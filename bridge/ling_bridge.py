@@ -738,6 +738,12 @@ def segments_to_text(message: Any) -> Tuple[str, List[Any]]:
 # --------------------------------------------------------------------------- 主入口
 def setup_logging(level: str = "INFO", log_file: Optional[str] = None) -> None:
     LOG.setLevel(getattr(logging, level.upper(), logging.INFO))
+    # Windows 控制台/重定向时 stdout 可能是 GBK，中文会变成 '?'，这里统一成 UTF-8
+    if hasattr(sys.stdout, "reconfigure"):
+        try:
+            sys.stdout.reconfigure(encoding="utf-8", errors="replace")  # type: ignore[attr-defined]
+        except Exception:  # noqa: BLE001
+            pass
     # 幂等：重复调用时先清掉旧 handler（main 与 selftest 都会调用）
     for handler in list(LOG.handlers):
         LOG.removeHandler(handler)
