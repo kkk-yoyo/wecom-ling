@@ -1,0 +1,9 @@
+企业微信版本：5.0.0.6008
+官方下载地址：https://dldir1.qq.com/wework/work_weixin/WeCom_5.0.0.6008.exe
+
+原版说明文档为以下链接+API.docx文件，写的比较简单
+微灵框架执行指令说明文档：https://ac8r5p3bcc.apifox.cn
+密码：XSi82krm
+
+整理版微灵框架接口说明文档：
+链接: https://s.apifox.cn/8010821f-5e0f-4891-b72e-f8a90df71678  访问密码: UB91XgOY

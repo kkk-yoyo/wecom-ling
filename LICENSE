@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2026 kkk-yoyo
+Copyright (c) 2026 kkk-yoyo and the WeComSever/微灵 reverse-engineering contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +19,18 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+---
+
+NOTE / 附加说明
+
+The decompiled sources under src/WeComSever/ and the native binaries under
+native/bin/ and dist/ originate from the closed-source program "微灵"
+(WeComSever) by its original author. They are included here for research and
+interoperability purposes only. Copyright in those parts remains with the
+original author. If the original author objects to this repository, the
+maintainers will remove the affected files upon request.
+
+src/WeComSever/ 下的反编译源码，以及 native/bin/ 与 dist/ 下的原始二进制，
+版权归「微灵」(WeComSever) 原作者所有，此处仅用于技术研究与互操作性目的；
+若原作者提出异议，维护者将应要求移除相关文件。

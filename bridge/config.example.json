@@ -1,0 +1,20 @@
+{
+  "http": {
+    "host": "127.0.0.1",
+    "port": 8899
+  },
+  "ling": {
+    "api": "http://127.0.0.1:8060",
+    "client": 1,
+    "tcp": ""
+  },
+  "onebot": {
+    "ws": "ws://127.0.0.1:6200/ws",
+    "access_token": "",
+    "self_id": ""
+  },
+  "filter": {
+    "ignore_self": true,
+    "ignore_recall": true
+  }
+}

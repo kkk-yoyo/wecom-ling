@@ -1,0 +1,2253 @@
+指令调用
+登录信息
+刷新登录二维码
+请求
+{
+"type": 11153,
+"data": {}
+}
+返回
+{
+"type": 11153,
+"data": {}
+}
+在通知消息中，接收二维码
+请求
+{
+"type": 11153,
+"data": {}
+}
+返回
+复制{
+"type": 11153,
+"data": {}
+}
+在通知消息中，接收二维码
+退出登录
+请求
+{
+"type": 11112,
+"data": {}
+}
+返回
+{
+"type": 11112,
+"data": {}
+}
+当前登录帐号信息
+请求
+{
+"type": 11035,
+"data": {}
+}
+返回
+复制 {
+"data": {
+"account": "xxxxx@xxx.onexmail.com", // 帐号
+"acctid": "xxxxx",                   // acctid
+"avatar":         "http://wework.qpic.cn/bizmail/xxxDM808qnyFVjQ/0", // 头像
+"corp_id": "1970325032041886",  // 公司id
+"corp_name": "xxxxxxxxx有限公司",  // 公司全称
+"corp_short_name": "xxxxx",    // 公司简称
+"email": "xxxxx@qq.com",       // 邮箱
+"job_name": "总经理",           // 职位
+"mobile": "137xxxxxxxxx",      // 手机号
+"nickname": "小邪212",          // 昵称
+"position": "总经理",           // 职位
+"sex": 2,                      // 性别 0 未知，1男，2女
+"user_id": "1688xxxx353xxxx",  // 用户id
+"username": "小邪"               // 名称
+},
+"type": 11035
+}
+获取自己的二维码
+请求
+{
+"type":11122,
+"data":{}
+}
+返回
+复制{
+"data":{
+"ctcode":"https:\/\/wework.qpic.cn\/wwpic\/881213_4lxxxx4T-CaPDT_1xxxx\/0", // 二维码url
+"plugid":"70179deeff34xxxxxx711e5f"
+},
+"type":11122
+}
+联系人
+获取联系人信息
+请求
+{
+"type": 11039,
+"data": {
+"user_id": "78813007149xxxxxxx"
+}
+}
+返回
+{
+"data": {
+"acctid": "xxxx",
+"avatar": "http://wx.qlogo.cn/mmhead/M8Vj2ZxG8UHJx0xdowCt4xxxx/0",
+"conversation_id": "S:16888505xxx82_7881300xx",
+"corp_id": "1970325xxx8",
+"mobile": "",
+"nickname": "",
+"position": "",
+"realname": "",
+"remark": "",
+"sex": 1,
+"unionid": "ozynqspBJVmTEwLsxxxQ",
+"user_id": "788130071491xxxx",
+"username": "小邪"
+},
+"type": 11039
+}
+获取内部联系人列表
+请求
+page_num 是第几页，从1开始
+page_size 是每页获取多少数据
+{
+"type": 11036,
+"data": {
+"page_num": 1,
+"page_size": 10
+}
+}
+返回
+{
+"data":{
+"page_num":1, // 当前页
+"page_size":10,  // 每页多少
+"total":26,       // 一共多少条数据
+"total_page":3,  // 共多少页
+"user_list":[
+{
+"acctid":"xxxx",
+"avatar":"http://wework.qpic.cn/bizmail/IHgRKfv9SqpPJEZUfiaUfqMkckbS0xxxxx",
+"conversation_id":"S:168885xx2_16888505xxx",
+"corp_id":"19703250xxx",
+"mobile":"手机号",
+"nickname":"小邪212",
+"position":"总经理",
+"realname":"xxxxx",
+"remark":"",
+"sex":2,
+"unionid":"ozynqspBJVmTEwLxxxx",
+"user_id":"1688850xxxx",
+"username":"小邪"
+}
+]
+},
+"type":11036
+}
+获取外部联系人列表
+请求
+page_num 是第几页，从1开始
+page_size 是每页获取多少数据
+{
+"type":11037,
+"data":{
+"page_num":1,
+"page_size":10
+}
+}
+返回
+{
+"data":{
+"page_num":1, // 当前页
+"page_size":10,  // 每页多少
+"total":26,       // 一共多少条数据
+"total_page":3,  // 共多少页
+"user_list":[{
+"acctid":"XiaoXie",
+"add_time":1599807110,
+"avatar":"https:\/\/wework.qpic.cn\/wwhead\/duc2TvpEgSTxBxoAMEoxxx\/0", // 头像url
+"conversation_id":"S:16888xx53_1688xxx",
+"corp_id":"19703249xxx",
+"mobile":"",
+"nickname":"",
+"position":"",
+"realname":"小邪",
+"remark":"",
+"sex":2,
+"unionid":"ozynqskFeVzLFjy6JToxxxxxx",
+"user_id":"16888503xxxxxx",
+"username":"小邪"
+}]
+},
+"type":11037
+}
+搜索微信/企微用户
+请求
+{
+"type": 11052,
+"data": {
+"keyword": "15666666666"
+}
+}
+无序列表返回的内容比较多, 有几个字段后续加人要用到，其他信息可以根据需要自提
+返回
+{
+"data":{
+"contact_info":{
+"acctid":"YiYi",
+"alias":"",
+"attr":146210880,
+"bind_email":"",
+"bind_email_status":1,
+"birthday":"1970-01-01 00:00:00",
+"bizuin":0,
+"circle_language":0,
+"corpid":1970325xxxxxx,
+"create_source":1,
+"create_time":0,
+"department":"",
+"display_order":0,
+"emailaddr":"",
+"english_name":"",
+"extern_job":"",
+"extern_position":"",
+"external_corp_info":"",
+"external_custom_info":null,
+"external_pb":"",
+"external_wxfinder":null,
+"extra_info":null,
+"gender":2,
+"gid":2251800xxxxxx,
+"hash":0,
+"holiday_info":{
+"create_time":0,
+"holiday_desc":"",
+"holiday_generate_src":0,
+"holiday_icon_index":0,
+"holiday_info_id":0,
+"holiday_status":0,
+"holiday_status_new":0,
+"new_holiday_icon_index":0
+},
+"holiday_list_read_time":0,
+"iconurl":"http:\/\/wework.qpic.cn\/bizmail\/W9Sqc7EPicJeeR77ibdaMesvkicibwMdjCmaY6rIcpG8aytZJMCTrtVQgw\/0",
+"internation_code":"86",
+"is_name_verified":true,
+"job":"",
+"level":0,
+"main_partyid":16888xxx81,
+"mobile":"",
+"name":"一一xx",
+"name_status":1,
+"nation_code":"",
+"number":"",
+"openkfprofile":null,
+"partyid":0,
+"partymember_order":0,
+"personal_work_type":0,
+"phone":"",
+"position":"",
+"pstn_extension_number":"",
+"pstn_extension_number_new":"",
+"qqmail_uin":0,
+"realname":"xxxxx",
+"robot_profile":null,
+"school_parent_openid":"",
+"school_staff_relation":"",
+"school_user_type":0,
+"staff_attr":0,
+"staff_type":0,
+"staff_xid":0,
+"student_number":"",
+"subjectname":"",
+"tencent_info":{
+"work_card_image":""
+},
+"uin":16888xxx,
+"under_verify_name":"",
+"unionid":"ozynqsnJuiQexxxxbE",
+"use_attr2":5898244,
+"v_corp_name_full":"",
+"v_corp_name_short":"",
+"v_corp_use_status":1000,
+"v_create_mail":"",
+"v_hoster_vid":0,
+"v_is_init_moder":true,
+"v_recommend_info":null,
+"vcode":"vce5e8f7825e87c408",
+"xcx_corp_address":"",
+"xcx_style":0
+},
+"corpinfo":{
+"admin_vid":0,
+"appli_info":null,
+"auth_time":0,
+"authed_domain":"",
+"b_authed_licence":true,
+"b_has_info_corp":false,
+"b_hastoken":false,
+"b_internet_industry":false,
+"b_need_not_verify":false,
+"b_need_update_name":false,
+"card_url":"https:\/\/work.weixin.qq.com\/wework_admin\/xxxxp?",
+"coreate_source_info":"",
+"corp_desc":"",
+"corp_full_name":"xxxx科技有限公司",
+"corp_logo":"https:\/\/p.qlogo.cn\/bizmail\/1icHEZ7xxxx\/0",
+"corp_name":"xxxxxxxxx",
+"corp_stat":0,
+"corp_use_status":0,
+"corpid":19703250xxxxxxx,
+"create_time":1532394113,
+"custom_check_url":"",
+"email_need_auth":"",
+"internation_code":"",
+"isAccepted":false,
+"isTrust":true,
+"is_corp_verify":false,
+"is_init_moduser":false,
+"is_overseas_corp":false,
+"join_need_verify":false,
+"language":1,
+"mail":"",
+"mem_appli_time":0,
+"mem_create_time":0,
+"mobile_need_auth":"",
+"moduser_info":{
+"name":"",
+"vid":0
+},
+"ownername":"小邪",
+"personal_work_info":"",
+"personal_work_type":0,
+"pstn_main_number":"",
+"pstn_officephone_state":0,
+"qyh_info":"",
+"scorp_id":"wwfd561047d79e1a2d",
+"staff_info":{
+"attr":0,
+"corp_mail":"",
+"corp_mail_active":false,
+"corp_position":"",
+"corp_rank":"",
+"custom_check_status":0,
+"english_name":"",
+"head_image":"http:\/\/wework.qpic.cn\/bizmail\/xxxxxxxxxxw\/0",
+"internation_code":"86",
+"mail":"yiyimama@lcwsl999.onexmail.com",
+"name":"一一xxxx",
+"phone":"",
+"pstn_extension_number":"",
+"real_name":""
+},
+"staffnum":0,
+"status":0,
+"unreadNum":0,
+"v_init_domain_name":"",
+"v_superadmin_name":"",
+"v_superadmin_vid":0,
+"verify_msg":"",
+"verify_submit_time":0,
+"vid":16888505xxxxxx,
+"virtual_can_change_full_name":false,
+"virtual_corp_claiming_name":"",
+"work_card_back_url":"",
+"work_card_face_url":""
+},
+"datalist":[{
+"contact_info":{
+"acctid":"YiYiM",
+"alias":"",
+"attr":146210880,
+"bind_email":"",
+"bind_email_status":1,
+"birthday":"1970-01-01 00:00:00",
+"bizuin":0,
+"circle_language":0,
+"corpid":1970325xxx86,
+"create_source":1,
+"create_time":0,
+"department":"",
+"display_order":0,
+"emailaddr":"",
+"english_name":"",
+"extern_job":"",
+"extern_position":"",
+"external_corp_info":"",
+"external_custom_info":null,
+"external_pb":"",
+"external_wxfinder":null,
+"extra_info":null,
+"gender":2,
+"gid":2251800xx9,
+"hash":0,
+"holiday_info":{
+"create_time":0,
+"holiday_desc":"",
+"holiday_generate_src":0,
+"holiday_icon_index":0,
+"holiday_info_id":0,
+"holiday_status":0,
+"holiday_status_new":0,
+"new_holiday_icon_index":0
+},
+"holiday_list_read_time":0,
+"iconurl":"http:\/\/wework.qpic.cn\/bizmail\/W9Sqc7EPicJeeR77ibdaMesvkicibwMdjCmaY6rIcpG8aytZJMCTrtVQgw\/0",
+"internation_code":"86",
+"is_name_verified":true,
+"job":"",
+"level":0,
+"main_partyid":16888505xxx1,
+"mobile":"",
+"name":"一一x",
+"name_status":1,
+"nation_code":"",
+"number":"",
+"openkfprofile":null,
+"partyid":0,
+"partymember_order":0,
+"personal_work_type":0,
+"phone":"",
+"position":"",
+"pstn_extension_number":"",
+"pstn_extension_number_new":"",
+"qqmail_uin":0,
+"realname":"xxxx",
+"robot_profile":null,
+"school_parent_openid":"",
+"school_staff_relation":"",
+"school_user_type":0,
+"staff_attr":0,
+"staff_type":0,
+"staff_xid":0,
+"student_number":"",
+"subjectname":"",
+"tencent_info":{
+"work_card_image":""
+},
+"uin":1688850xxxx3,
+"under_verify_name":"",
+"unionid":"ozynqsnJuiQerUcDxxE",
+"use_attr2":5898244,
+"v_corp_name_full":"",
+"v_corp_name_short":"",
+"v_corp_use_status":1000,
+"v_create_mail":"",
+"v_hoster_vid":0,
+"v_is_init_moder":true,
+"v_recommend_info":null,
+"vcode":"vce5e8f78x8",
+"xcx_corp_address":"",
+"xcx_style":0
+},
+"contact_info_wx":{
+"acctid":"",
+"alias":"",
+"attr":0,
+"bind_email":"",
+"bind_email_status":0,
+"birthday":"",
+"bizuin":0,
+"circle_language":0,
+"corpid":0,
+"create_source":0,
+"create_time":0,
+"department":"",
+"display_order":0,
+"emailaddr":"",
+"english_name":"",
+"extern_job":"",
+"extern_position":"",
+"external_corp_info":"",
+"external_custom_info":null,
+"external_pb":"",
+"external_wxfinder":null,
+"extra_info":null,
+"gender":2,
+"gid":0,
+"hash":0,
+"holiday_info":null,
+"holiday_list_read_time":0,
+"iconurl":"http:\/\/wx.qlogo.cn\/mmhead\/Q3auHgz\/0",
+"internation_code":"",
+"is_name_verified":false,
+"job":"",
+"level":0,
+"main_partyid":0,
+"mobile":"",
+"name":"一小口", // 名称
+"name_status":0,
+"nation_code":"",
+"number":"",
+"openkfprofile":null,
+"partyid":0,
+"partymember_order":0,
+"personal_work_type":0,
+"phone":"",
+"position":"",
+"pstn_extension_number":"",
+"pstn_extension_number_new":"",
+"qqmail_uin":0,
+"realname":"",
+"robot_profile":null,
+"school_parent_openid":"",
+"school_staff_relation":"",
+"school_user_type":0,
+"self_info":null,
+"staff_attr":0,
+"staff_type":0,
+"staff_xid":0,
+"student_number":"",
+"subjectname":"",
+"tencent_info":null,
+"uin":7881299xxxxxx,   // 用户id
+"under_verify_name":"",
+"unionid":"",
+"use_attr2":0,
+"v_corp_name_full":"",
+"v_corp_name_short":"",
+"v_corp_use_status":0,
+"v_create_mail":"",
+"v_hoster_vid":0,
+"v_is_init_moder":false,
+"v_recommend_info":null,
+"vcode":"",
+"xcx_corp_address":"",
+"xcx_style":0
+},
+"corpinfo":{
+"admin_vid":0,
+"appli_info":null,
+"auth_time":0,
+"authed_domain":"",
+"b_authed_licence":true,
+"b_has_info_corp":false,
+"b_hastoken":false,
+"b_internet_industry":false,
+"b_need_not_verify":false,
+"b_need_update_name":false,
+"card_url":"https:\/\/work.weixin.qq.com\/wework_admin\/user\/h5\/corp?",
+"coreate_source_info":"",
+"corp_desc":"",
+"corp_full_name":"xxxxxxx网络科技有限公司",
+"corp_logo":"https:\/\/p.qlogo.cn\/bizmail\/1icHExxxxxxg\/0",
+"corp_name":"xxxx",
+"corp_stat":0,
+"corp_use_status":0,
+"corpid":197032xxxxx6,
+"create_time":1532394113,
+"custom_check_url":"",
+"email_need_auth":"",
+"internation_code":"",
+"isAccepted":false,
+"isTrust":true,
+"is_corp_verify":false,
+"is_init_moduser":false,
+"is_overseas_corp":false,
+"join_need_verify":false,
+"language":1,
+"mail":"",
+"mem_appli_time":0,
+"mem_create_time":0,
+"mobile_need_auth":"",
+"moduser_info":{
+"name":"",
+"vid":0
+},
+"ownername":"小邪",
+"personal_work_info":"",
+"personal_work_type":0,
+"pstn_main_number":"",
+"pstn_officephone_state":0,
+"qyh_info":"",
+"scorp_id":"wwfd561047d79e1a2d",
+"staff_info":{
+"attr":0,
+"corp_mail":"",
+"corp_mail_active":false,
+"corp_position":"",
+"corp_rank":"",
+"custom_check_status":0,
+"english_name":"",
+"head_image":"http:\/\/wework.qpic.cn\/bizmail\/W9Sqc7EPicJeeR77ibdaMesvkicibwMdjCxxxxw\/0", // 头像
+"internation_code":"86",
+"mail":"yiyxxa@lxxx.onexmail.com",
+"name":"一一xxx",
+"phone":"",
+"pstn_extension_number":"",
+"real_name":""
+},
+"staffnum":0,
+"status":0,
+"unreadNum":0,
+"v_init_domain_name":"",
+"v_superadmin_name":"",
+"v_superadmin_vid":0,
+"verify_msg":"",
+"verify_submit_time":0,
+"vid":16888505xxxxxx,
+"virtual_can_change_full_name":false,
+"virtual_corp_claiming_name":"",
+"work_card_back_url":"",
+"work_card_face_url":""
+},
+"flag":0,
+"item_type":1,
+"name":"",
+"openid":"orFrbsuSYHirGxxxxxx",  // 添加为客户时要用到
+"relation":1,
+"search_status":1,
+"wx_ticket":"6001221957E20E5D29D1E733EE712415FBE17551E97981837EFAE6FFE7C22D989C2C64ABFEFC22FB07A801B91A132985C1A360FCDEAA389547xxxDxxxxF" // 添加为客户时要用到
+}],
+"error_code":0,
+"error_message":"",
+"flag":0,
+"keyword":"151xxxxxxxx",  // 搜索的手机号
+"name":"",
+"relation":1,
+"search_status":1
+},
+"type":11052
+}
+添加搜索的微信用户
+请求
+{
+"type":11053,
+"data":{
+"user_id":"78812998xxxxxx",
+"openid":"orFrbsuSYHirGzN1xxxxx",
+"wx_ticket":"6001221957E20E5D29D1E733EE712415FBE17551E97981837EFAE6FFE7C22D989C2C64ABFEFC22FB07A801B91A132985C1A360FCDEAA38954704EE6FD5894AE59725xxxxxxF",
+"verify":"你好"
+}
+}
+user_id 在查询结果中取，json路径是：data.datalist[0].contact_info_wx.uin
+openid 在查询结果中取，json路径是：data.datalist[0].openid
+wx_ticket 在查询结果中取，json路径是：data.datalist[0].wx_ticket
+verify 为验证消息
+返回
+{
+"data":{
+"error_code":0,
+"error_message":"ok"
+},
+"type":11053
+}
+添加搜索的企微用户
+请求
+{
+"type":11088,
+"data":{
+"user_id":"1688850xxx63",
+"corp_id":"19703250xxx86",
+"ticket": "xxxxxxxxxxxxxxxxxxxx",
+"verify":"你好"
+}
+}
+user_id 在查询结果中取，json路径是 data.datalist[0].contact_info.uin
+corp_id 在查询结果中取， json路径是 data.datalist[0].contact_info.corpid
+ticket 在查询结果中取 wx_ticket
+verify 验证消息
+返回
+{
+"data":{
+"error_code":0,   // 负值是请求错误
+"error_message":""
+},
+"type":11088
+}
+添加名片为联系人
+请求
+{
+"type":11121,
+"data":{
+"user_id":"78812998xxxxxx",
+"corp_id":"0",
+"from_user_id":"7881299524xxxx",
+"verify":"你好"
+}
+}
+user_id 在接收名片消息中取，user_id
+corp_id 在接收名片消息中取, corp_id
+from_user_id 是接收名片消息中的sender
+verify 验证消息
+返回
+{
+"data":{
+"error_code":0,
+"error_message":"ok"
+},
+"type":11121
+}
+添加删除的联系人
+请求
+{
+"type":11152,
+"data":{
+"user_id":"78812998549xxxxx",
+"corp_id":"0",
+"verify":"你好"
+}
+}
+返回
+{
+"data":{
+"error_code":0,
+"error_message":"ok"
+},
+"type":11152
+}
+修改内/外部好友备注
+请求
+{
+"type":11054,
+"data":{
+"user_id":"788130228391xxxx",
+"remark":"小邪的备注"
+}
+}
+返回
+复制{
+"data":{
+"error_code":0,
+"error_message":"ok"
+},
+"type":11054
+}
+修改内/外部好友描述
+请求
+{
+"type": 11055,
+"data": {
+"user_id": "7881302283xxxxx",
+"desc": "小邪的描述"
+}
+}
+返回
+{
+"data":{
+"error_code":0,
+"error_message":"ok"
+},
+"type":11055
+}
+修改外部联系人手机号
+请求
+{
+"type": 11056,
+"data": {
+"phone_list": [
+"15688888888"
+],
+"user_id": "7881302283xxxxxxx"
+}
+}
+返回
+{
+"data":{
+"error_code":0,
+"error_message":"ok"
+},
+"type":11056
+}
+修改外部联系人公司名称
+请求
+{
+"type":11057,
+"data":{
+"user_id":"78813022839xxxxx",
+"company":"小邪的公司"
+}
+}
+返回
+复制{
+"data":{
+"error_code":0,
+"error_message":"ok"
+},
+"type":11057
+}
+删除联系人
+请求
+{
+"type":11111,
+"data":{
+"user_id":"7881302283xxxxx",
+"corp_id":"0"
+}
+}
+返回
+复制{
+"data":{
+"error_code":0,
+"error_message":"ok"
+},
+"type":11111
+}
+接受好友申请
+请求
+{
+"type":11064,
+"data":{
+"user_id":"7881302283xxx",
+"corp_id":"1970325134xxx"
+}
+}
+从接收到好友请求信息中user_id和corp_id
+返回
+{
+"data":{
+"error_code":0,
+"error_message":"ok"
+},
+"type":11064
+}
+群组
+获取会话群聊列表
+请求
+page_num 是第几页，从1开始
+page_size 是每页获取多少数据
+{
+"type": 11038,
+"data": {
+"page_num": 1,
+"page_size": 10
+}
+}
+返回
+{
+"data":{
+"page_num":1, // 当前页
+"page_size":10,  // 每页多少
+"total":26,       // 一共多少条数据
+"total_page":3,  // 共多少页
+"room_list":[{
+"conversation_id":"R:10696xxxx434",
+"create_time":1603705235,
+"create_user_id":"16888xxxx0534",
+"is_external":1,   // 外部群 1， 内部群0
+"nickname":"测试大群1",
+"is_admin" : 0, // 是否为管理员
+"is_creator" : 0, // 是否为创建者
+"total":79   //群成员
+},{
+"conversation_id":"R:106960xxx1496",
+"create_time":1585103478,
+"create_user_id":"1688851xxx83530",
+"is_external":1,
+"is_admin" : 0, // 是否为管理员
+"is_creator" : 0, // 是否为创建者
+"nickname":"xxxx进阶玩法",
+"total":305
+}]},
+"type":11038
+}
+获取会话群成员列表
+请求
+page_num 是第几页，从1开始
+page_size 是每页获取多少数据
+{
+"type": 11040,
+"data": {
+"conversation_id": "R:38450xxxx72",
+"page_num":1,
+"page_size":10
+}
+}
+返回
+{
+"data":{
+"page_num":1, // 当前页
+"page_size":10,  // 每页多少
+"total":26,       // 一共多少条数据
+"total_page":3,  // 共多少页
+"conversation_id":"R:3845043072",
+"member_list":[{
+"acctid":"GuanxxxxxiQiRen",
+"avatar":"http:\/\/wework.qpic.cn\/bizmail\/Y4WrW34pibbTAR9d9gibZBxib4fD0MmgyjYWyhicxxxxQA\/0",
+"corp_id":"1970325032041886",
+"mobile":"",
+"nickname":"",
+"position":"",
+"realname":"xxxx利",
+"remark":"xxx",
+"sex":1,
+"unionid":"ozynqssGkZxxxxhwG82oV8g",
+"user_id":"16888505xxx6662",
+"username":"xxxx利",
+"invite_user_id": "168xxxxxx", // 邀请人id
+"is_admin" : 0, // 是否为管理员
+"room_nickname": "群内昵称",
+"join_scene" : 3， // 来源类型
+"join_time" : 1580138164 // 加入时间
+}]
+},
+"type":11040
+}
+创建内/外部群
+请求
+{
+"type": 11058,
+"data": [
+"788130071xxx93",
+"78813028xxx8803"
+]
+}
+返回
+{
+"data":{
+"createruin":168885053xx82,  //创建者user_id
+"createtime":1639322040,   // 创建时间
+"error_code":0,
+"error_message":"",
+"failmem":[{
+"type":0,
+"vid":0
+}],
+"msgid":109xx35,
+"msgseq":8513xxx,
+"roomid":1069605293xxx1944,  // 群id
+"roomname":"",
+"sessionid":"Nm5GdS10TURTd3lGdEZ1aQ==",
+"success_add_vidlist":[{
+"success_add_vidlist":7881300xxx2093  // 添加成功的成员用户id
+}]
+},
+"type":11058
+}
+创建空外部群
+请求
+{
+"type":11125,
+"data":{
+}
+}
+返回
+{
+"data":{
+"content":"5L6v5bCR6L6J5Zyo5LyB5Lia5b6u5L+h5Lit6YKA6K+35L2g5Yqg5YWl576k6IGK77yM55So5q2j5byP55qE5ZCN54mH6Ixxxxx2c",
+"h5url":"aHR0cHM6Ly93b3JrLndlaXhpbi5xcS5jb20vd2V3b3JrX2FkbWluL3Jvb20vam9pbi93eD9pbnZpdGVfc291cmNlPTE0NiZ2Y29kZT0yNjRhYxxxxxWE1MWQ0YjkzN2RjMzAzZTM4OWMyYg==",
+"image_url":"aHR0cDovL3Jlc2Nkbi5xcW1haWwuY29tL25vZGUvd3cvd3dtbmcvc3R5bGUvaW1hZ2VzL2luZGVwZW5kZW50L0RlZmF1bHRHcm91cEF2YxxxxxhhZTljNi5wbmc=", //  // 群头像base64
+"info":{
+"auto_reply_type":0,
+"createtime":1639322223,  // 创建时间
+"createuin":16888505xxxx82,  // 创建user_id
+"customer_room_type":2,
+"ex_owner":0,
+"flag":0,
+"is_wwwx_room_admin":false,
+"needreadmode_vid":0,
+"needreadmodetime":0,
+"new_flag":4,
+"notice":"",
+"person_room_image":"",
+"person_room_type":0,
+"room_tools":null,
+"room_welcome_msg":"",
+"roomid":10696052xxx094,  // 群id
+"roomname":"",
+"school_room_info":null,
+"sessionid":"WVBFUTByRFxxx6Xw==",
+"team_room_type":0,
+"update_topmsg_time":0
+},
+"is_first_wx_room":false,
+"room_qrcode":"",
+"roomid":10696052939032094,
+"title":"6YKA6K+35L2g5Yqg5YWl5LyB5Lia5b6u5L+h576k6IGK"  // 群标题base64
+},
+"type":11125
+}
+修改群名
+请求
+{
+"type":11059,
+"data":{
+"conversation_id":"R:10696049xxxx368",
+"name":"新群名"
+}
+}
+返回
+{
+"data":{
+"createruin":0,
+"createtime":0,
+"error_code":0,
+"error_message":"",
+"msgid":1098651,
+"msgseq":8513844,
+"roomid":0,
+"roomname":"",
+"sessionid":""
+},
+"type":11059
+}
+批量邀请好友入群
+请求
+{
+"type": 11060,
+"data": {
+"user_list": [
+"7881302872xx115"
+],
+"conversation_id": "R:10696051780xxx71"
+}
+}
+返回
+是否邀请成功，请看success_add_vidlist是否有值并且failmem不为null，如果没有就是失败
+{
+"data":{
+"error_code":0,
+"error_message":"",
+"failmem":[null],
+"msgid":1098658,
+"msgseq":8513848,
+"success_add_vidlist":[{
+"success_add_vidlist":7881302872xxx115
+}]
+},
+"type":11060
+}
+当fillmem为null,没有success_add_vidlist，这种情况是群成员大于40人，需要对方确认才能入群
+{
+"data":{
+"error_code":0,
+"error_message":"",
+"failmem":[null],
+"msgid":0,
+"msgseq":0
+},
+"type":11060
+}
+下面是添加失败的返回failmem为null
+{
+"data":{
+"error_code":0,
+"error_message":"",
+"failmem":[{
+"type":0,
+"vid":0
+}],
+"msgid":0,
+"msgseq":0
+},
+"type":11060
+}
+批量踢群成员
+请求
+{
+"type": 11061,
+"data": {
+"user_list": [
+"7881302872xxxx15"
+],
+"conversation_id": "R:106960517xxx"
+}
+}
+返回
+{
+"data":{
+"error_code":0,
+"error_message":"",
+"msgid":1098665,
+"msgseq":8513852
+},
+"type":11061
+}
+添加群成员为联系人
+请求
+{
+"type":11071,
+"data":{
+"room_conversation_id":"R:10696049576014434",  // 所在群
+"user_id":"1688850321512612",    // 群成员id
+"corp_id":"1970324972075112",   // 成员公司id
+"verify":"你好"   // 验证消息
+}
+}
+返回
+{
+"data":{
+"error_code":0,
+"error_message":"ok"
+},
+"type":11071
+}
+发布群公告
+请求
+{
+"type":11082,
+"data":{
+"room_conversation_id":"R:106960517xxxxx",
+"notice":"新群公告"
+}
+}
+返回
+{
+"data":{
+"createruin":0,
+"createtime":0,
+"error_code":0,
+"error_message":"",
+"msgid":0,
+"msgseq":0,
+"roomid":0,
+"roomname":"",
+"sessionid":""
+},
+"type":11082
+}
+转让群主
+请求
+{
+"type":11090,
+"data":{
+"room_conversation_id":"R:10696051xxx71",
+"user_id":"16888505xx3"  // 新群主
+}
+}
+返回
+{
+"data":{
+"createruin":0,
+"createtime":0,
+"error_code":0,
+"error_message":"",
+"msgid":0,
+"msgseq":0,
+"roomid":0,
+"roomname":"",
+"sessionid":""
+},
+"type":11090
+}
+开启/关闭群邀请确认
+请求
+{
+"type":11089,
+"data":{
+"room_conversation_id":"R:10696052725027504",
+"status":1   // 1开启， 0关闭
+}
+}
+返回
+复制{
+"data":{
+"createruin":0,
+"createtime":0,
+"error_code":0,
+"error_message":"",
+"msgid":0,
+"msgseq":0,
+"roomid":0,
+"roomname":"",
+"sessionid":""
+},
+"type":11089
+}
+启/关闭禁止修改群名
+请求
+{
+"type":11108,
+"data":{
+"room_conversation_id":"R:10696052725xxx4",
+"status":1  // 1开启 0关闭
+}
+}
+返回
+{
+"data":{
+"createruin":0,
+"createtime":0,
+"error_code":0,
+"error_message":"",
+"msgid":0,
+"msgseq":0,
+"roomid":0,
+"roomname":"",
+"sessionid":""
+},
+"type":11108
+}
+退出群聊
+请求
+{
+"type":11105,
+"data":{
+"room_conversation_id":"R:1069605045xxx2"
+}
+}
+返回
+{
+"data":{
+"error_code":0,
+"error_message":"",
+"msgid":1098700,
+"msgseq":8513871
+},
+"type":11105
+}
+解散群
+请求
+{
+"type":11130,
+"data":{
+"room_conversation_id":"R:10696xx27504"
+}
+}
+返回
+{
+"data":{
+"createruin":0,
+"createtime":0,
+"error_code":0,
+"error_message":"",
+"msgid":0,
+"msgseq":0,
+"roomid":0,
+"roomname":"",
+"sessionid":""
+},
+"type":11130
+}
+消息
+发送文本消息
+接口说明：
+发送文本消息接口
+JSON示例：
+{
+"data": {
+"conversation_id": "xxxxxxx",
+"content": "你好，世界"
+},
+"type": 11029
+}
+发送群@消息
+接口说明：
+发送群@消息接口
+JSON示例：
+{
+"data": {
+"conversation_id": "xxxxxxx",
+"content": "你好，世界",
+"at_list": ["168888xxxxxx", "1688xxxxxxxxx"]
+},
+"type": 11069
+}
+发送图片消息
+接口说明：
+发送图片消息接口
+JSON示例：
+{
+"data": {
+"conversation_id": "xxxxxxxx",
+"file": "c:\\User\\ssx\\x\\x.jpg"
+},
+"type": 11030
+}
+发视频消息
+接口说明：
+发送视频消息接口
+JSON示例：
+{
+"data": {
+"conversation_id": "xxxxxxxx",
+"file": "c:\\User\\ssx\\x\\x.mp4"
+},
+"type": 11067
+}
+发送动图消息
+接口说明：
+发送动图(gif)消息接口
+JSON示例：
+{
+"data": {
+"conversation_id": "xxxxxxxx",
+"file": "c:\\User\\ssx\\x\\x.gif"
+},
+"type": 11070
+}
+发送文件消息
+接口说明：
+发送文件消息接口
+JSON示例：
+复制{
+"data": {
+"conversation_id": "xxxxxxxx",
+"file": "c:\\User\\ssx\\x\\x.jpg"
+},
+"type": 11031
+}
+发送小程序
+请求
+{
+"type":11162,
+"data":{
+"conversation_id":"S:168885xxx28682_788130xxxx912998",
+"username":"gh_52b46203a658@app",
+"appid":"wx35f2a3937c9df889",
+"appname":"博鸟绘本",
+"appicon":"http:\/\/wx.qlogo.cn\/mmhead\/Q3auHgzwzM42Aa6BAq7rguLCx66IVTm7Qibr6paWic3rl9bfalX7gQLw\/96",
+"title":"博鸟绘本，最新最全的儿童绘本租赁平台~",
+"page_path":"pages\/shouye\/shouye.html",
+// cdn参数为小程序封面，可以从cdn上传图片处获得
+"file_id":"3069020102046230600201000204283cabaa02030f424102043c986eb4020461967039042431376332326538612d656533342d346537642d623531332d37393762376436336531663702010002030ec8700410059b34e084cf19a38a92a677177863d20201010201000400",
+"aes_key":"61393132623366353662313133653735",
+"md5":"059b34e084cf19a38a92a677177863d2",
+"size": 11122
+}
+}
+返回
+{
+"data":{
+"is_svr_fail":false,
+"msg_data":{
+"appinfo":"Q0FVUWhNRGFqUVlZNEthRWk5c3ZJQWM9",
+"asid":0,
+"content":"2gaMBAoTZ2hfNTJiNDYyMDNhNjU4QGFwcBISd3gzNWYyYTM5MzdjOWRmODg5GhhwYWdlcy9zaG91eWUvc2hvdXllLmh0bWwgAigAMlVodHRwOi8vd3gucWxvZ28uY24vbW1oZWFkL1EzYXVIZ3p3ek00MkFhNkJBcTdyZ3VMQ3g2NklWVG03UWlicjZwYVdpYzNybDliZmFsWDdnUUx3Lzk2OjfljZrpuJ\/nu5jmnKzvvIzmnIDmlrDmnIDlhajnmoTlhL\/nq6Xnu5jmnKznp5\/otYHlubPlj7B+UgzljZrpuJ\/nu5jmnKxi1gEzMDY5MDIwMTAyMDQ2MjMwNjAwMjAxMDAwMjA0MjgzY2FiYWEwMjAzMGY0MjQxMDIwNDNjOTg2ZWI0MDIwNDYxOTY3MDM5MDQyNDMxMzc2MzMyMzI2NTM4NjEyZDY1NjUzMzM0MmQzNDY1Mzc2NDJkNjIzNTMxMzMyZDM3MzkzNzYyMzc2NDM2MzM2NTMxNjYzNzAyMDEwMDAyMDMwZWM4NzAwNDEwMDU5YjM0ZTA4NGNmMTlhMzhhOTJhNjc3MTc3ODYzZDIwMjAxMDEwMjAxMDAwNDAwaiA2MTM5MzEzMjYyMzM2NjM1MzY2MjMxMzEzMzY1MzczNXIgMDU5YjM0ZTA4NGNmMTlhMzhhOTJhNjc3MTc3ODYzZDJ4AKgBrAKwAfAB",
+"contenttype":78,
+"custom_service":"",
+"devinfo":65537,
+"extra_content":"",
+"flag":16777216,
+"id":1098787,
+"image_url":"",
+"innerkf_vid":0,
+"messagetype":0,
+"readuinscount":0,
+"receiver":7881302xxx12998,
+"referid":0,
+"roomid":0,
+"sender":1688850xxxxx28682,
+"sendername":"5bCP6YKq",
+"sendtime":1639358470,
+"seq":8513912
+}
+},
+"type":11162
+}
+发送视频号
+请求
+{
+"data":{
+"conversation_id":"S:16888xxx28682_78812xxxx868",    "avatar":"http:\/\/wx.qlogo.cn\/finderhead\/Q3auHgzwzM5Wj8x4cMI7ekwXmT6CsibOjOm0s2KrZTRARGJ8U75EQ6g\/0",
+"cover_url":"http:\/\/wxapp.tc.qq.com\/251\/20350\/stodownload?encfilekey=Cvvj5Ix3eexKX1zo1IZZBrQomawdVfSQH1uu2U31EqEuJ6IyhFbn25faARlVjhSU56eqicuRvibvzQMU6zdpaPxYvicbKtnGKM4GcrrtlqgquRHMAColyRQBVskcYeRibwRPleP0VZFn1nTv1IDAuU01eo6SAzDFcqtJ3ibp8gzQYtgc&adaptivelytrans=0&bizid=1023&dotrans=0&hy=SH&idx=1&m=55167cbd3bbc01dba90b11a7ba140eba&token=x5Y29zUxcibAdrJ0wInbe5ZApHYU5taw6oaQcfrTmmrt2pyiaUc5tQs299icQZLE2LpDelYwZwEDYM&finder_expire_time=1639977779&finder_eid=export%2FUzFfAgtgekIEAQAAAAAA_dwkh7T7YgAAAAstQy6ubaLX4KHWvLEZgBPEnqM0Rnp6Fbr9zNPgMIBto29WMBq6Nqr4vQ-BQGWh",
+"desc":"这是我见过最会讲话的父亲#婚礼",
+"feed_type":4,
+"nickname":"婚礼策划主持董永",
+"thumb_url":"http:\/\/wxapp.tc.qq.com\/251\/20350\/stodownload?encfilekey=Cvvj5Ix3eexKX1zo1IZZBrQomawdVfSQH1uu2U31EqEuJ6IyhFbn25faARlVjhSU56eqicuRvibvzQMU6zdpaPxYvicbKtnGKM4GcrrtlqgquRHMAColyRQBVskcYeRibwRPleP0VZFn1nTv1IDAuU01eo6SAzDFcqtJ3ibp8gzQYtgc&adaptivelytrans=0&bizid=1023&dotrans=0&hy=SH&idx=1&m=55167cbd3bbc01dba90b11a7ba140eba&token=x5Y29zUxcibAdrJ0wInbe5ZApHYU5taw6oaQcfrTmmrt2pyiaUc5tQs299icQZLE2LpDelYwZwEDYM&finder_expire_time=1639977779&finder_eid=export%2FUzFfAgtgekIEAQAAAAAA_dwkh7T7YgAAAAstQy6ubaLX4KHWvLEZgBPEnqM0Rnp6Fbr9zNPgMIBto29WMBq6Nqr4vQ-BQGWh",
+"url":"https:\/\/channels.weixin.qq.com\/web\/pages\/feed?eid=export%2FUzFfAgtgekIEAQAAAAAA_dwkh7T7YgAAAAstQy6ubaLX4KHWvLEZgBPEnqM0Rnp6Fbr9zNPgMIBto29WMBq6Nqr4vQ-BQGWh",
+"extras":"CAEQACKBKwAE9OmXBAAAAQAAAAAAIe3D78dQLXN5JLPYtmEgAAAAaeq5SzX7s7sPwaz04zCEwYwyALHFYGIb\/l1etP1AtP01Y6hI8AMWYclAsxaJhKSmJ9JiBV7xxxx"
+},
+"type":11172
+}
+返回
+{
+"data":{
+"is_svr_fail":false,
+"msg_data":{
+"appinfo":"Q0FVUXBPWGFqUVlZMUtXbmpkc3ZJQWs9",
+"asid":0,
+"content":"ChdodHRwczovL3d3dy5kb3V5aW4uY29tLxI1aHR0cHM6Ly9iLnpvbC1pbWcuY29tLmNuL3NvZnQvNy85MDcvY2VDNEh0ZlFxa2lnYy5qcGcaCeaKlumfs0FQUCIn55So56eR5oqA6K6p5aSN5p2C55qE5LiW55WM5pu0566A5Y2V77yB",
+"contenttype":13,
+"custom_service":"",
+"devinfo":65537,
+"extra_content":"",
+"flag":16777216,
+"id":1098795,
+"image_url":"",
+"innerkf_vid":0,
+"messagetype":0,
+"readuinscount":0,
+"receiver":7881302xxx98,
+"referid":0,
+"roomid":0,
+"sender":168885053xxx82,
+"sendername":"5bCP6YKq",
+"sendtime":1639363237,
+"seq":8513915
+}
+},
+"type":11172
+}
+发送卡片消息
+请求
+{
+"type":11159,
+"data":{
+"conversation_id":"S:168885xxx328682_7881xx2998",
+"url":"https:\/\/www.douyin.com\/",
+"image_url":"https:\/\/b.zol-img.com.cn\/soft\/7\/907\/ceC4HtfQqkigc.jpg",
+"title":"抖音APP",
+"desc":"用科技让复杂的世界更简单！"
+}
+}
+url 链接地址
+image_url 图标地址
+title 标题
+desc 描述
+返回
+{
+"data":{
+"is_svr_fail":false,
+"msg_data":{
+"appinfo":"Q0FVUXBPWGFqUVlZMUtXbmpkc3ZJQWs9",
+"asid":0,
+"content":"ChdodHRwczovL3d3dy5kb3V5aW4uY29tLxI1aHR0cHM6Ly9iLnpvbC1pbWcuY29tLmNuL3NvZnQvNy85MDcvY2VDNEh0ZlFxa2lnYy5qcGcaCeaKlumfs0FQUCIn55So56eR5oqA6K6p5aSN5p2C55qE5LiW55WM5pu0566A5Y2V77yB",
+"contenttype":13,
+"custom_service":"",
+"devinfo":65537,
+"extra_content":"",
+"flag":16777216,
+"id":1098795,
+"image_url":"",
+"innerkf_vid":0,
+"messagetype":0,
+"readuinscount":0,
+"receiver":7881302xxx98,
+"referid":0,
+"roomid":0,
+"sender":168885053xxx82,
+"sendername":"5bCP6YKq",
+"sendtime":1639363237,
+"seq":8513915
+}
+},
+"type":11159
+}
+发送名片
+请求
+{
+"type":11161,
+"data":{
+"conversation_id":"S:168885xxxx82_78813022xxx998",
+"share_user_id":"7881300xxx093"
+}
+}
+share_user_id 要分享的好友id
+返回
+{
+"data":{
+"is_svr_fail":false,
+"msg_data":{
+"appinfo":"Q0FVUW51amFqUVlZK2JHK2pkc3ZJQTA9",
+"asid":0,
+"content":"CN3y64uFgIAOEgAaACIA",
+"contenttype":41,
+"custom_service":"",
+"devinfo":65537,
+"extra_content":"",
+"flag":16777216,
+"id":1098799,
+"image_url":"",
+"innerkf_vid":0,
+"messagetype":0,
+"readuinscount":0,
+"receiver":7881302xxx2998,
+"referid":0,
+"roomid":0,
+"sender":1688850xx28682,
+"sendername":"5bCP6YKq",
+"sendtime":1639363616,
+"seq":8513917
+}
+},
+"type":11161
+}
+发送视频号直播消息
+请求
+{
+"data": {
+"conversation_id": "S:7881300714912093_1688850535328682",
+"avatar": "http://wx.qlogo.cn/finderhead/ver_1/uKX9myKKepcU56XhO5XM6YxvSyD6TV3ZAJnqUMzV3kXAibmtcZ0882EOU8rUCibD5NibCyAy0TL5GIevM0owSrTx2FXZwIe4ORb0QecRAXmXos/0",
+"cover_url": "http://wxapp.tc.qq.com/251/20350/stodownload?encfilekey=oibeqyX228riaCwo9STVsGLIBn9G5YG8ZnJujjw3bicy2C6VG5mQPSicDYVCVOhia6jbuX6P7RFZLzkVV2FiaOWgVXWd7MGM4tYFicBEmb781ZJicfOxUEN56wmOJvg7MdhONhYMkzC06To9PVM&adaptivelytrans=0&bizid=1023&dotrans=0&hy=SZ&idx=1&m=8d80177b490d9d27c78d3ef4d6e80ef3&token=x5Y29zUxcibB90eQl2iao3wM9KWnEdVy6khUsCxbwS6xG9OQnXMU4Snahdia1hjibCIB9x0CDPG7dibY&finder_expire_time=1657090220&finder_eid=export%2FUzFfAgtgekIEAQAAAAAAE-Ixm2BRsAAAAAstQy6ubaLX4KHWvLEZgBPExYM4dVgyZY6DzNPgMIAUe9mrgQQscNXyDyQgHbOX",
+"desc": "下午好",
+"extras": "",
+"feed_type": 9,
+"nickname": "星子Stella",
+"object_id": "13895574026529675281",
+"object_nonce_id": "13435211891441762521_0_0_0_0",
+"thumb_url": "http://wxapp.tc.qq.com/251/20350/stodownload?encfilekey=oibeqyX228riaCwo9STVsGLIBn9G5YG8ZnJujjw3bicy2C6VG5mQPSicDYVCVOhia6jbuX6P7RFZLzkVV2FiaOWgVXWd7MGM4tYFicBEmb781ZJicfOxUEN56wmOJvg7MdhONhYMkzC06To9PVM&adaptivelytrans=0&bizid=1023&dotrans=0&hy=SZ&idx=1&m=8d80177b490d9d27c78d3ef4d6e80ef3&token=x5Y29zUxcibB90eQl2iao3wM9KWnEdVy6khUsCxbwS6xG9OQnXMU4Snahdia1hjibCIB9x0CDPG7dibY&finder_expire_time=1657090220&finder_eid=export%2FUzFfAgtgekIEAQAAAAAAE-Ixm2BRsAAAAAstQy6ubaLX4KHWvLEZgBPExYM4dVgyZY6DzNPgMIAUe9mrgQQscNXyDyQgHbOX",
+"url": "https://channels.weixin.qq.com/web/pages/live?eid=export%2FUzFfAgtgekIEAQAAAAAAE-Ixm2BRsAAAAAstQy6ubaLX4KHWvLEZgBPExYM4dVgyZY6DzNPgMIAUe9mrgQQscNXyDyQgHbOX"
+},
+"type": 11196
+}
+返回
+{
+"data":{
+"is_svr_fail":false,
+"msg_data":{
+"appinfo":"Q0FVUXBPWGFqUVlZMUtXbmpkc3ZJQWs9",
+"asid":0,
+"content":"ChdodHRwczovL3d3dy5kb3V5aW4uY29tLxI1aHR0cHM6Ly9iLnpvbC1pbWcuY29tLmNuL3NvZnQvNy85MDcvY2VDNEh0ZlFxa2lnYy5qcGcaCeaKlumfs0FQUCIn55So56eR5oqA6K6p5aSN5p2C55qE5LiW55WM5pu0566A5Y2V77yB",
+"contenttype":13,
+"custom_service":"",
+"devinfo":65537,
+"extra_content":"",
+"flag":16777216,
+"id":1098795,
+"image_url":"",
+"innerkf_vid":0,
+"messagetype":0,
+"readuinscount":0,
+"receiver":7881302xxx98,
+"referid":0,
+"roomid":0,
+"sender":168885053xxx82,
+"sendername":"5bCP6YKq",
+"sendtime":1639363237,
+"seq":8513915
+}
+},
+"type":11196
+}
+CDN
+C2cCDN上传资源
+请求
+当file_type为1时， 可以上传图片(包括gif动图格式)
+{
+"type":11115,
+"data":{
+"file_path":"c:\\Users\\evilbeast\\Pictures\\750x1250-1.jpg",
+"file_type":1
+}
+}
+返回
+{
+"data":{
+"error_code":0,  // 为0是上传成功
+"file_aes_key":"39373437333363346461613761633761", // cdn文件密钥
+"file_id":"3052020102044b30490201000204283cabaa02030f424102049cd366b4020461b698dc040d3136333933353636333438383602010002030ec8700410059b34e084cf19a38a92a677177863d20201010201000400", // cdn文件id
+"file_key":"1639356634886", // file_key
+"file_md5":"059b34e084cf19a38a92a677177863d2", // 文件md5
+"file_path":"c:\\Users\\evilbeast\\Pictures\\750x1250-1.jpg",
+"file_size":968802,   // 图片大小
+"file_type":1,
+"image_height":1250,  // 图片高
+"image_width":750    // 图片宽
+},
+"type":11115
+}
+C2cCDN下载媒体文件
+请求
+当接收到的消息中cdn_type为2时，使用c2cCdn下载
+{
+"type":11170,
+"data":{
+"aes_key":"61316639333163346262363730326261",
+"file_id":"3052020102044b30490201000204283cabaa02030f4241020436c16eb4020461b453fb040d3136333932303739323932303602010002030ec8700410059b34e084cf19a38a92a677177863d20201010201000400",
+"save_path":"e:\\cdn\\1.jpg",
+"file_size":968802,
+"file_type":1
+}
+}
+file_type值如下：
+返回
+{
+"data": {
+"error_code": 0,
+"file_id": "3052020102044b30490201000204283cabaa02030f4241020436c16eb4020461b453fb040d3136333932303739323932303602010002030ec8700410059b34e084cf19a38a92a677177863d20201010201000400",
+"save_path": "e:\\cdn\\1.jpg"
+},
+"type": 11170
+}
+WxCDN下载文件
+请求
+当接收到的消息中cdn_type为1时，使用WxCdn下载
+{
+"type":11171,
+"data":{
+"url":"https:\/\/imunion.weixin.qq.com\/cgi-bin\/mmae-bin\/tpdownloadmedia?param=v1_84d696afdc73fbf997931c6eb898facc4830ae5cb891060fdd5cca540beccd2de56cbc84207058d80f2af266f925e458ca19263f710bc0905881589f0b816c5def9bb2a039e0127bb680b6f3c8db2f93abf477d369374598cea92a001adf3f5977ba47cfa347643a36b05f96c4fa54ebc7f4f00767a0ba2a859ac82b6c0e9efacd07eb5c15c098837f4a19f27a0a897a890394f88ae7dd215f75e4199ac4c5e9c893358e5aee215a07ac0882aad2e72e249cacaaf0e2929ebf15dc147fceb386f8560923cba106cea3f5c0548ace640455df853ab7606f6e88acf48cdcb9593d7873c487536327e8988d969a360da527c09d7765dfc382ed98071720c3b3ba108cc2c3504907d095575676333a64ae6a2fdf9a2af2138e1c0d953a56d6a3c281348a7e71fd10f7b80220e4b4a4c1473ac5f00e07d132ad000289d96bd8abc40a",
+"auth_key":"v1_84d696afdc73fbf997931c6eb898facc4830ae5cb891060fdd5cca540beccd2d2d7fa866eb7f785638f4c69ac9c904a43685d48a39b7162bbab469dc884dd1e8",
+"aes_key":"9385a744af20cba0e59a52d51e3cacd1",
+"size":16504,
+"save_path":"e:\\cdn\\3.jpg"
+}
+}
+返回
+{
+"data":{
+"error_code":0,
+"save_path":"e:\\cdn\\3.jpg"
+},
+"type":11171
+}
+通知同步事件
+登录
+接口就绪通知
+当接口就绪后的通知，是最早的一个通知
+{
+"data": {
+"pid": 27620
+},
+"type": 11024
+}
+登录二维码通知
+通知示例
+file为二维码文件
+code 是二维码的内容，可以自行生成二维码图片
+{
+"data":{
+"code":"https:\/\/wx.work.weixin.qq.com\/cgi-bin\/crtx_auth?key=AC217979C446C3F003BF4B12B4F7A8AA&wx=1",
+"file":"C:\\Users\\evilbeast\\AppData\\Local\\Temp\\qr.png",
+"key":"AC217979C446C3F003BF4B12B4F7A8AA"
+},
+"type":11028
+}
+登录二维码状态通知
+通知示例
+{
+"data":{
+"auth_deviceid":"",
+"corpid":0,
+"easykey":"",
+"gid":0,
+"gid_sk1":"",
+"gid_tgt":"",
+"icon_url":"",
+"is_bind_wx":false,
+"keep_sec":0,
+"lang_type":0,
+"logo":"",
+"nick_name":"",
+"qrcode_key":"2D1BF812D2E7F56BED5276EE7E1C5833",
+"sk1":"",
+"st_gid_ticket":"",
+"status":0,
+"tgt":"",
+"vid":0,
+"wxlogindata":{
+}
+},
+"type":11174
+}
+当用户扫码，显示头像时通知
+{
+"data":{
+"auth_deviceid":"",
+"corpid":1970325xxx41886,  // 公司id
+"easykey":"",
+"gid":0,
+"gid_sk1":"",
+"gid_tgt":"",
+"icon_url":"http:\/\/wework.qpic.cn\/bizmail\/IHgRKfv9SqpPJEZUfiaUfqMkckbS0ELewgZkibwCwwxxxxwx":false,
+"keep_sec":0,
+"lang_type":0,
+"logo":"https:\/\/p.qlogo.cn\/bizmail\/1icHEZ7oxxxic8d5PQsYBjI6YtiaMz3qP2JUfiafn3xxxyfQNa4sg\/0",  // 公司头像
+"nick_name":"小邪",
+"qrcode_key":"2D1BF812D2E7F56BED5276EE7E1C5833",
+"sk1":"",
+"st_gid_ticket":"",
+"status":1,
+"tgt":"",
+"vid":168885xx28682,  // 用户id
+"wxlogindata":{
+}
+},
+"type":11174
+}
+用户登录成功通知(无公司名称)
+通知示例
+从扫码登录或已经登录的企业微信，都会触发这消息
+复制{
+"data":{
+"account":"xxxxxxx@qq.com",
+"acctid":"Hoxxxxxui",
+"avatar":"http:\/\/wework.qpic.cn\/bizmail\/IHgRKfv9SqpPJEZUfiaUfqMkckbS0ELewgZkibwCww80DM808qnyFVjQ\/0", // 头像
+"corp_id":"1970325xxx44117", // 公司id
+"document_root":"C:\\Users\\evilbeast\\Documents\\WXWork\\1688850xx9189", // 数据目录
+"email":"4xxx236@qq.com",
+"job_name":"",
+"mobile":"手机号",
+"nickname":"",
+"pid":27536,  // 进程id
+"position":"",
+"sex":1,
+"user_id":"1688850xxxxx189", // 用户id
+"username":"姓名"
+},
+"type":11026
+}
+用户登录成功通知（含公司名称）
+通知示例
+从扫码登录或已经登录的企业微信，都会触发这消息
+因为公司信息的获取，需要延迟，所以提供这个消息
+{
+"data":{
+"account":"xxxxxxx@qq.com",
+"acctid":"Hoxxxxxui",
+"avatar":"http:\/\/wework.qpic.cn\/bizmail\/IHgRKfv9SqpPJEZUfiaUfqMkckbS0ELewgZkibwCww80DM808qnyFVjQ\/0", // 头像
+"corp_id":"1970325xxx44117", // 公司id
+"corp_name":"公司名称",
+"corp_short_name": "公司简称"
+"document_root":"C:\\Users\\evilbeast\\Documents\\WXWork\\1688850xx9189", // 数据目录
+"email":"4xxx236@qq.com",
+"job_name":"",
+"mobile":"手机号",
+"nickname":"",
+"pid":27536,  // 进程id
+"position":"",
+"sex":1,
+"user_id":"1688850xxxxx189", // 用户id
+"username":"姓名"
+},
+"type":11179
+}
+用户退出通知
+通知示例
+当用户手机端退出，或切换企业都会触发这个问题
+{
+"data":{
+"user_id":"16888xxxxxx"
+},
+"type":11027
+}
+通知示例
+当用户手机端退出，或切换企业都会触发这个问题
+复制{
+"data":{
+"user_id":"16888xxxxxx"
+},
+"type":11027
+}
+消息
+文本消息
+{
+"data":{
+"at_list":[],
+"content":"hello world",   // 消息内容
+"content_type":2,    // 消息类型
+"conversation_id":"S:1688850xx328682_78813xxx83912998", // 会话id
+"is_pc":0,   // 是否从客户端发送
+"local_id":"2819", // 本地消息id
+"receiver":"1688850535xxx",  // 接收者id
+"send_time":"1639407098",  // 发送时间
+"sender":"78813022839xx",  // 发送者id
+"sender_name":"小邪",   // 发送者姓名
+"server_id":"1099017"    // 服务器消息id
+},
+"type":11041
+}
+图片消息
+dn 是图片cdn参数
+url,size是大图cdn参数
+md_url, md_size是中图cdn参数
+ld_url, ld_size是缩略图cdn参数
+可以使用WxCDN接口下载相应的图片
+{
+"data":{
+"content_type":101,
+"conversation_id":"S:16888xx682_788130228391xxx8",
+"is_pc":0,
+"local_id":"2820",
+"receiver":"168885xx328682",
+"send_time":"1639407252",
+"sender":"788130xxx2998",
+"sender_name":"小邪",
+"server_id":"1099020",
+"cdn_type": 1,  // 1 wxCdn, 2 c2cCdn, 3 bigCdn
+"cdn":{
+"aes_key":"9c81aab279db832121a167dee95cadfe",
+"auth_key":"v1_84d696afdc73fbf997931c6eb898facc4830ae5cb891060fdd5cca540beccd2df624657529a8fdf135c2765fe8a71cdbd66c4600ae446d4099d53d0247dc7a70",
+"ld_size":3113,
+"ld_url":"https:\/\/imunion.weixin.qq.com\/cgi-bin\/mmae-bin\/tpdownloadmedia?param=v1_84d696afdc73fbf997931c6eb898facc4830ae5cb891060fdd5cca540beccd2dc9c57df1d724e387e7cb93bc873bc0f28cfac9f4195e7ecf6bb9bffb63c4c7f01b1bc82cbb017a63a0403e60d3490d5ef6efb9505d087b9e0c9881a3981fe161933bbbbcfdbd265026c06dd7e991776ad0998a8ef5765d900c5dacd0a3064d1e4d20f1fccafc72f838501fdc0ef8ef0f54a7dad493ac1660b5a5c509c0e3b3138268b52caaf1462ee7cf1b2bce6dc0a49c572349b9535a387503871aedfc226f6906b71d06ce12b3580d38bd58b508599737e46ed3fc2f7fccfc1a1802b5370687bcf49736182e91df1172aac352e220",
+"md5":"8884990c7174278280bc67037d1d3267",
+"md_size":3281,
+"md_url":"https:\/\/imunion.weixin.qq.com\/cgi-bin\/mmae-bin\/tpdownloadmedia?param=v1_84d696afdc73fbf997931c6eb898facc4830ae5cb891060fdd5cca540beccd2dd755fc30a546c7050c628f0db8b92ae9172c4c8b52606d5c2725949fa945c3b7063306f0c2fe4c83c5e19126a8d5328447599cebc567ab8a550a437589b64dbc165a9c106b0fec80eeee00932045161fe31a935dbdb83204d214acab56063040d060ea3853d56882ee3d8d516a54a75c49b8825cb9f8373214774549d1a2ca0e2025102129951919bef1567414c70e7f08c0739c62f70c816b780e0082eb076d5e98360b7716b44b05c2b666f1f5e54cfe2dfea0dc56a7b0297f16799dd050de5d55d688229666a670538667972b84e4",
+"size":18266,
+"url":"https:\/\/imunion.weixin.qq.com\/cgi-bin\/mmae-bin\/tpdownloadmedia?param=v1_84d696afdc73fbf997931c6eb898facc4830ae5cb891060fdd5cca540beccd2d4fed696ee3ec30cde3864d2d0bfa6432b31dc035d757af9b61055838044410ddaf3382de7252efc7478eff1e5bf9d8cfc0a5ffa6e94c275dcf411edac466c515d0de75d31276dd6242e523976e49e6698ec150e3dd1afdcc9a5d07befe2d7ae0684874b036046cd5d18ff9ab7d04443a90d9d901aa480853ff0b23ac1a9225fc3e352bf1508877667d0f71494e8791ac0b0394c04a16feab00a2d9274df7d3bfdafa336b438e88050934198fc72023a6e5531207aa66ff571f222c181f9f8caa4e526a6e93429f79e2b230cd3ad0cdfe"
+}
+},
+"type":11042
+}
+链接消息
+通知示例
+{
+"data":{
+"content_type":13,
+"conversation_id":"S:168885xx8682_788130228xxx998",
+"desc":"",
+"image_url":"",
+"is_pc":0,
+"local_id":"2821",
+"receiver":"1688850xxx8682",
+"send_time":"1639407580",
+"sender":"7881302283xxxx2998",
+"sender_name":"小邪",
+"server_id":"1099023",
+"title":"据说思乡有八百多种，你是哪一种？",
+"url":"http:\/\/mp.weixin.qq.com\/s?__biz=MTI0MDU3NDYwMQ==&mid=2657210171&idx=1&sn=ba8436a94914948d0ace62bc2d4fe101&chksm=7a5b32dd4d2cbbcbea2e14e0f067133ff0d74e7f87b5020e52cae84e06f8105f5c735879289f&scene=126&&sessionid=1639407574#rd",
+"cdn_type" : 0
+"cdn":{
+"aes_key":"",
+"auth_key":"",
+"size":0,
+"url":"https:\/\/mmbiz.qpic.cn\/mmbiz_jpg\/oq1PymRl9D58P1dxgJCW4ysxCGYWgVzMfaONib0w41Xib5JQ1iaWOgJKWLmNic1xVwCl2msJQic0tsS8kqUhPe3ftIA\/300?wxtype=jpeg&wxfrom=0"
+}
+},
+"type":11047
+}
+GIF消息
+通知示例
+复制{
+"data":{
+"content_type":29,
+"conversation_id":"S:1688850xx8682_78813xxx3912998",
+"height":450,
+"is_pc":0,
+"local_id":"2822",
+"name":"动画表情",
+"receiver":"1688xxxxxx682",
+"send_time":"1639407654",
+"sender":"788130xxx98",
+"sender_name":"小邪",
+"server_id":"1099026",
+"source_type":102,
+"type":2,
+"url":"https:\/\/wework.qpic.cn\/wwpic\/wwwx_f2e79eaafc0a12dc6e382e6ff361bffb\/0",
+"width":600
+},
+"type":11048
+}
+文件消息
+通知示例
+通过wxCdn下载接口下载文件
+复制{
+"data":{
+"content_type":102,
+"conversation_id":"S:1688850xx82_78813022xx998",
+"is_pc":0,
+"local_id":"2823",
+"receiver":"16888xx328682",
+"send_time":"1639407706",
+"sender":"78813022xx2998",
+"sender_name":"小邪",
+"server_id":"1099029",
+"cdn_type" : 1,
+"cdn":{
+"aes_key":"901e7f14fcd5edca41b63f88fabaf2e1",
+"auth_key":"v1_84d696afdc73fbf997931c6eb898facc4830ae5cb891060fdd5cca540beccd2d4dfcdfccb3fee1ae235af88d4b6b58235ad38d6ca1ebec83740747abeb9ba310",
+"file_name":"HttpCanary.apk.1",
+"md5":"59f9ca6f053d76afd17132b4f78c4c1b",
+"size":9957248,
+"url":"https:\/\/imunion.weixin.qq.com\/cgi-bin\/mmae-bin\/tpdownloadmedia?param=v1_84d696afdc73fbf997931c6eb898facc4830ae5cb891060fdd5cca540beccd2d43f1d5e6d03c22235d1882ffb730d6828bbc770e5c8762ae84b515c47c2e102d241c2eee181591b5762aef3806ebe71778f7b62f466439ddcd8519eb33b697024e856ac48f314f561544a7884f650494f3fcfbf1528c930f73832d32a2a4c5aa4e87856e7a53eb3a57d89d542331b7e056a97135232839442a2b7d0ff6f13e780efa77dd28c3bd12f67f5c5593762cec96865657bc6aeb0b44f6ea960257f428742c406fc2dcd767a63d04b7a01bd9eb7f099c74fea522160d8a77504b31906c2a574e2f66ecd6253dd29698732ebe4b"
+}
+},
+"type":11045
+}
+视频消息
+通知示例
+复制{
+"data":{
+"content_type":103,
+"conversation_id":"S:16888xx2_788130228xxx12998",
+"duration":15,
+"file_size":1043363,
+"height":0,
+"is_pc":0,
+"local_id":"2824",
+"receiver":"16888xx8682",
+"send_time":"1639407800",
+"sender":"7881302xx98",
+"sender_name":"小邪",
+"server_id":"1099032",
+"width":0,
+"cdn_type": 1,
+"cdn":{
+"aes_key":"1a7a19b30e56200d12a175be19de59cc",
+"auth_key":"v1_84d696afdc73fbf997931c6eb898facc4830ae5cb891060fdd5cca540beccd2de52564de133cf19ee5ea80775ceb70f7b139872dcfcc6ede751b9b2086b74f6c",
+"md5":"ec8ea598dfbde57970f8018069ec378f",
+"preview_img_size":2239,
+"preview_img_url":"https:\/\/imunion.weixin.qq.com\/cgi-bin\/mmae-bin\/tpdownloadmedia?param=v1_84d696afdc73fbf997931c6eb898facc4830ae5cb891060fdd5cca540beccd2d2ddab6162fdd3427e81a1ae5dbcad12358e9dec3778c65e55408d08440b03b0031850fc794ab3c68e2fef0df44e83dd8bd29f1e0f9e13e425a329b9bdfed8ed8c6800f8da16c219ceb69f037b35da7a2a47f723624e84acd57b058ad7648bcdd486e54bff62ed6fee3d44fe566207101c8f785e5bc7cdb600b7c157acb88bf158ae1792c2038d6155a929553fa352cc6cd5e2e42d4880dc814d231069e08f81fa6d108c4e568f72ba545765e46103eb5fa795a1158b0bada68a5483f8e7ae10f8999d2c1f119c9d2a1d082e3509cfb7f",
+"size":1043363,
+"url":"https:\/\/imunion.weixin.qq.com\/cgi-bin\/mmae-bin\/tpdownloadmedia?param=v1_84d696afdc73fbf997931c6eb898facc4830ae5cb891060fdd5cca540beccd2d8e3bf620dba09b2d39c4a84d0c952b7a878df830c0208b23db99b4d8e2a09d32320fd4886a043754b037c25e0ad3b59a3a773148b11a8438f8f77893ea639a73de77e07fee289282ec47b209f7609d677df8245d9762662f863483b137bd82f85727d6e7d4d0e296d5192bac9fc6a20ed9b004827226fa51b9d2020c8a3f2254b6c4217de5aba7cba24a75c929ec900eb8ef34cb89360274dffcfc73d0d8979cc6b4f55b52bf96d3303a8d27fa6ff59dee27eafe9e259d80099450b6e1f89034fb4b16f0c4cbbf03e02059d11d75a219"
+}
+},
+"type":11043
+}
+名片消息
+通知示例
+复制{
+"data":{
+"avatar":"http:\/\/wx.qlogo.cn\/mmhead\/PiajxSqBRaEL1Inz8icSQgSJ4rV44UcaNWVPWGmiaTEhpfSdcxxTg\/0",
+"content_type":41,
+"conversation_id":"S:168885053xx682_7881299xx021868",
+"is_pc":0,
+"local_id":"2699",
+"nickname":"贝朗",  // 名称昵称
+"receiver":"16888505xxx82",
+"send_time":"1639318149",
+"sender":"788129952xxx8",
+"sender_name":"小邪",
+"server_id":"1098527",
+"source":"微信",
+"user_id":"788129xxx2928"
+},
+"type":11050
+}
+小程序消息
+通知示例
+{
+"data":{
+"appicon":"http:\/\/mmbiz.qpic.cn\/sz_mmbiz_png\/yLCrZFCQoB76U8YoQ6DPuCNGS4awVYOYGxEGnhRU7khicmowj4ty341Oydl5xE9uuoIl1wK7amDVQoQ79vkzO3g\/640?wx_fmt=png&wxfrom=200",
+"appid":"wxe9714e742209d35f",
+"appname":"唯品会特卖",
+"content_type":78,
+"conversation_id":"S:168885xxx8682_788130xxxx12998",
+"is_pc":0,
+"local_id":"2825",
+"page_path":"pages\/index\/index.html?chl_type=share&chl_param=1627909475937_4a258ff09c0a487fa7f0815106273b4d%3A1639407978077%3APzonl",
+"receiver":"168885xxxx82",
+"send_time":"1639407981",
+"sender":"78813xxxx12998",
+"sender_name":"小邪",
+"server_id":"1099035",
+"thumb_width":100,
+"thumb_height":100,
+"title":"唯品会 · 品牌特卖 就是超值",
+"username":"gh_8ed2afad9972@app"
+"cdn_type": 2,
+"cdn" : {
+"aes_key":"6C7563736E666A6566696B6C716D6D65",
+"file_id":"306b020102046430620201000204af00072602031e90380204ecc7f46d020461b7616d0436323933363031343633305f313832393236373539395f613037626133323031303431653363636535376161636531656633356334663802010002030160b004000201010201000400",
+"size":90276,
+}
+},
+"type":11066
+}
+通知示例
+{
+"data":{
+"appicon":"http:\/\/mmbiz.qpic.cn\/sz_mmbiz_png\/yLCrZFCQoB76U8YoQ6DPuCNGS4awVYOYGxEGnhRU7khicmowj4ty341Oydl5xE9uuoIl1wK7amDVQoQ79vkzO3g\/640?wx_fmt=png&wxfrom=200",
+"appid":"wxe9714e742209d35f",
+"appname":"唯品会特卖",
+"content_type":78,
+"conversation_id":"S:168885xxx8682_788130xxxx12998",
+"is_pc":0,
+"local_id":"2825",
+"page_path":"pages\/index\/index.html?chl_type=share&chl_param=1627909475937_4a258ff09c0a487fa7f0815106273b4d%3A1639407978077%3APzonl",
+"receiver":"168885xxxx82",
+"send_time":"1639407981",
+"sender":"78813xxxx12998",
+"sender_name":"小邪",
+"server_id":"1099035",
+"thumb_width":100,
+"thumb_height":100,
+"title":"唯品会 · 品牌特卖 就是超值",
+"username":"gh_8ed2afad9972@app"
+"cdn_type": 2,
+"cdn" : {
+"aes_key":"6C7563736E666A6566696B6C716D6D65",
+"file_id":"306b020102046430620201000204af00072602031e90380204ecc7f46d020461b7616d0436323933363031343633305f313832393236373539395f613037626133323031303431653363636535376161636531656633356334663802010002030160b004000201010201000400",
+"size":90276,
+}
+},
+"type":11066
+}
+视频号消息
+通知示例
+复制{
+"data":{
+"avatar":"http:\/\/wx.qlogo.cn\/finderhead\/98Nz5LFElxy52vwoicInGTY5DIt2gcvj7K19yibc0axW6ARtSF8icBWcA\/0",
+"content_type":141,
+"conversation_id":"S:1688850xx2_7881302283xx8",
+"cover_url":"http:\/\/wxapp.tc.qq.com\/251\/20304\/stodownload?encfilekey=rjD5jyTuFrIpZ2ibE8T7YmwgiahniaXswqzv6bW118niaoUuZtsM9vJEDP61J01zLGiaHTbR0d00VcbO7uTscwibibHYb0fbuQ9oWlCNibRjqReXUqM&adaptivelytrans=0&bizid=1023&dotrans=0&hy=SH&idx=1&m=&scene=0&token=AxricY7RBHdXVEgMYiahMRju4usjnMDmfvUIhIkaOa8qL61MjdP1WbtKG7gzibx6TBNwryGwql5lnc&finder_expire_time=1640012841&finder_eid=export%2FUzFfAgtgekIEAQAAAAAAL3g1-GkDsAAAAAstQy6ubaLX4KHWvLEZgBPE1YJEBhhWbMj9zNPgMIAcUmbEgrgbsrYqsnwkUBiJ",
+"desc":"Note 11 系列 120W 神仙秒充小剧场，5 个关于超级速度的小故事\r\n?深度诠释：什么叫速战速决，快到想不到！",
+"extras":"CAEQACKuFwAE9OmXBAAAAQAAAAAAbGk3vHhq0dqrbalht2EgAAAAaeq5SzX7s7sPwaz04zCEwYwyALHFYGIb\/l1etP1AtP1tGDa5lWo0wVLweieXaJyyyE4BdumgiONjSMgTcoVFGqNAeJSYwgYFeZQQ41KoeAK9e2JZXMza+LZuotsNmW3cxkxXcajc670SdduYZvaqPUh1e2J+AYC0eAvEmhbGDCMzd2b1PpJnlriDiJ2Np5Q96sbrAn7Im5HA3Qs22+zdoCHgD9P\/GGVmDkxdTudX+BRYlL3270nhOqBUlkca\/xiRnW+Pn9w+IWiVQPDAAOOLH\/gPmV4xHuAujXEHIhjZz0ZtKvV3kXRLPuuQQvALcI2Pr6dowAQuZdsoylsyTKZLGEK+pApavBzCd0dxeH7eMqYUfLcot5HfmNqGEw5OCCfzk0spIZfxI1G+GfpVcIthw2mag4I9\/nOMsL2Qw0YC\/nx0vz6VL3qgkKq7U9MSuizcO7kM5LsC5zZgsuBIhtN6IyxUoSkMkyoRAtL24\/RsdyhGP7soBd27kqUYfoHOruo\/69+3ebd2XX5JDGmeYx9TxtKUecX4D+aOSb3teLFbNSdhV3klobypko5wBrxHND0If5D8H\/XGo5xbRGKIXlStXJOmBgqQ74IpWU5MM05Ms1FyGxlxjmJ4qiLs51t0SOkG\/Qog2WBHQSQGXZdv4nj+iggORFhHHP\/gL8D6ZZ\/E+\/ksseQh4nHILIoBgit8XdzRtAmEaXT\/gGqMwwbNHERaW\/x4jGzi8iUF2KlmBPTE4snYGPadt9fGdTxK5jgIlXaUfISZsE7XcHo2S+tHDLcN4Y6YwjVRy9aRU5L7wED0KY9h6giHFSByPu1OrayykS\/5f3EIzghu823mB+l4vtRdbt\/kK+qENbniflsC6zTMrR7CzERkvKsfOTA8xt\/4y3jNCeMZweboL1GzOsFwHQpX4\/+WHp3EblQcy4XyR8tDu5HdqH\/M0a1kf52GlX9sj3WmUnUt9YXLR7MOiE9XdLfKzoVhVAa\/hzVgX\/NiUqy9JCZsowbSNf2W0v2gn6X0K73nDFaxFSscI42LYnk7rhcHVX6bOTRNM58zxtgpIcaEJG4DYUxDBJQNUoFkWKo5lCHlro4RPF9vHoW7EwwfFLiX55wmgqVBZTNhda\/pG+HoJ8JFijSSI6VEW+8zDO8mhnb4I0wnmjYdOoitXnHg71Rlo4uuI2BrNDi8ybDVsMr9BQXOXwdGhXdjfJA3TK1i3KPUVVZQVV59B\/vYReiAcpu7XP3Wspg17pUq5xE8IValC9FJl0rFT58+Q7r0kfQAvoegx\/NdbvyC2039ucOZiD4LMblPcGaW9zn8Jg9OVMNZOCttc+\/S8+B4De+SIO2TjHPLxxEey8GrHIKqegRAIdFl2yIGWs9lc03QOIHsv8wS5WUCTDXpW0ogQJZ7YA0scwq1PDqEed0ttGOshcMO\/9jpj4w925Juyj7Ub8zJZ7N1tAMZqpIfGz3hndrDYGuh2BmuL6uxpjN8dpPEZxYRdD9tG5Zfi8ZM4YZuYEs8+Q5Smz8qVJzbo8MJYSeRowkpjFVJkQPrYx9fOOAonb1lP3FNT2U4H6PMcc8HDOdpm7Jt0OajRQvIKEtWCHALxlP9VdtmI3uy1JpZNS\/waB0De8\/S7z337dg130jO4juKF\/9M+pkXzuZv0jjpLMK5KwLzh3SpCD1D7MAxQPcNfEj0stlti2rfvU2Gp7+\/SylMXQCU9sqhnSjeu4FD283\/2frUHjR3xEQO0X+88UmM3WBdzSqG02TZndkr1B36FGtih98gXdQdGs74QpZMUazNfH\/ULDDNUldvhlZjj5i8WKdNqHlbUD3SUrirXSQI\/QSGFF4HfP5Bz7HiVG9g47opjIFqKe3v1tr+6t6JhjE70poLQBsKAaP\/KXnbhZP3Smb0aqWGUW5BKgsy9hL0Df18XpuBz9U7eJll6WTPcsOsxRPy4dbZ6l34KxQEyj6wTdQp1J7\/iMrihneD3f3QoVI5bJgn9JMg6k3ZE\/zqOLak8g\/Jf3NP0+O7ddAp\/QOfFE4zZF9QTxB57hNTe3wdArSJzziMgsAWWOtLyQ6HlC2zzarVDjUKlpuBfwIstnXtC\/qsECJRc4P4\/jq1hmwUgvSKTniwINlxE4XDSBKr9x7wtrZAmUow7acIS2cQA3rNEtbFereMOWU49scjTjptrivArvoXv9s90+iREENU5E\/LG3Uk6geFQcsbbvY\/vYSmbqDuZ6czySGvayB16tNJtudR+6QOWl04iU1aDZ1mOvqZklrc4DgLFQ8WsO1v3duks++mww\/xdDhfAqfE04YFIiSMuRwOXm5x4xKcoRdru8PVGAHrbiCF13pVJF7MQ3c9784Oe5qtgVQbR\/cLsm2onZkdcsvWILEKTlmCERO4cBwoAId\/hb\/odqkL5\/fkGRXnnFSvu1gzGB3n6WveE9frgVBaybPCzBiYxU+K+FsJsrGEraO\/vp1WpgO+GP7ZHia1oAH0V0udtUI3l6mXY\/yDSBwTt1q3MrengDx9lxuk4YuNUQx9n77NXchc2WxaYEF3nP4SJ13JrKv\/x6awdVJAbjdlAcObHl4WUDo7tkeEUvu2qbijrsNQkCf60lRInznA9eFsn21WFYaCD4ioJN5ystO0KzxQYBX17dlh+6fJ\/vR1JH0wf81fYpmlOJ742IRUfi3wanE9nmqHfXN9bHL+w6\/H6EBNOBHQgsrbAQgYplOd2rkl+OlDRoCSO9ncSKLlX1vsujK7VeeaBalhXdNDOKU\/hRpTZ4iLJzOjPNtap\/mxmlUjGH1wPhZtt99KqVqJFxSKEQ9W8VdM+8JFjcm7LoNyVYv6bZ1MCAhnhZXOACKC09EcBpgDjmN\/l2TSO\/JmCY\/c5PD3apO2oymjEEvitwsfCK+soMYzkvKc6t4+lDrVHm41p3VOUHqgKNf+LDsFHsSxjokrcgt73bi7qzAjK3yvgni6PX\/vu2KCnQr0IdbW85Kk+y0gjYzunyuUdUPJSgIhma8lRmbcIODtvVh2X85iwAbJkPjQfBlJ1kOPbFeS8ie6NLraKkX+cPUcYI5Jed\/TuHeDQLTxNWJQ6seEysFFLMnYXdgiL9WgA9hNfyGlGV6mnx3Q\/aCNsKBbB5cqhe2TMrQlWPde2XirIyH11vARVLFXBYHerOqKvaDSEPycNS3VIqoVzyLzzcPJG4UQrCGL3fuCI73IGU1v+exOzPZT6ujuBMQP2mQPZ0RA1GbtIy0kcx1PLgCouO3D9xvxAKxjcvZfQRdy96HXItRe8SwN0+a4gZmbSoR9C55ekwnem9s7seO3LvEuFcFLF4KXSAn5qN4V69yD+jq3qzNThY5IocwiYS+xwVIRgg65ozDqaChGVvkjJwyxaEPSo0WTgWt0+Bl0IvEiFTOgW1YUKwM9bxII9XuVY88+rMddTmH7U1xvyAUIOpS53RQj3Ja3SGw6hwG37plewXpP7bm7B8GxvnKFQKnh9pSLW0Sn2JVmhDYsGH5PfXNUamPlurTnf35stlUgm06+g+9Bt9vKJkmqpbuiiQGWEzvhPllvxc9RzZvGpj8w9IFDNJjNlz6m9bK\/WFJBLclx7dQyGa7a2W7BRBnh5TDxiLN3Nq\/DtGngcEf3krxRIcCA2+z38Pl6Q3UpVe\/Lma4vkf6UsUA5FkQu07TKwlpeCi3SG\/g0HCbvk0p+yJlyCjh7ByOHsQF\/3zaESO8vwsYIhiXzNNt5HPbDXOTgybs0qcIj\/2vMOzFnX78AegJu9Y+J3SosvxmlpKnSh0lr4i5QsMfCTJ3FwkDp3WT4EC94ElrM1p4reqky1ccrcB\/aebke6yIZ2q4hfV\/wHDd1D8bc+fRHmnxl44bPQ+EGFkziB12CMEqKtRQRoI6hGibwraSPAWN9Z8c+yl0\/N\/Di45sJ\/71xfp\/L8EBugTZKbiNqM7nCBa9c2CH30+02zjc8qhwyRLkYkpKnVdSzC+qUKAA=",
+"feed_type":4,
+"is_pc":0,
+"local_id":"2826",
+"nickname":"Redmi红米手机",
+"receiver":"1688850xxx8682",
+"send_time":"1639408041",
+"sender":"78813022xxx98",
+"sender_name":"小邪",
+"server_id":"1099038",
+"thumb_url":"http:\/\/wxapp.tc.qq.com\/251\/20304\/stodownload?encfilekey=rjD5jyTuFrIpZ2ibE8T7YmwgiahniaXswqzv6bW118niaoUuZtsM9vJEDP61J01zLGiaHTbR0d00VcbO7uTscwibibHYb0fbuQ9oWlCNibRjqReXUqM&adaptivelytrans=0&bizid=1023&dotrans=0&hy=SH&idx=1&m=&scene=0&token=AxricY7RBHdXVEgMYiahMRju4usjnMDmfvUIhIkaOa8qL61MjdP1WbtKG7gzibx6TBNwryGwql5lnc&finder_expire_time=1640012841&finder_eid=export%2FUzFfAgtgekIEAQAAAAAAL3g1-GkDsAAAAAstQy6ubaLX4KHWvLEZgBPE1YJEBhhWbMj9zNPgMIAcUmbEgrgbsrYqsnwkUBiJ",
+"url":"https:\/\/channels.weixin.qq.com\/web\/pages\/feed?eid=export%2FUzFfAgtgekIEAQAAAAAAL3g1-GkDsAAAAAstQy6ubaLX4KHWvLEZgBPE1YJEBhhWbMj9zNPgMIAcUmbEgrgbsrYqsnwkUBiJ"
+},
+"type":11124
+}
+红包消息
+通知示例
+{
+"data": {
+"content_type": 26,
+"conversation_id": "S:1688xxxx_16888505xxxx",
+"desc": "来自xxxxx的红包，请进入手机版企业微信查看",
+"local_id": "385",
+"money": 1,
+"packet_id": "10000405012020xxxxxx",
+"receiver": "1688850535834755",
+"remark": "恭喜发财",
+"send_time": "1580616846",
+"sender": "168885053xxx",
+"sender_name": "xxxxx",
+"server_id": "100xxxxxxx"
+},
+"type": 11049
+}
+语音消息
+通知示例
+c2cCdn参数，可以使用c2cCdn下载接口下载语音文件
+{
+"data":{
+"c2c_cdn":{
+"aes_key":"6D656B6E7275737A6677766C72667A6A",
+"file_id":"308180020102047930770201000204af00072602031e903802045ec7f46d020461b762a6044c323933363031343633305f36443635364236453732373537333741363637373736364337323636374136415f34353737366337343265333431663732616333626434663937653065643362620201000202479004000201050201000400",
+"file_name":"",
+"md5":"45776c742e341f72ac3bd4f97e0ed3bb",
+"size":18308,
+"voice_time":10
+},
+"content_type":16,
+"conversation_id":"S:168885xx328682_78813022xx998",
+"duration":10,
+"is_pc":0,
+"local_id":"2827",
+"receiver":"168885xx328682",
+"send_time":"1639408294",
+"sender":"7881302xx998",
+"sender_name":"小邪",
+"server_id":"1099043"
+},
+"type":11044
+}
+位置消息
+通知示例
+{
+"data":{
+"address":"北京市东城区东长安街",
+"content_type":6,
+"conversation_id":"S:16888xxx328682_7881302xx12998",
+"is_pc":0,
+"latitude":39.903739928999997,
+"local_id":"2828",
+"longitude":116.397827148,
+"receiver":"168885xxx28682",
+"send_time":"1639408398",
+"sender":"78813xx98",
+"sender_name":"小邪",
+"server_id":"1099046",
+"title":"北京天安门广场",
+"zoom":15
+},
+"type":11046
+}
+图文消息
+通知示例
+{
+"data":{
+"content_type":123,
+"conversation_id":"S:16888505xx8682_168885xx6004663",
+"emotion_list":[],
+"image_list":[{
+"cdn_type": 2,
+"cdn":{
+"aes_key":"cce0ba73c7dd4ea3a799adb803c2a5d2",
+"file_id":"3081b00201020481a83081a50201000204283cabaa02030f4df90204e5136071020461b5604c04694e45574944315f3238336361626161653531333630373136316237363336305f64656433663066312d386135312d346162352d383061622d6336353330643333316338355f66376166303563392d323932632d343562302d613434342d36663761323135636639636202010002030113200410e8873b0a25333bed1342112b1a2024a50201020201000400",
+"file_name":"7b428249db04abc684953d4c5635e7d1.png",
+"md5":"e8873b0a25333bed1342112b1a2024a5",
+"size":70421
+},
+"file_size":70421
+}],
+"is_pc":0,
+"local_id":"2829",
+"receiver":"16888xx004663",
+"send_time":"1639408480",
+"sender":"16888505xx8682",
+"sender_name":"小邪",
+"server_id":"1099051",
+"text_content":"你好图文消息"
+},
+"type":11068
+}
+撤回消息通知
+通知示例
+当其他人撤回消息时的通知
+{
+"data":{
+"message_server_id":"1099273",  // 消息id
+"op_user_id":"7881299524021868",  // 撤回人的id
+"room_id":"0"    // 群id
+},
+"type":11123
+}
+视频号直播消息
+通知示例
+复制 {
+"data": {
+"appinfo": "CAMQ/N78kwYYqtfywYKAgAMgxxxxA==",
+"avatar": "http://wx.qlogo.cn/finderhead/ver_1/uKX9myKKepcU56XhO5XM6YxvSyD6TV3ZAJnqUMzV3kXAibmtcZ0882EOU8rUCibD5NibCyAy0TL5GIevM0owSrTx2FXZwIe4ORb0QecRAXmXos/0",
+"content_type": 146,
+"conversation_id": "S:78813xxxxx3_168885xxxxx82",
+"cover_url": "http://wxapp.tc.qq.com/251/20350/stodownload?encfilekey=oibeqyX228riaCwo9STVsGLIBn9G5YG8ZnJujjw3bicy2C6VG5mQPSicDYVCVOhia6jbuX6P7RFZLzkVV2FiaOWgVXWd7MGM4tYFicBEmb781ZJicfOxUEN56wmOJvg7MdhONhYMkzC06To9PVM&adaptivelytrans=0&bizid=1023&dotrans=0&hy=SZ&idx=1&m=8d80177b490d9d27c78d3ef4d6e80ef3&token=x5Y29zUxcibB90eQl2iao3wM9KWnEdVy6khUsCxbwS6xG9OQnXMU4Snahdia1hjibCIB9x0CDPG7dibY&finder_expire_time=1657090220&finder_eid=export%2FUzFfAgtgekIEAQAAAAAAE-Ixm2BRsAAAAAstQy6ubaLX4KHWvLEZgBPExYM4dVgyZY6DzNPgMIAUe9mrgQQscNXyDyQgHbOX",
+"desc": "下午好",
+"extras": "",
+"feed_type": 9,
+"is_pc": 0,
+"nickname": "星子Stella",
+"object_id": "13895574026529675281",
+"object_nonce_id": "13435211891441762521_0_0_0_0",
+"receiver": "78813007xxxxxxxxx,
+"send_time": "1656486902",
+"sender": "16888xxxxxx",
+"sender_name": "小邪2123",
+"server_id": "1111212",
+"thumb_url": "http://wxapp.tc.qq.com/251/20350/stodownload?encfilekey=oibeqyX228riaCwo9STVsGLIBn9G5YG8ZnJujjw3bicy2C6VG5mQPSicDYVCVOhia6jbuX6P7RFZLzkVV2FiaOWgVXWd7MGM4tYFicBEmb781ZJicfOxUEN56wmOJvg7MdhONhYMkzC06To9PVM&adaptivelytrans=0&bizid=1023&dotrans=0&hy=SZ&idx=1&m=8d80177b490d9d27c78d3ef4d6e80ef3&token=x5Y29zUxcibB90eQl2iao3wM9KWnEdVy6khUsCxbwS6xG9OQnXMU4Snahdia1hjibCIB9x0CDPG7dibY&finder_expire_time=1657090220&finder_eid=export%2FUzFfAgtgekIEAQAAAAAAE-Ixm2BRsAAAAAstQy6ubaLX4KHWvLEZgBPExYM4dVgyZY6DzNPgMIAUe9mrgQQscNXyDyQgHbOX",
+"url": "https://channels.weixin.qq.com/web/pages/live?eid=export%2FUzFfAgtgekIEAQAAAAAAE-Ixm2BRsAAAAAstQy6ubaLX4KHWvLEZgBPExYM4dVgyZY6DzNPgMIAUe9mrgQQscNXyDyQgHbOX"
+},
+"type": 11195
+}
+好友
+好友申请通知
+通知示例
+{
+"data":{
+"avatar":"http:\/\/wx.qlogo.cn\/mmhead\/UOCHvzUGAIU6r51scmeNibicnYs4KzTtIee8QY0MwIRfkukxxx6M1Gw\/0",
+"corp_id":"1970325xxx26788",
+"nickname":"小邪",
+"sex":1,
+"user_id":"7881302xxx998",
+"verify":"我是小邪"
+},
+"type":11063
+}
+好友新增通知
+通知示例
+{
+"data":{
+"acctid":"",
+"avatar":"http:\/\/wx.qlogo.cn\/mmhead\/UOCHvzUGAIU6r51scmeNibicnYs4KzTtIee8QY0MwIRfkuke16H6M1Gw\/0",
+"conversation_id":"S:16888xx328682_78813022xx2998",
+"corp_id":"1970325xxx6788",
+"mobile":"",
+"nickname":"",
+"position":"",
+"realname":"",
+"remark":"",
+"sex":1,
+"unionid":"ozynqsiVdxxx6y7gWmY3JY",
+"user_id":"788130xx912998",
+"username":"小邪"
+},
+"type":11076
+}
+好友删除通知
+通知示例
+复制{
+"data":{
+"avatar":"http:\/\/wx.qlogo.cn\/mmhead\/UOCHvzUGAIU6r51scmeNibicnYs4KzTtIee8QY0MwIRfkukxxGw\/0",
+"corp_id":"1970325xx6788",
+"nickname":"小邪",
+"sex":1,
+"user_id":"788130xxxx912998",
+},
+"type":11077
+}
+好友删除通知
+通知示例
+复制{
+"data":{
+"avatar":"http:\/\/wx.qlogo.cn\/mmhead\/UOCHvzUGAIU6r51scmeNibicnYs4KzTtIee8QY0MwIRfkukxxGw\/0",
+"corp_id":"1970325xx6788",
+"nickname":"小邪",
+"sex":1,
+"user_id":"788130xxxx912998",
+},
+"type":11077
+}
+群聊
+新增群通知
+通知示例
+{
+"data":{
+"avatar":"http:\/\/wx.qlogo.cn\/mmhead\/UOCHvzUGAIU6r51scmeNibicnYs4KzTtIee8QY0MwIRfkukxxGw\/0",
+"corp_id":"1970325xx6788",
+"nickname":"小邪",
+"sex":1,
+"user_id":"788130xxxx912998",
+},
+"type":11173
+}
+通知示例
+{
+"data":{
+"member_list":[{
+"name":"小邪",
+"user_id":"78813xxx2093"
+}],
+"op_user_id":"16888505xx28682",
+"op_user_name":"小邪",
+"room_conversation_id":"R:1069604xxx056787",
+"room_name":"小邪、小邪"
+},
+"type":11074
+}
+通知示例
+复制{
+"data":{
+"member_list":[{
+"name":"小邪",
+"user_id":"78813xxx2093"
+}],
+"op_user_id":"16888505xx28682",
+"op_user_name":"小邪",
+"room_conversation_id":"R:1069604xxx056787",
+"room_name":"小邪、小邪"
+},
+"type":11074
+}
+群成员增加通知
+通知示例
+{
+"data":{
+"member_list":[{
+"name":"liju1n",
+"user_id":"78813xxx29115"
+}],
+"op_user_id":"16888505xx82",
+"op_user_name":"小邪",
+"room_conversation_id":"R:10696xxxxxx",
+"room_name":"小邪、小邪、lijun"
+},
+"type":11072
+}
+群成员减少通知
+通知示例
+{
+"data":{
+"member_list":[{
+"name":"liju1n",
+"user_id":"788130xx9115"
+}],
+"op_user_id":"16888505xx682",
+"op_user_name":"小邪",
+"room_conversation_id":"R:106xx787",
+"room_name":"小邪、小邪"
+},
+"type":11073
+}
+主动退群通知
+通知示例
+{
+"data":{
+"op_user_id":"1688850xx682",
+"op_user_name":"小邪",
+"room_conversation_id":"R:1069xx013643",
+"room_name":"一x、小邪"
+},
+"type":11075
+}
+群名称变化通知
+通知示例
+复制{
+"data":{
+"op_user_id":"1688850xx2",
+"room_conversation_id":"R:106xx3056787",
+"room_name":"11212"
+},
+"type":11078
+}
+值 | 说明
+1 | 原图
+2 | 中图
+3 | 缩略图
+4 | 视频
+5 | 文件
