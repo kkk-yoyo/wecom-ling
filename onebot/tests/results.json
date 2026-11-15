@@ -1,0 +1,1175 @@
+{
+  "task": "task-2",
+  "generated_at": "2026-11-13 13:37:17",
+  "summary": {
+    "total": 62,
+    "passed": 62,
+    "failed": 0,
+    "pass_rate": 100.0,
+    "p0_total": 54,
+    "p0_passed": 54,
+    "p1_total": 8,
+    "p1_passed": 8
+  },
+  "environment": {
+    "os": "Windows-10-10.0.19045-SP0",
+    "python": "C:\\Users\\Administrator\\.astrbot_launcher\\instances\\38c868af-ee29-4389-9c27-c69e148f7200\\venv\\Scripts\\python.exe",
+    "python_version": "3.12.13",
+    "csc": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\csc.exe",
+    "csc_exists": true,
+    "loaded_shim_dll": "D:\\wecom-ling\\onebot\\tests\\bin\\OneBotShim.dll",
+    "loaded_shim_dll_sha256": "4f0d7ea2372b0bf7109c6f6aec87d5d6e41a523313b8264b0d93ecc6f46fd714",
+    "loaded_shim_dll_size": 53760,
+    "output_shim_dll": "D:\\wecom-ling\\onebot\\output\\OneBotShim.dll",
+    "output_shim_dll_sha256": "4f0d7ea2372b0bf7109c6f6aec87d5d6e41a523313b8264b0d93ecc6f46fd714",
+    "output_shim_dll_size": 53760,
+    "shim_copy_matches_output": true,
+    "shim_source": "D:\\wecom-ling\\onebot\\src\\WxSocketClient.cs",
+    "shim_source_lines": 3183,
+    "original_exe": "D:\\wecom-ling\\onebot\\tests\\lib\\WeComSever.exe",
+    "original_exe_sha256": "4f2954a7149b318b4a69f7d407302eaed67a2911f27084c289dd35bf0f5ba24a",
+    "mock_base": "http://127.0.0.1:6399",
+    "token": "testtoken",
+    "robot_id": "77880001",
+    "testhost": "D:\\wecom-ling\\onebot\\tests\\bin\\TestHost.exe",
+    "testhost_built": true
+  },
+  "cases": [
+    {
+      "id": "T01",
+      "name": "启动前无 self_id 不连接；注入 11026 登录后建立连接并带上 self_id",
+      "group": "handshake",
+      "status": "PASS",
+      "duration_ms": 5834,
+      "error": "",
+      "evidence": [
+        "OK  无 self_id 时 StatusText=连接中 == 连接中",
+        "OK  无 self_id 时 StatusBackground=#E6A23C == #E6A23C",
+        "OK  self_id 为空时 1.2s 内不建立 WS 连接（NetLoop 等待登录）",
+        "OK  无 self_id 时 IsConnected 仍为 false",
+        "OK  构造后 StatusText == 未连接",
+        "OK  构造后 StatusBackground == #909399",
+        "OK  构造后 IsConnected==false",
+        "注入微灵事件 type=11026 TrySendEvent=false",
+        "启动前注入 11026 设置 self_id（未连接时 TrySendEvent 返回 false，但 CaptureState 已生效）seq=0",
+        "OK  连接后 StatusText=已连接 == 已连接",
+        "OK  连接后 StatusBackground=#22AA22 == #22AA22",
+        "OK  Mock 记录到连接",
+        "OK  11026 后连接的 X-Self-ID 使用 robot_id/data.user_id == 77880001"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T02",
+      "name": "握手头：X-Client-Role / Authorization / X-Self-ID / 路径",
+      "group": "handshake",
+      "status": "PASS",
+      "duration_ms": 1,
+      "error": "",
+      "evidence": [
+        "OK  存在连接记录",
+        "OK  WS 路径 == /ws",
+        "OK  X-Client-Role 头 == Universal",
+        "OK  Authorization 头 == Bearer testtoken",
+        "OK  X-Self-ID 头 == 77880001"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T03",
+      "name": "连接建立后发送 lifecycle.connect 元事件",
+      "group": "handshake",
+      "status": "PASS",
+      "duration_ms": 10,
+      "error": "",
+      "evidence": [
+        "OK  lifecycle.sub_type == connect",
+        "OK  lifecycle.self_id == 77880001 (整型)",
+        "OK  lifecycle 含 time (存在 time)"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T04",
+      "name": "心跳 meta_event（interval=30s）+ 心跳周期内无周期性重连（看门狗已删除）",
+      "group": "handshake",
+      "status": "PASS",
+      "duration_ms": 18686,
+      "error": "",
+      "evidence": [
+        "OK  heartbeat.interval == 30000 (整型)",
+        "OK  heartbeat.status.online == true",
+        "OK  heartbeat.status.good == true",
+        "OK  heartbeat.self_id == 77880001 (整型)",
+        "OK  心跳等待期间没有周期性重连（总连接数仍为 1）",
+        "OK  心跳周期后连接仍存活"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T05",
+      "name": "11041 群文本 → group 消息（group_id/text 段/raw_message/ling）",
+      "group": "events",
+      "status": "PASS",
+      "duration_ms": 101,
+      "error": "",
+      "evidence": [
+        "注入微灵事件 type=11041 TrySendEvent=true",
+        "OK  post_type == message",
+        "OK  message_type == group",
+        "OK  sub_type == normal",
+        "OK  group_id == 12345 (整型)",
+        "OK  群消息无顶层 user_id (无 user_id)",
+        "OK  message_id（server_id 转数字） == 55550001 (整型)",
+        "OK  self_id == 77880001 (整型)",
+        "OK  time（秒值透传） == 1710000000 (整型)",
+        "OK  sender.nickname == 张三",
+        "OK  sender.user_id == 11111 (整型)",
+        "OK  sender.role == member",
+        "OK  font == 0 (整型)",
+        "OK  message 仅 1 个段",
+        "OK  段类型 text == text",
+        "OK  段文本 == 你好，世界",
+        "OK  raw_message == 你好，世界",
+        "OK  顶层 ling 存在",
+        "OK  ling.type 保留原始事件类型 == 11041 (整型)",
+        "OK  ling.data.conversation_id == R:12345",
+        "OK  ling 中剥离 data.payload_base64 (无 payload_base64)"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T06",
+      "name": "11041 私聊文本 S:67890_<self> → private 消息 user_id=67890",
+      "group": "events",
+      "status": "PASS",
+      "duration_ms": 89,
+      "error": "",
+      "evidence": [
+        "注入微灵事件 type=11041 TrySendEvent=true",
+        "OK  message_type == private",
+        "OK  sub_type == friend",
+        "OK  user_id（取最后一个 _ 之前部分） == 67890 (整型)",
+        "OK  私聊消息无 group_id (无 group_id)",
+        "OK  毫秒 send_time 被 /1000 == 1710000123 (整型)",
+        "OK  message 仅 1 个段",
+        "OK  段文本 == 私聊内容",
+        "OK  sender.nickname == 李四"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T07",
+      "name": "is_self 消息不推送（is_self=true / sender==self_id）",
+      "group": "events",
+      "status": "PASS",
+      "duration_ms": 3133,
+      "error": "",
+      "evidence": [
+        "注入微灵事件 type=11041 TrySendEvent=false",
+        "OK  1500ms 内未收到 is_self=true 的消息事件",
+        "注入微灵事件 type=11041 TrySendEvent=false",
+        "OK  1500ms 内未收到 sender==self_id 的消息事件"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T08",
+      "name": "11041 at_list → at 段（mixed / 纯 at / 保留 self at）",
+      "group": "events",
+      "status": "PASS",
+      "duration_ms": 93,
+      "error": "",
+      "evidence": [
+        "注入微灵事件 type=11041 TrySendEvent=true",
+        "OK  mixed: 3 个 at + 1 个 text 段，共 4 段",
+        "OK  段0 类型 at == at",
+        "OK  段0 qq (字符串条目) == 22222",
+        "OK  段0 qq 的 JSON 类型为 string == String",
+        "OK  段1 类型 at == at",
+        "OK  段1 qq (JObject user_id) == 33333",
+        "OK  段2 类型 at (self) == at",
+        "OK  段2 qq (self 也保留) == 77880001",
+        "OK  段3 类型 text == text",
+        "OK  段3 文本 == 大家好",
+        "OK  raw_message 拼接 @ 与文本 == @22222@33333@77880001大家好",
+        "注入微灵事件 type=11041 TrySendEvent=true",
+        "OK  纯 at: 仅 1 个 at 段（空 content 不生成 text 段）",
+        "OK  纯 at 段类型 == at",
+        "OK  纯 at qq == 44444",
+        "OK  纯 at raw_message == @44444"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T09",
+      "name": "11042 图片 → image 段（cdn.url / md5 作为 file）",
+      "group": "events",
+      "status": "PASS",
+      "duration_ms": 4,
+      "error": "",
+      "evidence": [
+        "注入微灵事件 type=11042 TrySendEvent=true",
+        "OK  图片消息 1 个段",
+        "OK  段类型 image == image",
+        "OK  image.data.file 取 cdn.md5 == abc123",
+        "OK  image.data.url 取 cdn.url == https://cdn.example.com/img/a.png"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T10",
+      "name": "11045 文件 → file 段",
+      "group": "events",
+      "status": "PASS",
+      "duration_ms": 2,
+      "error": "",
+      "evidence": [
+        "注入微灵事件 type=11045 TrySendEvent=true",
+        "OK  文件消息 1 个段",
+        "OK  段类型 file == file",
+        "OK  file.data.name 取 cdn.file_name（AstrBot File 需要） == 报告.pdf",
+        "OK  file.data.file 取 cdn.url == https://cdn.example.com/f/报告.pdf",
+        "OK  file.data.url == https://cdn.example.com/f/报告.pdf",
+        "OK  file 段不再输出 file_id（新结构 {name,file,url}） (无 file_id)"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T11",
+      "name": "11123 撤回 → notice（group_recall / friend_recall）",
+      "group": "events",
+      "status": "PASS",
+      "duration_ms": 84,
+      "error": "",
+      "evidence": [
+        "注入微灵事件 type=11123 TrySendEvent=true",
+        "OK  群撤回 group_id == 12345 (整型)",
+        "OK  群撤回 message_id == 55550001 (整型)",
+        "OK  群撤回 operator_id == 11111 (整型)",
+        "OK  群撤回含 ling",
+        "注入微灵事件 type=11123 TrySendEvent=true",
+        "OK  私聊撤回 user_id == 67890 (整型)",
+        "OK  私聊撤回 message_id == 55550002 (整型)",
+        "OK  私聊撤回含 ling"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T12",
+      "name": "11072 群成员增加 → notice group_increase",
+      "group": "events",
+      "status": "PASS",
+      "duration_ms": 4,
+      "error": "",
+      "evidence": [
+        "注入微灵事件 type=11072 TrySendEvent=true",
+        "OK  sub_type invite == invite",
+        "OK  group_id == 12345 (整型)",
+        "OK  user_id=member_list[0].user_id == 99999 (整型)",
+        "OK  operator_id == 11111 (整型)",
+        "OK  notice 含 ling"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T13",
+      "name": "未知事件类型 99999 被忽略（不推送 ws 帧）",
+      "group": "events",
+      "status": "PASS",
+      "duration_ms": 1528,
+      "error": "",
+      "evidence": [
+        "注入微灵事件 type=99999 TrySendEvent=false",
+        "OK  1500ms 内未收到 未知事件产生的任何非心跳帧"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T14",
+      "name": "send_private_msg 文本 → 微灵命令 {client:1,type:11029,conversation_id:'S:67890_<self>'} + ok/echo/message_id",
+      "group": "actions",
+      "status": "PASS",
+      "duration_ms": 95,
+      "error": "",
+      "evidence": [
+        "ACTION send_private_msg params={\"user_id\":\"67890\",\"message\":\"私聊回复\"} -> {\"status\":\"ok\",\"retcode\":0,\"msg\":\"\",\"data\":{\"message_id\":\"srv-11029-1\"},\"echo\":\"echo-T14-1\"}",
+        "OK  status == ok",
+        "OK  retcode == 0 (整型)",
+        "OK  echo 原样返回",
+        "OK  含 data (存在 data)",
+        "OK  message_id 来自 handler 的 server_id: srv-11029-1",
+        "OK  命令 client=1（数字） == 1 (整型)",
+        "OK  命令 type == 11029 (整型)",
+        "OK  命令 conversation_id == S:67890_77880001",
+        "OK  命令 content == 私聊回复"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T15",
+      "name": "send_group_msg 无 at → 11029 R:12345",
+      "group": "actions",
+      "status": "PASS",
+      "duration_ms": 8,
+      "error": "",
+      "evidence": [
+        "ACTION send_group_msg params={\"group_id\":\"12345\",\"message\":\"群回复\"} -> {\"status\":\"ok\",\"retcode\":0,\"msg\":\"\",\"data\":{\"message_id\":\"srv-11029-2\"},\"echo\":\"echo-T15-2\"}",
+        "OK  status == ok",
+        "OK  命令 conversation_id == R:12345",
+        "OK  命令 content == 群回复",
+        "OK  无 at 时不带 at_list (无 at_list)"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T16",
+      "name": "send_group_msg 含 at → 11069 + data.at_list",
+      "group": "actions",
+      "status": "PASS",
+      "duration_ms": 87,
+      "error": "",
+      "evidence": [
+        "ACTION send_group_msg params={\"group_id\":\"12345\",\"message\":[{\"type\":\"text\",\"data\":{\"text\":\"Hi \"}},{\"type\":\"at\",\"data\":{\"qq\":\"22222\"}},{\"type\":\"at\",\"data\":{\"qq\":\"33333\"}}]} -> {\"status\":\"ok\",\"retcode\":0,\"msg\":\"\",\"data\":{\"message_id\":\"srv-11069-3\"},\"echo\":\"echo-T16-3\"}",
+        "OK  status == ok",
+        "OK  命令 conversation_id == R:12345",
+        "OK  命令 content（at 段不产生文本） == Hi ",
+        "OK  at_list 含 2 个用户",
+        "OK  at_list[0] == 22222 (整型)",
+        "OK  at_list[1] == 33333 (整型)"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T17",
+      "name": "send_msg message_type=private → 11029",
+      "group": "actions",
+      "status": "PASS",
+      "duration_ms": 145,
+      "error": "",
+      "evidence": [
+        "ACTION send_msg params={\"message_type\":\"private\",\"user_id\":\"67890\",\"message\":\"send_msg私聊\"} -> {\"status\":\"ok\",\"retcode\":0,\"msg\":\"\",\"data\":{\"message_id\":\"srv-11029-4\"},\"echo\":\"echo-T17-4\"}",
+        "OK  status == ok",
+        "OK  命令 conversation_id == S:67890_77880001",
+        "OK  命令 content == send_msg私聊"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T18",
+      "name": "send_msg message_type=group → 11029",
+      "group": "actions",
+      "status": "PASS",
+      "duration_ms": 8,
+      "error": "",
+      "evidence": [
+        "ACTION send_msg params={\"message_type\":\"group\",\"group_id\":\"12345\",\"message\":\"send_msg群\"} -> {\"status\":\"ok\",\"retcode\":0,\"msg\":\"\",\"data\":{\"message_id\":\"srv-11029-5\"},\"echo\":\"echo-T18-5\"}",
+        "OK  status == ok",
+        "OK  命令 conversation_id == R:12345"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T19",
+      "name": "get_login_info → user_id/nickname",
+      "group": "actions",
+      "status": "PASS",
+      "duration_ms": 93,
+      "error": "",
+      "evidence": [
+        "ACTION get_login_info params={} -> {\"status\":\"ok\",\"retcode\":0,\"msg\":\"\",\"data\":{\"user_id\":77880001,\"nickname\":\"机器人昵称\"},\"echo\":\"echo-T19-6\"}",
+        "OK  status == ok",
+        "OK  user_id == 77880001 (整型)",
+        "OK  nickname 来自 11026 data.username == 机器人昵称"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T20",
+      "name": "get_status → online/good",
+      "group": "actions",
+      "status": "PASS",
+      "duration_ms": 9,
+      "error": "",
+      "evidence": [
+        "ACTION get_status params={} -> {\"status\":\"ok\",\"retcode\":0,\"msg\":\"\",\"data\":{\"online\":true,\"good\":true},\"echo\":\"echo-T20-7\"}",
+        "OK  status == ok",
+        "OK  online == true",
+        "OK  good == true"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T21",
+      "name": "get_version_info → 实现信息",
+      "group": "actions",
+      "status": "PASS",
+      "duration_ms": 94,
+      "error": "",
+      "evidence": [
+        "ACTION get_version_info params={} -> {\"status\":\"ok\",\"retcode\":0,\"msg\":\"\",\"data\":{\"app_name\":\"wecom-ling-onebot\",\"app_version\":\"1.11.0\",\"protocol_version\":\"v11\",\"app_full_name\":\"微灵 OneBot v11 改造版\"},\"echo\":\"echo-T21-8\"}",
+        "OK  status == ok",
+        "OK  app_name == wecom-ling-onebot",
+        "OK  app_version == 1.11.0",
+        "OK  protocol_version == v11",
+        "OK  app_full_name == 微灵 OneBot v11 改造版"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T22",
+      "name": "get_group_list → 11038 数据转 [{group_id,group_name}]",
+      "group": "actions",
+      "status": "PASS",
+      "duration_ms": 91,
+      "error": "",
+      "evidence": [
+        "ACTION get_group_list params={} -> {\"status\":\"ok\",\"retcode\":0,\"msg\":\"\",\"data\":[{\"group_id\":12345,\"group_name\":\"测试群A\"},{\"group_id\":77777,\"group_name\":\"测试群B\"}],\"echo\":\"echo-T22-9\"}",
+        "OK  status == ok",
+        "OK  群列表 2 项",
+        "OK  群1 group_id（R: 前缀已剥离） == 12345 (整型)",
+        "OK  群1 group_name == 测试群A",
+        "OK  群2 group_id == 77777 (整型)",
+        "OK  群2 group_name == 测试群B"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T23",
+      "name": "get_friend_list → 11036 数据转 [{user_id,nickname}]",
+      "group": "actions",
+      "status": "PASS",
+      "duration_ms": 93,
+      "error": "",
+      "evidence": [
+        "ACTION get_friend_list params={} -> {\"status\":\"ok\",\"retcode\":0,\"msg\":\"\",\"data\":[{\"user_id\":67890,\"nickname\":\"好友甲\",\"remark\":\"\"},{\"user_id\":12345,\"nickname\":\"好友乙\",\"remark\":\"\"}],\"echo\":\"echo-T23-10\"}",
+        "OK  status == ok",
+        "OK  好友列表 2 项",
+        "OK  好友1 user_id == 67890 (整型)",
+        "OK  好友1 nickname == 好友甲",
+        "OK  好友2 user_id 由 conversation_id 解析 == 12345 (整型)",
+        "OK  好友2 nickname（remark 回退） == 好友乙"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T24",
+      "name": "get_group_info → 复用群列表",
+      "group": "actions",
+      "status": "PASS",
+      "duration_ms": 92,
+      "error": "",
+      "evidence": [
+        "ACTION get_group_info params={\"group_id\":\"12345\"} -> {\"status\":\"ok\",\"retcode\":0,\"msg\":\"\",\"data\":{\"group_id\":12345,\"group_name\":\"测试群A\"},\"echo\":\"echo-T24-11\"}",
+        "OK  status == ok",
+        "OK  group_id == 12345 (整型)",
+        "OK  group_name == 测试群A"
+      ],
+      "priority": "P1"
+    },
+    {
+      "id": "T25",
+      "name": "get_group_member_info → 11040 数据",
+      "group": "actions",
+      "status": "PASS",
+      "duration_ms": 11,
+      "error": "",
+      "evidence": [
+        "ACTION get_group_member_info params={\"group_id\":\"12345\",\"user_id\":\"22222\"} -> {\"status\":\"ok\",\"retcode\":0,\"msg\":\"\",\"data\":{\"user_id\":22222,\"nickname\":\"成员甲\",\"card\":\"成员甲\",\"sex\":\"unknown\",\"age\":0,\"role\":\"member\"},\"echo\":\"echo-T25-12\"}",
+        "OK  status == ok",
+        "OK  11040 查询 conversation_id == R:12345",
+        "OK  成员 user_id == 22222 (整型)",
+        "OK  成员 nickname == 成员甲"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T26",
+      "name": "get_stranger_info → 11039 数据",
+      "group": "actions",
+      "status": "PASS",
+      "duration_ms": 84,
+      "error": "",
+      "evidence": [
+        "ACTION get_stranger_info params={\"user_id\":\"44444\"} -> {\"status\":\"ok\",\"retcode\":0,\"msg\":\"\",\"data\":{\"user_id\":44444,\"nickname\":\"陌生人甲\",\"sex\":\"unknown\",\"age\":0},\"echo\":\"echo-T26-13\"}",
+        "OK  status == ok",
+        "OK  user_id == 44444 (整型)",
+        "OK  nickname == 陌生人甲"
+      ],
+      "priority": "P1"
+    },
+    {
+      "id": "T27",
+      "name": "get_msg → 命中消息缓存（由 T05 注入的消息）",
+      "group": "actions",
+      "status": "PASS",
+      "duration_ms": 37,
+      "error": "",
+      "evidence": [
+        "ACTION get_msg params={\"message_id\":\"55550001\"} -> {\"status\":\"ok\",\"retcode\":0,\"msg\":\"\",\"data\":{\"time\":1710000000,\"self_id\":77880001,\"post_type\":\"message\",\"message_type\":\"group\",\"sub_type\":\"normal\",\"message_id\":55550001,\"message\":[{\"type\":\"text\",\"data\":{\"text\":\"你好，世界\"}}],\"raw_message\":\"你好，世界\",\"font\":0,\"sender\":{\"user_id\":11111,\"nickname\":\"张三\",\"card\":\"张三\",\"role\":\"member\"},\"group_id\":12345,\"ling\":{\"type\":11041,\"client\":1,\"data\":{\"conversation_id\":\"R:12345\",\"sender\":\"11111\",\"sender_name\":\"张三\",\"receiver\":\"12345\",\"content\":\"你好，世界\",\"send_time\":1710000000,\"server_id\":\"55550001\",\"local_id\":\"l1\",\"is_self\":false},\"robot_id\":\"77880001\"}},\"echo\":\"echo-T27-14\"}",
+        "OK  status == ok",
+        "OK  缓存消息 message_id == 55550001 (整型)",
+        "OK  缓存消息 post_type == message",
+        "OK  缓存消息含 ling"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T28",
+      "name": "get_msg 未知 message_id → failed/500 + message not found",
+      "group": "actions",
+      "status": "PASS",
+      "duration_ms": 8,
+      "error": "",
+      "evidence": [
+        "ACTION get_msg params={\"message_id\":\"999999999\"} -> {\"status\":\"failed\",\"retcode\":500,\"msg\":\"message not found: 999999999\",\"data\":null,\"echo\":\"echo-T28-15\"}",
+        "OK  status == failed",
+        "OK  retcode == 500 (整型)",
+        "OK  错误信息 (找到 \"message not found: 999999999\")"
+      ],
+      "priority": "P1"
+    },
+    {
+      "id": "T29",
+      "name": "can_send_image → yes:true",
+      "group": "actions",
+      "status": "PASS",
+      "duration_ms": 90,
+      "error": "",
+      "evidence": [
+        "ACTION can_send_image params={} -> {\"status\":\"ok\",\"retcode\":0,\"msg\":\"\",\"data\":{\"yes\":true},\"echo\":\"echo-T29-16\"}",
+        "OK  status == ok",
+        "OK  yes == true"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T30",
+      "name": "已知但不支持的动作 → failed/500；未知动作 → failed/1404",
+      "group": "actions",
+      "status": "PASS",
+      "duration_ms": 21,
+      "error": "",
+      "evidence": [
+        "ACTION set_group_name params={\"group_id\":\"12345\",\"group_name\":\"x\"} -> {\"status\":\"failed\",\"retcode\":500,\"msg\":\"action not supported by 微灵 OneBot shim: set_group_name\",\"data\":null,\"echo\":\"echo-T30a-17\"}",
+        "OK  set_group_name status == failed",
+        "OK  set_group_name retcode == 500 (整型)",
+        "OK  set_group_name 错误信息 (找到 \"action not supported by 微灵 OneBot shim: set_group_name\")",
+        "ACTION nonexistent_action_xyz params={} -> {\"status\":\"failed\",\"retcode\":1404,\"msg\":\"unsupported action: nonexistent_action_xyz\",\"data\":null,\"echo\":\"echo-T30b-18\"}",
+        "OK  未知动作 status == failed",
+        "OK  未知动作 retcode == 1404 (整型)",
+        "OK  未知动作错误信息 == unsupported action: nonexistent_action_xyz"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T31",
+      "name": "出站 image 段（base64 PNG）→ 先 11030 落盘（绝对路径/.png）再 11029 文本，返回 ok",
+      "group": "actions",
+      "status": "PASS",
+      "duration_ms": 104,
+      "error": "",
+      "evidence": [
+        "ACTION send_private_msg params={\"user_id\":\"67890\",\"message\":[{\"type\":\"image\",\"data\":{\"file\":\"base64://iVBORw0KGgpNT0NLLVBORy0AAQIDBAUGBwgJCgsMDQ4P\"}},{\"type\":\"text\",\"data\":{\"text\":\"图片说明\"}}]} -> {\"status\":\"ok\",\"retcode\":0,\"msg\":\"\",\"data\":{\"message_id\":\"srv-11029-7\"},\"echo\":\"echo-T31-19\"}",
+        "OK  status == ok",
+        "OK  retcode == 0 (整型)",
+        "OK  echo 原样回传 == echo-T31-19",
+        "OK  11030 conversation_id == S:67890_77880001",
+        "OK  11030 data.file 为绝对路径",
+        "OK  11030 data.file 指向已存在文件",
+        "OK  11030 data.file 扩展名 .png",
+        "OK  11030 落盘内容与 base64 一致 长度 (33 == 期望 33)",
+        "OK  11030 落盘内容与 base64 一致 字节完全一致（33 bytes）",
+        "OK  11029 conversation_id == S:67890_77880001",
+        "OK  11029 content == 图片说明",
+        "OK  命令顺序：先 11030 媒体后 11029 文本",
+        "OK  共 2 条命令（图片 + 文本）",
+        "OK  message_id 来自最后一条文本命令结果"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T32",
+      "name": "空消息 → failed/500 empty message",
+      "group": "actions",
+      "status": "PASS",
+      "duration_ms": 8,
+      "error": "",
+      "evidence": [
+        "ACTION send_private_msg params={\"user_id\":\"67890\",\"message\":\"\"} -> {\"status\":\"failed\",\"retcode\":500,\"msg\":\"empty message\",\"data\":null,\"echo\":\"echo-T32-20\"}",
+        "OK  status == failed",
+        "OK  retcode == 500 (整型)",
+        "OK  错误信息 (找到 \"empty message\")"
+      ],
+      "priority": "P1"
+    },
+    {
+      "id": "T33",
+      "name": "get_image 命中已登记媒体 → 按需 HTTP 下载并返回 base64://",
+      "group": "actions",
+      "status": "PASS",
+      "duration_ms": 179,
+      "error": "",
+      "evidence": [
+        "注入微灵事件 type=11042 TrySendEvent=true",
+        "OK  图片消息 1 个 image 段",
+        "OK  image 段 file 取 cdn.file_name == pic.png",
+        "OK  image 段 url == http://127.0.0.1:6399/media/pic.png",
+        "ACTION get_image params={\"file\":\"pic.png\"} -> {\"status\":\"ok\",\"retcode\":0,\"msg\":\"\",\"data\":{\"file\":\"base64://iVBORw0KGgpNT0NLLVBORy0AAQIDBAUGBwgJCgsMDQ4P\",\"file_name\":\"pic.png\"},\"echo\":\"echo-T33-21\"}",
+        "OK  get_image status == ok",
+        "OK  retcode == 0 (整型)",
+        "OK  data.file 形如 base64://...",
+        "OK  get_image 下载内容 长度 (33 == 期望 33)",
+        "OK  get_image 下载内容 字节完全一致（33 bytes）",
+        "OK  data.file_name 保留 cdn.file_name == pic.png",
+        "OK  Mock 记录到 shim 的按需 HTTP 下载请求"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T34",
+      "name": "出站 face 段被忽略，文本正常发送",
+      "group": "actions",
+      "status": "PASS",
+      "duration_ms": 7,
+      "error": "",
+      "evidence": [
+        "ACTION send_private_msg params={\"user_id\":\"67890\",\"message\":[{\"type\":\"text\",\"data\":{\"text\":\"表情\"}},{\"type\":\"face\",\"data\":{\"id\":\"14\"}}]} -> {\"status\":\"ok\",\"retcode\":0,\"msg\":\"\",\"data\":{\"message_id\":\"srv-11029-8\"},\"echo\":\"echo-T34-28\"}",
+        "OK  status == ok",
+        "OK  content 仅文本部分 == 表情"
+      ],
+      "priority": "P1"
+    },
+    {
+      "id": "T35",
+      "name": "token 不符 → Mock 401 拒绝；shim 重试不崩溃；改正后连上",
+      "group": "resilience",
+      "status": "PASS",
+      "duration_ms": 2244,
+      "error": "",
+      "evidence": [
+        "注入微灵事件 type=11026 TrySendEvent=false",
+        "OK  被拒绝握手的 Authorization == Bearer badtoken",
+        "OK  token 错误时 IsConnected==false",
+        "OK  token 错误时 StatusText=连接中（重试中） == 连接中",
+        "OK  token 错误时 StatusBackground=#E6A23C",
+        "OK  改正 token 后 StatusText=已连接 == 已连接",
+        "OK  Mock 侧存在活跃连接"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T36",
+      "name": "Mock 主动断开 → shim 约 1s 后自动重连",
+      "group": "resilience",
+      "status": "PASS",
+      "duration_ms": 1724,
+      "error": "",
+      "evidence": [
+        "OK  断开前存在活跃连接",
+        "OK  mock close_all 成功",
+        "断开→重连完成耗时约 1718 ms",
+        "OK  重连耗时 < 6s（ReconnectMinMs=1000 + 握手）",
+        "OK  Mock 记录到新的连接（重连发生）",
+        "OK  重连后 StatusText=已连接 == 已连接"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T37",
+      "name": "Stop 后不再重连、状态回到未连接",
+      "group": "lifecycle",
+      "status": "PASS",
+      "duration_ms": 1955,
+      "error": "",
+      "evidence": [
+        "OK  Stop 后 IsConnected==false",
+        "OK  Stop 后 StatusText=未连接 == 未连接",
+        "OK  Stop 后 StatusBackground=#909399 == #909399",
+        "OK  Stop 后 1.8s 内没有新的重连连接"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T38",
+      "name": "onebot_v11.log 证据：连接/生命周期/重连/忽略事件/动作日志",
+      "group": "log",
+      "status": "PASS",
+      "duration_ms": 382,
+      "error": "",
+      "evidence": [
+        "OK  日志文件存在: D:\\wecom-ling\\onebot\\tests\\bin\\onebot_v11.log",
+        "日志大小 22270 字节",
+        "OK  channel 日志前缀 (找到 \"[OneBot:wecom-test]\")",
+        "OK  连接成功日志 (找到 \"connected: ws://127.0.0.1:6399/ws\")",
+        "OK  lifecycle 入队日志 (找到 \"lifecycle connect queued\")",
+        "OK  服务端断开日志 (找到 \"server closed connection\")",
+        "OK  重连延迟日志 (找到 \"reconnect in 1000 ms\")",
+        "OK  入站动作日志 (找到 \"<- action send_private_msg\")",
+        "OK  未映射事件日志（99999） (找到 \"不映射为 OneBot 事件\")",
+        "OK  坏 token shim 的日志前缀 (找到 \"[OneBot:wecom-bad-token]\")",
+        "OK  连接失败日志（token 401） (找到 \"connection failed:\")",
+        "OK  日志中没有 watchdog 静默断连记录（新 shim 已彻底删除看门狗）",
+        "OK  日志中没有 120s 静默强制关链记录"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T39",
+      "name": "StatusChanged 事件序列：未连接/连接中/已连接/未连接 与背景色",
+      "group": "lifecycle",
+      "status": "PASS",
+      "duration_ms": 0,
+      "error": "",
+      "evidence": [
+        "状态序列:\n连接中|#E6A23C|False\n已连接|#22AA22|True\n连接中|#E6A23C|False\n已连接|#22AA22|True\n未连接|#909399|False\n未连接|#909399|False",
+        "OK  启动时 连接中/#E6A23C (找到 \"连接中|#E6A23C|False\")",
+        "OK  连接后 已连接/#22AA22 (找到 \"已连接|#22AA22|True\")",
+        "OK  Stop 后 未连接/#909399 (找到 \"未连接|#909399|False\")"
+      ],
+      "priority": "P1"
+    },
+    {
+      "id": "T40",
+      "name": "发送缺字段的负向分支：missing group_id / missing user_id",
+      "group": "actions",
+      "status": "PASS",
+      "duration_ms": 103,
+      "error": "",
+      "evidence": [
+        "ACTION send_group_msg params={\"message\":\"x\"} -> {\"status\":\"failed\",\"retcode\":500,\"msg\":\"missing group_id\",\"data\":null,\"echo\":\"echo-T40a-29\"}",
+        "OK  send_group_msg 缺 group_id status == failed",
+        "OK  retcode == 500 (整型)",
+        "OK  错误信息 (找到 \"missing group_id\")",
+        "ACTION send_private_msg params={\"message\":\"x\"} -> {\"status\":\"failed\",\"retcode\":500,\"msg\":\"missing user_id\",\"data\":null,\"echo\":\"echo-T40b-30\"}",
+        "OK  send_private_msg 缺 user_id status == failed",
+        "OK  retcode == 500 (整型)",
+        "OK  错误信息 (找到 \"missing user_id\")"
+      ],
+      "priority": "P1"
+    },
+    {
+      "id": "T41",
+      "name": "send_group_msg 仅 at 段（无文本）→ 11069 且 content 为空",
+      "group": "actions",
+      "status": "PASS",
+      "duration_ms": 123,
+      "error": "",
+      "evidence": [
+        "ACTION send_group_msg params={\"group_id\":\"12345\",\"message\":[{\"type\":\"at\",\"data\":{\"qq\":\"22222\"}}]} -> {\"status\":\"ok\",\"retcode\":0,\"msg\":\"\",\"data\":{\"message_id\":\"srv-11069-9\"},\"echo\":\"echo-T41-31\"}",
+        "OK  status == ok",
+        "OK  content 为空字符串 == ",
+        "OK  at_list 含 1 个用户",
+        "OK  at_list[0] == 22222 (整型)"
+      ],
+      "priority": "P1"
+    },
+    {
+      "id": "T42",
+      "name": "get_file → base64；get_group_file_url/get_private_file_url → 原始 CDN URL",
+      "group": "actions",
+      "status": "PASS",
+      "duration_ms": 116,
+      "error": "",
+      "evidence": [
+        "注入微灵事件 type=11045 TrySendEvent=true",
+        "OK  文件消息 1 个 file 段",
+        "OK  file 段 name 取 cdn.file_name == 报告.txt",
+        "OK  file 段 file 取 cdn.url == http://127.0.0.1:6399/media/doc.txt",
+        "OK  file 段 url == http://127.0.0.1:6399/media/doc.txt",
+        "ACTION get_file params={\"file_id\":\"55550201\"} -> {\"status\":\"ok\",\"retcode\":0,\"msg\":\"\",\"data\":{\"file\":\"base64://TU9DSy1GSUxFLUNPTlRFTlQtMTIzNDU2Nzg5MAo=\",\"file_name\":\"报告.txt\"},\"echo\":\"echo-T42get-22\"}",
+        "OK  get_file status == ok",
+        "OK  get_file 下载内容 长度 (29 == 期望 29)",
+        "OK  get_file 下载内容 字节完全一致（29 bytes）",
+        "OK  get_file file_name == 报告.txt",
+        "ACTION get_group_file_url params={\"file_id\":\"55550201\"} -> {\"status\":\"ok\",\"retcode\":0,\"msg\":\"\",\"data\":{\"url\":\"http://127.0.0.1:6399/media/doc.txt\",\"file_name\":\"报告.txt\"},\"echo\":\"echo-T42groupurl-23\"}",
+        "OK  get_group_file_url status == ok",
+        "OK  get_group_file_url 返回原始 CDN url（未缓存字节） == http://127.0.0.1:6399/media/doc.txt",
+        "OK  get_group_file_url file_name == 报告.txt",
+        "ACTION get_private_file_url params={\"file_id\":\"55550201\"} -> {\"status\":\"ok\",\"retcode\":0,\"msg\":\"\",\"data\":{\"url\":\"http://127.0.0.1:6399/media/doc.txt\",\"file_name\":\"报告.txt\"},\"echo\":\"echo-T42privurl-24\"}",
+        "OK  get_private_file_url status == ok",
+        "OK  get_private_file_url 返回原始 CDN url == http://127.0.0.1:6399/media/doc.txt"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T43",
+      "name": "get_record 直传 HTTP file → 按需下载 base64（未登记媒体分支）",
+      "group": "actions",
+      "status": "PASS",
+      "duration_ms": 189,
+      "error": "",
+      "evidence": [
+        "ACTION get_record params={\"file\":\"http://127.0.0.1:6399/media/rec.silk\"} -> {\"status\":\"ok\",\"retcode\":0,\"msg\":\"\",\"data\":{\"file\":\"base64://TU9DSy1SRUNPUkQtREFUQQ==\",\"file_name\":\"file\"},\"echo\":\"echo-T43-25\"}",
+        "OK  get_record status == ok",
+        "OK  get_record 下载内容 长度 (16 == 期望 16)",
+        "OK  get_record 下载内容 字节完全一致（16 bytes）",
+        "OK  未登记媒体的 file_name 默认 file == file",
+        "OK  Mock 记录到 get_record 的下载请求"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T44",
+      "name": "媒体未命中 → failed/500：media not available / file url not available",
+      "group": "actions",
+      "status": "PASS",
+      "duration_ms": 97,
+      "error": "",
+      "evidence": [
+        "ACTION get_image params={\"file\":\"no-such-media\"} -> {\"status\":\"failed\",\"retcode\":500,\"msg\":\"media not available: no-such-media\",\"data\":null,\"echo\":\"echo-T44a-26\"}",
+        "OK  get_image 未命中 status == failed",
+        "OK  retcode == 500 (整型)",
+        "OK  错误信息 (找到 \"media not available: no-such-media\")",
+        "ACTION get_group_file_url params={\"file_id\":\"no-such-file\"} -> {\"status\":\"failed\",\"retcode\":500,\"msg\":\"file url not available (需要消息内自带 cdn.url): no-such-file\",\"data\":null,\"echo\":\"echo-T44b-27\"}",
+        "OK  get_group_file_url 未命中 status == failed",
+        "OK  retcode == 500 (整型)",
+        "OK  错误信息 (找到 \"file url not available (需要消息内自带 cdn.url)\")"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T45",
+      "name": "11173 群成员邀请 → notice group_increase/invite（新分派）",
+      "group": "events",
+      "status": "PASS",
+      "duration_ms": 91,
+      "error": "",
+      "evidence": [
+        "注入微灵事件 type=11173 TrySendEvent=true",
+        "OK  sub_type invite == invite",
+        "OK  group_id == 12345 (整型)",
+        "OK  user_id == 55555 (整型)",
+        "OK  operator_id == 11111 (整型)",
+        "OK  11173 notice 含 ling",
+        "OK  ling.type == 11173"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T46",
+      "name": "出站 send_group_msg reply+at+text → 11069（reply 忽略、文本与 at 正常）",
+      "group": "actions",
+      "status": "PASS",
+      "duration_ms": 45,
+      "error": "",
+      "evidence": [
+        "ACTION send_group_msg params={\"group_id\":\"12345\",\"message\":[{\"type\":\"reply\",\"data\":{\"id\":\"srv-11029-1\"}},{\"type\":\"at\",\"data\":{\"qq\":\"22222\"}},{\"type\":\"text\",\"data\":{\"text\":\"回复你\"}}]} -> {\"status\":\"ok\",\"retcode\":0,\"msg\":\"\",\"data\":{\"message_id\":\"srv-11069-10\"},\"echo\":\"echo-T46-32\"}",
+        "OK  status == ok",
+        "OK  retcode == 0 (整型)",
+        "OK  echo 原样回传 == echo-T46-32",
+        "OK  conversation_id == R:12345",
+        "OK  content（reply 段被忽略，正文保留） == 回复你",
+        "OK  at_list 含 1 个用户",
+        "OK  at_list[0] == 22222 (整型)",
+        "OK  reply 段不产生额外命令（仅 1 条 11069）",
+        "OK  message_id 来自 11069 结果"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T47",
+      "name": "出站 at qq=all 与 face 段被忽略 → 11029 无 at_list",
+      "group": "actions",
+      "status": "PASS",
+      "duration_ms": 6,
+      "error": "",
+      "evidence": [
+        "ACTION send_group_msg params={\"group_id\":\"12345\",\"message\":[{\"type\":\"text\",\"data\":{\"text\":\"看@全体\"}},{\"type\":\"at\",\"data\":{\"qq\":\"all\"}},{\"type\":\"face\",\"data\":{\"id\":\"14\"}}]} -> {\"status\":\"ok\",\"retcode\":0,\"msg\":\"\",\"data\":{\"message_id\":\"srv-11029-11\"},\"echo\":\"echo-T47-33\"}",
+        "OK  status == ok",
+        "OK  retcode == 0 (整型)",
+        "OK  conversation_id == R:12345",
+        "OK  content 仅文本（@全体 不作为 at_list） == 看@全体",
+        "OK  @all 忽略后降级为 11029，无 at_list (无 at_list)",
+        "OK  仅 1 条命令（face/@all 不产生命令）"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T48",
+      "name": "出站 video 段（base64 mp4）→ 11067（落盘绝对路径、扩展名 .mp4）",
+      "group": "actions",
+      "status": "PASS",
+      "duration_ms": 105,
+      "error": "",
+      "evidence": [
+        "ACTION send_private_msg params={\"user_id\":\"67890\",\"message\":[{\"type\":\"video\",\"data\":{\"file\":\"base64://AAAAGGZ0eXBtcDQyDQ4KCw==\"}}]} -> {\"status\":\"ok\",\"retcode\":0,\"msg\":\"\",\"data\":{\"message_id\":\"srv-11067-12\"},\"echo\":\"echo-T48-34\"}",
+        "OK  status == ok",
+        "OK  retcode == 0 (整型)",
+        "OK  11067 conversation_id == S:67890_77880001",
+        "OK  11067 data.file 为绝对路径",
+        "OK  11067 data.file 指向已存在文件",
+        "OK  落盘扩展名为 .mp4",
+        "OK  11067 媒体文件内容与 base64 一致 长度 (16 == 期望 16)",
+        "OK  11067 媒体文件内容与 base64 一致 字节完全一致（16 bytes）",
+        "OK  仅 1 条媒体命令（无文本段）",
+        "OK  message_id 来自 11067 结果"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T49",
+      "name": "出站 file 段（绝对路径）→ 11031（保留 data.file_name）",
+      "group": "actions",
+      "status": "PASS",
+      "duration_ms": 82,
+      "error": "",
+      "evidence": [
+        "临时文件: D:\\wecom-ling\\onebot\\tests\\bin\\tmp_upload_source.txt (30 bytes)",
+        "ACTION send_group_msg params={\"group_id\":\"12345\",\"message\":[{\"type\":\"file\",\"data\":{\"name\":\"报告.txt\",\"file\":\"D:\\\\wecom-ling\\\\onebot\\\\tests\\\\bin\\\\tmp_upload_source.txt\"}}]} -> {\"status\":\"ok\",\"retcode\":0,\"msg\":\"\",\"data\":{\"message_id\":\"srv-11031-13\"},\"echo\":\"echo-T49-35\"}",
+        "OK  status == ok",
+        "OK  retcode == 0 (整型)",
+        "OK  11031 conversation_id == R:12345",
+        "OK  11031 data.file 为绝对路径",
+        "OK  11031 data.file 指向已存在文件",
+        "OK  落盘扩展名为 .txt",
+        "OK  11031 媒体文件内容与源文件一致 长度 (30 == 期望 30)",
+        "OK  11031 媒体文件内容与源文件一致 字节完全一致（30 bytes）",
+        "OK  11031 data.file_name 保留段中的 name == 报告.txt"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T50",
+      "name": "出站 image 段 gif 变体（data.type=gif / file 后缀 .gif）→ 11070",
+      "group": "actions",
+      "status": "PASS",
+      "duration_ms": 89,
+      "error": "",
+      "evidence": [
+        "ACTION send_private_msg params={\"user_id\":\"67890\",\"message\":[{\"type\":\"image\",\"data\":{\"file\":\"base64://R0lGODlhAAAAAAAAAAAAAAAAAAAAAA==\",\"type\":\"gif\"}}]} -> {\"status\":\"ok\",\"retcode\":0,\"msg\":\"\",\"data\":{\"message_id\":\"srv-11070-14\"},\"echo\":\"echo-T50a-36\"}",
+        "OK  data.type=gif status == ok",
+        "OK  11070 data.file 存在",
+        "OK  11070 落盘扩展名 .gif",
+        "OK  11070 媒体文件内容与 base64 一致 长度 (22 == 期望 22)",
+        "OK  11070 媒体文件内容与 base64 一致 字节完全一致（22 bytes）",
+        "临时文件: D:\\wecom-ling\\onebot\\tests\\bin\\tmp_anim.gif (22 bytes)",
+        "ACTION send_private_msg params={\"user_id\":\"67890\",\"message\":[{\"type\":\"image\",\"data\":{\"file\":\"D:\\\\wecom-ling\\\\onebot\\\\tests\\\\bin\\\\tmp_anim.gif\"}}]} -> {\"status\":\"ok\",\"retcode\":0,\"msg\":\"\",\"data\":{\"message_id\":\"srv-11070-15\"},\"echo\":\"echo-T50b-37\"}",
+        "OK  file 后缀 .gif status == ok",
+        "OK  11070(.gif 路径) 落盘扩展名 .gif"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T51",
+      "name": "出站 record 段 → failed/500（暂不支持发送语音），且不下发微灵命令",
+      "group": "actions",
+      "status": "PASS",
+      "duration_ms": 80,
+      "error": "",
+      "evidence": [
+        "ACTION send_private_msg params={\"user_id\":\"67890\",\"message\":[{\"type\":\"record\",\"data\":{\"file\":\"https://cdn.example.com/a.silk\"}}]} -> {\"status\":\"failed\",\"retcode\":500,\"msg\":\"暂不支持发送语音：微灵未提供语音发送指令（可改用文本或文件）\",\"data\":null,\"echo\":\"echo-T51-38\"}",
+        "OK  status == failed",
+        "OK  retcode == 500 (整型)",
+        "OK  错误信息 (找到 \"暂不支持发送语音\")",
+        "OK  record 段在解析阶段被拒绝，未下发微灵命令"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T52",
+      "name": "入站 11046 位置 → location 段（lat/lon/title/content）",
+      "group": "events",
+      "status": "PASS",
+      "duration_ms": 77,
+      "error": "",
+      "evidence": [
+        "注入微灵事件 type=11046 TrySendEvent=true",
+        "OK  位置消息 1 个段",
+        "OK  段类型 location == location",
+        "OK  location.data.lat 取 latitude == 31.2304",
+        "OK  location.data.lon 取 longitude == 121.4737",
+        "OK  location.data.title == 公司",
+        "OK  location.data.content 取 address == 上海市黄浦区某路 1 号"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T53",
+      "name": "入站 11047 链接 → share 段（url/title/content/image）",
+      "group": "events",
+      "status": "PASS",
+      "duration_ms": 93,
+      "error": "",
+      "evidence": [
+        "注入微灵事件 type=11047 TrySendEvent=true",
+        "OK  链接消息 1 个段",
+        "OK  段类型 share == share",
+        "OK  share.data.url == https://news.example.com/a/1",
+        "OK  share.data.title == 新闻标题",
+        "OK  share.data.content 取 desc == 新闻摘要",
+        "OK  share.data.image 取 image_url == https://cdn.example.com/img/thumb.png",
+        "注入微灵事件 type=11047 TrySendEvent=true",
+        "OK  空 url/title 降级为 1 个段",
+        "OK  降级段类型 text == text",
+        "OK  降级文本内容取 content == [链接] 链接描述文本"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T54",
+      "name": "入站 11050 名片 → contact 段（type=qq，id 为 JSON 数字）",
+      "group": "events",
+      "status": "PASS",
+      "duration_ms": 95,
+      "error": "",
+      "evidence": [
+        "注入微灵事件 type=11050 TrySendEvent=true",
+        "OK  名片消息 1 个段",
+        "OK  段类型 contact == contact",
+        "OK  contact.data.type=qq == qq",
+        "OK  contact.data.id 为 JSON 数字 == 12345678 (整型)"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T55",
+      "name": "入站 11048 动图 → image 段（file=name，url=cdn url）",
+      "group": "events",
+      "status": "PASS",
+      "duration_ms": 88,
+      "error": "",
+      "evidence": [
+        "注入微灵事件 type=11048 TrySendEvent=true",
+        "OK  动图消息 1 个段",
+        "OK  段类型 image == image",
+        "OK  image.data.file 取 name == anim.gif",
+        "OK  image.data.url == http://127.0.0.1:6399/media/anim.gif"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T56",
+      "name": "get_group_member_list → 11040 查询带顶层 getData:true，返回成员数组",
+      "group": "actions",
+      "status": "PASS",
+      "duration_ms": 11,
+      "error": "",
+      "evidence": [
+        "ACTION get_group_member_list params={\"group_id\":\"12345\"} -> {\"status\":\"ok\",\"retcode\":0,\"msg\":\"\",\"data\":[{\"user_id\":22222,\"nickname\":\"成员甲\",\"card\":\"成员甲\",\"sex\":\"unknown\",\"age\":0,\"role\":\"member\"},{\"user_id\":33333,\"nickname\":\"成员乙\",\"card\":\"群昵称乙\",\"sex\":\"unknown\",\"age\":0,\"role\":\"member\"}],\"echo\":\"echo-T56-39\"}",
+        "OK  status == ok",
+        "OK  retcode == 0 (整型)",
+        "OK  命令顶层 getData=true == true",
+        "OK  命令 type == 11040 (整型)",
+        "OK  查询 conversation_id == R:12345",
+        "OK  返回 2 个成员",
+        "OK  成员0 user_id == 22222 (整型)",
+        "OK  成员0 nickname 取 name == 成员甲",
+        "OK  成员1 user_id == 33333 (整型)",
+        "OK  成员1 card 取 group_nickname == 群昵称乙"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T57",
+      "name": "get_group_msg_history → ok 且返回空数组（不回调微灵 handler）",
+      "group": "actions",
+      "status": "PASS",
+      "duration_ms": 82,
+      "error": "",
+      "evidence": [
+        "ACTION get_group_msg_history params={\"group_id\":\"12345\",\"count\":20} -> {\"status\":\"ok\",\"retcode\":0,\"msg\":\"\",\"data\":[],\"echo\":\"echo-T57-40\"}",
+        "OK  status == ok",
+        "OK  retcode == 0 (整型)",
+        "OK  data 为空数组",
+        "OK  未下发微灵命令"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T58",
+      "name": "入站 11200 未映射消息 → message 事件（content/at_list 透传）",
+      "group": "events",
+      "status": "PASS",
+      "duration_ms": 4,
+      "error": "",
+      "evidence": [
+        "注入微灵事件 type=11200 TrySendEvent=true",
+        "OK  message_type == group",
+        "OK  group_id == 12345 (整型)",
+        "OK  11200 消息含 at + text 共 2 段",
+        "OK  段0 类型 at == at",
+        "OK  at 段 qq == 22222",
+        "OK  段1 类型 text == text",
+        "OK  text 段内容取 content == 未映射消息内容",
+        "OK  raw_message 拼接 == @22222未映射消息内容",
+        "OK  ling.type 保留原始 11200 == 11200 (整型)"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T59",
+      "name": "入站 11200 已读上报 → 不推送（message_type / event_desc 两种判定）",
+      "group": "events",
+      "status": "PASS",
+      "duration_ms": 3066,
+      "error": "",
+      "evidence": [
+        "注入微灵事件 type=11200 TrySendEvent=false",
+        "OK  1500ms 内未收到 message_type=read_receipt 的 11200",
+        "注入微灵事件 type=11200 TrySendEvent=false",
+        "OK  1500ms 内未收到 event_desc=已读上报 的 11200"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T60",
+      "name": "出站 image 段（http(s) URL）→ 经 Mock 下载落盘后发 11030",
+      "group": "actions",
+      "status": "PASS",
+      "duration_ms": 119,
+      "error": "",
+      "evidence": [
+        "ACTION send_private_msg params={\"user_id\":\"67890\",\"message\":[{\"type\":\"image\",\"data\":{\"file\":\"http://127.0.0.1:6399/media/pic.png\"}}]} -> {\"status\":\"ok\",\"retcode\":0,\"msg\":\"\",\"data\":{\"message_id\":\"srv-11030-16\"},\"echo\":\"echo-T60-41\"}",
+        "OK  status == ok",
+        "OK  retcode == 0 (整型)",
+        "OK  11030 conversation_id == S:67890_77880001",
+        "OK  11030 data.file 为绝对路径",
+        "OK  11030 data.file 指向已存在文件",
+        "OK  落盘扩展名 .png",
+        "OK  落盘内容为 Mock 下载的 PNG 长度 (33 == 期望 33)",
+        "OK  落盘内容为 Mock 下载的 PNG 字节完全一致（33 bytes）",
+        "OK  Mock 记录到 shim 的 HTTP 下载请求",
+        "OK  仅 1 条 11030 命令（无文本段）"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T61",
+      "name": "出站 image 段（file:// 前缀 + 绝对路径）→ 11030",
+      "group": "actions",
+      "status": "PASS",
+      "duration_ms": 90,
+      "error": "",
+      "evidence": [
+        "临时文件: D:\\wecom-ling\\onebot\\tests\\bin\\tmp_src_for_fileprefix.png (33 bytes)",
+        "file:// 源: file:///D:/wecom-ling/onebot/tests/bin/tmp_src_for_fileprefix.png",
+        "ACTION send_private_msg params={\"user_id\":\"67890\",\"message\":[{\"type\":\"image\",\"data\":{\"file\":\"file:///D:/wecom-ling/onebot/tests/bin/tmp_src_for_fileprefix.png\"}}]} -> {\"status\":\"ok\",\"retcode\":0,\"msg\":\"\",\"data\":{\"message_id\":\"srv-11030-17\"},\"echo\":\"echo-T61-42\"}",
+        "OK  status == ok",
+        "OK  retcode == 0 (整型)",
+        "OK  11030 data.file 为绝对路径",
+        "OK  11030 data.file 指向已存在文件",
+        "OK  落盘扩展名 .png",
+        "OK  file:// 源文件内容一致 长度 (33 == 期望 33)",
+        "OK  file:// 源文件内容一致 字节完全一致（33 bytes）"
+      ],
+      "priority": "P0"
+    },
+    {
+      "id": "T62",
+      "name": "出站未知消息段（json）→ failed/500 提示不支持，不下发微灵命令",
+      "group": "actions",
+      "status": "PASS",
+      "duration_ms": 12,
+      "error": "",
+      "evidence": [
+        "ACTION send_group_msg params={\"group_id\":\"12345\",\"message\":[{\"type\":\"json\",\"data\":{\"data\":\"{}\"}}]} -> {\"status\":\"failed\",\"retcode\":500,\"msg\":\"当前版本不支持发送 json 消息段（支持：文本、@、图片、视频、文件、动图）\",\"data\":null,\"echo\":\"echo-T62-43\"}",
+        "OK  status == failed",
+        "OK  retcode == 500 (整型)",
+        "OK  错误信息提示不支持 (找到 \"不支持\")",
+        "OK  未知消息段不产生微灵命令"
+      ],
+      "priority": "P0"
+    }
+  ]
+}

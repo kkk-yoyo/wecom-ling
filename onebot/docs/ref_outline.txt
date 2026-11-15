@@ -1,0 +1,2298 @@
+=== SECTIONS ===
+page 7560310 x 10692130; margins L635000 R635000 T635000 B635000
+
+=== STYLES USED ===
+Normal : 1130
+
+=== BODY (paragraph runs detail) ===
+[000][Normal] 微灵对接文档
+      runs=[{'t': '微灵对接文档', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 22.0, 'b': True, 'color': '1F4E79'}]
+[001][Normal] 给对接开发看的。企业微信和个人微信是两套接口，地址、请求体、事件格式都不一样，不要混用。每套都可以选 HTTP 或 WebSocket，同一边同一时间只开一种。直接把文档跟需求丢给AI去对接更快！！！！！！
+      runs=[{'t': '给对接开发看的。企业微信和个人微信是两套接口，地址、请求体、', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}, {'t': '直接把文档跟需求丢给AI去对接更快！！！！！！', 'font': None, 'ea': None, 'sz': 10.5, 'b': None, 'color': None}]
+[002][Normal] 目录
+      runs=[{'t': '目录', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 14.0, 'b': True, 'color': '1F4E79'}]
+[003][Normal] 使用前
+      runs=[{'t': '使用前', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '1F4E79'}]
+[004][Normal] 先做这几件事
+      runs=[{'t': '先做这几件事', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': '334155'}]
+[005][Normal] HTTP 和 WebSocket 的差别
+      runs=[{'t': 'HTTP 和 WebSocket 的差别', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': '334155'}]
+[006][Normal] 企业微信
+      runs=[{'t': '企业微信', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '1F4E79'}]
+[007][Normal] HTTP 怎么接
+      runs=[{'t': 'HTTP 怎么接', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': '334155'}]
+[008][Normal] WebSocket 怎么接
+      runs=[{'t': 'WebSocket 怎么接', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': '334155'}]
+[009][Normal] 指令怎么填
+      runs=[{'t': '指令怎么填', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': '334155'}]
+[010][Normal] 一个能跑通的例子
+      runs=[{'t': '一个能跑通的例子', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': '334155'}]
+[011][Normal] 最小 Demo：回你好
+      runs=[{'t': '最小 Demo：回你好', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': '334155'}]
+[012][Normal] 指令与通知事件
+      runs=[{'t': '指令与通知事件', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': '334155'}]
+[013][Normal] 登录、联系人、群组、消息、CDN
+      runs=[{'t': '登录、联系人、群组、消息、CDN', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.0, 'b': None, 'color': '64748B'}]
+[014][Normal] 通知事件
+      runs=[{'t': '通知事件', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.0, 'b': None, 'color': '64748B'}]
+[015][Normal] 指令类型速查表
+      runs=[{'t': '指令类型速查表', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.0, 'b': None, 'color': '64748B'}]
+[016][Normal] 仅 5.0.13.6005
+      runs=[{'t': '仅 5.0.13.6005', 'font': None, 'ea': None, 'sz': None, 'b': None, 'color': None}]
+[017][Normal] 个人微信
+      runs=[{'t': '个人微信', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '1F4E79'}]
+[018][Normal] 怎么对接
+      runs=[{'t': '怎么对接', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': '334155'}]
+[019][Normal] HTTP
+      runs=[{'t': 'HTTP', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.0, 'b': None, 'color': '64748B'}]
+[020][Normal] WebSocket
+      runs=[{'t': 'WebSocket', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.0, 'b': None, 'color': '64748B'}]
+[021][Normal] 指令一览
+      runs=[{'t': '指令一览', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': '334155'}]
+[022][Normal] 事件一览
+      runs=[{'t': '事件一览', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': '334155'}]
+[023][Normal] 使用前
+      runs=[{'t': '使用前', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 14.0, 'b': True, 'color': '1F4E79'}]
+[024][Normal] 先做这几件事
+      runs=[{'t': '先做这几件事', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[025][Normal] 1. 在 Windows 上用管理员身份打开微灵。不要先开企业微信。
+      runs=[{'t': '1. 在 Windows 上用管理员身份打开微灵。不要先开企', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[026][Normal] 2. 第一次打开会要卡密。把本机机器码发给商家，拿到卡密后粘贴，点激活。激活成功后再进主界面。
+      runs=[{'t': '2. 第一次打开会要卡密。把本机机器码发给商家，拿到卡密后粘', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[027][Normal] 3. 本文先写完企业微信，再写个人微信。两边各自选 HTTP 或 WebSocket，不要混用地址。
+      runs=[{'t': '3. 本文先写完企业微信，再写个人微信。两边各自选 HTTP', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[028][Normal] 4. 账号面板里要出现对应账号并且在线。没有在线账号时，后面怎么调都没有反应。
+      runs=[{'t': '4. 账号面板里要出现对应账号并且在线。没有在线账号时，后面', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[029][Normal] 电脑重启后：先开微灵，再从微灵里登录，不要从桌面直接打开微信或企业微信。HTTP 确认本机服务在跑；WebSocket 确认状态是「已连接」。
+      runs=[{'t': '电脑重启后：先开微灵，再从微灵里登录，不要从桌面直接打开微信', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[030][Normal] 两种方式怎么选
+      runs=[{'t': '两种方式怎么选', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[031][Normal] 企微和个微各自选一次，可以一个用 HTTP、另一个用 WebSocket。
+      runs=[{'t': '企微和个微各自选一次，可以一个用 HTTP、另一个用 Web', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[032][Normal] HTTP：你的服务端主动请求微灵，微灵再把收到的消息 POST 到你填的回调地址。微灵和你的服务端如果不在同一台机器，微灵这边通常还要做内网穿透，否则你访问不到它的端口，它也访问不到你的回调。
+      runs=[{'t': 'HTTP：你的服务端主动请求微灵，微灵再把收到的消息 POS', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[033][Normal] WebSocket：微灵主动连你的服务端。收消息、下指令都走这一条连接。一般不需要内网穿透。推荐新对接用这种方式。
+      runs=[{'t': 'WebSocket：微灵主动连你的服务端。收消息、下指令都走', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[034][Normal] 企业微信
+      runs=[{'t': '企业微信', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 16.0, 'b': True, 'color': 'FFFFFF'}]
+[035][Normal] 选中 5.0.13.6005 时，对外指令码和回调通道不变。这一版才会多出第「五、仅企业微信 5.0.13.6005」里的事件和字段。更早版本没有。
+      runs=[{'t': '选中 5.0.13.6005 时，对外指令码和回调通道不变。', 'font': None, 'ea': None, 'sz': None, 'b': None, 'color': None}]
+[036][Normal] 企业微信：HTTP 怎么接
+      runs=[{'t': '企业微信：HTTP 怎么接', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 12.0, 'b': True, 'color': '0F6E56'}]
+[037][Normal] 3.1 微灵这边怎么填
+      runs=[{'t': '3.1 微灵这边怎么填', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[038][Normal] 1. 「企业微信」页点「自动检测」或手动选对本机企微版本，再点「登录新账号」扫码。不要从桌面直接打开企业微信。账号面板里要看到在线账号，client 填这个编号。
+      runs=[{'t': '1. 「企业微信」页点「自动检测」或手动选对本机企微版本，再', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[039][Normal] 2. 通信方式选 HTTP。
+      runs=[{'t': '2. 通信方式选 HTTP。', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[040][Normal] 3. 点「编辑」，填写「事件通知 URL」，保存。必须以 http:// 或 https:// 开头。示例：http://192.168.1.100:8080/callback
+      runs=[{'t': '3. 点「编辑」，填写「事件通知 URL」，保存。必须以 h', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[041][Normal] 4. 「本机配置」页里 HTTP 服务必须是「运行中」。默认端口 8060，改端口后要重启服务。
+      runs=[{'t': '4. 「本机配置」页里 HTTP 服务必须是「运行中」。默认', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[042][Normal] 5. 你的服务端不在这台电脑上时：「内网穿透」要处于运行中，并把穿透后的对外地址配给你的服务端。事件通知 URL 必须是微灵这台电脑访问得到的地址。
+      runs=[{'t': '5. 你的服务端不在这台电脑上时：「内网穿透」要处于运行中，', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[043][Normal] 3.2 你怎么给微灵下指令
+      runs=[{'t': '3.2 你怎么给微灵下指令', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[044][Normal] POST http://微灵IP:8060/api/Client/ExecCommand
+      runs=[{'t': 'POST http://微灵IP:8060/api/Clie', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[045][Normal] Content-Type: application/json
+      runs=[{'t': 'Content-Type: application/json', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[046][Normal] 请求体就是一条指令，type、data、client 放在最外层：
+      runs=[{'t': '请求体就是一条指令，type、data、client 放在最', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[047][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[048][Normal] "type": 11029,
+      runs=[{'t': '  "type": 11029,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[049][Normal] "data": {
+      runs=[{'t': '  "data": {', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[050][Normal] "conversation_id": "S:自己的user_id_对方的user_id",
+      runs=[{'t': '    "conversation_id": "S:自己的u', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[051][Normal] "content": "你好"
+      runs=[{'t': '    "content": "你好"', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[052][Normal] },
+      runs=[{'t': '  },', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[053][Normal] "client": 1
+      runs=[{'t': '  "client": 1', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[054][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[055][Normal] 字段说明：
+      runs=[{'t': '字段说明：', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[056][Normal] type：指令码，见本文后半部分。
+      runs=[{'t': 'type：指令码，见本文后半部分。', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[057][Normal] data：这条指令自己的参数。
+      runs=[{'t': 'data：这条指令自己的参数。', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[058][Normal] client：账号面板里的客户端编号。必填。已断开的账号会返回失败。
+      runs=[{'t': 'client：账号面板里的客户端编号。必填。已断开的账号会返', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[059][Normal] getData：查询类指令要结果时传 true。发消息这类不需要结果的不要传，传了会一直等到超时。
+      runs=[{'t': 'getData：查询类指令要结果时传 true。发消息这类不', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[060][Normal] 成功时 HTTP 正文大致是：
+      runs=[{'t': '成功时 HTTP 正文大致是：', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[061][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[062][Normal] "code": 200,
+      runs=[{'t': '  "code": 200,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[063][Normal] "msg": "请求成功！",
+      runs=[{'t': '  "msg": "请求成功！",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[064][Normal] "data": "执行结果",
+      runs=[{'t': '  "data": "执行结果",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[065][Normal] "time": 1710000000
+      runs=[{'t': '  "time": 1710000000', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[066][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[067][Normal] code 为 200 表示成功，其他值表示失败，原因在 msg。
+      runs=[{'t': 'code 为 200 表示成功，其他值表示失败，原因在 ms', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[068][Normal] 下载 CDN 文件（type 11170 或 11171）成功时，HTTP 直接返回文件二进制，不是上面的 JSON。请按文件流保存。
+      runs=[{'t': '下载 CDN 文件（type 11170 或 11171）成', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[069][Normal] 3.3 微灵怎么把消息推给你
+      runs=[{'t': '3.3 微灵怎么把消息推给你', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[070][Normal] 企业微信里发生的事件，微灵会用 POST 把 JSON 发到你填的事件通知 URL。正文就是事件本身，例如：
+      runs=[{'t': '企业微信里发生的事件，微灵会用 POST 把 JSON 发到', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[071][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[072][Normal] "type": 11041,
+      runs=[{'t': '  "type": 11041,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[073][Normal] "client": 1,
+      runs=[{'t': '  "client": 1,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[074][Normal] "robot_id": "当前登录用户的user_id",
+      runs=[{'t': '  "robot_id": "当前登录用户的user_id"', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[075][Normal] "data": {
+      runs=[{'t': '  "data": {', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[076][Normal] "conversation_id": "S:xxx_xxx",
+      runs=[{'t': '    "conversation_id": "S:xxx_', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[077][Normal] "content": "你好",
+      runs=[{'t': '    "content": "你好",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[078][Normal] "receiver": "当前登录用户的user_id"
+      runs=[{'t': '    "receiver": "当前登录用户的user_i', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[079][Normal] }
+      runs=[{'t': '  }', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[080][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[081][Normal] client、robot_id 是微灵补上的。type 含义见「通知事件」。你的接口尽快返回 HTTP 2xx 即可，微灵不解析响应正文。回调最多等 5 秒，超时或非 2xx 只记日志，不会重推。不要在这个请求里做耗时处理。
+      runs=[{'t': 'client、robot_id 是微灵补上的。type 含义', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[082][Normal] 没收到消息时按这个顺序查：账号是否在线、HTTP 服务是否运行中、事件通知 URL 是否已保存、外网时穿透是否运行、日志里有没有回调失败。
+      runs=[{'t': '没收到消息时按这个顺序查：账号是否在线、HTTP 服务是否运', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[083][Normal] 3.4 企微 HTTP 的 Java 示例
+      runs=[{'t': '3.4 企微 HTTP 的 Java 示例', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[084][Normal] Spring Boot 即可，用 spring-boot-starter-web。微灵把事件 POST 到你填的地址；你再 POST 到微灵的 8060 下指令。回调里尽快返回，不要在这个请求里等待外部接口。
+      runs=[{'t': 'Spring Boot 即可，用 spring-boot-s', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[085][Normal] import org.springframework.http.ResponseEntity;
+      runs=[{'t': 'import org.springframework.htt', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[086][Normal] import org.springframework.web.bind.annotation.PostMapping;
+      runs=[{'t': 'import org.springframework.web', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[087][Normal] import org.springframework.web.bind.annotation.RequestBody;
+      runs=[{'t': 'import org.springframework.web', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[088][Normal] import org.springframework.web.bind.annotation.RestController;
+      runs=[{'t': 'import org.springframework.web', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[089][Normal] import org.springframework.web.client.RestTemplate;
+      runs=[{'t': 'import org.springframework.web', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[090][Normal] import com.fasterxml.jackson.databind.JsonNode;
+      runs=[{'t': 'import com.fasterxml.jackson.d', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[091][Normal] import com.fasterxml.jackson.databind.ObjectMapper;
+      runs=[{'t': 'import com.fasterxml.jackson.d', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[092][Normal] import java.util.LinkedHashMap;
+      runs=[{'t': 'import java.util.LinkedHashMap', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[093][Normal] import java.util.Map;
+      runs=[{'t': 'import java.util.Map;', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[095][Normal] @RestController
+      runs=[{'t': '@RestController', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[096][Normal] public class WeComHttpDemo {
+      runs=[{'t': 'public class WeComHttpDemo {', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[097][Normal] private final ObjectMapper json = new ObjectMapper();
+      runs=[{'t': '    private final ObjectMapper', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[098][Normal] private final RestTemplate http = new RestTemplate();
+      runs=[{'t': '    private final RestTemplate', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[100][Normal] // 微灵「事件通知 URL」填：http://你的主机:端口/wx/callback
+      runs=[{'t': '    // 微灵「事件通知 URL」填：http://你的', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[101][Normal] @PostMapping("/wx/callback")
+      runs=[{'t': '    @PostMapping("/wx/callback', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[102][Normal] public ResponseEntity<String> onEvent(@RequestBody String body) throws Exception {
+      runs=[{'t': '    public ResponseEntity<Stri', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[103][Normal] JsonNode event = json.readTree(body);
+      runs=[{'t': '        JsonNode event = json.', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[104][Normal] int type = event.path("type").asInt();
+      runs=[{'t': '        int type = event.path(', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[105][Normal] int client = event.path("client").asInt();
+      runs=[{'t': '        int client = event.pat', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[106][Normal] String text = event.path("data").path("content").asText("");
+      runs=[{'t': '        String text = event.pa', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[107][Normal] // type 11041 是收到消息。这里尽快返回，耗时逻辑放到别的线程。
+      runs=[{'t': '        // type 11041 是收到消息。这里', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[108][Normal] return ResponseEntity.ok("ok");
+      runs=[{'t': '        return ResponseEntity.', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[109][Normal] }
+      runs=[{'t': '    }', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[111][Normal] // 给在线企微发文本。发消息不要带 getData。
+      runs=[{'t': '    // 给在线企微发文本。发消息不要带 getData', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[112][Normal] public String sendText(int client, String conversationId, String content) {
+      runs=[{'t': '    public String sendText(int', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[113][Normal] Map<String, Object> data = new LinkedHashMap<String, Object>();
+      runs=[{'t': '        Map<String, Object> da', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[114][Normal] data.put("conversation_id", conversationId);
+      runs=[{'t': '        data.put("conversation', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[115][Normal] data.put("content", content);
+      runs=[{'t': '        data.put("content", co', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[116][Normal] Map<String, Object> body = new LinkedHashMap<String, Object>();
+      runs=[{'t': '        Map<String, Object> bo', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[117][Normal] body.put("type", 11029);
+      runs=[{'t': '        body.put("type", 11029', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[118][Normal] body.put("client", client);
+      runs=[{'t': '        body.put("client", cli', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[119][Normal] body.put("data", data);
+      runs=[{'t': '        body.put("data", data)', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[120][Normal] return http.postForObject(
+      runs=[{'t': '        return http.postForObj', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[121][Normal] "http://微灵IP:8060/api/Client/ExecCommand", body, String.class);
+      runs=[{'t': '                "http://微灵IP:8', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[122][Normal] }
+      runs=[{'t': '    }', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[123][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[124][Normal] 企业微信：WebSocket 怎么接
+      runs=[{'t': '企业微信：WebSocket 怎么接', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 12.0, 'b': True, 'color': '0F6E56'}]
+[125][Normal] 4.1 谁连谁
+      runs=[{'t': '4.1 谁连谁', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[126][Normal] 微灵是客户端，你的服务端是 WebSocket 服务端。微灵主动连过来。你不要去连微灵。
+      runs=[{'t': '微灵是客户端，你的服务端是 WebSocket 服务端。微灵', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[127][Normal] 4.2 微灵这边怎么填
+      runs=[{'t': '4.2 微灵这边怎么填', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[128][Normal] 1. 「企业微信」页通信方式选 WebSocket。
+      runs=[{'t': '1. 「企业微信」页通信方式选 WebSocket。', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[129][Normal] 2. 连接地址填你的服务端地址，ws:// 或 wss://。只填主机时，微灵会自动补上路径 /wx/ws。建议直接填完整地址，例如 ws://192.168.1.100:8080/wx/ws
+      runs=[{'t': '2. 连接地址填你的服务端地址，ws:// 或 wss://', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[130][Normal] 3. Token 填你约定的口令。微灵会把它追加到地址上：ws://192.168.1.100:8080/wx/ws?token=你的Token
+      runs=[{'t': '3. Token 填你约定的口令。微灵会把它追加到地址上：w', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[131][Normal] 4. 点「连接」。状态必须变成「已连接」。停在「连接中」就再等；是「未连接」就核对地址、Token，以及这台电脑能不能访问你的服务端。
+      runs=[{'t': '4. 点「连接」。状态必须变成「已连接」。停在「连接中」就再', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[132][Normal] 5. 地址和 Token 都填了之后，下次打开微灵会自动重连。断线后按 1 秒、2 秒、4 秒、8 秒、16 秒重连，之后固定 30 秒。连上之后，或网络恢复、本机地址变化时，间隔重新从 1 秒算。
+      runs=[{'t': '5. 地址和 Token 都填了之后，下次打开微灵会自动重连', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[133][Normal] 个人微信是另一条连接，路径是 /personal-wx/ws，不要和企微这条混用。本文指令码只适用于企业微信。
+      runs=[{'t': '个人微信是另一条连接，路径是 /personal-wx/ws', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[134][Normal] 4.3 帧格式
+      runs=[{'t': '4.3 帧格式', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[135][Normal] 除文件分片外，消息都是一条文本 JSON：
+      runs=[{'t': '除文件分片外，消息都是一条文本 JSON：', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[136][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[137][Normal] "id": "本次消息的唯一编号",
+      runs=[{'t': '  "id": "本次消息的唯一编号",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[138][Normal] "action": "动作",
+      runs=[{'t': '  "action": "动作",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[139][Normal] "payload": {}
+      runs=[{'t': '  "payload": {}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[140][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[141][Normal] id 用 UUID 即可。请求和响应必须使用同一个 id，用来对上是哪一条指令。
+      runs=[{'t': 'id 用 UUID 即可。请求和响应必须使用同一个 id，用', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[142][Normal] 4.4 连上之后微灵先发 hello
+      runs=[{'t': '4.4 连上之后微灵先发 hello', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[143][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[144][Normal] "id": "新的uuid",
+      runs=[{'t': '  "id": "新的uuid",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[145][Normal] "action": "hello",
+      runs=[{'t': '  "action": "hello",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[146][Normal] "payload": {
+      runs=[{'t': '  "payload": {', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[147][Normal] "clientName": "微灵里填的客户端名称",
+      runs=[{'t': '    "clientName": "微灵里填的客户端名称"', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[148][Normal] "channel": "wecom"
+      runs=[{'t': '    "channel": "wecom"', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[149][Normal] }
+      runs=[{'t': '  }', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[150][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[151][Normal] 收到 hello 且 channel 为 wecom，就表示这条连接是企业微信通道。你不需要回复 hello。
+      runs=[{'t': '收到 hello 且 channel 为 wecom，就表示', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[152][Normal] 4.5 心跳
+      runs=[{'t': '4.5 心跳', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[153][Normal] 微灵每 20 秒发一次 ping。这是应用层 JSON，不是 WebSocket 协议自带的 Ping 帧：
+      runs=[{'t': '微灵每 20 秒发一次 ping。这是应用层 JSON，不是', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[154][Normal] { "id": "uuid", "action": "ping", "payload": {} }
+      runs=[{'t': '{ "id": "uuid", "action": "pin', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[155][Normal] 你必须立刻用同一个 id 回 pong：
+      runs=[{'t': '你必须立刻用同一个 id 回 pong：', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[156][Normal] { "id": "同一个uuid", "action": "pong", "payload": {} }
+      runs=[{'t': '{ "id": "同一个uuid", "action": "', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[157][Normal] 后端必须配合。收到 ping 后立刻用同一个 id 回 pong，微灵收到 pong 才算心跳成功。超过 30 秒没有 pong，微灵会断开并重连。检查发生在下一次发 ping 时，所以实际大约 40 秒能发现死连接。后端只要应答即可，不必自己发 ping，也不必因为长时间没心跳去踢掉连接。你也可以主动发 ping，微灵会回 pong。个微 WebSocket 的心跳和重连与这里相同，两条连接各自心跳，都要回 pong。
+      runs=[{'t': '后端必须配合。收到 ping 后立刻用同一个 id 回 po', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[158][Normal] 4.6 微灵怎么把消息推给你
+      runs=[{'t': '4.6 微灵怎么把消息推给你', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[159][Normal] 事件用 action=event 推过来。payload 就是和 HTTP 回调同一份 JSON：
+      runs=[{'t': '事件用 action=event 推过来。payload 就', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[160][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[161][Normal] "id": "uuid",
+      runs=[{'t': '  "id": "uuid",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[162][Normal] "action": "event",
+      runs=[{'t': '  "action": "event",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[163][Normal] "payload": {
+      runs=[{'t': '  "payload": {', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[164][Normal] "type": 11041,
+      runs=[{'t': '    "type": 11041,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[165][Normal] "client": 1,
+      runs=[{'t': '    "client": 1,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[166][Normal] "robot_id": "当前登录用户的user_id",
+      runs=[{'t': '    "robot_id": "当前登录用户的user_i', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[167][Normal] "data": {
+      runs=[{'t': '    "data": {', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[168][Normal] "conversation_id": "S:xxx_xxx",
+      runs=[{'t': '      "conversation_id": "S:xx', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[169][Normal] "content": "你好",
+      runs=[{'t': '      "content": "你好",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[170][Normal] "receiver": "当前登录用户的user_id"
+      runs=[{'t': '      "receiver": "当前登录用户的user', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[171][Normal] }
+      runs=[{'t': '    }', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[172][Normal] }
+      runs=[{'t': '  }', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[173][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[174][Normal] 你不需要回复 event。WebSocket 未连接时，这条事件会被丢掉，不会改走 HTTP。
+      runs=[{'t': '你不需要回复 event。WebSocket 未连接时，这条', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[175][Normal] 4.7 你怎么给微灵下指令
+      runs=[{'t': '4.7 你怎么给微灵下指令', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[176][Normal] 发 action=command。payload 与 HTTP 的请求体完全相同，仍然包含 type、data、client，查询时同样带 getData：
+      runs=[{'t': '发 action=command。payload 与 HTT', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[177][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[178][Normal] "id": "指令uuid",
+      runs=[{'t': '  "id": "指令uuid",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[179][Normal] "action": "command",
+      runs=[{'t': '  "action": "command",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[180][Normal] "payload": {
+      runs=[{'t': '  "payload": {', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[181][Normal] "type": 11029,
+      runs=[{'t': '    "type": 11029,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[182][Normal] "client": 1,
+      runs=[{'t': '    "client": 1,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[183][Normal] "data": {
+      runs=[{'t': '    "data": {', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[184][Normal] "conversation_id": "S:xxx_xxx",
+      runs=[{'t': '      "conversation_id": "S:xx', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[185][Normal] "content": "你好"
+      runs=[{'t': '      "content": "你好"', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[186][Normal] }
+      runs=[{'t': '    }', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[187][Normal] }
+      runs=[{'t': '  }', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[188][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[189][Normal] 微灵执行完后回 action=command_result，id 与你发出的指令相同：
+      runs=[{'t': '微灵执行完后回 action=command_result，', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[190][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[191][Normal] "id": "指令uuid",
+      runs=[{'t': '  "id": "指令uuid",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[192][Normal] "action": "command_result",
+      runs=[{'t': '  "action": "command_result",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[193][Normal] "payload": {
+      runs=[{'t': '  "payload": {', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[194][Normal] "code": 200,
+      runs=[{'t': '    "code": 200,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[195][Normal] "msg": "请求成功！",
+      runs=[{'t': '    "msg": "请求成功！",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[196][Normal] "data": null
+      runs=[{'t': '    "data": null', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[197][Normal] }
+      runs=[{'t': '  }', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[198][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[199][Normal] code 为 200 表示成功，500 表示失败，原因在 msg。请用 id 对应请求，不要按到达顺序猜。单条指令最长大约等 60 秒。
+      runs=[{'t': 'code 为 200 表示成功，500 表示失败，原因在 m', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[200][Normal] 4.8 下载文件时多出来的二进制帧
+      runs=[{'t': '4.8 下载文件时多出来的二进制帧', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[201][Normal] type 为 11170 或 11171 时，微灵不会在 JSON 里塞文件内容。顺序是：
+      runs=[{'t': 'type 为 11170 或 11171 时，微灵不会在 J', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[202][Normal] 1. 文本帧 action=file_start，id 为指令 id。payload 含 name、size、contentType。
+      runs=[{'t': '1. 文本帧 action=file_start，id 为指', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[203][Normal] 2. 若干二进制帧。单帧最大 64KB，文件最大 100MB。
+      runs=[{'t': '2. 若干二进制帧。单帧最大 64KB，文件最大 100MB', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[204][Normal] 3. 文本帧 action=file_end。payload 为 { "ok": true, "size": 文件字节数 }。
+      runs=[{'t': '3. 文本帧 action=file_end。payload', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[205][Normal] 4. 最后仍有一条 command_result。payload 里 file 为 true，并带 fileName、contentType、size。文件内容以前面的二进制帧为准。
+      runs=[{'t': '4. 最后仍有一条 command_result。paylo', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[206][Normal] 二进制帧布局（大端）：
+      runs=[{'t': '二进制帧布局（大端）：', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[207][Normal] 4 字节魔数，固定是 ASCII：WXFL
+      runs=[{'t': '4 字节魔数，固定是 ASCII：WXFL', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[208][Normal] 2 字节：后面指令 id 的字节长度
+      runs=[{'t': '2 字节：后面指令 id 的字节长度', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[209][Normal] N 字节：指令 id 的 UTF-8
+      runs=[{'t': 'N 字节：指令 id 的 UTF-8', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[210][Normal] 4 字节：分片序号 seq，从 0 开始
+      runs=[{'t': '4 字节：分片序号 seq，从 0 开始', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[211][Normal] 1 字节：是否最后一片，1 表示是
+      runs=[{'t': '1 字节：是否最后一片，1 表示是', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[212][Normal] 剩余字节：这一片的文件内容
+      runs=[{'t': '剩余字节：这一片的文件内容', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[213][Normal] 按 seq 顺序拼接，直到 last 为 1。
+      runs=[{'t': '按 seq 顺序拼接，直到 last 为 1。', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[214][Normal] 4.9 没反应时查什么
+      runs=[{'t': '4.9 没反应时查什么', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[215][Normal] 只查这几项：状态是不是「已连接」、账号面板里有没有在线账号、你的服务端有没有把 command 的 id 原样带回。不要去查 HTTP 的事件通知 URL 和内网穿透，WebSocket 用不到它们。
+      runs=[{'t': '只查这几项：状态是不是「已连接」、账号面板里有没有在线账号、', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[216][Normal] 4.10 企微 WebSocket 的 Java 示例
+      runs=[{'t': '4.10 企微 WebSocket 的 Java 示例', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[217][Normal] 微灵是客户端，你起 WebSocket 服务端。依赖 spring-boot-starter-websocket。路径用 /wx/ws，微灵只填主机时会自动补这个路径，并带上 ?token=口令。先处理 ping，用同一个 id 回 pong，否则大约 40 秒后微灵会断开重连。下载文件的二进制分片见 4.8，这里不展开。
+      runs=[{'t': '微灵是客户端，你起 WebSocket 服务端。依赖 spr', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[218][Normal] import org.springframework.context.annotation.Configuration;
+      runs=[{'t': 'import org.springframework.con', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[219][Normal] import org.springframework.stereotype.Component;
+      runs=[{'t': 'import org.springframework.ste', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[220][Normal] import org.springframework.web.socket.TextMessage;
+      runs=[{'t': 'import org.springframework.web', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[221][Normal] import org.springframework.web.socket.WebSocketSession;
+      runs=[{'t': 'import org.springframework.web', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[222][Normal] import org.springframework.web.socket.config.annotation.EnableWebSocket;
+      runs=[{'t': 'import org.springframework.web', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[223][Normal] import org.springframework.web.socket.config.annotation.WebSocketConfigurer;
+      runs=[{'t': 'import org.springframework.web', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[224][Normal] import org.springframework.web.socket.config.annotation.WebSocketHandlerRegistry;
+      runs=[{'t': 'import org.springframework.web', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[225][Normal] import org.springframework.web.socket.handler.TextWebSocketHandler;
+      runs=[{'t': 'import org.springframework.web', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[226][Normal] import com.fasterxml.jackson.databind.JsonNode;
+      runs=[{'t': 'import com.fasterxml.jackson.d', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[227][Normal] import com.fasterxml.jackson.databind.ObjectMapper;
+      runs=[{'t': 'import com.fasterxml.jackson.d', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[228][Normal] import com.fasterxml.jackson.databind.node.ObjectNode;
+      runs=[{'t': 'import com.fasterxml.jackson.d', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[229][Normal] import java.util.UUID;
+      runs=[{'t': 'import java.util.UUID;', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[231][Normal] @Component
+      runs=[{'t': '@Component', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[232][Normal] public class WeComWsDemo extends TextWebSocketHandler {
+      runs=[{'t': 'public class WeComWsDemo exten', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[233][Normal] private final ObjectMapper json = new ObjectMapper();
+      runs=[{'t': '    private final ObjectMapper', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[235][Normal] @Override
+      runs=[{'t': '    @Override', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[236][Normal] protected void handleTextMessage(WebSocketSession session, TextMessage message) throws Exception {
+      runs=[{'t': '    protected void handleTextM', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[237][Normal] JsonNode frame = json.readTree(message.getPayload());
+      runs=[{'t': '        JsonNode frame = json.', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[238][Normal] String action = frame.path("action").asText();
+      runs=[{'t': '        String action = frame.', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[239][Normal] String id = frame.path("id").asText();
+      runs=[{'t': '        String id = frame.path', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[240][Normal] if ("ping".equals(action)) {
+      runs=[{'t': '        if ("ping".equals(acti', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[241][Normal] reply(session, id, "pong", json.createObjectNode());
+      runs=[{'t': '            reply(session, id,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[242][Normal] return;
+      runs=[{'t': '            return;', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[243][Normal] }
+      runs=[{'t': '        }', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[244][Normal] if ("hello".equals(action)) {
+      runs=[{'t': '        if ("hello".equals(act', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[245][Normal] // payload.channel 应为 wecom。不用回复 hello。
+      runs=[{'t': '            // payload.channel', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[246][Normal] return;
+      runs=[{'t': '            return;', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[247][Normal] }
+      runs=[{'t': '        }', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[248][Normal] if ("event".equals(action)) {
+      runs=[{'t': '        if ("event".equals(act', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[249][Normal] JsonNode payload = frame.path("payload");
+      runs=[{'t': '            JsonNode payload =', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[250][Normal] int type = payload.path("type").asInt();
+      runs=[{'t': '            int type = payload', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[251][Normal] // payload 与 HTTP 回调正文相同，11041 的文字在 payload.data.content
+      runs=[{'t': '            // payload 与 HTTP ', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[252][Normal] return;
+      runs=[{'t': '            return;', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[253][Normal] }
+      runs=[{'t': '        }', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[254][Normal] if ("command_result".equals(action)) {
+      runs=[{'t': '        if ("command_result".e', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[255][Normal] int code = frame.path("payload").path("code").asInt();
+      runs=[{'t': '            int code = frame.p', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[256][Normal] // 用 id 对上自己发出的 command。200 成功，500 失败。
+      runs=[{'t': '            // 用 id 对上自己发出的 co', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[257][Normal] return;
+      runs=[{'t': '            return;', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[258][Normal] }
+      runs=[{'t': '        }', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[259][Normal] }
+      runs=[{'t': '    }', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[261][Normal] public void sendText(WebSocketSession session, int client,
+      runs=[{'t': '    public void sendText(WebSo', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[262][Normal] String conversationId, String content) throws Exception {
+      runs=[{'t': '                         Strin', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[263][Normal] ObjectNode data = json.createObjectNode();
+      runs=[{'t': '        ObjectNode data = json', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[264][Normal] data.put("conversation_id", conversationId);
+      runs=[{'t': '        data.put("conversation', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[265][Normal] data.put("content", content);
+      runs=[{'t': '        data.put("content", co', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[266][Normal] ObjectNode payload = json.createObjectNode();
+      runs=[{'t': '        ObjectNode payload = j', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[267][Normal] payload.put("type", 11029);
+      runs=[{'t': '        payload.put("type", 11', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[268][Normal] payload.put("client", client);
+      runs=[{'t': '        payload.put("client", ', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[269][Normal] payload.set("data", data);
+      runs=[{'t': '        payload.set("data", da', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[270][Normal] reply(session, UUID.randomUUID().toString(), "command", payload);
+      runs=[{'t': '        reply(session, UUID.ra', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[271][Normal] }
+      runs=[{'t': '    }', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[273][Normal] private void reply(WebSocketSession session, String id, String action, JsonNode payload) throws Exception {
+      runs=[{'t': '    private void reply(WebSock', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[274][Normal] ObjectNode frame = json.createObjectNode();
+      runs=[{'t': '        ObjectNode frame = jso', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[275][Normal] frame.put("id", id);
+      runs=[{'t': '        frame.put("id", id);', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[276][Normal] frame.put("action", action);
+      runs=[{'t': '        frame.put("action", ac', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[277][Normal] frame.set("payload", payload);
+      runs=[{'t': '        frame.set("payload", p', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[278][Normal] synchronized (session) {
+      runs=[{'t': '        synchronized (session)', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[279][Normal] session.sendMessage(new TextMessage(json.writeValueAsString(frame)));
+      runs=[{'t': '            session.sendMessag', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[280][Normal] }
+      runs=[{'t': '        }', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[281][Normal] }
+      runs=[{'t': '    }', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[282][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[284][Normal] @Configuration
+      runs=[{'t': '@Configuration', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[285][Normal] @EnableWebSocket
+      runs=[{'t': '@EnableWebSocket', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[286][Normal] class WeComWsConfig implements WebSocketConfigurer {
+      runs=[{'t': 'class WeComWsConfig implements', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[287][Normal] private final WeComWsDemo handler;
+      runs=[{'t': '    private final WeComWsDemo ', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[288][Normal] WeComWsConfig(WeComWsDemo handler) { this.handler = handler; }
+      runs=[{'t': '    WeComWsConfig(WeComWsDemo ', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[290][Normal] @Override
+      runs=[{'t': '    @Override', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[291][Normal] public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
+      runs=[{'t': '    public void registerWebSoc', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[292][Normal] registry.addHandler(handler, "/wx/ws").setAllowedOrigins("*");
+      runs=[{'t': '        registry.addHandler(ha', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[293][Normal] }
+      runs=[{'t': '    }', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[294][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[295][Normal] 企业微信指令怎么填（HTTP 和 WebSocket 相同）
+      runs=[{'t': '企业微信指令怎么填（HTTP 和 WebSocket 相同）', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 12.0, 'b': True, 'color': '0F6E56'}]
+[296][Normal] 下面的 JSON 是指令体。HTTP 时它就是 POST 正文。WebSocket 时把它放进 command 的 payload。
+      runs=[{'t': '下面的 JSON 是指令体。HTTP 时它就是 POST 正', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[297][Normal] client 对应账号面板中的客户端编号。
+      runs=[{'t': 'client 对应账号面板中的客户端编号。', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[298][Normal] getData 为 true 的是查询，要等返回。没有标注 getData 的不要传这个字段。
+      runs=[{'t': 'getData 为 true 的是查询，要等返回。没有标注 ', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[299][Normal] 发图片、视频、文件时，file 使用微灵所在电脑上的绝对路径，反斜杠写成 \\。如果 data 里带 url，微灵会先把文件下载到本机再发送。发送图片、文件、视频对应的 type 是 11030、11031、11067。
+      runs=[{'t': '发图片、视频、文件时，file 使用微灵所在电脑上的绝对路径', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[300][Normal] conversation_id：私聊是 S:自己的user_id_对方的user_id，群聊是 R:群ID。
+      runs=[{'t': 'conversation_id：私聊是 S:自己的user_', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[301][Normal] 消息里的 cdn_type 为 1 时用 11171 下载，为 2 时用 11170 下载。
+      runs=[{'t': '消息里的 cdn_type 为 1 时用 11171 下载，', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[302][Normal] 企业微信一个能跑通的例子
+      runs=[{'t': '企业微信一个能跑通的例子', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 12.0, 'b': True, 'color': '0F6E56'}]
+[303][Normal] 目标：给当前在线企微发一条文本。
+      runs=[{'t': '目标：给当前在线企微发一条文本。', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[304][Normal] 1. 微灵已管理员运行，账号面板里该账号在线，记下 client，下面按 1 举例。
+      runs=[{'t': '1. 微灵已管理员运行，账号面板里该账号在线，记下 clie', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[305][Normal] 2. 如果用 HTTP：确认本机 8060 服务运行中，然后 POST /api/Client/ExecCommand，正文 type=11029，data.conversation_id 填会话 ID，data.content 填文本，client 填 1。不要传 getData。
+      runs=[{'t': '2. 如果用 HTTP：确认本机 8060 服务运行中，然后', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[306][Normal] 3. 如果用 WebSocket：状态为已连接后，发 action=command，payload 用同一份 JSON，自己生成 id。等到相同 id 的 command_result，且 code 为 200。
+      runs=[{'t': '3. 如果用 WebSocket：状态为已连接后，发 act', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[307][Normal] 4. 对方回复后：HTTP 会 POST 到事件通知 URL；WebSocket 会推 action=event。两种的 payload.type 都是 11041，文字在 payload.data.content。
+      runs=[{'t': '4. 对方回复后：HTTP 会 POST 到事件通知 URL', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[308][Normal] 最小 Demo：有人私聊就回「你好」
+      runs=[{'t': '最小 Demo：有人私聊就回「你好」', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 12.0, 'b': True, 'color': '0F6E56'}]
+[309][Normal] 先跑通这一条，再去看上面的完整接口。下面是企微 HTTP。个微在本节最后，只换回调和指令。
+      runs=[{'t': '先跑通这一条，再去看上面的完整接口。下面是企微 HTTP。个', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[310][Normal] 1. 管理员打开微灵，从微灵里登录企业微信，账号面板里这个号要在线。通信方式选 HTTP。
+      runs=[{'t': '1. 管理员打开微灵，从微灵里登录企业微信，账号面板里这个号', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[311][Normal] 2. 事件通知 URL 填 http://你的服务:端口/wx/callback。这个地址必须是微灵这台电脑访问得到的。
+      runs=[{'t': '2. 事件通知 URL 填 http://你的服务:端口/w', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[312][Normal] 3. 「本机配置」里 HTTP 服务是运行中。代码里的 WEILING 改成微灵地址，同一台电脑就是 http://127.0.0.1:8060。
+      runs=[{'t': '3. 「本机配置」里 HTTP 服务是运行中。代码里的 WE', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[313][Normal] 4. 启动下面这个接口。用另一个号给这个企微发一条私聊，它会回「你好」。群消息不回。
+      runs=[{'t': '4. 启动下面这个接口。用另一个号给这个企微发一条私聊，它会', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[314][Normal] 先返回 ok，再在别的线程里发「你好」。回调最多等 5 秒，不要在这个请求里干别的。自己发出去的消息也会通知过来，sender 等于 robot_id 时不要回，否则会一直互回。import 与前面的企微 HTTP 示例相同，另外加上 java.util.Map 和 LinkedHashMap。
+      runs=[{'t': '先返回 ok，再在别的线程里发「你好」。回调最多等 5 秒，', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[315][Normal] @RestController
+      runs=[{'t': '@RestController', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[316][Normal] public class HelloReplyDemo {
+      runs=[{'t': 'public class HelloReplyDemo {', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[317][Normal] private static final String WEILING = "http://127.0.0.1:8060";
+      runs=[{'t': '    private static final Strin', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[318][Normal] private final ObjectMapper json = new ObjectMapper();
+      runs=[{'t': '    private final ObjectMapper', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[319][Normal] private final RestTemplate http = new RestTemplate();
+      runs=[{'t': '    private final RestTemplate', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[321][Normal] @PostMapping("/wx/callback")
+      runs=[{'t': '    @PostMapping("/wx/callback', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[322][Normal] public ResponseEntity<String> onEvent(@RequestBody String body) throws Exception {
+      runs=[{'t': '    public ResponseEntity<Stri', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[323][Normal] JsonNode event = json.readTree(body);
+      runs=[{'t': '        JsonNode event = json.', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[324][Normal] if (event.path("type").asInt() != 11041) {
+      runs=[{'t': '        if (event.path("type")', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[325][Normal] return ResponseEntity.ok("ok");
+      runs=[{'t': '            return ResponseEnt', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[326][Normal] }
+      runs=[{'t': '        }', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[327][Normal] JsonNode data = event.path("data");
+      runs=[{'t': '        JsonNode data = event.', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[328][Normal] String conversationId = data.path("conversation_id").asText("");
+      runs=[{'t': '        String conversationId ', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[329][Normal] if (!conversationId.startsWith("S:")) {
+      runs=[{'t': '        if (!conversationId.st', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[330][Normal] return ResponseEntity.ok("ok");
+      runs=[{'t': '            return ResponseEnt', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[331][Normal] }
+      runs=[{'t': '        }', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[332][Normal] String sender = data.path("sender").asText("");
+      runs=[{'t': '        String sender = data.p', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[333][Normal] String robotId = event.path("robot_id").asText("");
+      runs=[{'t': '        String robotId = event', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[334][Normal] if (sender.isEmpty() || sender.equals(robotId)) {
+      runs=[{'t': '        if (sender.isEmpty() |', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[335][Normal] return ResponseEntity.ok("ok");
+      runs=[{'t': '            return ResponseEnt', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[336][Normal] }
+      runs=[{'t': '        }', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[337][Normal] int client = event.path("client").asInt();
+      runs=[{'t': '        int client = event.pat', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[338][Normal] new Thread(new Runnable() {
+      runs=[{'t': '        new Thread(new Runnabl', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[339][Normal] public void run() { reply(client, conversationId); }
+      runs=[{'t': '            public void run() ', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[340][Normal] }).start();
+      runs=[{'t': '        }).start();', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[341][Normal] return ResponseEntity.ok("ok");
+      runs=[{'t': '        return ResponseEntity.', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[342][Normal] }
+      runs=[{'t': '    }', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[344][Normal] private void reply(int client, String conversationId) {
+      runs=[{'t': '    private void reply(int cli', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[345][Normal] Map<String, Object> data = new LinkedHashMap<String, Object>();
+      runs=[{'t': '        Map<String, Object> da', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[346][Normal] data.put("conversation_id", conversationId);
+      runs=[{'t': '        data.put("conversation', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[347][Normal] data.put("content", "你好");
+      runs=[{'t': '        data.put("content", "你', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[348][Normal] Map<String, Object> body = new LinkedHashMap<String, Object>();
+      runs=[{'t': '        Map<String, Object> bo', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[349][Normal] body.put("type", 11029);
+      runs=[{'t': '        body.put("type", 11029', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[350][Normal] body.put("client", client);
+      runs=[{'t': '        body.put("client", cli', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[351][Normal] body.put("data", data);
+      runs=[{'t': '        body.put("data", data)', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[352][Normal] http.postForObject(WEILING + "/api/Client/ExecCommand", body, String.class);
+      runs=[{'t': '        http.postForObject(WEI', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[353][Normal] }
+      runs=[{'t': '    }', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[354][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[355][Normal] 个微：同样回「你好」
+      runs=[{'t': '个微：同样回「你好」', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[356][Normal] 通信方式选个微的 HTTP，事件通知 URL 填 http://你的服务:端口/personal-wx/callback。不要填企微那个地址。下面这段加到同一个类里，WEILING 和 RestTemplate 共用。只处理文本私聊，群（wxid 含 @chatroom）和自己发的不回。
+      runs=[{'t': '通信方式选个微的 HTTP，事件通知 URL 填 http:', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[357][Normal] @PostMapping("/personal-wx/callback")
+      runs=[{'t': '@PostMapping("/personal-wx/cal', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[358][Normal] public ResponseEntity<String> onPersonal(@RequestBody String body) throws Exception {
+      runs=[{'t': 'public ResponseEntity<String> ', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[359][Normal] JsonNode event = json.readTree(body);
+      runs=[{'t': '    JsonNode event = json.read', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[360][Normal] int eventType = event.path("event_type").asInt(event.path("even_type").asInt(-1));
+      runs=[{'t': '    int eventType = event.path', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[361][Normal] String msgType = event.path("msg_type").asText("");
+      runs=[{'t': '    String msgType = event.pat', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[362][Normal] if (eventType != 2000 && eventType != 2001 && !"1".equals(msgType)) {
+      runs=[{'t': '    if (eventType != 2000 && e', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[363][Normal] return ResponseEntity.ok("ok");
+      runs=[{'t': '        return ResponseEntity.', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[364][Normal] }
+      runs=[{'t': '    }', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[365][Normal] String wxid = event.path("from_wxid").asText("");
+      runs=[{'t': '    String wxid = event.path("', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[366][Normal] if (wxid.isEmpty()) {
+      runs=[{'t': '    if (wxid.isEmpty()) {', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[367][Normal] wxid = event.path("wxid").asText("");
+      runs=[{'t': '        wxid = event.path("wxi', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[368][Normal] }
+      runs=[{'t': '    }', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[369][Normal] if (wxid.isEmpty() || wxid.contains("@chatroom")) {
+      runs=[{'t': '    if (wxid.isEmpty() || wxid', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[370][Normal] return ResponseEntity.ok("ok");
+      runs=[{'t': '        return ResponseEntity.', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[371][Normal] }
+      runs=[{'t': '    }', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[372][Normal] if (wxid.equals(event.path("robot_id").asText(""))) {
+      runs=[{'t': '    if (wxid.equals(event.path', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[373][Normal] return ResponseEntity.ok("ok");
+      runs=[{'t': '        return ResponseEntity.', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[374][Normal] }
+      runs=[{'t': '    }', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[375][Normal] final String client = event.path("client").asText();
+      runs=[{'t': '    final String client = even', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[376][Normal] final String to = wxid;
+      runs=[{'t': '    final String to = wxid;', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[377][Normal] new Thread(new Runnable() {
+      runs=[{'t': '    new Thread(new Runnable() ', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[378][Normal] public void run() { replyPersonal(client, to); }
+      runs=[{'t': '        public void run() { re', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[379][Normal] }).start();
+      runs=[{'t': '    }).start();', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[380][Normal] return ResponseEntity.ok("ok");
+      runs=[{'t': '    return ResponseEntity.ok("', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[381][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[383][Normal] private void replyPersonal(String client, String wxid) {
+      runs=[{'t': 'private void replyPersonal(Str', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[384][Normal] Map<String, Object> data = new LinkedHashMap<String, Object>();
+      runs=[{'t': '    Map<String, Object> data =', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[385][Normal] data.put("wxid", wxid);
+      runs=[{'t': '    data.put("wxid", wxid);', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[386][Normal] data.put("msg", "你好");
+      runs=[{'t': '    data.put("msg", "你好");', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[387][Normal] Map<String, Object> body = new LinkedHashMap<String, Object>();
+      runs=[{'t': '    Map<String, Object> body =', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[388][Normal] body.put("client", client);
+      runs=[{'t': '    body.put("client", client)', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[389][Normal] body.put("action", "send_text_msg");
+      runs=[{'t': '    body.put("action", "send_t', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[390][Normal] body.put("data", data);
+      runs=[{'t': '    body.put("data", data);', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[391][Normal] http.postForObject(WEILING + "/api/PersonalWeChat/ExecCommand", body, String.class);
+      runs=[{'t': '    http.postForObject(WEILING', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[392][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[393][Normal] 企业微信指令与通知事件
+      runs=[{'t': '企业微信指令与通知事件', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 14.0, 'b': True, 'color': '1F4E79'}]
+[394][Normal] 二、指令列表
+      runs=[{'t': '二、指令列表', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[395][Normal] 2.1 登录信息
+      runs=[{'t': '2.1 登录信息', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[396][Normal] 2.2 联系人
+      runs=[{'t': '2.2 联系人', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[397][Normal] 2.3 群组
+      runs=[{'t': '2.3 群组', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[398][Normal] 2.4 消息发送
+      runs=[{'t': '2.4 消息发送', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[399][Normal] 2.5 CDN 资源
+      runs=[{'t': '2.5 CDN 资源', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[400][Normal] 三、通知事件
+      runs=[{'t': '三、通知事件', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[401][Normal] 3.1 登录事件
+      runs=[{'t': '3.1 登录事件', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[402][Normal] 3.2 消息通知
+      runs=[{'t': '3.2 消息通知', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[403][Normal] 3.3 好友事件
+      runs=[{'t': '3.3 好友事件', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[404][Normal] 3.4 群聊事件
+      runs=[{'t': '3.4 群聊事件', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[405][Normal] 四、指令类型速查表
+      runs=[{'t': '四、指令类型速查表', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[406][Normal] ──────────────────────────────────────────────────
+      runs=[{'t': '──────────────────────────────', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[407][Normal] 一、接口调用说明
+      runs=[{'t': '一、接口调用说明', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[408][Normal] 1.1 HTTP 接口
+      runs=[{'t': '1.1 HTTP 接口', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[409][Normal] POST http://127.0.0.1:8060/api/Client/ExecCommand
+      runs=[{'t': 'POST http://127.0.0.1:8060/api', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[410][Normal] Content-Type: application/json
+      runs=[{'t': 'Content-Type: application/json', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[411][Normal] 请求示例
+      runs=[{'t': '请求示例', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[412][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[413][Normal] "type": 11029,
+      runs=[{'t': '    "type": 11029,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[414][Normal] "data": {
+      runs=[{'t': '    "data": {', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[415][Normal] "conversation_id": "S:1688854804625351_7881300409020143",
+      runs=[{'t': '        "conversation_id": "S:', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[416][Normal] "content": "你好，世界[呲牙]"
+      runs=[{'t': '        "content": "你好，世界[呲牙]"', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[417][Normal] },
+      runs=[{'t': '    },', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[418][Normal] "client": 1
+      runs=[{'t': '    "client": 1', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[419][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[420][Normal] 1.2 入参说明
+      runs=[{'t': '1.2 入参说明', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[422][Normal] 1.3 响应格式
+      runs=[{'t': '1.3 响应格式', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[423][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[424][Normal] "code": "200",
+      runs=[{'t': '    "code": "200",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[425][Normal] "data": "执行结果"
+      runs=[{'t': '    "data": "执行结果"', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[426][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[427][Normal] 字段
+      runs=[{'t': '字段', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[428][Normal] 说明
+      runs=[{'t': '说明', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[429][Normal] code
+      runs=[{'t': 'code', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[430][Normal] "200" 表示成功，其他值表示失败
+      runs=[{'t': '"200" 表示成功，其他值表示失败', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[431][Normal] data
+      runs=[{'t': 'data', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[432][Normal] 指令执行结果
+      runs=[{'t': '指令执行结果', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[433][Normal] CDN 下载特殊说明：调用下载 CDN 文件指令（type 11170 或 11171）成功时，接口直接返回原始文件的二进制流，而非 JSON 响应。请确保客户端具备处理二进制流的能力，根据文件类型正确保存或解析。
+      runs=[{'t': 'CDN 下载特殊说明：调用下载 CDN 文件指令（type ', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[434][Normal] 1.5 消息推送
+      runs=[{'t': '1.5 消息推送', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[435][Normal] 企微收到消息后会通过以下方式推送：
+      runs=[{'t': '企微收到消息后会通过以下方式推送：', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[436][Normal] 方式
+      runs=[{'t': '方式', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[437][Normal] 地址
+      runs=[{'t': '地址', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[438][Normal] 回调 URL
+      runs=[{'t': '回调 URL', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[439][Normal] 配置的 HTTP 回调地址（POST 请求）
+      runs=[{'t': '配置的 HTTP 回调地址（POST 请求）', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[440][Normal] WebSocket
+      runs=[{'t': 'WebSocket', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[441][Normal] 不要用这条旧地址。企微 WebSocket 见上文：ws://你的主机:端口/wx/ws?token=口令
+      runs=[{'t': '不要用这条旧地址。企微 WebSocket 见上文：ws:/', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[442][Normal] TCP 广播
+      runs=[{'t': 'TCP 广播', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[443][Normal] 当前软件没有 TCP 广播，不要再接。消息只走你选的 HTTP 回调或 WebSocket。
+      runs=[{'t': '当前软件没有 TCP 广播，不要再接。消息只走你选的 HTT', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[444][Normal] 1.6 注意事项
+      runs=[{'t': '1.6 注意事项', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[445][Normal] 管理员权限：程序必须以管理员身份运行
+      runs=[{'t': '管理员权限：程序必须以管理员身份运行', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[446][Normal] client 参数：对应控制台中显示的 ClientId，多开时每个企微实例有独立编号
+      runs=[{'t': 'client 参数：对应控制台中显示的 ClientId，多', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[447][Normal] getData 使用场景：获取联系人列表、群列表、登录信息等查询类指令需要传 getData: true；发送消息等操作类指令一般无需传
+      runs=[{'t': 'getData 使用场景：获取联系人列表、群列表、登录信息等', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[448][Normal] 文件路径：发送图片/视频/文件等指令中的 file 参数需使用服务器本地绝对路径，路径分隔符需转义为 \\
+      runs=[{'t': '文件路径：发送图片/视频/文件等指令中的 file 参数需使', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[449][Normal] conversation_id 格式：
+      runs=[{'t': 'conversation_id 格式：', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[450][Normal] 私聊：S:自己的user_id_对方的user_id
+      runs=[{'t': '私聊：S:自己的user_id_对方的user_id', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[451][Normal] 群聊：R:群ID
+      runs=[{'t': '群聊：R:群ID', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[452][Normal] CDN 下载选择：根据消息中的 cdn_type 字段选择下载方式
+      runs=[{'t': 'CDN 下载选择：根据消息中的 cdn_type 字段选择下', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[453][Normal] cdn_type = 1 → 使用 WxCDN 下载（type 11171）
+      runs=[{'t': 'cdn_type = 1 → 使用 WxCDN 下载（typ', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[454][Normal] cdn_type = 2 → 使用 C2cCDN 下载（type 11170）
+      runs=[{'t': 'cdn_type = 2 → 使用 C2cCDN 下载（ty', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[455][Normal] ──────────────────────────────────────────────────
+      runs=[{'t': '──────────────────────────────', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[456][Normal] 二、指令列表
+      runs=[{'t': '二、指令列表', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[457][Normal] 2.1 登录信息
+      runs=[{'t': '2.1 登录信息', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[458][Normal] 刷新登录二维码 type: 11153
+      runs=[{'t': '刷新登录二维码 type: 11153', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[459][Normal] { "type": 11153, "data": {}, "client": 1 }
+      runs=[{'t': '{ "type": 11153, "data": {}, "', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[460][Normal] 二维码将通过通知事件（type 11028）推送。
+      runs=[{'t': '二维码将通过通知事件（type 11028）推送。', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[461][Normal] 退出登录 type: 11112
+      runs=[{'t': '退出登录 type: 11112', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[462][Normal] { "type": 11112, "data": {}, "client": 1 }
+      runs=[{'t': '{ "type": 11112, "data": {}, "', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[463][Normal] 获取当前登录帐号信息 type: 11035
+      runs=[{'t': '获取当前登录帐号信息 type: 11035', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[464][Normal] { "type": 11035, "data": {}, "client": 1, "getData": true }
+      runs=[{'t': '{ "type": 11035, "data": {}, "', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[465][Normal] 返回：
+      runs=[{'t': '返回：', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[466][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[467][Normal] "type": 11035,
+      runs=[{'t': '    "type": 11035,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[468][Normal] "data": {
+      runs=[{'t': '    "data": {', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[469][Normal] "account": "xxx@onexmail.com",
+      runs=[{'t': '        "account": "xxx@onexma', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[470][Normal] "acctid": "xxx",
+      runs=[{'t': '        "acctid": "xxx",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[471][Normal] "avatar": "头像URL",
+      runs=[{'t': '        "avatar": "头像URL",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[472][Normal] "corp_id": "公司ID",
+      runs=[{'t': '        "corp_id": "公司ID",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[473][Normal] "corp_name": "公司全称",
+      runs=[{'t': '        "corp_name": "公司全称",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[474][Normal] "corp_short_name": "公司简称",
+      runs=[{'t': '        "corp_short_name": "公司', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[475][Normal] "email": "邮箱",
+      runs=[{'t': '        "email": "邮箱",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[476][Normal] "job_name": "职位",
+      runs=[{'t': '        "job_name": "职位",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[477][Normal] "mobile": "手机号",
+      runs=[{'t': '        "mobile": "手机号",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[478][Normal] "nickname": "昵称",
+      runs=[{'t': '        "nickname": "昵称",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[479][Normal] "position": "职位",
+      runs=[{'t': '        "position": "职位",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[480][Normal] "sex": 1,
+      runs=[{'t': '        "sex": 1,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[481][Normal] "user_id": "用户ID",
+      runs=[{'t': '        "user_id": "用户ID",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[482][Normal] "username": "名称"
+      runs=[{'t': '        "username": "名称"', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[483][Normal] }
+      runs=[{'t': '    }', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[484][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[485][Normal] sex：0 未知，1 男，2 女
+      runs=[{'t': 'sex：0 未知，1 男，2 女', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[486][Normal] 获取自己的二维码 type: 11122
+      runs=[{'t': '获取自己的二维码 type: 11122', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[487][Normal] { "type": 11122, "data": {}, "client": 1, "getData": true }
+      runs=[{'t': '{ "type": 11122, "data": {}, "', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[488][Normal] 返回：ctcode（二维码 URL）、plugid
+      runs=[{'t': '返回：ctcode（二维码 URL）、plugid', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[489][Normal] ──────────────────────────────────────────────────
+      runs=[{'t': '──────────────────────────────', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[490][Normal] 2.2 联系人
+      runs=[{'t': '2.2 联系人', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[491][Normal] 获取联系人信息 type: 11039
+      runs=[{'t': '获取联系人信息 type: 11039', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[492][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[493][Normal] "type": 11039,
+      runs=[{'t': '    "type": 11039,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[494][Normal] "data": { "user_id": "用户ID" },
+      runs=[{'t': '    "data": { "user_id": "用户ID', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[495][Normal] "client": 1,
+      runs=[{'t': '    "client": 1,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[496][Normal] "getData": true
+      runs=[{'t': '    "getData": true', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[497][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[498][Normal] 返回字段：acctid, avatar, conversation_id, corp_id, mobile, nickname, position, realname, remark, sex, unionid, user_id, username
+      runs=[{'t': '返回字段：acctid, avatar, conversat', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[499][Normal] 获取内部联系人列表 type: 11036
+      runs=[{'t': '获取内部联系人列表 type: 11036', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[500][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[501][Normal] "type": 11036,
+      runs=[{'t': '    "type": 11036,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[502][Normal] "data": { "page_num": 1, "page_size": 10 },
+      runs=[{'t': '    "data": { "page_num": 1, "', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[503][Normal] "client": 1,
+      runs=[{'t': '    "client": 1,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[504][Normal] "getData": true
+      runs=[{'t': '    "getData": true', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[505][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[506][Normal] page_num 从 1 开始。返回：page_num, page_size, total, total_page, user_list[]
+      runs=[{'t': 'page_num 从 1 开始。返回：page_num, p', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[507][Normal] 获取外部联系人列表 type: 11037
+      runs=[{'t': '获取外部联系人列表 type: 11037', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[508][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[509][Normal] "type": 11037,
+      runs=[{'t': '    "type": 11037,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[510][Normal] "data": { "page_num": 1, "page_size": 10 },
+      runs=[{'t': '    "data": { "page_num": 1, "', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[511][Normal] "client": 1,
+      runs=[{'t': '    "client": 1,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[512][Normal] "getData": true
+      runs=[{'t': '    "getData": true', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[513][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[514][Normal] 搜索微信/企微用户 type: 11052
+      runs=[{'t': '搜索微信/企微用户 type: 11052', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[515][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[516][Normal] "type": 11052,
+      runs=[{'t': '    "type": 11052,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[517][Normal] "data": { "keyword": "手机号或关键词" },
+      runs=[{'t': '    "data": { "keyword": "手机号或', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[518][Normal] "client": 1,
+      runs=[{'t': '    "client": 1,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[519][Normal] "getData": true
+      runs=[{'t': '    "getData": true', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[520][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[521][Normal] 添加好友时需要用到的关键字段路径：
+      runs=[{'t': '添加好友时需要用到的关键字段路径：', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[523][Normal] 添加搜索的微信用户 type: 11053
+      runs=[{'t': '添加搜索的微信用户 type: 11053', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[524][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[525][Normal] "type": 11053,
+      runs=[{'t': '    "type": 11053,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[526][Normal] "data": {
+      runs=[{'t': '    "data": {', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[527][Normal] "user_id": "搜索结果中的 uin",
+      runs=[{'t': '        "user_id": "搜索结果中的 uin', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[528][Normal] "openid": "搜索结果中的 openid",
+      runs=[{'t': '        "openid": "搜索结果中的 open', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[529][Normal] "wx_ticket": "搜索结果中的 wx_ticket",
+      runs=[{'t': '        "wx_ticket": "搜索结果中的 w', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[530][Normal] "verify": "验证消息"
+      runs=[{'t': '        "verify": "验证消息"', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[531][Normal] },
+      runs=[{'t': '    },', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[532][Normal] "client": 1
+      runs=[{'t': '    "client": 1', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[533][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[534][Normal] 添加搜索的企微用户 type: 11088
+      runs=[{'t': '添加搜索的企微用户 type: 11088', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[535][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[536][Normal] "type": 11088,
+      runs=[{'t': '    "type": 11088,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[537][Normal] "data": {
+      runs=[{'t': '    "data": {', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[538][Normal] "user_id": "搜索结果中的 uin",
+      runs=[{'t': '        "user_id": "搜索结果中的 uin', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[539][Normal] "corp_id": "搜索结果中的 corpid",
+      runs=[{'t': '        "corp_id": "搜索结果中的 cor', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[540][Normal] "ticket": "搜索结果中的 wx_ticket",
+      runs=[{'t': '        "ticket": "搜索结果中的 wx_t', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[541][Normal] "verify": "验证消息"
+      runs=[{'t': '        "verify": "验证消息"', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[542][Normal] },
+      runs=[{'t': '    },', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[543][Normal] "client": 1
+      runs=[{'t': '    "client": 1', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[544][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[545][Normal] 添加名片为联系人 type: 11121
+      runs=[{'t': '添加名片为联系人 type: 11121', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[546][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[547][Normal] "type": 11121,
+      runs=[{'t': '    "type": 11121,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[548][Normal] "data": {
+      runs=[{'t': '    "data": {', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[549][Normal] "user_id": "名片中的 user_id",
+      runs=[{'t': '        "user_id": "名片中的 user_', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[550][Normal] "corp_id": "名片中的 corp_id",
+      runs=[{'t': '        "corp_id": "名片中的 corp_', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[551][Normal] "from_user_id": "名片消息的 sender",
+      runs=[{'t': '        "from_user_id": "名片消息的', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[552][Normal] "verify": "验证消息"
+      runs=[{'t': '        "verify": "验证消息"', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[553][Normal] },
+      runs=[{'t': '    },', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[554][Normal] "client": 1
+      runs=[{'t': '    "client": 1', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[555][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[556][Normal] 添加删除的联系人 type: 11152
+      runs=[{'t': '添加删除的联系人 type: 11152', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[557][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[558][Normal] "type": 11152,
+      runs=[{'t': '    "type": 11152,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[559][Normal] "data": { "user_id": "用户ID", "corp_id": "0", "verify": "你好" },
+      runs=[{'t': '    "data": { "user_id": "用户ID', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[560][Normal] "client": 1
+      runs=[{'t': '    "client": 1', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[561][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[562][Normal] 修改好友备注 type: 11054
+      runs=[{'t': '修改好友备注 type: 11054', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[563][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[564][Normal] "type": 11054,
+      runs=[{'t': '    "type": 11054,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[565][Normal] "data": { "user_id": "用户ID", "remark": "新备注" },
+      runs=[{'t': '    "data": { "user_id": "用户ID', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[566][Normal] "client": 1
+      runs=[{'t': '    "client": 1', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[567][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[568][Normal] 修改好友描述 type: 11055
+      runs=[{'t': '修改好友描述 type: 11055', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[569][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[570][Normal] "type": 11055,
+      runs=[{'t': '    "type": 11055,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[571][Normal] "data": { "user_id": "用户ID", "desc": "新描述" },
+      runs=[{'t': '    "data": { "user_id": "用户ID', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[572][Normal] "client": 1
+      runs=[{'t': '    "client": 1', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[573][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[574][Normal] 修改外部联系人手机号 type: 11056
+      runs=[{'t': '修改外部联系人手机号 type: 11056', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[575][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[576][Normal] "type": 11056,
+      runs=[{'t': '    "type": 11056,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[577][Normal] "data": { "user_id": "用户ID", "phone_list": ["手机号"] },
+      runs=[{'t': '    "data": { "user_id": "用户ID', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[578][Normal] "client": 1
+      runs=[{'t': '    "client": 1', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[579][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[580][Normal] 修改外部联系人公司名称 type: 11057
+      runs=[{'t': '修改外部联系人公司名称 type: 11057', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[581][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[582][Normal] "type": 11057,
+      runs=[{'t': '    "type": 11057,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[583][Normal] "data": { "user_id": "用户ID", "company": "公司名" },
+      runs=[{'t': '    "data": { "user_id": "用户ID', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[584][Normal] "client": 1
+      runs=[{'t': '    "client": 1', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[585][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[586][Normal] 删除联系人 type: 11111
+      runs=[{'t': '删除联系人 type: 11111', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[587][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[588][Normal] "type": 11111,
+      runs=[{'t': '    "type": 11111,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[589][Normal] "data": { "user_id": "用户ID", "corp_id": "0" },
+      runs=[{'t': '    "data": { "user_id": "用户ID', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[590][Normal] "client": 1
+      runs=[{'t': '    "client": 1', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[591][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[592][Normal] 接受好友申请 type: 11064
+      runs=[{'t': '接受好友申请 type: 11064', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[593][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[594][Normal] "type": 11064,
+      runs=[{'t': '    "type": 11064,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[595][Normal] "data": { "user_id": "申请人ID", "corp_id": "申请人公司ID" },
+      runs=[{'t': '    "data": { "user_id": "申请人I', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[596][Normal] "client": 1
+      runs=[{'t': '    "client": 1', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[597][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[598][Normal] user_id 和 corp_id 从好友申请通知（type 11063）中获取。
+      runs=[{'t': 'user_id 和 corp_id 从好友申请通知（type', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[599][Normal] ──────────────────────────────────────────────────
+      runs=[{'t': '──────────────────────────────', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[600][Normal] 2.3 群组
+      runs=[{'t': '2.3 群组', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[601][Normal] 获取会话群聊列表 type: 11038
+      runs=[{'t': '获取会话群聊列表 type: 11038', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[602][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[603][Normal] "type": 11038,
+      runs=[{'t': '    "type": 11038,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[604][Normal] "data": { "page_num": 1, "page_size": 10 },
+      runs=[{'t': '    "data": { "page_num": 1, "', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[605][Normal] "client": 1,
+      runs=[{'t': '    "client": 1,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[606][Normal] "getData": true
+      runs=[{'t': '    "getData": true', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[607][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[608][Normal] 返回字段：room_list[] 包含 conversation_id, nickname, total, is_external（1 外部群 / 0 内部群）, is_admin, is_creator
+      runs=[{'t': '返回字段：room_list[] 包含 conversati', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[609][Normal] 获取群成员列表 type: 11040
+      runs=[{'t': '获取群成员列表 type: 11040', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[610][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[611][Normal] "type": 11040,
+      runs=[{'t': '    "type": 11040,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[612][Normal] "data": { "conversation_id": "R:xxx", "page_num": 1, "page_size": 10 },
+      runs=[{'t': '    "data": { "conversation_id', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[613][Normal] "client": 1,
+      runs=[{'t': '    "client": 1,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[614][Normal] "getData": true
+      runs=[{'t': '    "getData": true', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[615][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[616][Normal] 返回字段：member_list[] 包含 user_id, username, avatar, remark, invite_user_id, is_admin, room_nickname, join_scene, join_time
+      runs=[{'t': '返回字段：member_list[] 包含 user_id,', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[617][Normal] 创建内/外部群 type: 11058
+      runs=[{'t': '创建内/外部群 type: 11058', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[618][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[619][Normal] "type": 11058,
+      runs=[{'t': '    "type": 11058,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[620][Normal] "data": ["用户ID1", "用户ID2"],
+      runs=[{'t': '    "data": ["用户ID1", "用户ID2"]', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[621][Normal] "client": 1,
+      runs=[{'t': '    "client": 1,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[622][Normal] "getData": true
+      runs=[{'t': '    "getData": true', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[623][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[624][Normal] 返回：roomid（群 ID）, createruin, success_add_vidlist[]
+      runs=[{'t': '返回：roomid（群 ID）, createruin, s', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[625][Normal] 创建空外部群 type: 11125
+      runs=[{'t': '创建空外部群 type: 11125', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[626][Normal] { "type": 11125, "data": {}, "client": 1, "getData": true }
+      runs=[{'t': '{ "type": 11125, "data": {}, "', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[627][Normal] 返回：roomid, h5url(base64), image_url(base64), title(base64)
+      runs=[{'t': '返回：roomid, h5url(base64), imag', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[628][Normal] 修改群名 type: 11059
+      runs=[{'t': '修改群名 type: 11059', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[629][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[630][Normal] "type": 11059,
+      runs=[{'t': '    "type": 11059,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[631][Normal] "data": { "conversation_id": "R:xxx", "name": "新群名" },
+      runs=[{'t': '    "data": { "conversation_id', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[632][Normal] "client": 1
+      runs=[{'t': '    "client": 1', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[633][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[634][Normal] 批量邀请好友入群 type: 11060
+      runs=[{'t': '批量邀请好友入群 type: 11060', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[635][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[636][Normal] "type": 11060,
+      runs=[{'t': '    "type": 11060,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[637][Normal] "data": { "conversation_id": "R:xxx", "user_list": ["用户ID"] },
+      runs=[{'t': '    "data": { "conversation_id', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[638][Normal] "client": 1
+      runs=[{'t': '    "client": 1', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[639][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[640][Normal] 群成员 > 40 人时需对方确认才能入群。通过返回值中 success_add_vidlist 是否有值判断是否邀请成功。
+      runs=[{'t': '群成员 > 40 人时需对方确认才能入群。通过返回值中 su', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[641][Normal] 批量踢群成员 type: 11061
+      runs=[{'t': '批量踢群成员 type: 11061', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[642][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[643][Normal] "type": 11061,
+      runs=[{'t': '    "type": 11061,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[644][Normal] "data": { "conversation_id": "R:xxx", "user_list": ["用户ID"] },
+      runs=[{'t': '    "data": { "conversation_id', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[645][Normal] "client": 1
+      runs=[{'t': '    "client": 1', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[646][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[647][Normal] 添加群成员为联系人 type: 11071
+      runs=[{'t': '添加群成员为联系人 type: 11071', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[648][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[649][Normal] "type": 11071,
+      runs=[{'t': '    "type": 11071,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[650][Normal] "data": {
+      runs=[{'t': '    "data": {', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[651][Normal] "room_conversation_id": "R:xxx",
+      runs=[{'t': '        "room_conversation_id"', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[652][Normal] "user_id": "群成员ID",
+      runs=[{'t': '        "user_id": "群成员ID",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[653][Normal] "corp_id": "成员公司ID",
+      runs=[{'t': '        "corp_id": "成员公司ID",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[654][Normal] "verify": "验证消息"
+      runs=[{'t': '        "verify": "验证消息"', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[655][Normal] },
+      runs=[{'t': '    },', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[656][Normal] "client": 1
+      runs=[{'t': '    "client": 1', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[657][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[658][Normal] 发布群公告 type: 11082
+      runs=[{'t': '发布群公告 type: 11082', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[659][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[660][Normal] "type": 11082,
+      runs=[{'t': '    "type": 11082,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[661][Normal] "data": { "room_conversation_id": "R:xxx", "notice": "公告内容" },
+      runs=[{'t': '    "data": { "room_conversati', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[662][Normal] "client": 1
+      runs=[{'t': '    "client": 1', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[663][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[664][Normal] 转让群主 type: 11090
+      runs=[{'t': '转让群主 type: 11090', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[665][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[666][Normal] "type": 11090,
+      runs=[{'t': '    "type": 11090,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[667][Normal] "data": { "room_conversation_id": "R:xxx", "user_id": "新群主ID" },
+      runs=[{'t': '    "data": { "room_conversati', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[668][Normal] "client": 1
+      runs=[{'t': '    "client": 1', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[669][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[670][Normal] 开启/关闭群邀请确认 type: 11089
+      runs=[{'t': '开启/关闭群邀请确认 type: 11089', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[671][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[672][Normal] "type": 11089,
+      runs=[{'t': '    "type": 11089,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[673][Normal] "data": { "room_conversation_id": "R:xxx", "status": 1 },
+      runs=[{'t': '    "data": { "room_conversati', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[674][Normal] "client": 1
+      runs=[{'t': '    "client": 1', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[675][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[676][Normal] status：1 开启，0 关闭
+      runs=[{'t': 'status：1 开启，0 关闭', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[677][Normal] 开启/关闭禁止修改群名 type: 11108
+      runs=[{'t': '开启/关闭禁止修改群名 type: 11108', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[678][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[679][Normal] "type": 11108,
+      runs=[{'t': '    "type": 11108,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[680][Normal] "data": { "room_conversation_id": "R:xxx", "status": 1 },
+      runs=[{'t': '    "data": { "room_conversati', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[681][Normal] "client": 1
+      runs=[{'t': '    "client": 1', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[682][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[683][Normal] 退出群聊 type: 11105
+      runs=[{'t': '退出群聊 type: 11105', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[684][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[685][Normal] "type": 11105,
+      runs=[{'t': '    "type": 11105,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[686][Normal] "data": { "room_conversation_id": "R:xxx" },
+      runs=[{'t': '    "data": { "room_conversati', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[687][Normal] "client": 1
+      runs=[{'t': '    "client": 1', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[688][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[689][Normal] 解散群 type: 11130
+      runs=[{'t': '解散群 type: 11130', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[690][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[691][Normal] "type": 11130,
+      runs=[{'t': '    "type": 11130,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[692][Normal] "data": { "room_conversation_id": "R:xxx" },
+      runs=[{'t': '    "data": { "room_conversati', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[693][Normal] "client": 1
+      runs=[{'t': '    "client": 1', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[694][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[695][Normal] ──────────────────────────────────────────────────
+      runs=[{'t': '──────────────────────────────', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[696][Normal] 2.4 消息发送
+      runs=[{'t': '2.4 消息发送', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[697][Normal] 发送文本消息 type: 11029
+      runs=[{'t': '发送文本消息 type: 11029', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[698][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[699][Normal] "type": 11029,
+      runs=[{'t': '    "type": 11029,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[700][Normal] "data": { "conversation_id": "会话ID", "content": "消息内容" },
+      runs=[{'t': '    "data": { "conversation_id', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[701][Normal] "client": 1
+      runs=[{'t': '    "client": 1', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[702][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[703][Normal] 发送群 @ 消息 type: 11069
+      runs=[{'t': '发送群 @ 消息 type: 11069', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[704][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[705][Normal] "type": 11069,
+      runs=[{'t': '    "type": 11069,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[706][Normal] "data": {
+      runs=[{'t': '    "data": {', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[707][Normal] "conversation_id": "会话ID",
+      runs=[{'t': '        "conversation_id": "会话', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[708][Normal] "content": "消息内容",
+      runs=[{'t': '        "content": "消息内容",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[709][Normal] "at_list": ["被@用户ID1", "被@用户ID2"]
+      runs=[{'t': '        "at_list": ["被@用户ID1",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[710][Normal] },
+      runs=[{'t': '    },', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[711][Normal] "client": 1
+      runs=[{'t': '    "client": 1', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[712][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[713][Normal] 发送图片消息 type: 11030
+      runs=[{'t': '发送图片消息 type: 11030', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[714][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[715][Normal] "type": 11030,
+      runs=[{'t': '    "type": 11030,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[716][Normal] "data": { "conversation_id": "会话ID", "file": "C:\\path\\image.jpg" },
+      runs=[{'t': '    "data": { "conversation_id', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[717][Normal] "client": 1
+      runs=[{'t': '    "client": 1', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[718][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[719][Normal] 发送视频消息 type: 11067
+      runs=[{'t': '发送视频消息 type: 11067', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[720][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[721][Normal] "type": 11067,
+      runs=[{'t': '    "type": 11067,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[722][Normal] "data": { "conversation_id": "会话ID", "file": "C:\\path\\video.mp4" },
+      runs=[{'t': '    "data": { "conversation_id', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[723][Normal] "client": 1
+      runs=[{'t': '    "client": 1', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[724][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[725][Normal] 发送动图消息 type: 11070
+      runs=[{'t': '发送动图消息 type: 11070', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[726][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[727][Normal] "type": 11070,
+      runs=[{'t': '    "type": 11070,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[728][Normal] "data": { "conversation_id": "会话ID", "file": "C:\\path\\image.gif" },
+      runs=[{'t': '    "data": { "conversation_id', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[729][Normal] "client": 1
+      runs=[{'t': '    "client": 1', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[730][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[731][Normal] 发送文件消息 type: 11031
+      runs=[{'t': '发送文件消息 type: 11031', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[732][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[733][Normal] "type": 11031,
+      runs=[{'t': '    "type": 11031,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[734][Normal] "data": { "conversation_id": "会话ID", "file": "C:\\path\\file.zip" },
+      runs=[{'t': '    "data": { "conversation_id', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[735][Normal] "client": 1
+      runs=[{'t': '    "client": 1', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[736][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[737][Normal] 发送小程序 type: 11162
+      runs=[{'t': '发送小程序 type: 11162', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[738][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[739][Normal] "type": 11162,
+      runs=[{'t': '    "type": 11162,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[740][Normal] "data": {
+      runs=[{'t': '    "data": {', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[741][Normal] "conversation_id": "会话ID",
+      runs=[{'t': '        "conversation_id": "会话', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[742][Normal] "username": "gh_xxx@app",
+      runs=[{'t': '        "username": "gh_xxx@ap', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[743][Normal] "appid": "小程序appid",
+      runs=[{'t': '        "appid": "小程序appid",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[744][Normal] "appname": "小程序名称",
+      runs=[{'t': '        "appname": "小程序名称",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[745][Normal] "appicon": "小程序图标URL",
+      runs=[{'t': '        "appicon": "小程序图标URL",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[746][Normal] "title": "小程序标题",
+      runs=[{'t': '        "title": "小程序标题",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[747][Normal] "page_path": "pages/index/index.html",
+      runs=[{'t': '        "page_path": "pages/in', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[748][Normal] "file_id": "CDN file_id（封面图）",
+      runs=[{'t': '        "file_id": "CDN file_i', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[749][Normal] "aes_key": "CDN aes_key",
+      runs=[{'t': '        "aes_key": "CDN aes_ke', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[750][Normal] "md5": "文件MD5",
+      runs=[{'t': '        "md5": "文件MD5",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[751][Normal] "size": 11122
+      runs=[{'t': '        "size": 11122', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[752][Normal] },
+      runs=[{'t': '    },', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[753][Normal] "client": 1
+      runs=[{'t': '    "client": 1', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[754][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[755][Normal] 发送视频号 type: 11172
+      runs=[{'t': '发送视频号 type: 11172', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[756][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[757][Normal] "type": 11172,
+      runs=[{'t': '    "type": 11172,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[758][Normal] "data": {
+      runs=[{'t': '    "data": {', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[759][Normal] "conversation_id": "会话ID",
+      runs=[{'t': '        "conversation_id": "会话', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[760][Normal] "avatar": "视频号头像",
+      runs=[{'t': '        "avatar": "视频号头像",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[761][Normal] "cover_url": "封面URL",
+      runs=[{'t': '        "cover_url": "封面URL",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[762][Normal] "desc": "视频描述",
+      runs=[{'t': '        "desc": "视频描述",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[763][Normal] "feed_type": 4,
+      runs=[{'t': '        "feed_type": 4,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[764][Normal] "nickname": "视频号昵称",
+      runs=[{'t': '        "nickname": "视频号昵称",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[765][Normal] "thumb_url": "缩略图URL",
+      runs=[{'t': '        "thumb_url": "缩略图URL",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[766][Normal] "url": "视频号链接",
+      runs=[{'t': '        "url": "视频号链接",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[767][Normal] "extras": "扩展数据"
+      runs=[{'t': '        "extras": "扩展数据"', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[768][Normal] },
+      runs=[{'t': '    },', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[769][Normal] "client": 1
+      runs=[{'t': '    "client": 1', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[770][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[771][Normal] 发送卡片消息 type: 11159
+      runs=[{'t': '发送卡片消息 type: 11159', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[772][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[773][Normal] "type": 11159,
+      runs=[{'t': '    "type": 11159,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[774][Normal] "data": {
+      runs=[{'t': '    "data": {', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[775][Normal] "conversation_id": "会话ID",
+      runs=[{'t': '        "conversation_id": "会话', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[776][Normal] "url": "链接地址",
+      runs=[{'t': '        "url": "链接地址",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[777][Normal] "image_url": "图标地址",
+      runs=[{'t': '        "image_url": "图标地址",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[778][Normal] "title": "标题",
+      runs=[{'t': '        "title": "标题",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[779][Normal] "desc": "描述"
+      runs=[{'t': '        "desc": "描述"', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[780][Normal] },
+      runs=[{'t': '    },', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[781][Normal] "client": 1
+      runs=[{'t': '    "client": 1', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[782][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[783][Normal] 发送名片 type: 11161
+      runs=[{'t': '发送名片 type: 11161', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[784][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[785][Normal] "type": 11161,
+      runs=[{'t': '    "type": 11161,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[786][Normal] "data": {
+      runs=[{'t': '    "data": {', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[787][Normal] "conversation_id": "会话ID",
+      runs=[{'t': '        "conversation_id": "会话', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[788][Normal] "share_user_id": "要分享的好友ID"
+      runs=[{'t': '        "share_user_id": "要分享的', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[789][Normal] },
+      runs=[{'t': '    },', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[790][Normal] "client": 1
+      runs=[{'t': '    "client": 1', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[791][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[792][Normal] 发送视频号直播消息 type: 11196
+      runs=[{'t': '发送视频号直播消息 type: 11196', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[793][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[794][Normal] "type": 11196,
+      runs=[{'t': '    "type": 11196,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[795][Normal] "data": {
+      runs=[{'t': '    "data": {', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[796][Normal] "conversation_id": "会话ID",
+      runs=[{'t': '        "conversation_id": "会话', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[797][Normal] "avatar": "主播头像",
+      runs=[{'t': '        "avatar": "主播头像",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[798][Normal] "cover_url": "封面URL",
+      runs=[{'t': '        "cover_url": "封面URL",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[799][Normal] "desc": "直播描述",
+      runs=[{'t': '        "desc": "直播描述",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[800][Normal] "extras": "",
+      runs=[{'t': '        "extras": "",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[801][Normal] "feed_type": 9,
+      runs=[{'t': '        "feed_type": 9,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[802][Normal] "nickname": "主播昵称",
+      runs=[{'t': '        "nickname": "主播昵称",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[803][Normal] "object_id": "直播ID",
+      runs=[{'t': '        "object_id": "直播ID",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[804][Normal] "object_nonce_id": "nonce_id",
+      runs=[{'t': '        "object_nonce_id": "no', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[805][Normal] "thumb_url": "缩略图URL",
+      runs=[{'t': '        "thumb_url": "缩略图URL",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[806][Normal] "url": "直播链接"
+      runs=[{'t': '        "url": "直播链接"', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[807][Normal] },
+      runs=[{'t': '    },', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[808][Normal] "client": 1
+      runs=[{'t': '    "client": 1', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[809][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[810][Normal] ──────────────────────────────────────────────────
+      runs=[{'t': '──────────────────────────────', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[811][Normal] 2.5 CDN 资源
+      runs=[{'t': '2.5 CDN 资源', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[812][Normal] C2cCDN 上传资源 type: 11115
+      runs=[{'t': 'C2cCDN 上传资源 type: 11115', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[813][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[814][Normal] "type": 11115,
+      runs=[{'t': '    "type": 11115,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[815][Normal] "data": { "file_path": "C:\\path\\image.jpg", "file_type": 1 },
+      runs=[{'t': '    "data": { "file_path": "C:', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[816][Normal] "client": 1,
+      runs=[{'t': '    "client": 1,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[817][Normal] "getData": true
+      runs=[{'t': '    "getData": true', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[818][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[819][Normal] file_type = 1 可上传图片（含 GIF）。返回：file_id, file_aes_key, file_key, file_md5, file_size, image_height, image_width
+      runs=[{'t': 'file_type = 1 可上传图片（含 GIF）。返回：', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[820][Normal] C2cCDN 下载媒体文件 type: 11170
+      runs=[{'t': 'C2cCDN 下载媒体文件 type: 11170', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[821][Normal] 用于下载企微用户发送的媒体文件（消息中 cdn_type = 2）
+      runs=[{'t': '用于下载企微用户发送的媒体文件（消息中 cdn_type =', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[822][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[823][Normal] "type": 11170,
+      runs=[{'t': '    "type": 11170,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[824][Normal] "data": {
+      runs=[{'t': '    "data": {', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[825][Normal] "aes_key": "61316639333163346262363730326261",
+      runs=[{'t': '        "aes_key": "6131663933', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[826][Normal] "file_id": "文件ID",
+      runs=[{'t': '        "file_id": "文件ID",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[827][Normal] "file_size": 968802,
+      runs=[{'t': '        "file_size": 968802,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[828][Normal] "file_type": 1
+      runs=[{'t': '        "file_type": 1', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[829][Normal] },
+      runs=[{'t': '    },', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[830][Normal] "client": 1
+      runs=[{'t': '    "client": 1', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[831][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[833][Normal] ⚠️ 成功时直接返回二进制文件流，不是 JSON。
+      runs=[{'t': '⚠️ 成功时直接返回二进制文件流，不是 JSON。', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[834][Normal] WxCDN 下载文件 type: 11171
+      runs=[{'t': 'WxCDN 下载文件 type: 11171', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[835][Normal] 用于下载个微用户发送的媒体文件（消息中 cdn_type = 1）
+      runs=[{'t': '用于下载个微用户发送的媒体文件（消息中 cdn_type =', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[836][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[837][Normal] "type": 11171,
+      runs=[{'t': '    "type": 11171,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[838][Normal] "data": {
+      runs=[{'t': '    "data": {', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[839][Normal] "download_type": 1,
+      runs=[{'t': '        "download_type": 1,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[840][Normal] "url": "下载URL",
+      runs=[{'t': '        "url": "下载URL",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[841][Normal] "auth_key": "认证密钥",
+      runs=[{'t': '        "auth_key": "认证密钥",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[842][Normal] "aes_key": "AES密钥",
+      runs=[{'t': '        "aes_key": "AES密钥",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[843][Normal] "size": 851646
+      runs=[{'t': '        "size": 851646', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[844][Normal] },
+      runs=[{'t': '    },', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[845][Normal] "client": 1
+      runs=[{'t': '    "client": 1', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[846][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[848][Normal] ⚠️ 成功时直接返回二进制文件流，不是 JSON。
+      runs=[{'t': '⚠️ 成功时直接返回二进制文件流，不是 JSON。', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[849][Normal] ──────────────────────────────────────────────────
+      runs=[{'t': '──────────────────────────────', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[850][Normal] 三、通知事件
+      runs=[{'t': '三、通知事件', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[851][Normal] 3.1 登录事件
+      runs=[{'t': '3.1 登录事件', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[852][Normal] 接口就绪通知 type: 11024
+      runs=[{'t': '接口就绪通知 type: 11024', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[853][Normal] { "type": 11024, "data": { "pid": 27620 } }
+      runs=[{'t': '{ "type": 11024, "data": { "pi', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[854][Normal] 登录二维码通知 type: 11028
+      runs=[{'t': '登录二维码通知 type: 11028', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[855][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[856][Normal] "type": 11028,
+      runs=[{'t': '    "type": 11028,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[857][Normal] "data": {
+      runs=[{'t': '    "data": {', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[858][Normal] "code": "二维码内容URL（可自行生成二维码图片）",
+      runs=[{'t': '        "code": "二维码内容URL（可自行生', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[859][Normal] "file": "二维码图片本地路径",
+      runs=[{'t': '        "file": "二维码图片本地路径",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[860][Normal] "key": "二维码key"
+      runs=[{'t': '        "key": "二维码key"', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[861][Normal] }
+      runs=[{'t': '    }', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[862][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[863][Normal] 登录二维码状态通知 type: 11174
+      runs=[{'t': '登录二维码状态通知 type: 11174', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[864][Normal] 扫码后推送，关键字段：status, nick_name, icon_url, vid（用户 ID）, corpid（公司 ID）
+      runs=[{'t': '扫码后推送，关键字段：status, nick_name, ', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[865][Normal] 用户登录成功通知 type: 11026
+      runs=[{'t': '用户登录成功通知 type: 11026', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[866][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[867][Normal] "type": 11026,
+      runs=[{'t': '    "type": 11026,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[868][Normal] "data": {
+      runs=[{'t': '    "data": {', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[869][Normal] "account": "帐号",
+      runs=[{'t': '        "account": "帐号",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[870][Normal] "acctid": "acctid",
+      runs=[{'t': '        "acctid": "acctid",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[871][Normal] "avatar": "头像URL",
+      runs=[{'t': '        "avatar": "头像URL",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[872][Normal] "corp_id": "公司ID",
+      runs=[{'t': '        "corp_id": "公司ID",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[873][Normal] "document_root": "数据目录",
+      runs=[{'t': '        "document_root": "数据目录', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[874][Normal] "email": "邮箱",
+      runs=[{'t': '        "email": "邮箱",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[875][Normal] "mobile": "手机号",
+      runs=[{'t': '        "mobile": "手机号",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[876][Normal] "pid": 27536,
+      runs=[{'t': '        "pid": 27536,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[877][Normal] "sex": 1,
+      runs=[{'t': '        "sex": 1,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[878][Normal] "user_id": "用户ID",
+      runs=[{'t': '        "user_id": "用户ID",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[879][Normal] "username": "姓名"
+      runs=[{'t': '        "username": "姓名"', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[880][Normal] }
+      runs=[{'t': '    }', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[881][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[882][Normal] 用户登录成功通知（含公司名称） type: 11179
+      runs=[{'t': '用户登录成功通知（含公司名称） type: 11179', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[883][Normal] 与 11026 相同，额外包含 corp_name（公司全称）、corp_short_name（公司简称）
+      runs=[{'t': '与 11026 相同，额外包含 corp_name（公司全称', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[884][Normal] 用户退出通知 type: 11027
+      runs=[{'t': '用户退出通知 type: 11027', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[885][Normal] { "type": 11027, "data": { "user_id": "用户ID" } }
+      runs=[{'t': '{ "type": 11027, "data": { "us', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[886][Normal] 用户在手机端退出或切换企业时触发。
+      runs=[{'t': '用户在手机端退出或切换企业时触发。', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[887][Normal] ──────────────────────────────────────────────────
+      runs=[{'t': '──────────────────────────────', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[888][Normal] 3.2 消息通知
+      runs=[{'t': '3.2 消息通知', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[889][Normal] 所有消息通知包含公共字段：conversation_id, sender, sender_name, receiver, send_time, server_id, local_id, is_pc。从 5.0.13.6005 起，同一条消息还会多返回 sequence、message_type、quote、payload_fields 等字段，完整名单见「五、仅企业微信 5.0.13.6005」。更早版本不返回这些字段。
+      runs=[{'t': '所有消息通知包含公共字段：conversation_id, ', 'font': None, 'ea': None, 'sz': None, 'b': None, 'color': None}]
+[891][Normal] 撤回消息通知 type: 11123
+      runs=[{'t': '撤回消息通知 type: 11123', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[892][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[893][Normal] "type": 11123,
+      runs=[{'t': '    "type": 11123,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[894][Normal] "data": {
+      runs=[{'t': '    "data": {', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[895][Normal] "message_server_id": "被撤回消息ID",
+      runs=[{'t': '        "message_server_id": "', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[896][Normal] "op_user_id": "撤回操作人ID",
+      runs=[{'t': '        "op_user_id": "撤回操作人ID', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[897][Normal] "room_id": "群ID（0为私聊）"
+      runs=[{'t': '        "room_id": "群ID（0为私聊）"', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[898][Normal] }
+      runs=[{'t': '    }', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[899][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[900][Normal] ──────────────────────────────────────────────────
+      runs=[{'t': '──────────────────────────────', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[901][Normal] 3.3 好友事件
+      runs=[{'t': '3.3 好友事件', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[903][Normal] ──────────────────────────────────────────────────
+      runs=[{'t': '──────────────────────────────', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[904][Normal] 3.4 群聊事件
+      runs=[{'t': '3.4 群聊事件', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[906][Normal] ──────────────────────────────────────────────────
+      runs=[{'t': '──────────────────────────────', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[907][Normal] 四、指令类型速查表
+      runs=[{'t': '四、指令类型速查表', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[909][Normal] 五、仅企业微信 5.0.13.6005
+      runs=[{'t': '五、仅企业微信 5.0.13.6005', 'font': None, 'ea': None, 'sz': None, 'b': None, 'color': None}]
+[910][Normal] 下面这些只在微灵选中的企业微信版本是 5.0.13.6005 时才会出现。5.0.0.6008 和 5.0.3.6005 不推这些新事件，同一条旧接口也不会多出这些字段。对接时看字段在不在，不要假设旧版本也有。
+      runs=[{'t': '下面这些只在微灵选中的企业微信版本是 5.0.13.6005', 'font': None, 'ea': None, 'sz': None, 'b': None, 'color': None}]
+[911][Normal] 5.1 新通知事件（仅 5.0.13.6005 支持）
+      runs=[{'t': '5.1 新通知事件（仅 5.0.13.6005 支持）', 'font': None, 'ea': None, 'sz': None, 'b': None, 'color': None}]
+[912][Normal] 11201 连接断开。账号还在，只是观察到连接中断。这是实验通知。connection_state 为 unknown 时不能当成离线，也不要据此把账号标成退出。data 字段：event（固定 disconnected）、event_id、account_id、user_id、observed_at_ms（观察到变化的 Unix 毫秒）、source、connection_state、pid。source 可能是 client_context、client_connection_callback、process_replacement。
+      runs=[{'t': '11201 连接断开。账号还在，只是观察到连接中断。这是实验', 'font': None, 'ea': None, 'sz': None, 'b': None, 'color': None}]
+[913][Normal] 11202 连接恢复。event 固定 reconnected，其余字段与 11201 相同。
+      runs=[{'t': '11202 连接恢复。event 固定 reconnecte', 'font': None, 'ea': None, 'sz': None, 'b': None, 'color': None}]
+[914][Normal] 11200 旧类型表里没有的消息。新接口给出的消息类型对不上 11041 到 11195 时，仍然原样推送，type 固定 11200，不要当成 11041 文本。data.bridge_unmapped 为 true。用 message_type、message_type_name 区分具体种类。红包、图文、视频号、视频号直播、好友申请如果能识别，仍走原来的 11049、11068、11124、11195、11063，不走 11200。
+      runs=[{'t': '11200 旧类型表里没有的消息。新接口给出的消息类型对不上', 'font': None, 'ea': None, 'sz': None, 'b': None, 'color': None}]
+[915][Normal] 5.2 同一条旧接口多出来的字段（从 5.0.13.6005 开始才返回）
+      runs=[{'t': '5.2 同一条旧接口多出来的字段（从 5.0.13.6005', 'font': None, 'ea': None, 'sz': None, 'b': None, 'color': None}]
+[916][Normal] 旧字段名和含义不变。下面这些字段只在 5.0.13.6005 的回调或查询结果里出现，更早版本没有这些键。有值才带上。
+      runs=[{'t': '旧字段名和含义不变。下面这些字段只在 5.0.13.6005', 'font': None, 'ea': None, 'sz': None, 'b': None, 'color': None}]
+[917][Normal] 消息通知（11041、11042、11043、11044、11045、11046、11047、11048、11049、11050、11063、11066、11068、11123、11124、11195，以及 11200）在原有公共字段之外，还可能带：sequence 消息序号；raw_type 客户端原始类型；raw_flag 原始标记；message_type 新接口类型名，例如 text、image；message_type_name 类型名称；summary 摘要；content_status 正文解析状态，可能是 decoded、partial、malformed、empty；extra_content_status 附加内容解析状态；payload_base64 完整正文载荷的 Base64，最大约 1MiB；extra_payload_base64 附加载荷的 Base64；payload_size、extra_payload_size 解码后的字节数；payload_fields、extra_payload_fields 按类型解析出的字段；segments 分段内容；quote 引用，回复文字在 quote.display_text；is_revoked 本地记录是否已撤回；payload_truncated、extra_payload_truncated 是否截断；conversation_type 会话种类，private、group、customer_service 或 unknown；reply_conversation_id 可以用来回复的完整会话 ID。
+      runs=[{'t': '消息通知（11041、11042、11043、11044、1', 'font': None, 'ea': None, 'sz': None, 'b': None, 'color': None}]
+[918][Normal] 登录成功 11026，以及查询当前账号 11035，从 5.0.13.6005 起在原字段外还返回：name、avatar_url、english_name、email、position、external_corp_name、external_job、category、remark、wechat_id、conversation_status、categories、profile_cached、conversation_id、alias。alias 同时写入原来的 acctid。mobile 没有缓存时为空字符串。category 可能是 self、external、colleague、wechat、cached_profile。cached_profile 只表示有资料缓存，不表示已经是好友。
+      runs=[{'t': '登录成功 11026，以及查询当前账号 11035，从 5.', 'font': None, 'ea': None, 'sz': None, 'b': None, 'color': None}]
+[919][Normal] 退出 11027 从 5.0.13.6005 起还带：account_id、event_id、observed_at_ms、source、connection_state。user_id 仍然有。
+      runs=[{'t': '退出 11027 从 5.0.13.6005 起还带：acc', 'font': None, 'ea': None, 'sz': None, 'b': None, 'color': None}]
+[920][Normal] 获取自己的二维码 11122、刷新登录二维码 11153：原来的 ctcode 仍在。从 5.0.13.6005 起多返回 qr_content，内容与 ctcode 相同，是二维码完整链接。
+      runs=[{'t': '获取自己的二维码 11122、刷新登录二维码 11153：原', 'font': None, 'ea': None, 'sz': None, 'b': None, 'color': None}]
+[921][Normal] 外部联系人 11037 的 user_list、联系人详情 11039：原有 user_id、username、avatar、remark、corp_id、conversation_id 保留。从 5.0.13.6005 起把该联系人对象上的其余字段一并带回，包括 name、avatar_url、english_name、email、mobile、position、external_corp_name、external_job、category、wechat_id、conversation_status、categories、profile_cached、alias。11039 返回整份资料，不再删字段。
+      runs=[{'t': '外部联系人 11037 的 user_list、联系人详情 ', 'font': None, 'ea': None, 'sz': None, 'b': None, 'color': None}]
+[922][Normal] 群列表 11038 的 room_list：原有 conversation_id、name 保留，并补 room_name、group_name、nickname。从 5.0.13.6005 起还返回 creator_id、cached_member_count、avatar_url。cached_member_count 同时写入 member_count，avatar_url 同时写入 avatar。这是本地缓存人数，不是云端精确人数。
+      runs=[{'t': '群列表 11038 的 room_list：原有 conve', 'font': None, 'ea': None, 'sz': None, 'b': None, 'color': None}]
+[923][Normal] 群成员 11040 的 member_list：原有 user_id、username、avatar、remark、room_nickname、is_admin、invite_user_id、join_time 保留。从 5.0.13.6005 起还带回成员对象上的其余字段，包括 name、avatar_url、group_nickname、inviter_id。group_nickname 已写入 room_nickname，inviter_id 已写入 invite_user_id。
+      runs=[{'t': '群成员 11040 的 member_list：原有 use', 'font': None, 'ea': None, 'sz': None, 'b': None, 'color': None}]
+[924][Normal] 搜索用户 11052 的返回从 5.0.13.6005 起使用新接口的搜索结果。每条可能含 user_id、contact_user_id、search_result_id、name、avatar_url、corp_id、profile_source、profile_cached、profile_complete。search_result_id 只在当前账号、本次运行的 10 分钟内有效，用来申请添加。user_id 为空时不能拿去删除或同意好友。
+      runs=[{'t': '搜索用户 11052 的返回从 5.0.13.6005 起使', 'font': None, 'ea': None, 'sz': None, 'b': None, 'color': None}]
+[925][Normal] 个人微信
+      runs=[{'t': '个人微信', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 16.0, 'b': True, 'color': 'FFFFFF'}]
+[926][Normal] 从这里开始只写个人微信。不要使用上面的企业微信 type 码和 /api/Client 路径。
+      runs=[{'t': '从这里开始只写个人微信。不要使用上面的企业微信 type 码', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': '7A4E00'}]
+[927][Normal] 个人微信怎么对接
+      runs=[{'t': '个人微信怎么对接', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 14.0, 'b': True, 'color': '1F4E79'}]
+[928][Normal] 个微不要使用企业微信的 type 码，也不要调用 /api/Client/ExecCommand。指令名和参数见本文「个人微信指令」「个人微信事件」。微灵只负责转发。
+      runs=[{'t': '个微不要使用企业微信的 type 码，也不要调用 /api/', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[929][Normal] 5.1 微灵这边怎么准备
+      runs=[{'t': '5.1 微灵这边怎么准备', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[930][Normal] 1. 打开「个人微信」页，填好本机 Weixin.exe 的完整路径。
+      runs=[{'t': '1. 打开「个人微信」页，填好本机 Weixin.exe 的', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[931][Normal] 2. 通信方式选 HTTP 或 WebSocket，只选一种。
+      runs=[{'t': '2. 通信方式选 HTTP 或 WebSocket，只选一种', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[932][Normal] 3. 点「启动个人微信」，等窗口起来后再登录。不要自己先打开已经在运行的微信再指望注入。个微只能在微灵拉起进程时注入，已经开着的微信注入不进去。
+      runs=[{'t': '3. 点「启动个人微信」，等窗口起来后再登录。不要自己先打开', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[933][Normal] 4. 账号面板里出现该微信，状态在线。指令里的 client 填这个账号的编号。这个编号就是该实例的本地端口，也可以改填这个号的 wxid。
+      runs=[{'t': '4. 账号面板里出现该微信，状态在线。指令里的 client', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[934][Normal] 5.2 个人微信：HTTP
+      runs=[{'t': '5.2 个人微信：HTTP', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[935][Normal] 微灵这边：
+      runs=[{'t': '微灵这边：', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[936][Normal] 1. 通信方式选 HTTP。
+      runs=[{'t': '1. 通信方式选 HTTP。', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[937][Normal] 2. 填写个微自己的「事件通知 URL」并保存。这是个微专用地址，不要填成企微那个。
+      runs=[{'t': '2. 填写个微自己的「事件通知 URL」并保存。这是个微专用', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[938][Normal] 3. 「本机配置」里 HTTP 服务必须是「运行中」，默认端口仍是 8060。企微和个微共用这一个 HTTP 端口，靠路径区分。
+      runs=[{'t': '3. 「本机配置」里 HTTP 服务必须是「运行中」，默认端', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[939][Normal] 下指令：
+      runs=[{'t': '下指令：', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[940][Normal] POST http://微灵IP:8060/api/PersonalWeChat/ExecCommand
+      runs=[{'t': 'POST http://微灵IP:8060/api/Pers', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[941][Normal] Content-Type: application/json
+      runs=[{'t': 'Content-Type: application/json', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[942][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[943][Normal] "client": "19088",
+      runs=[{'t': '  "client": "19088",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[944][Normal] "action": "send_text_msg",
+      runs=[{'t': '  "action": "send_text_msg",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[945][Normal] "data": {}
+      runs=[{'t': '  "data": {}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[946][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[947][Normal] client：账号面板上的编号，或该微信的 wxid。必填。
+      runs=[{'t': 'client：账号面板上的编号，或该微信的 wxid。必填。', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[948][Normal] action：个微指令名，例如 send_text_msg。具体名字和 data 字段看上面的 Apifox 文档。必填。
+      runs=[{'t': 'action：个微指令名，例如 send_text_msg。', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': True, 'color': '1F2937'}]
+[949][Normal] data：这条指令的参数。没有参数时传 {}。
+      runs=[{'t': 'data：这条指令的参数。没有参数时传 {}。', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[950][Normal] 查当前有哪些个微在线：
+      runs=[{'t': '查当前有哪些个微在线：', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[951][Normal] GET http://微灵IP:8060/api/PersonalWeChat/Clients
+      runs=[{'t': 'GET http://微灵IP:8060/api/Perso', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[952][Normal] 返回每条里的 clientId、wxId、nickname、isOnline。clientId 就是下指令时的 client。
+      runs=[{'t': '返回每条里的 clientId、wxId、nickname、', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[953][Normal] 由微灵拉起一个新的个人微信：
+      runs=[{'t': '由微灵拉起一个新的个人微信：', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[954][Normal] GET http://微灵IP:8060/api/PersonalWeChat/OpenWeixin
+      runs=[{'t': 'GET http://微灵IP:8060/api/Perso', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[955][Normal] 不传 path 时使用微灵里已保存的 Weixin.exe 路径。
+      runs=[{'t': '不传 path 时使用微灵里已保存的 Weixin.exe ', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[956][Normal] 成功时 HTTP 正文同样是 code、msg、data、time。code 为 200 表示微灵这一层成功。data 里是个微自己的返回，常见成功码是 0、1、200。
+      runs=[{'t': '成功时 HTTP 正文同样是 code、msg、data、t', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[957][Normal] 下载语音、图片、视频、文件时，action 使用 download_voice、download_img、download_video、download_file。HTTP 成功时直接返回文件二进制，不是 JSON。语音可以在 data 里带 format 为 mp3 或 wav，微灵会转码后再返回；不带 format 则返回原始文件。
+      runs=[{'t': '下载语音、图片、视频、文件时，action 使用 downl', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[958][Normal] 发图片、文件、语音时，data 里可以给微灵所在电脑上的本地路径，也可以给 url 或 base64。微灵会先落成临时文件再转发给个微。对应 action：send_image_msg、send_file_msg、send_voice、send_mp3_voice。
+      runs=[{'t': '发图片、文件、语音时，data 里可以给微灵所在电脑上的本地', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[959][Normal] 事件推送：个人微信里发生的事件，微灵 POST 到个微的事件通知 URL。正文是个微原始事件，并额外加上：
+      runs=[{'t': '事件推送：个人微信里发生的事件，微灵 POST 到个微的事件', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[960][Normal] client：该实例编号
+      runs=[{'t': 'client：该实例编号', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[961][Normal] robot_id：当前登录 wxid
+      runs=[{'t': 'robot_id：当前登录 wxid', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[962][Normal] client_name：微灵里填的个微客户端名称，没填就没有
+      runs=[{'t': 'client_name：微灵里填的个微客户端名称，没填就没有', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[963][Normal] client_url：客户端地址，没填就没有
+      runs=[{'t': 'client_url：客户端地址，没填就没有', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[964][Normal] 原始事件里用 event_type 区分类型（有的包写作 even_type），文字说明在 event_desc。各类型的字段见本文「个人微信事件」。你的接口尽快返回 HTTP 2xx 即可。回调最多等 5 秒，超时不会重推。不要在这个请求里做耗时处理。
+      runs=[{'t': '原始事件里用 event_type 区分类型（有的包写作 e', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[965][Normal] Java 示例（个微 HTTP）
+      runs=[{'t': 'Java 示例（个微 HTTP）', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[966][Normal] 和企微 HTTP 一样，差别是回调地址、指令路径和请求体。不要调用 /api/Client/ExecCommand，也不要传企微的 type。client 是字符串，填账号面板编号或 wxid。发文本时 data 里用 wxid 和 msg。
+      runs=[{'t': '和企微 HTTP 一样，差别是回调地址、指令路径和请求体。不', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[967][Normal] @RestController
+      runs=[{'t': '@RestController', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[968][Normal] public class PersonalHttpDemo {
+      runs=[{'t': 'public class PersonalHttpDemo ', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[969][Normal] private final ObjectMapper json = new ObjectMapper();
+      runs=[{'t': '    private final ObjectMapper', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[970][Normal] private final RestTemplate http = new RestTemplate();
+      runs=[{'t': '    private final RestTemplate', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[972][Normal] // 个微「事件通知 URL」填：http://你的主机:端口/personal-wx/callback
+      runs=[{'t': '    // 个微「事件通知 URL」填：http://你的', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[973][Normal] // 不要填成企微的 /wx/callback
+      runs=[{'t': '    // 不要填成企微的 /wx/callback', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[974][Normal] @PostMapping("/personal-wx/callback")
+      runs=[{'t': '    @PostMapping("/personal-wx', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[975][Normal] public ResponseEntity<String> onEvent(@RequestBody String body) throws Exception {
+      runs=[{'t': '    public ResponseEntity<Stri', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[976][Normal] JsonNode event = json.readTree(body);
+      runs=[{'t': '        JsonNode event = json.', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[977][Normal] String client = event.path("client").asText();
+      runs=[{'t': '        String client = event.', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[978][Normal] String robotId = event.path("robot_id").asText();
+      runs=[{'t': '        String robotId = event', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[979][Normal] String eventType = event.path("event_type").asText(event.path("even_type").asText(""));
+      runs=[{'t': '        String eventType = eve', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[980][Normal] return ResponseEntity.ok("success");
+      runs=[{'t': '        return ResponseEntity.', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[981][Normal] }
+      runs=[{'t': '    }', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[983][Normal] // client 填账号面板编号或 wxid。发文本的 data 用 wxid、msg。
+      runs=[{'t': '    // client 填账号面板编号或 wxid。发文', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[984][Normal] public String sendText(String client, String wxid, String text) {
+      runs=[{'t': '    public String sendText(Str', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[985][Normal] Map<String, Object> data = new LinkedHashMap<String, Object>();
+      runs=[{'t': '        Map<String, Object> da', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[986][Normal] data.put("wxid", wxid);
+      runs=[{'t': '        data.put("wxid", wxid)', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[987][Normal] data.put("msg", text);
+      runs=[{'t': '        data.put("msg", text);', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[988][Normal] Map<String, Object> body = new LinkedHashMap<String, Object>();
+      runs=[{'t': '        Map<String, Object> bo', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[989][Normal] body.put("client", client);
+      runs=[{'t': '        body.put("client", cli', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[990][Normal] body.put("action", "send_text_msg");
+      runs=[{'t': '        body.put("action", "se', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[991][Normal] body.put("data", data);
+      runs=[{'t': '        body.put("data", data)', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[992][Normal] return http.postForObject(
+      runs=[{'t': '        return http.postForObj', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[993][Normal] "http://微灵IP:8060/api/PersonalWeChat/ExecCommand", body, String.class);
+      runs=[{'t': '                "http://微灵IP:8', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[994][Normal] }
+      runs=[{'t': '    }', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[995][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[996][Normal] 5.3 个人微信：WebSocket
+      runs=[{'t': '5.3 个人微信：WebSocket', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[997][Normal] 帧格式、文件分片和企业微信那一节相同。心跳也相同：微灵每 20 秒发 ping，后端必须用同一个 id 回 pong；大约 40 秒没有 pong 就断开。重连从 1 秒翻倍，最长 30 秒。只有下面这些不同。
+      runs=[{'t': '帧格式、文件分片和企业微信那一节相同。心跳也相同：微灵每 2', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[998][Normal] 微灵这边：
+      runs=[{'t': '微灵这边：', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[999][Normal] 1. 「个人微信」页通信方式选 WebSocket。
+      runs=[{'t': '1. 「个人微信」页通信方式选 WebSocket。', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[1000][Normal] 2. 连接地址填你的服务端。只填主机时，微灵自动补路径 /personal-wx/ws。建议写完整地址，例如 ws://192.168.1.100:8080/personal-wx/ws
+      runs=[{'t': '2. 连接地址填你的服务端。只填主机时，微灵自动补路径 /p', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[1001][Normal] 3. Token 填你约定的口令。微灵会追加为 ?token=你的Token。
+      runs=[{'t': '3. Token 填你约定的口令。微灵会追加为 ?token', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[1002][Normal] 4. 点「连接」，状态必须是「已连接」。
+      runs=[{'t': '4. 点「连接」，状态必须是「已连接」。', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[1003][Normal] 连上后微灵发 hello，channel 是 personal，不是 wecom：
+      runs=[{'t': '连上后微灵发 hello，channel 是 persona', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[1004][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1005][Normal] "id": "uuid",
+      runs=[{'t': '  "id": "uuid",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1006][Normal] "action": "hello",
+      runs=[{'t': '  "action": "hello",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1007][Normal] "payload": {
+      runs=[{'t': '  "payload": {', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1008][Normal] "clientName": "微灵里填的个微客户端名称",
+      runs=[{'t': '    "clientName": "微灵里填的个微客户端名', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1009][Normal] "channel": "personal"
+      runs=[{'t': '    "channel": "personal"', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1010][Normal] }
+      runs=[{'t': '  }', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1011][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1012][Normal] 收到 channel 为 personal 才按个微处理。企微那条连接的 channel 是 wecom，两条连接不要接到同一个业务处理里。
+      runs=[{'t': '收到 channel 为 personal 才按个微处理。企', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[1013][Normal] 事件仍然是 action=event。payload 就是 5.2 里那份 POST 正文（原始事件加上 client、robot_id 等）。
+      runs=[{'t': '事件仍然是 action=event。payload 就是 ', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[1014][Normal] 下指令仍然是 action=command，但 payload 用个微的请求体，不是企微的 type：
+      runs=[{'t': '下指令仍然是 action=command，但 payloa', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[1015][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1016][Normal] "id": "指令uuid",
+      runs=[{'t': '  "id": "指令uuid",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1017][Normal] "action": "command",
+      runs=[{'t': '  "action": "command",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1018][Normal] "payload": {
+      runs=[{'t': '  "payload": {', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1019][Normal] "client": "19088",
+      runs=[{'t': '    "client": "19088",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1020][Normal] "action": "send_text_msg",
+      runs=[{'t': '    "action": "send_text_msg",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1021][Normal] "data": {}
+      runs=[{'t': '    "data": {}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1022][Normal] }
+      runs=[{'t': '  }', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1023][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1024][Normal] 注意：外层 action 固定写 command，里层 payload.action 才是个微指令名。
+      runs=[{'t': '注意：外层 action 固定写 command，里层 pa', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': '7A4E00'}]
+[1025][Normal] 回包仍是同一个 id 的 command_result，payload.code 为 200 表示成功。
+      runs=[{'t': '回包仍是同一个 id 的 command_result，pa', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[1026][Normal] download_voice、download_img、download_video、download_file 的文件内容不在 JSON 里，走企业微信 WebSocket 里写过的 file_start、WXFL 二进制分片、file_end，最后再来一条 command_result。
+      runs=[{'t': 'download_voice、download_img、do', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[1027][Normal] WebSocket 没连上时，个微事件会被丢掉，不会改走 HTTP。
+      runs=[{'t': 'WebSocket 没连上时，个微事件会被丢掉，不会改走 H', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[1028][Normal] Java 示例（个微 WebSocket）
+      runs=[{'t': 'Java 示例（个微 WebSocket）', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[1029][Normal] 路径是 /personal-wx/ws，和企微的 /wx/ws 各一条连接，心跳各自回。hello 里 channel 必须是 personal。外层 action 固定写 command，里层 payload.action 才是个微指令名，例如 send_text_msg。
+      runs=[{'t': '路径是 /personal-wx/ws，和企微的 /wx/w', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[1030][Normal] @Component
+      runs=[{'t': '@Component', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1031][Normal] public class PersonalWsDemo extends TextWebSocketHandler {
+      runs=[{'t': 'public class PersonalWsDemo ex', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1032][Normal] private final ObjectMapper json = new ObjectMapper();
+      runs=[{'t': '    private final ObjectMapper', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1034][Normal] @Override
+      runs=[{'t': '    @Override', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1035][Normal] protected void handleTextMessage(WebSocketSession session, TextMessage message) throws Exception {
+      runs=[{'t': '    protected void handleTextM', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1036][Normal] JsonNode frame = json.readTree(message.getPayload());
+      runs=[{'t': '        JsonNode frame = json.', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1037][Normal] String action = frame.path("action").asText();
+      runs=[{'t': '        String action = frame.', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1038][Normal] String id = frame.path("id").asText();
+      runs=[{'t': '        String id = frame.path', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1039][Normal] if ("ping".equals(action)) {
+      runs=[{'t': '        if ("ping".equals(acti', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1040][Normal] reply(session, id, "pong", json.createObjectNode());
+      runs=[{'t': '            reply(session, id,', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1041][Normal] return;
+      runs=[{'t': '            return;', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1042][Normal] }
+      runs=[{'t': '        }', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1043][Normal] if ("hello".equals(action)) {
+      runs=[{'t': '        if ("hello".equals(act', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1044][Normal] // payload.channel 必须是 personal，不要和 wecom 那条连接混在一个业务里。
+      runs=[{'t': '            // payload.channel', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1045][Normal] return;
+      runs=[{'t': '            return;', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1046][Normal] }
+      runs=[{'t': '        }', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1047][Normal] if ("event".equals(action)) {
+      runs=[{'t': '        if ("event".equals(act', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1048][Normal] JsonNode payload = frame.path("payload");
+      runs=[{'t': '            JsonNode payload =', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1049][Normal] String eventType = payload.path("event_type").asText(payload.path("even_type").asText(""));
+      runs=[{'t': '            String eventType =', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1050][Normal] return;
+      runs=[{'t': '            return;', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1051][Normal] }
+      runs=[{'t': '        }', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1052][Normal] if ("command_result".equals(action)) {
+      runs=[{'t': '        if ("command_result".e', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1053][Normal] int code = frame.path("payload").path("code").asInt();
+      runs=[{'t': '            int code = frame.p', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1054][Normal] return;
+      runs=[{'t': '            return;', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1055][Normal] }
+      runs=[{'t': '        }', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1056][Normal] }
+      runs=[{'t': '    }', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1058][Normal] public void sendText(WebSocketSession session, String client, String wxid, String text) throws Exception {
+      runs=[{'t': '    public void sendText(WebSo', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1059][Normal] ObjectNode data = json.createObjectNode();
+      runs=[{'t': '        ObjectNode data = json', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1060][Normal] data.put("wxid", wxid);
+      runs=[{'t': '        data.put("wxid", wxid)', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1061][Normal] data.put("msg", text);
+      runs=[{'t': '        data.put("msg", text);', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1062][Normal] ObjectNode payload = json.createObjectNode();
+      runs=[{'t': '        ObjectNode payload = j', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1063][Normal] payload.put("client", client);
+      runs=[{'t': '        payload.put("client", ', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1064][Normal] payload.put("action", "send_text_msg");
+      runs=[{'t': '        payload.put("action", ', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1065][Normal] payload.set("data", data);
+      runs=[{'t': '        payload.set("data", da', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1066][Normal] // 外层 action 固定是 command，里层 payload.action 才是个微指令名。
+      runs=[{'t': '        // 外层 action 固定是 comma', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1067][Normal] reply(session, UUID.randomUUID().toString(), "command", payload);
+      runs=[{'t': '        reply(session, UUID.ra', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1068][Normal] }
+      runs=[{'t': '    }', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1070][Normal] private void reply(WebSocketSession session, String id, String action, JsonNode payload) throws Exception {
+      runs=[{'t': '    private void reply(WebSock', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1071][Normal] ObjectNode frame = json.createObjectNode();
+      runs=[{'t': '        ObjectNode frame = jso', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1072][Normal] frame.put("id", id);
+      runs=[{'t': '        frame.put("id", id);', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1073][Normal] frame.put("action", action);
+      runs=[{'t': '        frame.put("action", ac', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1074][Normal] frame.set("payload", payload);
+      runs=[{'t': '        frame.set("payload", p', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1075][Normal] synchronized (session) {
+      runs=[{'t': '        synchronized (session)', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1076][Normal] session.sendMessage(new TextMessage(json.writeValueAsString(frame)));
+      runs=[{'t': '            session.sendMessag', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1077][Normal] }
+      runs=[{'t': '        }', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1078][Normal] }
+      runs=[{'t': '    }', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1079][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1081][Normal] @Configuration
+      runs=[{'t': '@Configuration', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1082][Normal] @EnableWebSocket
+      runs=[{'t': '@EnableWebSocket', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1083][Normal] class PersonalWsConfig implements WebSocketConfigurer {
+      runs=[{'t': 'class PersonalWsConfig impleme', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1084][Normal] private final PersonalWsDemo handler;
+      runs=[{'t': '    private final PersonalWsDe', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1085][Normal] PersonalWsConfig(PersonalWsDemo handler) { this.handler = handler; }
+      runs=[{'t': '    PersonalWsConfig(PersonalW', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1087][Normal] @Override
+      runs=[{'t': '    @Override', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1088][Normal] public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
+      runs=[{'t': '    public void registerWebSoc', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1089][Normal] registry.addHandler(handler, "/personal-wx/ws").setAllowedOrigins("*");
+      runs=[{'t': '        registry.addHandler(ha', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1090][Normal] }
+      runs=[{'t': '    }', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1091][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1092][Normal] 5.4 个微没反应时查什么
+      runs=[{'t': '5.4 个微没反应时查什么', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[1093][Normal] 账号是不是从微灵「启动个人微信」拉起来的、面板里是否在线、client 是不是该实例编号或 wxid、HTTP 是否打到 /api/PersonalWeChat/ExecCommand、WebSocket 的 hello 里 channel 是不是 personal。不要把企微的 type、/wx/ws、/api/Client/ExecCommand 用到个微上。
+      runs=[{'t': '账号是不是从微灵「启动个人微信」拉起来的、面板里是否在线、c', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[1094][Normal] 个人微信指令
+      runs=[{'t': '个人微信指令', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 14.0, 'b': True, 'color': '1F4E79'}]
+[1095][Normal] 下面每条都是一次调用。HTTP 和 WebSocket 的 payload 相同：
+      runs=[{'t': '下面每条都是一次调用。HTTP 和 WebSocket 的 ', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[1096][Normal] {
+      runs=[{'t': '{', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1097][Normal] "client": "账号面板上的编号或wxid",
+      runs=[{'t': '  "client": "账号面板上的编号或wxid",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1098][Normal] "action": "下面的 action",
+      runs=[{'t': '  "action": "下面的 action",', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1099][Normal] "data": { }
+      runs=[{'t': '  "data": { }', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1100][Normal] }
+      runs=[{'t': '}', 'font': 'Consolas', 'ea': 'Consolas', 'sz': 9.0, 'b': None, 'color': None}]
+[1101][Normal] action 不要带 /api/。data 没有参数时传 {}。
+      runs=[{'t': 'action 不要带 /api/。data 没有参数时传 {', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[1102][Normal] 下载类 action（download_img、download_file、download_video、download_voice）成功时，HTTP 直接返回文件；WebSocket 走 file_start 和 WXFL 分片。语音可在 data 里加 format 为 mp3 或 wav。
+      runs=[{'t': '下载类 action（download_img、downlo', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[1103][Normal] 发图片、文件、语音时，data 里可以写本机路径，也可以写 url 或 base64，微灵会先落成临时文件。对应 action：send_image_msg、send_file_msg、send_voice、send_mp3_voice。
+      runs=[{'t': '发图片、文件、语音时，data 里可以写本机路径，也可以写 ', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[1104][Normal] 返回里 code 为 1 且 msg 为 success 是个微自己的成功，微灵外面还会再包一层 code 200。
+      runs=[{'t': '返回里 code 为 1 且 msg 为 success 是', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[1106][Normal] 下载图片
+      runs=[{'t': '下载图片', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[1108][Normal] 下载文件
+      runs=[{'t': '下载文件', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[1110][Normal] 下载视频
+      runs=[{'t': '下载视频', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[1112][Normal] 下载语音
+      runs=[{'t': '下载语音', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 11.0, 'b': True, 'color': '334155'}]
+[1113][Normal] action：download_voice
+      runs=[{'t': 'action：download_voice', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': True, 'color': '1F2937'}]
+[1114][Normal] data 字段：newMsgId：必填；length：必填；MsgId：必填
+      runs=[{'t': 'data 字段：newMsgId：必填；length：必填；', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': True, 'color': '1F2937'}]
+[1116][Normal] 个人微信事件
+      runs=[{'t': '个人微信事件', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 14.0, 'b': True, 'color': '1F4E79'}]
+[1117][Normal] 这些不是指令，不要拿去当 action 调用。个人微信发生这些事时，微灵会把原始内容推给你，并额外加上 client（实例编号）、robot_id（当前 wxid）。HTTP 是 POST 到个微事件通知 URL；WebSocket 是 action=event 的 payload。
+      runs=[{'t': '这些不是指令，不要拿去当 action 调用。个人微信发生这', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[1118][Normal] 事件类型看 event_type，有的包写作 even_type。说明文字在 event_desc 或 even_desc。
+      runs=[{'t': '事件类型看 event_type，有的包写作 even_ty', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[1119][Normal] 个人发送文本消息回调
+      runs=[{'t': '个人发送文本消息回调', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[1120][Normal] 个人发送图片消息回调
+      runs=[{'t': '个人发送图片消息回调', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[1121][Normal] 个人发送文件/卡片/小程序/等等xml回调
+      runs=[{'t': '个人发送文件/卡片/小程序/等等xml回调', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[1122][Normal] 群聊消息回调
+      runs=[{'t': '群聊消息回调', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[1123][Normal] 私聊消息回调
+      runs=[{'t': '私聊消息回调', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[1124][Normal] 公众号文章,服务号通知都在这个回调里   可以用server酱来测试
+      runs=[{'t': '公众号文章,服务号通知都在这个回调里   可以用server', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[1125][Normal] 朋友圈消息回调
+      runs=[{'t': '朋友圈消息回调', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[1126][Normal] 聊天对象切换回调
+      runs=[{'t': '聊天对象切换回调', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[1127][Normal] 群成员修改昵称回调
+      runs=[{'t': '群成员修改昵称回调', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[1128][Normal] 群成员进群回调
+      runs=[{'t': '群成员进群回调', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+[1129][Normal] 群成员退群回调
+      runs=[{'t': '群成员退群回调', 'font': '微软雅黑', 'ea': '微软雅黑', 'sz': 10.5, 'b': None, 'color': None}]
+
+=== TABLES (13) ===
+--- table 0: rows=5 cols=4 style=Normal Table
+  r0: 参数 | 类型 | 必填 | 说明
+  r1: type | integer | ✅ | 指令类型码，见下方指令列表
+  r2: data | object | ✅ | 指令参数，不同 type 对应不同结构
+  r3: client | integer | ✅ | 企微实例客户端 ID，在微灵控制台可以看到每个企微实例对应的 ClientId
+  r4: getData | boolean | ❌ | 需要获取返回数据的指令传 true，下方有返回值的指令示例中已标注，没有返回值的不要传值，会超时！！
+--- table 1: rows=6 cols=2 style=Normal Table
+  r0: 用途 | JSON 路径
+  r1: 微信用户 user_id | data.datalist[0].contact_info_wx.uin
+  r2: 微信用户 openid | data.datalist[0].openid
+  r3: 微信用户 wx_ticket | data.datalist[0].wx_ticket
+  r4: 企微用户 user_id | data.datalist[0].contact_info.uin
+  r5: 企微用户 corp_id | data.datalist[0].contact_info.corpid
+--- table 2: rows=6 cols=2 style=Normal Table
+  r0: file_type | 说明
+  r1: 1 | 原图
+  r2: 2 | 中图
+  r3: 3 | 缩略图
+  r4: 4 | 视频
+  r5: 5 | 文件
+--- table 3: rows=5 cols=2 style=Normal Table
+  r0: download_type | 说明
+  r1: 1 | 图片
+  r2: 2 | 视频
+  r3: 3 | 录音
+  r4: 4 | 文件（.dat 格式）
+--- table 4: rows=15 cols=4 style=Normal Table
+  r0: type | 消息类型 | content_type | 特有字段
+  r1: 11041 | 文本消息 | 2 | content
+  r2: 11042 | 图片消息 | 101 | cdn_type, cdn{aes_key, auth_key, url, md5, size, md_url, ld_url}
+  r3: 11043 | 视频消息 | 103 | duration, file_size, cdn_type, cdn{url, preview_img_url}
+  r4: 11044 | 语音消息 | 16 | duration, c2c_cdn{aes_key, file_id, size, voice_time}
+  r5: 11045 | 文件消息 | 102 | cdn_type, cdn{aes_key, auth_key, file_name, md5, size, url}
+  r6: 11046 | 位置消息 | 6 | title, address, latitude, longitude, zoom
+  r7: 11047 | 链接消息 | 13 | title, desc, url, image_url
+--- table 5: rows=4 cols=3 style=Normal Table
+  r0: type | 事件 | 关键字段
+  r1: 11063 | 好友申请通知 | avatar, corp_id, nickname, sex, user_id, verify
+  r2: 11076 | 好友新增通知 | acctid, avatar, conversation_id, corp_id, user_id, username
+  r3: 11077 | 好友删除通知 | avatar, corp_id, nickname, sex, user_id
+--- table 6: rows=6 cols=3 style=Normal Table
+  r0: type | 事件 | 关键字段
+  r1: 11074 / 11173 | 新增群通知 | room_conversation_id, room_name, member_list[], op_user_id
+  r2: 11072 | 群成员增加 | member_list[]{name, user_id}, op_user_id, op_user_name, room_conversation_id, ro
+  r3: 11073 | 群成员减少 | 同群成员增加
+  r4: 11075 | 主动退群 | op_user_id, op_user_name, room_conversation_id, room_name
+  r5: 11078 | 群名称变化 | op_user_id, room_conversation_id, room_name（新群名）
+--- table 7: rows=77 cols=3 style=Normal Table
+  r0: type | 功能 | 分类
+  r1: 11024 | 接口就绪通知 | 通知
+  r2: 11026 | 用户登录成功通知 | 通知
+  r3: 11027 | 用户退出通知 | 通知
+  r4: 11028 | 登录二维码通知 | 通知
+  r5: 11029 | 发送文本消息 | 消息
+  r6: 11030 | 发送图片消息 | 消息
+  r7: 11031 | 发送文件消息 | 消息
+--- table 8: rows=54 cols=3 style=Normal Table
+  r0: 功能 | action | 参数
+  r1: 修改我所在群的群昵称 | mod_chat_room_self_nick_name | roomId：48520920817@chatroom
+  r2: 发送卡片/XML消息。该接口所有的卡片信息都可以发 包括但不限于 小程序 位置 音乐卡片等等 | send_app_msg | content：见消息或文件内容；type：19
+  r3: 发送本地GIF信息 | send_emotion_msg | wxid：75
+  r4: 发送链接信息_不走UI | send_xml | wxid：63；title：由于向下更加全啊；description：再业最到。难族开常因团象后也。可命保口。行几布族道市打传段程。实看属处总义合色强明。们第运
+  r5: 发送文本消息 | send_text_msg | wxid：45220347292@chatroom
+  r6: 发送AT消息 | send_at_text | wxids：notify@all；msg：@爱吃香菜 123123
+  r7: 发送名片消息 | send_card_msg | towxid：filehelper
+--- table 9: rows=2 cols=3 style=Normal Table
+  r0: 功能 | action | 参数
+  r1: 这些参数都来自于消息里 | download_img | to_user：wxid_bdk9jdwumfgj22；from_user：wxid_n629zjvs2ath29；start_pos：0；total_len：
+--- table 10: rows=16 cols=3 style=Normal Table
+  r0: 功能 | action | 参数
+  r1: 这些参数都来自于消息里 | download_file | from_user：必填；total_len：31538；MsgId：2754393265637994500；path：d:\罗泽南8月考勤表.xlsx；att
+  r2: 同意群聊邀请。运行该接口的时候 需要将url 用a8key转一下 | enter_room | url：见消息或文件内容
+  r3: 朋友圈图片上传。该接口取的url其实可以当做图库 | sns_upload | 无参数，data 传 {}
+  r4: 修改头像 | upload_head_img | 无参数，data 传 {}
+  r5: 修改个人签名 | mod_self_nick_signature | 无参数，data 传 {}
+  r6: 获取标签列表 | get_label_lists | 无参数，data 传 {}
+  r7: 增加标签 | add_label | 无参数，data 传 {}
+--- table 11: rows=6 cols=3 style=Normal Table
+  r0: 功能 | action | 参数
+  r1: 该接口里的所有数据均来自消息回调 | download_video | total_len：68264760；NewMsgId：150973212120165920；path：d:\121.mp4
+  r2: 防撤回 | anti_revoke | 无参数，data 传 {}
+  r3: 获取群员昵称 | get_group_memeber_info | roomId：49767299448@chatroom
+  r4: 获取朋友圈下一页 | sns_get_next_page | 无参数，data 传 {}
+  r5: 微信初始化_删除当前设备_慎用 | wechat_init | 无参数，data 传 {}
+--- table 12: rows=23 cols=3 style=Normal Table
+  r0: 功能 | action | 参数
+  r1: cdn下载。文件类型 | cdn_download | fileid：见消息或文件内容；asekey：ae38eb5aee69ba62e6b3a94ecfc76c5f；imgType：2
+  r2: 更新单个用户资料 | update_single_profile | 无参数，data 传 {}
+  r3: 获取登陆状态 | check_login | 无参数，data 传 {}
+  r4: 二维码识别 | qrscan | 无参数，data 传 {}
+  r5: 退出登陆 | logout | 无参数，data 传 {}
+  r6: 获取群聊列表 | get_chatroom_list | 无参数，data 传 {}
+  r7: 撤回任何消息 | revoke_any | newMsgId：2050044161371926300；createTime：1761391928

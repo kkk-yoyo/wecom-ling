@@ -1,0 +1,69 @@
+{
+  "approval_group_ids": {
+    "description": "审批群群号",
+    "hint": "只有这些群里的消息才会被当作审批申请处理（留空则群聊不触发，仅私聊可用）。填写企业微信群 ID，可填多个。",
+    "type": "list",
+    "default": []
+  },
+  "admin_group_ids": {
+    "description": "管理员群群号",
+    "hint": "需要人工审核的申请会发到这些群里提醒管理员。留空时改为私聊提醒 admin_user_ids。",
+    "type": "list",
+    "default": []
+  },
+  "admin_user_ids": {
+    "description": "管理员用户 ID",
+    "hint": "申请人若在此列表中，将强制人工审核；也是 /ai审批记录 的授权名单之一（另含群管理员与全局 admins_id）。admin_group_ids 为空时也用于私聊提醒。",
+    "type": "list",
+    "default": []
+  },
+  "auto_approve_types": {
+    "description": "自动通过类型",
+    "hint": "只有这些类型的申请才可能被规则自动通过。可选：请假、报销、外出、加班（也支持 休假/出差/报账 等别名）。",
+    "type": "list",
+    "default": [
+      "请假",
+      "外出"
+    ]
+  },
+  "auto_approve_max_leave_days": {
+    "description": "自动通过天数上限",
+    "hint": "申请天数（小时按 8 小时=1 天折算）不超过该值才自动通过。",
+    "type": "float",
+    "default": 2.0,
+    "slider": {
+      "min": 0,
+      "max": 30,
+      "step": 0.5
+    }
+  },
+  "auto_approve_max_amount": {
+    "description": "自动通过金额上限（元）",
+    "hint": "申请金额不超过该值才自动通过。",
+    "type": "float",
+    "default": 500.0,
+    "slider": {
+      "min": 0,
+      "max": 100000,
+      "step": 50
+    }
+  },
+  "use_llm": {
+    "description": "启用 LLM 合理性审查",
+    "hint": "规则通过后，可选调用 AstrBot 已配置的 LLM 做合理性审查；LLM 不可用或输出无法解析时自动回退规则判定，不会阻塞审批。",
+    "type": "bool",
+    "default": false
+  },
+  "llm_provider_id": {
+    "description": "审查使用的 LLM Provider ID",
+    "hint": "留空表示使用当前默认对话模型（按会话偏好）；也可填 AstrBot WebUI 中已有的 Provider ID。",
+    "type": "string",
+    "default": ""
+  },
+  "audit_log_path": {
+    "description": "审计日志路径",
+    "hint": "JSONL 文件路径。留空使用插件默认位置；相对路径基于 AstrBot data 目录。",
+    "type": "string",
+    "default": ""
+  }
+}

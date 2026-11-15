@@ -17,21 +17,24 @@
 
 ```
 wecom-ling/
-├── src/WeComSever/          # ilspycmd 反编译的完整源码（.NET Framework 4.7.2 / WPF）
-├── native/
-│   ├── bin/Loader.dll       # 注入器（x86 原生）
-│   ├── bin/Helper_5.0.0.6008.dll  # hook 核心（版本绑定 5.0.0.6008）
-│   └── README.md            # 原生组件接口说明
-├── dist/微灵.exe            # 原始二进制（v1.0.1.0，未修改），用于对照/直接运行
-├── bridge/                  # OneBot v11 适配器（微灵 ⇄ AstrBot 等）
-├── docs/
-│   ├── PROTOCOL.md          # 指令与事件协议完整说明
-│   ├── ARCHITECTURE.md      # 架构与启动流程
-│   ├── NATIVE_DLLS.md       # Loader.dll / Helper dll 接口
-│   ├── BUILD.md             # 构建说明（含已知问题）
-│   └── original/            # 原作者提供的 API 文档（docx/txt）
-├── examples/config.ini      # 微灵配置样例
-└── tools/decompile.ps1      # 用 ilspycmd 复现反编译
+├── src/WeComSever/              # ilspycmd 反编译源码（v1.0.1.0，.NET Framework 4.7.2 / WPF）
+├── native/bin/                  # 原生注入组件（Loader.dll / Helper_5.0.0.6008.dll）
+├── bridge/                      # OneBot v11 HTTP 桥接层（Python，适配 v1.0.1.0 旧版）
+├── docs/                        # 协议文档、架构说明、原作者 API 文档
+├── tools/                       # 反编译脚本
+│
+├── onebot/                      # ★ OneBot v11 改造工程（适配微灵 1.11.0）
+│   ├── src/WxSocketClient.cs    #   OneBot v11 反向 WS 客户端 shim（C# 5，2600+ 行）
+│   ├── tools/PatchOneBot.cs     #   IL 移植工具（dnlib 4.5.0，加法式策略 + PreserveAll）
+│   ├── tools/build.ps1           #   一键编译 shim + 重打补丁
+│   ├── tests/                    #   62 用例 Mock 测试（Python + C# TestHost）
+│   ├── plugin_ai_approval/       #   AstrBot AI 审批插件（astrbot_plugin_ai_approval）
+│   ├── analysis/                 #   1.11.0 逆向分析产物（反编译 .cs + 探针脚本）
+│   ├── docs/                     #   对接文档生成脚本
+│   └── REPORT.md                 #   改造报告（SHA256、原理、验证证据、已知限制）
+│
+├── dist/                        # 原始二进制说明
+└── .gitignore
 ```
 
 ## 快速体验
@@ -83,6 +86,48 @@ POST /api/Client/ExecCommand
 ```
 
 完整指令/事件表见 [`docs/PROTOCOL.md`](docs/PROTOCOL.md)。
+
+## OneBot v11 改造（微灵 1.11.0）
+
+在原仓库（v1.0.1.0 反编译）基础上，新增了 **微灵 1.11.0 的 OneBot v11 协议改造工程**（`onebot/` 目录）。
+
+### 做了什么
+
+将微灵 1.11.0 自研 WebSocket 协议（`{id,action,payload}` + hello/ping/pong + WXFL 二进制分片）**替换为标准 OneBot v11 反向 WebSocket**，使微灵可以直接对接 AstrBot / NapCat / LLOneBot 等 OneBot v11 实现，**无需外挂桥接层**。
+
+- 原程序 exe 不修改（SHA256 前后一致），改造产物为独立 exe。
+- 使用 dnlib IL 补丁（加法式策略 + `MetadataFlags.PreserveAll`），只替换 `WxWebSocketClient` 类的 10 个公开方法体，其余全部保留。
+- 微灵其余功能（企微注入、HTTP 8060 API、事件回调、UI、个微 TCP 桥等）原样保留。
+
+### 消息能力
+
+| 方向 | 支持 |
+| --- | --- |
+| **入站** | 文本/@、图片、视频、动图、文件、位置、链接、名片、撤回通知、好友申请、群成员变动；11200 未映射消息兜底；已读上报过滤 |
+| **出站** | 文本、@（群内）、图片/视频/文件/动图（base64://、http(s)://、file://、绝对路径四种来源）；reply/face 段静默忽略 |
+| **查询** | get_login_info / get_status / get_version_info / get_group_list / get_friend_list / get_group_info / get_group_member_info / get_group_member_list / get_stranger_info / get_msg / can_send_image / can_send_record |
+
+### 快速构建
+
+```powershell
+# 1. 编译 shim（需要 .NET Framework 4.x csc + Newtonsoft.Json 13.0.0）
+cd onebot\tools
+.\build.ps1
+
+# 2. 输出：onebot\output\微灵-OneBotV11-1.11.0.exe
+```
+
+### 验证
+
+- Mock 测试 **62/62 PASS**
+- 真实 AstrBot 4.29 联调通过（反向 WS 握手 + 事件双向 + 动作应答）
+- 改造报告见 [`onebot/REPORT.md`](onebot/REPORT.md)
+
+### AI 审批插件
+
+附带 AstrBot 插件 `astrbot_plugin_ai_approval`（`onebot/plugin_ai_approval/`）：员工在群/私聊提交请假/报销/外出申请，插件按规则自动通过或转管理员提醒，JSONL 审计日志。
+
+---
 
 ## 构建
 

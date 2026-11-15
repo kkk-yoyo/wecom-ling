@@ -1,0 +1,9 @@
+name: astrbot_plugin_ai_approval
+display_name: AI 审批
+desc: 员工在聊天中提交请假/报销/外出/加班申请，插件按规则自动通过；超出规则时提醒管理员群，并写入 JSONL 审计日志。
+version: 1.0.0
+author: 立方工作室
+repo: https://127.0.0.1/astrbot_plugin_ai_approval
+astrbot_version: ">=4.16,<5"
+support_platforms:
+  - aiocqhttp

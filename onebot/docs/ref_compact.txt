@@ -1,0 +1,1349 @@
+[pNormal] {font=微软雅黑 sz=22.0 b=True} 微灵对接文档
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 给对接开发看的。企业微信和个人微信是两套接口，地址、请求体、事件格式都不一样，不要混用。每套都可以选 HTTP 或 WebSocket，同一边同一时间只开一种。直接把文档跟需求丢给AI去对接更快！！！！！！
+[pNormal] {font=微软雅黑 sz=14.0 b=True} 目录
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 使用前
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 先做这几件事
+[pNormal] {font=微软雅黑 sz=10.5 b=None} HTTP 和 WebSocket 的差别
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 企业微信
+[pNormal] {font=微软雅黑 sz=10.5 b=None} HTTP 怎么接
+[pNormal] {font=微软雅黑 sz=10.5 b=None} WebSocket 怎么接
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 指令怎么填
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 一个能跑通的例子
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 最小 Demo：回你好
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 指令与通知事件
+[pNormal] {font=微软雅黑 sz=10.0 b=None} 登录、联系人、群组、消息、CDN
+[pNormal] {font=微软雅黑 sz=10.0 b=None} 通知事件
+[pNormal] {font=微软雅黑 sz=10.0 b=None} 指令类型速查表
+[pNormal] {font=None sz=None b=None} 仅 5.0.13.6005
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 个人微信
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 怎么对接
+[pNormal] {font=微软雅黑 sz=10.0 b=None} HTTP
+[pNormal] {font=微软雅黑 sz=10.0 b=None} WebSocket
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 指令一览
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 事件一览
+[pNormal] {font=微软雅黑 sz=14.0 b=True} 使用前
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 先做这几件事
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 1. 在 Windows 上用管理员身份打开微灵。不要先开企业微信。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 2. 第一次打开会要卡密。把本机机器码发给商家，拿到卡密后粘贴，点激活。激活成功后再进主界面。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 3. 本文先写完企业微信，再写个人微信。两边各自选 HTTP 或 WebSocket，不要混用地址。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 4. 账号面板里要出现对应账号并且在线。没有在线账号时，后面怎么调都没有反应。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 电脑重启后：先开微灵，再从微灵里登录，不要从桌面直接打开微信或企业微信。HTTP 确认本机服务在跑；WebSocket 确认状态是「已连接」。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 两种方式怎么选
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 企微和个微各自选一次，可以一个用 HTTP、另一个用 WebSocket。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} HTTP：你的服务端主动请求微灵，微灵再把收到的消息 POST 到你填的回调地址。微灵和你的服务端如果不在同一台机器，微灵这边通常还要做内网穿透，否则你访问不到它的端口，它也访问不到你的回调。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} WebSocket：微灵主动连你的服务端。收消息、下指令都走这一条连接。一般不需要内网穿透。推荐新对接用这种方式。
+[pNormal] {font=微软雅黑 sz=16.0 b=True} 企业微信
+[pNormal] {font=None sz=None b=None} 选中 5.0.13.6005 时，对外指令码和回调通道不变。这一版才会多出第「五、仅企业微信 5.0.13.6005」里的事件和字段。更早版本没有。
+[pNormal] {font=微软雅黑 sz=12.0 b=True} 企业微信：HTTP 怎么接
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 3.1 微灵这边怎么填
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 1. 「企业微信」页点「自动检测」或手动选对本机企微版本，再点「登录新账号」扫码。不要从桌面直接打开企业微信。账号面板里要看到在线账号，client 填这个编号。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 2. 通信方式选 HTTP。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 3. 点「编辑」，填写「事件通知 URL」，保存。必须以 http:// 或 https:// 开头。示例：http://192.168.1.100:8080/callback
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 4. 「本机配置」页里 HTTP 服务必须是「运行中」。默认端口 8060，改端口后要重启服务。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 5. 你的服务端不在这台电脑上时：「内网穿透」要处于运行中，并把穿透后的对外地址配给你的服务端。事件通知 URL 必须是微灵这台电脑访问得到的地址。
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 3.2 你怎么给微灵下指令
+[pNormal] {font=Consolas sz=9.0 b=None} POST http://微灵IP:8060/api/Client/ExecCommand
+[pNormal] {font=微软雅黑 sz=10.5 b=None} Content-Type: application/json
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 请求体就是一条指令，type、data、client 放在最外层：
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "type": 11029,
+[pNormal] {font=Consolas sz=9.0 b=None} "data": {
+[pNormal] {font=Consolas sz=9.0 b=None} "conversation_id": "S:自己的user_id_对方的user_id",
+[pNormal] {font=Consolas sz=9.0 b=None} "content": "你好"
+[pNormal] {font=Consolas sz=9.0 b=None} },
+[pNormal] {font=Consolas sz=9.0 b=None} "client": 1
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 字段说明：
+[pNormal] {font=微软雅黑 sz=10.5 b=None} type：指令码，见本文后半部分。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} data：这条指令自己的参数。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} client：账号面板里的客户端编号。必填。已断开的账号会返回失败。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} getData：查询类指令要结果时传 true。发消息这类不需要结果的不要传，传了会一直等到超时。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 成功时 HTTP 正文大致是：
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "code": 200,
+[pNormal] {font=Consolas sz=9.0 b=None} "msg": "请求成功！",
+[pNormal] {font=Consolas sz=9.0 b=None} "data": "执行结果",
+[pNormal] {font=Consolas sz=9.0 b=None} "time": 1710000000
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=10.5 b=None} code 为 200 表示成功，其他值表示失败，原因在 msg。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 下载 CDN 文件（type 11170 或 11171）成功时，HTTP 直接返回文件二进制，不是上面的 JSON。请按文件流保存。
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 3.3 微灵怎么把消息推给你
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 企业微信里发生的事件，微灵会用 POST 把 JSON 发到你填的事件通知 URL。正文就是事件本身，例如：
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "type": 11041,
+[pNormal] {font=Consolas sz=9.0 b=None} "client": 1,
+[pNormal] {font=Consolas sz=9.0 b=None} "robot_id": "当前登录用户的user_id",
+[pNormal] {font=Consolas sz=9.0 b=None} "data": {
+[pNormal] {font=Consolas sz=9.0 b=None} "conversation_id": "S:xxx_xxx",
+[pNormal] {font=Consolas sz=9.0 b=None} "content": "你好",
+[pNormal] {font=Consolas sz=9.0 b=None} "receiver": "当前登录用户的user_id"
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=10.5 b=None} client、robot_id 是微灵补上的。type 含义见「通知事件」。你的接口尽快返回 HTTP 2xx 即可，微灵不解析响应正文。回调最多等 5 秒，超时或非 2xx 只记日志，不会重推。不要在这个请求里做耗时处理。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 没收到消息时按这个顺序查：账号是否在线、HTTP 服务是否运行中、事件通知 URL 是否已保存、外网时穿透是否运行、日志里有没有回调失败。
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 3.4 企微 HTTP 的 Java 示例
+[pNormal] {font=微软雅黑 sz=10.5 b=None} Spring Boot 即可，用 spring-boot-starter-web。微灵把事件 POST 到你填的地址；你再 POST 到微灵的 8060 下指令。回调里尽快返回，不要在这个请求里等待外部接口。
+[pNormal] {font=Consolas sz=9.0 b=None} import org.springframework.http.ResponseEntity;
+[pNormal] {font=Consolas sz=9.0 b=None} import org.springframework.web.bind.annotation.PostMapping;
+[pNormal] {font=Consolas sz=9.0 b=None} import org.springframework.web.bind.annotation.RequestBody;
+[pNormal] {font=Consolas sz=9.0 b=None} import org.springframework.web.bind.annotation.RestController;
+[pNormal] {font=Consolas sz=9.0 b=None} import org.springframework.web.client.RestTemplate;
+[pNormal] {font=Consolas sz=9.0 b=None} import com.fasterxml.jackson.databind.JsonNode;
+[pNormal] {font=Consolas sz=9.0 b=None} import com.fasterxml.jackson.databind.ObjectMapper;
+[pNormal] {font=Consolas sz=9.0 b=None} import java.util.LinkedHashMap;
+[pNormal] {font=Consolas sz=9.0 b=None} import java.util.Map;
+[pNormal] {font=Consolas sz=9.0 b=None} @RestController
+[pNormal] {font=Consolas sz=9.0 b=None} public class WeComHttpDemo {
+[pNormal] {font=Consolas sz=9.0 b=None} private final ObjectMapper json = new ObjectMapper();
+[pNormal] {font=Consolas sz=9.0 b=None} private final RestTemplate http = new RestTemplate();
+[pNormal] {font=Consolas sz=9.0 b=None} // 微灵「事件通知 URL」填：http://你的主机:端口/wx/callback
+[pNormal] {font=Consolas sz=9.0 b=None} @PostMapping("/wx/callback")
+[pNormal] {font=Consolas sz=9.0 b=None} public ResponseEntity<String> onEvent(@RequestBody String body) throws Exception {
+[pNormal] {font=Consolas sz=9.0 b=None} JsonNode event = json.readTree(body);
+[pNormal] {font=Consolas sz=9.0 b=None} int type = event.path("type").asInt();
+[pNormal] {font=Consolas sz=9.0 b=None} int client = event.path("client").asInt();
+[pNormal] {font=Consolas sz=9.0 b=None} String text = event.path("data").path("content").asText("");
+[pNormal] {font=Consolas sz=9.0 b=None} // type 11041 是收到消息。这里尽快返回，耗时逻辑放到别的线程。
+[pNormal] {font=Consolas sz=9.0 b=None} return ResponseEntity.ok("ok");
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=Consolas sz=9.0 b=None} // 给在线企微发文本。发消息不要带 getData。
+[pNormal] {font=Consolas sz=9.0 b=None} public String sendText(int client, String conversationId, String content) {
+[pNormal] {font=Consolas sz=9.0 b=None} Map<String, Object> data = new LinkedHashMap<String, Object>();
+[pNormal] {font=Consolas sz=9.0 b=None} data.put("conversation_id", conversationId);
+[pNormal] {font=Consolas sz=9.0 b=None} data.put("content", content);
+[pNormal] {font=Consolas sz=9.0 b=None} Map<String, Object> body = new LinkedHashMap<String, Object>();
+[pNormal] {font=Consolas sz=9.0 b=None} body.put("type", 11029);
+[pNormal] {font=Consolas sz=9.0 b=None} body.put("client", client);
+[pNormal] {font=Consolas sz=9.0 b=None} body.put("data", data);
+[pNormal] {font=Consolas sz=9.0 b=None} return http.postForObject(
+[pNormal] {font=Consolas sz=9.0 b=None} "http://微灵IP:8060/api/Client/ExecCommand", body, String.class);
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=12.0 b=True} 企业微信：WebSocket 怎么接
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 4.1 谁连谁
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 微灵是客户端，你的服务端是 WebSocket 服务端。微灵主动连过来。你不要去连微灵。
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 4.2 微灵这边怎么填
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 1. 「企业微信」页通信方式选 WebSocket。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 2. 连接地址填你的服务端地址，ws:// 或 wss://。只填主机时，微灵会自动补上路径 /wx/ws。建议直接填完整地址，例如 ws://192.168.1.100:8080/wx/ws
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 3. Token 填你约定的口令。微灵会把它追加到地址上：ws://192.168.1.100:8080/wx/ws?token=你的Token
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 4. 点「连接」。状态必须变成「已连接」。停在「连接中」就再等；是「未连接」就核对地址、Token，以及这台电脑能不能访问你的服务端。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 5. 地址和 Token 都填了之后，下次打开微灵会自动重连。断线后按 1 秒、2 秒、4 秒、8 秒、16 秒重连，之后固定 30 秒。连上之后，或网络恢复、本机地址变化时，间隔重新从 1 秒算。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 个人微信是另一条连接，路径是 /personal-wx/ws，不要和企微这条混用。本文指令码只适用于企业微信。
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 4.3 帧格式
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 除文件分片外，消息都是一条文本 JSON：
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "id": "本次消息的唯一编号",
+[pNormal] {font=Consolas sz=9.0 b=None} "action": "动作",
+[pNormal] {font=Consolas sz=9.0 b=None} "payload": {}
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=10.5 b=None} id 用 UUID 即可。请求和响应必须使用同一个 id，用来对上是哪一条指令。
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 4.4 连上之后微灵先发 hello
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "id": "新的uuid",
+[pNormal] {font=Consolas sz=9.0 b=None} "action": "hello",
+[pNormal] {font=Consolas sz=9.0 b=None} "payload": {
+[pNormal] {font=Consolas sz=9.0 b=None} "clientName": "微灵里填的客户端名称",
+[pNormal] {font=Consolas sz=9.0 b=None} "channel": "wecom"
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 收到 hello 且 channel 为 wecom，就表示这条连接是企业微信通道。你不需要回复 hello。
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 4.5 心跳
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 微灵每 20 秒发一次 ping。这是应用层 JSON，不是 WebSocket 协议自带的 Ping 帧：
+[pNormal] {font=Consolas sz=9.0 b=None} { "id": "uuid", "action": "ping", "payload": {} }
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 你必须立刻用同一个 id 回 pong：
+[pNormal] {font=Consolas sz=9.0 b=None} { "id": "同一个uuid", "action": "pong", "payload": {} }
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 后端必须配合。收到 ping 后立刻用同一个 id 回 pong，微灵收到 pong 才算心跳成功。超过 30 秒没有 pong，微灵会断开并重连。检查发生在下一次发 ping 时，所以实际大约 40 秒能发现死连接。后端只要应答即可，不必自己发 ping，也不必因为长时间没心跳去踢掉连接。你也可以主动发 ping，微灵会回 pong。个微 WebSocket 的心跳和重连与这里相同，两条连接各自心跳，都要回 pong。
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 4.6 微灵怎么把消息推给你
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 事件用 action=event 推过来。payload 就是和 HTTP 回调同一份 JSON：
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "id": "uuid",
+[pNormal] {font=Consolas sz=9.0 b=None} "action": "event",
+[pNormal] {font=Consolas sz=9.0 b=None} "payload": {
+[pNormal] {font=Consolas sz=9.0 b=None} "type": 11041,
+[pNormal] {font=Consolas sz=9.0 b=None} "client": 1,
+[pNormal] {font=Consolas sz=9.0 b=None} "robot_id": "当前登录用户的user_id",
+[pNormal] {font=Consolas sz=9.0 b=None} "data": {
+[pNormal] {font=Consolas sz=9.0 b=None} "conversation_id": "S:xxx_xxx",
+[pNormal] {font=Consolas sz=9.0 b=None} "content": "你好",
+[pNormal] {font=Consolas sz=9.0 b=None} "receiver": "当前登录用户的user_id"
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 你不需要回复 event。WebSocket 未连接时，这条事件会被丢掉，不会改走 HTTP。
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 4.7 你怎么给微灵下指令
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 发 action=command。payload 与 HTTP 的请求体完全相同，仍然包含 type、data、client，查询时同样带 getData：
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "id": "指令uuid",
+[pNormal] {font=Consolas sz=9.0 b=None} "action": "command",
+[pNormal] {font=Consolas sz=9.0 b=None} "payload": {
+[pNormal] {font=Consolas sz=9.0 b=None} "type": 11029,
+[pNormal] {font=Consolas sz=9.0 b=None} "client": 1,
+[pNormal] {font=Consolas sz=9.0 b=None} "data": {
+[pNormal] {font=Consolas sz=9.0 b=None} "conversation_id": "S:xxx_xxx",
+[pNormal] {font=Consolas sz=9.0 b=None} "content": "你好"
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 微灵执行完后回 action=command_result，id 与你发出的指令相同：
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "id": "指令uuid",
+[pNormal] {font=Consolas sz=9.0 b=None} "action": "command_result",
+[pNormal] {font=Consolas sz=9.0 b=None} "payload": {
+[pNormal] {font=Consolas sz=9.0 b=None} "code": 200,
+[pNormal] {font=Consolas sz=9.0 b=None} "msg": "请求成功！",
+[pNormal] {font=Consolas sz=9.0 b=None} "data": null
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=10.5 b=None} code 为 200 表示成功，500 表示失败，原因在 msg。请用 id 对应请求，不要按到达顺序猜。单条指令最长大约等 60 秒。
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 4.8 下载文件时多出来的二进制帧
+[pNormal] {font=微软雅黑 sz=10.5 b=None} type 为 11170 或 11171 时，微灵不会在 JSON 里塞文件内容。顺序是：
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 1. 文本帧 action=file_start，id 为指令 id。payload 含 name、size、contentType。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 2. 若干二进制帧。单帧最大 64KB，文件最大 100MB。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 3. 文本帧 action=file_end。payload 为 { "ok": true, "size": 文件字节数 }。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 4. 最后仍有一条 command_result。payload 里 file 为 true，并带 fileName、contentType、size。文件内容以前面的二进制帧为准。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 二进制帧布局（大端）：
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 4 字节魔数，固定是 ASCII：WXFL
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 2 字节：后面指令 id 的字节长度
+[pNormal] {font=微软雅黑 sz=10.5 b=None} N 字节：指令 id 的 UTF-8
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 4 字节：分片序号 seq，从 0 开始
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 1 字节：是否最后一片，1 表示是
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 剩余字节：这一片的文件内容
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 按 seq 顺序拼接，直到 last 为 1。
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 4.9 没反应时查什么
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 只查这几项：状态是不是「已连接」、账号面板里有没有在线账号、你的服务端有没有把 command 的 id 原样带回。不要去查 HTTP 的事件通知 URL 和内网穿透，WebSocket 用不到它们。
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 4.10 企微 WebSocket 的 Java 示例
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 微灵是客户端，你起 WebSocket 服务端。依赖 spring-boot-starter-websocket。路径用 /wx/ws，微灵只填主机时会自动补这个路径，并带上 ?token=口令。先处理 ping，用同一个 id 回 pong，否则大约 40 秒后微灵会断开重连。下载文件的二进制分片见 4.8，这里不展开。
+[pNormal] {font=Consolas sz=9.0 b=None} import org.springframework.context.annotation.Configuration;
+[pNormal] {font=Consolas sz=9.0 b=None} import org.springframework.stereotype.Component;
+[pNormal] {font=Consolas sz=9.0 b=None} import org.springframework.web.socket.TextMessage;
+[pNormal] {font=Consolas sz=9.0 b=None} import org.springframework.web.socket.WebSocketSession;
+[pNormal] {font=Consolas sz=9.0 b=None} import org.springframework.web.socket.config.annotation.EnableWebSocket;
+[pNormal] {font=Consolas sz=9.0 b=None} import org.springframework.web.socket.config.annotation.WebSocketConfigurer;
+[pNormal] {font=Consolas sz=9.0 b=None} import org.springframework.web.socket.config.annotation.WebSocketHandlerRegistry;
+[pNormal] {font=Consolas sz=9.0 b=None} import org.springframework.web.socket.handler.TextWebSocketHandler;
+[pNormal] {font=Consolas sz=9.0 b=None} import com.fasterxml.jackson.databind.JsonNode;
+[pNormal] {font=Consolas sz=9.0 b=None} import com.fasterxml.jackson.databind.ObjectMapper;
+[pNormal] {font=Consolas sz=9.0 b=None} import com.fasterxml.jackson.databind.node.ObjectNode;
+[pNormal] {font=Consolas sz=9.0 b=None} import java.util.UUID;
+[pNormal] {font=Consolas sz=9.0 b=None} @Component
+[pNormal] {font=Consolas sz=9.0 b=None} public class WeComWsDemo extends TextWebSocketHandler {
+[pNormal] {font=Consolas sz=9.0 b=None} private final ObjectMapper json = new ObjectMapper();
+[pNormal] {font=Consolas sz=9.0 b=None} @Override
+[pNormal] {font=Consolas sz=9.0 b=None} protected void handleTextMessage(WebSocketSession session, TextMessage message) throws Exception {
+[pNormal] {font=Consolas sz=9.0 b=None} JsonNode frame = json.readTree(message.getPayload());
+[pNormal] {font=Consolas sz=9.0 b=None} String action = frame.path("action").asText();
+[pNormal] {font=Consolas sz=9.0 b=None} String id = frame.path("id").asText();
+[pNormal] {font=Consolas sz=9.0 b=None} if ("ping".equals(action)) {
+[pNormal] {font=Consolas sz=9.0 b=None} reply(session, id, "pong", json.createObjectNode());
+[pNormal] {font=Consolas sz=9.0 b=None} return;
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=Consolas sz=9.0 b=None} if ("hello".equals(action)) {
+[pNormal] {font=Consolas sz=9.0 b=None} // payload.channel 应为 wecom。不用回复 hello。
+[pNormal] {font=Consolas sz=9.0 b=None} return;
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=Consolas sz=9.0 b=None} if ("event".equals(action)) {
+[pNormal] {font=Consolas sz=9.0 b=None} JsonNode payload = frame.path("payload");
+[pNormal] {font=Consolas sz=9.0 b=None} int type = payload.path("type").asInt();
+[pNormal] {font=Consolas sz=9.0 b=None} // payload 与 HTTP 回调正文相同，11041 的文字在 payload.data.content
+[pNormal] {font=Consolas sz=9.0 b=None} return;
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=Consolas sz=9.0 b=None} if ("command_result".equals(action)) {
+[pNormal] {font=Consolas sz=9.0 b=None} int code = frame.path("payload").path("code").asInt();
+[pNormal] {font=Consolas sz=9.0 b=None} // 用 id 对上自己发出的 command。200 成功，500 失败。
+[pNormal] {font=Consolas sz=9.0 b=None} return;
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=Consolas sz=9.0 b=None} public void sendText(WebSocketSession session, int client,
+[pNormal] {font=Consolas sz=9.0 b=None} String conversationId, String content) throws Exception {
+[pNormal] {font=Consolas sz=9.0 b=None} ObjectNode data = json.createObjectNode();
+[pNormal] {font=Consolas sz=9.0 b=None} data.put("conversation_id", conversationId);
+[pNormal] {font=Consolas sz=9.0 b=None} data.put("content", content);
+[pNormal] {font=Consolas sz=9.0 b=None} ObjectNode payload = json.createObjectNode();
+[pNormal] {font=Consolas sz=9.0 b=None} payload.put("type", 11029);
+[pNormal] {font=Consolas sz=9.0 b=None} payload.put("client", client);
+[pNormal] {font=Consolas sz=9.0 b=None} payload.set("data", data);
+[pNormal] {font=Consolas sz=9.0 b=None} reply(session, UUID.randomUUID().toString(), "command", payload);
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=Consolas sz=9.0 b=None} private void reply(WebSocketSession session, String id, String action, JsonNode payload) throws Exception {
+[pNormal] {font=Consolas sz=9.0 b=None} ObjectNode frame = json.createObjectNode();
+[pNormal] {font=Consolas sz=9.0 b=None} frame.put("id", id);
+[pNormal] {font=Consolas sz=9.0 b=None} frame.put("action", action);
+[pNormal] {font=Consolas sz=9.0 b=None} frame.set("payload", payload);
+[pNormal] {font=Consolas sz=9.0 b=None} synchronized (session) {
+[pNormal] {font=Consolas sz=9.0 b=None} session.sendMessage(new TextMessage(json.writeValueAsString(frame)));
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=Consolas sz=9.0 b=None} @Configuration
+[pNormal] {font=Consolas sz=9.0 b=None} @EnableWebSocket
+[pNormal] {font=Consolas sz=9.0 b=None} class WeComWsConfig implements WebSocketConfigurer {
+[pNormal] {font=Consolas sz=9.0 b=None} private final WeComWsDemo handler;
+[pNormal] {font=Consolas sz=9.0 b=None} WeComWsConfig(WeComWsDemo handler) { this.handler = handler; }
+[pNormal] {font=Consolas sz=9.0 b=None} @Override
+[pNormal] {font=Consolas sz=9.0 b=None} public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
+[pNormal] {font=Consolas sz=9.0 b=None} registry.addHandler(handler, "/wx/ws").setAllowedOrigins("*");
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=12.0 b=True} 企业微信指令怎么填（HTTP 和 WebSocket 相同）
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 下面的 JSON 是指令体。HTTP 时它就是 POST 正文。WebSocket 时把它放进 command 的 payload。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} client 对应账号面板中的客户端编号。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} getData 为 true 的是查询，要等返回。没有标注 getData 的不要传这个字段。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 发图片、视频、文件时，file 使用微灵所在电脑上的绝对路径，反斜杠写成 \\。如果 data 里带 url，微灵会先把文件下载到本机再发送。发送图片、文件、视频对应的 type 是 11030、11031、11067。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} conversation_id：私聊是 S:自己的user_id_对方的user_id，群聊是 R:群ID。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 消息里的 cdn_type 为 1 时用 11171 下载，为 2 时用 11170 下载。
+[pNormal] {font=微软雅黑 sz=12.0 b=True} 企业微信一个能跑通的例子
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 目标：给当前在线企微发一条文本。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 1. 微灵已管理员运行，账号面板里该账号在线，记下 client，下面按 1 举例。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 2. 如果用 HTTP：确认本机 8060 服务运行中，然后 POST /api/Client/ExecCommand，正文 type=11029，data.conversation_id 填会话 ID，data.content 填文本，client 填 1。不要传 getData。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 3. 如果用 WebSocket：状态为已连接后，发 action=command，payload 用同一份 JSON，自己生成 id。等到相同 id 的 command_result，且 code 为 200。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 4. 对方回复后：HTTP 会 POST 到事件通知 URL；WebSocket 会推 action=event。两种的 payload.type 都是 11041，文字在 payload.data.content。
+[pNormal] {font=微软雅黑 sz=12.0 b=True} 最小 Demo：有人私聊就回「你好」
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 先跑通这一条，再去看上面的完整接口。下面是企微 HTTP。个微在本节最后，只换回调和指令。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 1. 管理员打开微灵，从微灵里登录企业微信，账号面板里这个号要在线。通信方式选 HTTP。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 2. 事件通知 URL 填 http://你的服务:端口/wx/callback。这个地址必须是微灵这台电脑访问得到的。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 3. 「本机配置」里 HTTP 服务是运行中。代码里的 WEILING 改成微灵地址，同一台电脑就是 http://127.0.0.1:8060。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 4. 启动下面这个接口。用另一个号给这个企微发一条私聊，它会回「你好」。群消息不回。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 先返回 ok，再在别的线程里发「你好」。回调最多等 5 秒，不要在这个请求里干别的。自己发出去的消息也会通知过来，sender 等于 robot_id 时不要回，否则会一直互回。import 与前面的企微 HTTP 示例相同，另外加上 java.util.Map 和 LinkedHashMap。
+[pNormal] {font=Consolas sz=9.0 b=None} @RestController
+[pNormal] {font=Consolas sz=9.0 b=None} public class HelloReplyDemo {
+[pNormal] {font=Consolas sz=9.0 b=None} private static final String WEILING = "http://127.0.0.1:8060";
+[pNormal] {font=Consolas sz=9.0 b=None} private final ObjectMapper json = new ObjectMapper();
+[pNormal] {font=Consolas sz=9.0 b=None} private final RestTemplate http = new RestTemplate();
+[pNormal] {font=Consolas sz=9.0 b=None} @PostMapping("/wx/callback")
+[pNormal] {font=Consolas sz=9.0 b=None} public ResponseEntity<String> onEvent(@RequestBody String body) throws Exception {
+[pNormal] {font=Consolas sz=9.0 b=None} JsonNode event = json.readTree(body);
+[pNormal] {font=Consolas sz=9.0 b=None} if (event.path("type").asInt() != 11041) {
+[pNormal] {font=Consolas sz=9.0 b=None} return ResponseEntity.ok("ok");
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=Consolas sz=9.0 b=None} JsonNode data = event.path("data");
+[pNormal] {font=Consolas sz=9.0 b=None} String conversationId = data.path("conversation_id").asText("");
+[pNormal] {font=Consolas sz=9.0 b=None} if (!conversationId.startsWith("S:")) {
+[pNormal] {font=Consolas sz=9.0 b=None} return ResponseEntity.ok("ok");
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=Consolas sz=9.0 b=None} String sender = data.path("sender").asText("");
+[pNormal] {font=Consolas sz=9.0 b=None} String robotId = event.path("robot_id").asText("");
+[pNormal] {font=Consolas sz=9.0 b=None} if (sender.isEmpty() || sender.equals(robotId)) {
+[pNormal] {font=Consolas sz=9.0 b=None} return ResponseEntity.ok("ok");
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=Consolas sz=9.0 b=None} int client = event.path("client").asInt();
+[pNormal] {font=Consolas sz=9.0 b=None} new Thread(new Runnable() {
+[pNormal] {font=Consolas sz=9.0 b=None} public void run() { reply(client, conversationId); }
+[pNormal] {font=Consolas sz=9.0 b=None} }).start();
+[pNormal] {font=Consolas sz=9.0 b=None} return ResponseEntity.ok("ok");
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=Consolas sz=9.0 b=None} private void reply(int client, String conversationId) {
+[pNormal] {font=Consolas sz=9.0 b=None} Map<String, Object> data = new LinkedHashMap<String, Object>();
+[pNormal] {font=Consolas sz=9.0 b=None} data.put("conversation_id", conversationId);
+[pNormal] {font=Consolas sz=9.0 b=None} data.put("content", "你好");
+[pNormal] {font=Consolas sz=9.0 b=None} Map<String, Object> body = new LinkedHashMap<String, Object>();
+[pNormal] {font=Consolas sz=9.0 b=None} body.put("type", 11029);
+[pNormal] {font=Consolas sz=9.0 b=None} body.put("client", client);
+[pNormal] {font=Consolas sz=9.0 b=None} body.put("data", data);
+[pNormal] {font=Consolas sz=9.0 b=None} http.postForObject(WEILING + "/api/Client/ExecCommand", body, String.class);
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 个微：同样回「你好」
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 通信方式选个微的 HTTP，事件通知 URL 填 http://你的服务:端口/personal-wx/callback。不要填企微那个地址。下面这段加到同一个类里，WEILING 和 RestTemplate 共用。只处理文本私聊，群（wxid 含 @chatroom）和自己发的不回。
+[pNormal] {font=Consolas sz=9.0 b=None} @PostMapping("/personal-wx/callback")
+[pNormal] {font=Consolas sz=9.0 b=None} public ResponseEntity<String> onPersonal(@RequestBody String body) throws Exception {
+[pNormal] {font=Consolas sz=9.0 b=None} JsonNode event = json.readTree(body);
+[pNormal] {font=Consolas sz=9.0 b=None} int eventType = event.path("event_type").asInt(event.path("even_type").asInt(-1));
+[pNormal] {font=Consolas sz=9.0 b=None} String msgType = event.path("msg_type").asText("");
+[pNormal] {font=Consolas sz=9.0 b=None} if (eventType != 2000 && eventType != 2001 && !"1".equals(msgType)) {
+[pNormal] {font=Consolas sz=9.0 b=None} return ResponseEntity.ok("ok");
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=Consolas sz=9.0 b=None} String wxid = event.path("from_wxid").asText("");
+[pNormal] {font=Consolas sz=9.0 b=None} if (wxid.isEmpty()) {
+[pNormal] {font=Consolas sz=9.0 b=None} wxid = event.path("wxid").asText("");
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=Consolas sz=9.0 b=None} if (wxid.isEmpty() || wxid.contains("@chatroom")) {
+[pNormal] {font=Consolas sz=9.0 b=None} return ResponseEntity.ok("ok");
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=Consolas sz=9.0 b=None} if (wxid.equals(event.path("robot_id").asText(""))) {
+[pNormal] {font=Consolas sz=9.0 b=None} return ResponseEntity.ok("ok");
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=Consolas sz=9.0 b=None} final String client = event.path("client").asText();
+[pNormal] {font=Consolas sz=9.0 b=None} final String to = wxid;
+[pNormal] {font=Consolas sz=9.0 b=None} new Thread(new Runnable() {
+[pNormal] {font=Consolas sz=9.0 b=None} public void run() { replyPersonal(client, to); }
+[pNormal] {font=Consolas sz=9.0 b=None} }).start();
+[pNormal] {font=Consolas sz=9.0 b=None} return ResponseEntity.ok("ok");
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=Consolas sz=9.0 b=None} private void replyPersonal(String client, String wxid) {
+[pNormal] {font=Consolas sz=9.0 b=None} Map<String, Object> data = new LinkedHashMap<String, Object>();
+[pNormal] {font=Consolas sz=9.0 b=None} data.put("wxid", wxid);
+[pNormal] {font=Consolas sz=9.0 b=None} data.put("msg", "你好");
+[pNormal] {font=Consolas sz=9.0 b=None} Map<String, Object> body = new LinkedHashMap<String, Object>();
+[pNormal] {font=Consolas sz=9.0 b=None} body.put("client", client);
+[pNormal] {font=Consolas sz=9.0 b=None} body.put("action", "send_text_msg");
+[pNormal] {font=Consolas sz=9.0 b=None} body.put("data", data);
+[pNormal] {font=Consolas sz=9.0 b=None} http.postForObject(WEILING + "/api/PersonalWeChat/ExecCommand", body, String.class);
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=14.0 b=True} 企业微信指令与通知事件
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 二、指令列表
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 2.1 登录信息
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 2.2 联系人
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 2.3 群组
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 2.4 消息发送
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 2.5 CDN 资源
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 三、通知事件
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 3.1 登录事件
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 3.2 消息通知
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 3.3 好友事件
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 3.4 群聊事件
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 四、指令类型速查表
+[pNormal] {font=微软雅黑 sz=10.5 b=None} ──────────────────────────────────────────────────
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 一、接口调用说明
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 1.1 HTTP 接口
+[pNormal] {font=Consolas sz=9.0 b=None} POST http://127.0.0.1:8060/api/Client/ExecCommand
+[pNormal] {font=微软雅黑 sz=10.5 b=None} Content-Type: application/json
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 请求示例
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "type": 11029,
+[pNormal] {font=Consolas sz=9.0 b=None} "data": {
+[pNormal] {font=Consolas sz=9.0 b=None} "conversation_id": "S:1688854804625351_7881300409020143",
+[pNormal] {font=Consolas sz=9.0 b=None} "content": "你好，世界[呲牙]"
+[pNormal] {font=Consolas sz=9.0 b=None} },
+[pNormal] {font=Consolas sz=9.0 b=None} "client": 1
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 1.2 入参说明
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 1.3 响应格式
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "code": "200",
+[pNormal] {font=Consolas sz=9.0 b=None} "data": "执行结果"
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 字段
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 说明
+[pNormal] {font=微软雅黑 sz=10.5 b=None} code
+[pNormal] {font=Consolas sz=9.0 b=None} "200" 表示成功，其他值表示失败
+[pNormal] {font=微软雅黑 sz=10.5 b=None} data
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 指令执行结果
+[pNormal] {font=微软雅黑 sz=10.5 b=None} CDN 下载特殊说明：调用下载 CDN 文件指令（type 11170 或 11171）成功时，接口直接返回原始文件的二进制流，而非 JSON 响应。请确保客户端具备处理二进制流的能力，根据文件类型正确保存或解析。
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 1.5 消息推送
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 企微收到消息后会通过以下方式推送：
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 方式
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 地址
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 回调 URL
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 配置的 HTTP 回调地址（POST 请求）
+[pNormal] {font=微软雅黑 sz=10.5 b=None} WebSocket
+[pNormal] {font=Consolas sz=9.0 b=None} 不要用这条旧地址。企微 WebSocket 见上文：ws://你的主机:端口/wx/ws?token=口令
+[pNormal] {font=微软雅黑 sz=10.5 b=None} TCP 广播
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 当前软件没有 TCP 广播，不要再接。消息只走你选的 HTTP 回调或 WebSocket。
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 1.6 注意事项
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 管理员权限：程序必须以管理员身份运行
+[pNormal] {font=微软雅黑 sz=10.5 b=None} client 参数：对应控制台中显示的 ClientId，多开时每个企微实例有独立编号
+[pNormal] {font=微软雅黑 sz=10.5 b=None} getData 使用场景：获取联系人列表、群列表、登录信息等查询类指令需要传 getData: true；发送消息等操作类指令一般无需传
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 文件路径：发送图片/视频/文件等指令中的 file 参数需使用服务器本地绝对路径，路径分隔符需转义为 \\
+[pNormal] {font=微软雅黑 sz=10.5 b=None} conversation_id 格式：
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 私聊：S:自己的user_id_对方的user_id
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 群聊：R:群ID
+[pNormal] {font=微软雅黑 sz=10.5 b=None} CDN 下载选择：根据消息中的 cdn_type 字段选择下载方式
+[pNormal] {font=微软雅黑 sz=10.5 b=None} cdn_type = 1 → 使用 WxCDN 下载（type 11171）
+[pNormal] {font=微软雅黑 sz=10.5 b=None} cdn_type = 2 → 使用 C2cCDN 下载（type 11170）
+[pNormal] {font=微软雅黑 sz=10.5 b=None} ──────────────────────────────────────────────────
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 二、指令列表
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 2.1 登录信息
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 刷新登录二维码 type: 11153
+[pNormal] {font=Consolas sz=9.0 b=None} { "type": 11153, "data": {}, "client": 1 }
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 二维码将通过通知事件（type 11028）推送。
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 退出登录 type: 11112
+[pNormal] {font=Consolas sz=9.0 b=None} { "type": 11112, "data": {}, "client": 1 }
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 获取当前登录帐号信息 type: 11035
+[pNormal] {font=Consolas sz=9.0 b=None} { "type": 11035, "data": {}, "client": 1, "getData": true }
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 返回：
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "type": 11035,
+[pNormal] {font=Consolas sz=9.0 b=None} "data": {
+[pNormal] {font=Consolas sz=9.0 b=None} "account": "xxx@onexmail.com",
+[pNormal] {font=Consolas sz=9.0 b=None} "acctid": "xxx",
+[pNormal] {font=Consolas sz=9.0 b=None} "avatar": "头像URL",
+[pNormal] {font=Consolas sz=9.0 b=None} "corp_id": "公司ID",
+[pNormal] {font=Consolas sz=9.0 b=None} "corp_name": "公司全称",
+[pNormal] {font=Consolas sz=9.0 b=None} "corp_short_name": "公司简称",
+[pNormal] {font=Consolas sz=9.0 b=None} "email": "邮箱",
+[pNormal] {font=Consolas sz=9.0 b=None} "job_name": "职位",
+[pNormal] {font=Consolas sz=9.0 b=None} "mobile": "手机号",
+[pNormal] {font=Consolas sz=9.0 b=None} "nickname": "昵称",
+[pNormal] {font=Consolas sz=9.0 b=None} "position": "职位",
+[pNormal] {font=Consolas sz=9.0 b=None} "sex": 1,
+[pNormal] {font=Consolas sz=9.0 b=None} "user_id": "用户ID",
+[pNormal] {font=Consolas sz=9.0 b=None} "username": "名称"
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=10.5 b=None} sex：0 未知，1 男，2 女
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 获取自己的二维码 type: 11122
+[pNormal] {font=Consolas sz=9.0 b=None} { "type": 11122, "data": {}, "client": 1, "getData": true }
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 返回：ctcode（二维码 URL）、plugid
+[pNormal] {font=微软雅黑 sz=10.5 b=None} ──────────────────────────────────────────────────
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 2.2 联系人
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 获取联系人信息 type: 11039
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "type": 11039,
+[pNormal] {font=Consolas sz=9.0 b=None} "data": { "user_id": "用户ID" },
+[pNormal] {font=Consolas sz=9.0 b=None} "client": 1,
+[pNormal] {font=Consolas sz=9.0 b=None} "getData": true
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 返回字段：acctid, avatar, conversation_id, corp_id, mobile, nickname, position, realname, remark, sex, unionid, user_id, username
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 获取内部联系人列表 type: 11036
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "type": 11036,
+[pNormal] {font=Consolas sz=9.0 b=None} "data": { "page_num": 1, "page_size": 10 },
+[pNormal] {font=Consolas sz=9.0 b=None} "client": 1,
+[pNormal] {font=Consolas sz=9.0 b=None} "getData": true
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=10.5 b=None} page_num 从 1 开始。返回：page_num, page_size, total, total_page, user_list[]
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 获取外部联系人列表 type: 11037
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "type": 11037,
+[pNormal] {font=Consolas sz=9.0 b=None} "data": { "page_num": 1, "page_size": 10 },
+[pNormal] {font=Consolas sz=9.0 b=None} "client": 1,
+[pNormal] {font=Consolas sz=9.0 b=None} "getData": true
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 搜索微信/企微用户 type: 11052
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "type": 11052,
+[pNormal] {font=Consolas sz=9.0 b=None} "data": { "keyword": "手机号或关键词" },
+[pNormal] {font=Consolas sz=9.0 b=None} "client": 1,
+[pNormal] {font=Consolas sz=9.0 b=None} "getData": true
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 添加好友时需要用到的关键字段路径：
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 添加搜索的微信用户 type: 11053
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "type": 11053,
+[pNormal] {font=Consolas sz=9.0 b=None} "data": {
+[pNormal] {font=Consolas sz=9.0 b=None} "user_id": "搜索结果中的 uin",
+[pNormal] {font=Consolas sz=9.0 b=None} "openid": "搜索结果中的 openid",
+[pNormal] {font=Consolas sz=9.0 b=None} "wx_ticket": "搜索结果中的 wx_ticket",
+[pNormal] {font=Consolas sz=9.0 b=None} "verify": "验证消息"
+[pNormal] {font=Consolas sz=9.0 b=None} },
+[pNormal] {font=Consolas sz=9.0 b=None} "client": 1
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 添加搜索的企微用户 type: 11088
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "type": 11088,
+[pNormal] {font=Consolas sz=9.0 b=None} "data": {
+[pNormal] {font=Consolas sz=9.0 b=None} "user_id": "搜索结果中的 uin",
+[pNormal] {font=Consolas sz=9.0 b=None} "corp_id": "搜索结果中的 corpid",
+[pNormal] {font=Consolas sz=9.0 b=None} "ticket": "搜索结果中的 wx_ticket",
+[pNormal] {font=Consolas sz=9.0 b=None} "verify": "验证消息"
+[pNormal] {font=Consolas sz=9.0 b=None} },
+[pNormal] {font=Consolas sz=9.0 b=None} "client": 1
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 添加名片为联系人 type: 11121
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "type": 11121,
+[pNormal] {font=Consolas sz=9.0 b=None} "data": {
+[pNormal] {font=Consolas sz=9.0 b=None} "user_id": "名片中的 user_id",
+[pNormal] {font=Consolas sz=9.0 b=None} "corp_id": "名片中的 corp_id",
+[pNormal] {font=Consolas sz=9.0 b=None} "from_user_id": "名片消息的 sender",
+[pNormal] {font=Consolas sz=9.0 b=None} "verify": "验证消息"
+[pNormal] {font=Consolas sz=9.0 b=None} },
+[pNormal] {font=Consolas sz=9.0 b=None} "client": 1
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 添加删除的联系人 type: 11152
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "type": 11152,
+[pNormal] {font=Consolas sz=9.0 b=None} "data": { "user_id": "用户ID", "corp_id": "0", "verify": "你好" },
+[pNormal] {font=Consolas sz=9.0 b=None} "client": 1
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 修改好友备注 type: 11054
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "type": 11054,
+[pNormal] {font=Consolas sz=9.0 b=None} "data": { "user_id": "用户ID", "remark": "新备注" },
+[pNormal] {font=Consolas sz=9.0 b=None} "client": 1
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 修改好友描述 type: 11055
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "type": 11055,
+[pNormal] {font=Consolas sz=9.0 b=None} "data": { "user_id": "用户ID", "desc": "新描述" },
+[pNormal] {font=Consolas sz=9.0 b=None} "client": 1
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 修改外部联系人手机号 type: 11056
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "type": 11056,
+[pNormal] {font=Consolas sz=9.0 b=None} "data": { "user_id": "用户ID", "phone_list": ["手机号"] },
+[pNormal] {font=Consolas sz=9.0 b=None} "client": 1
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 修改外部联系人公司名称 type: 11057
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "type": 11057,
+[pNormal] {font=Consolas sz=9.0 b=None} "data": { "user_id": "用户ID", "company": "公司名" },
+[pNormal] {font=Consolas sz=9.0 b=None} "client": 1
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 删除联系人 type: 11111
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "type": 11111,
+[pNormal] {font=Consolas sz=9.0 b=None} "data": { "user_id": "用户ID", "corp_id": "0" },
+[pNormal] {font=Consolas sz=9.0 b=None} "client": 1
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 接受好友申请 type: 11064
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "type": 11064,
+[pNormal] {font=Consolas sz=9.0 b=None} "data": { "user_id": "申请人ID", "corp_id": "申请人公司ID" },
+[pNormal] {font=Consolas sz=9.0 b=None} "client": 1
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=10.5 b=None} user_id 和 corp_id 从好友申请通知（type 11063）中获取。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} ──────────────────────────────────────────────────
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 2.3 群组
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 获取会话群聊列表 type: 11038
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "type": 11038,
+[pNormal] {font=Consolas sz=9.0 b=None} "data": { "page_num": 1, "page_size": 10 },
+[pNormal] {font=Consolas sz=9.0 b=None} "client": 1,
+[pNormal] {font=Consolas sz=9.0 b=None} "getData": true
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 返回字段：room_list[] 包含 conversation_id, nickname, total, is_external（1 外部群 / 0 内部群）, is_admin, is_creator
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 获取群成员列表 type: 11040
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "type": 11040,
+[pNormal] {font=Consolas sz=9.0 b=None} "data": { "conversation_id": "R:xxx", "page_num": 1, "page_size": 10 },
+[pNormal] {font=Consolas sz=9.0 b=None} "client": 1,
+[pNormal] {font=Consolas sz=9.0 b=None} "getData": true
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 返回字段：member_list[] 包含 user_id, username, avatar, remark, invite_user_id, is_admin, room_nickname, join_scene, join_time
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 创建内/外部群 type: 11058
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "type": 11058,
+[pNormal] {font=Consolas sz=9.0 b=None} "data": ["用户ID1", "用户ID2"],
+[pNormal] {font=Consolas sz=9.0 b=None} "client": 1,
+[pNormal] {font=Consolas sz=9.0 b=None} "getData": true
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 返回：roomid（群 ID）, createruin, success_add_vidlist[]
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 创建空外部群 type: 11125
+[pNormal] {font=Consolas sz=9.0 b=None} { "type": 11125, "data": {}, "client": 1, "getData": true }
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 返回：roomid, h5url(base64), image_url(base64), title(base64)
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 修改群名 type: 11059
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "type": 11059,
+[pNormal] {font=Consolas sz=9.0 b=None} "data": { "conversation_id": "R:xxx", "name": "新群名" },
+[pNormal] {font=Consolas sz=9.0 b=None} "client": 1
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 批量邀请好友入群 type: 11060
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "type": 11060,
+[pNormal] {font=Consolas sz=9.0 b=None} "data": { "conversation_id": "R:xxx", "user_list": ["用户ID"] },
+[pNormal] {font=Consolas sz=9.0 b=None} "client": 1
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 群成员 > 40 人时需对方确认才能入群。通过返回值中 success_add_vidlist 是否有值判断是否邀请成功。
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 批量踢群成员 type: 11061
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "type": 11061,
+[pNormal] {font=Consolas sz=9.0 b=None} "data": { "conversation_id": "R:xxx", "user_list": ["用户ID"] },
+[pNormal] {font=Consolas sz=9.0 b=None} "client": 1
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 添加群成员为联系人 type: 11071
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "type": 11071,
+[pNormal] {font=Consolas sz=9.0 b=None} "data": {
+[pNormal] {font=Consolas sz=9.0 b=None} "room_conversation_id": "R:xxx",
+[pNormal] {font=Consolas sz=9.0 b=None} "user_id": "群成员ID",
+[pNormal] {font=Consolas sz=9.0 b=None} "corp_id": "成员公司ID",
+[pNormal] {font=Consolas sz=9.0 b=None} "verify": "验证消息"
+[pNormal] {font=Consolas sz=9.0 b=None} },
+[pNormal] {font=Consolas sz=9.0 b=None} "client": 1
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 发布群公告 type: 11082
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "type": 11082,
+[pNormal] {font=Consolas sz=9.0 b=None} "data": { "room_conversation_id": "R:xxx", "notice": "公告内容" },
+[pNormal] {font=Consolas sz=9.0 b=None} "client": 1
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 转让群主 type: 11090
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "type": 11090,
+[pNormal] {font=Consolas sz=9.0 b=None} "data": { "room_conversation_id": "R:xxx", "user_id": "新群主ID" },
+[pNormal] {font=Consolas sz=9.0 b=None} "client": 1
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 开启/关闭群邀请确认 type: 11089
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "type": 11089,
+[pNormal] {font=Consolas sz=9.0 b=None} "data": { "room_conversation_id": "R:xxx", "status": 1 },
+[pNormal] {font=Consolas sz=9.0 b=None} "client": 1
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=10.5 b=None} status：1 开启，0 关闭
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 开启/关闭禁止修改群名 type: 11108
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "type": 11108,
+[pNormal] {font=Consolas sz=9.0 b=None} "data": { "room_conversation_id": "R:xxx", "status": 1 },
+[pNormal] {font=Consolas sz=9.0 b=None} "client": 1
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 退出群聊 type: 11105
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "type": 11105,
+[pNormal] {font=Consolas sz=9.0 b=None} "data": { "room_conversation_id": "R:xxx" },
+[pNormal] {font=Consolas sz=9.0 b=None} "client": 1
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 解散群 type: 11130
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "type": 11130,
+[pNormal] {font=Consolas sz=9.0 b=None} "data": { "room_conversation_id": "R:xxx" },
+[pNormal] {font=Consolas sz=9.0 b=None} "client": 1
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=10.5 b=None} ──────────────────────────────────────────────────
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 2.4 消息发送
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 发送文本消息 type: 11029
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "type": 11029,
+[pNormal] {font=Consolas sz=9.0 b=None} "data": { "conversation_id": "会话ID", "content": "消息内容" },
+[pNormal] {font=Consolas sz=9.0 b=None} "client": 1
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 发送群 @ 消息 type: 11069
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "type": 11069,
+[pNormal] {font=Consolas sz=9.0 b=None} "data": {
+[pNormal] {font=Consolas sz=9.0 b=None} "conversation_id": "会话ID",
+[pNormal] {font=Consolas sz=9.0 b=None} "content": "消息内容",
+[pNormal] {font=Consolas sz=9.0 b=None} "at_list": ["被@用户ID1", "被@用户ID2"]
+[pNormal] {font=Consolas sz=9.0 b=None} },
+[pNormal] {font=Consolas sz=9.0 b=None} "client": 1
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 发送图片消息 type: 11030
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "type": 11030,
+[pNormal] {font=Consolas sz=9.0 b=None} "data": { "conversation_id": "会话ID", "file": "C:\\path\\image.jpg" },
+[pNormal] {font=Consolas sz=9.0 b=None} "client": 1
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 发送视频消息 type: 11067
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "type": 11067,
+[pNormal] {font=Consolas sz=9.0 b=None} "data": { "conversation_id": "会话ID", "file": "C:\\path\\video.mp4" },
+[pNormal] {font=Consolas sz=9.0 b=None} "client": 1
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 发送动图消息 type: 11070
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "type": 11070,
+[pNormal] {font=Consolas sz=9.0 b=None} "data": { "conversation_id": "会话ID", "file": "C:\\path\\image.gif" },
+[pNormal] {font=Consolas sz=9.0 b=None} "client": 1
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 发送文件消息 type: 11031
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "type": 11031,
+[pNormal] {font=Consolas sz=9.0 b=None} "data": { "conversation_id": "会话ID", "file": "C:\\path\\file.zip" },
+[pNormal] {font=Consolas sz=9.0 b=None} "client": 1
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 发送小程序 type: 11162
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "type": 11162,
+[pNormal] {font=Consolas sz=9.0 b=None} "data": {
+[pNormal] {font=Consolas sz=9.0 b=None} "conversation_id": "会话ID",
+[pNormal] {font=Consolas sz=9.0 b=None} "username": "gh_xxx@app",
+[pNormal] {font=Consolas sz=9.0 b=None} "appid": "小程序appid",
+[pNormal] {font=Consolas sz=9.0 b=None} "appname": "小程序名称",
+[pNormal] {font=Consolas sz=9.0 b=None} "appicon": "小程序图标URL",
+[pNormal] {font=Consolas sz=9.0 b=None} "title": "小程序标题",
+[pNormal] {font=Consolas sz=9.0 b=None} "page_path": "pages/index/index.html",
+[pNormal] {font=Consolas sz=9.0 b=None} "file_id": "CDN file_id（封面图）",
+[pNormal] {font=Consolas sz=9.0 b=None} "aes_key": "CDN aes_key",
+[pNormal] {font=Consolas sz=9.0 b=None} "md5": "文件MD5",
+[pNormal] {font=Consolas sz=9.0 b=None} "size": 11122
+[pNormal] {font=Consolas sz=9.0 b=None} },
+[pNormal] {font=Consolas sz=9.0 b=None} "client": 1
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 发送视频号 type: 11172
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "type": 11172,
+[pNormal] {font=Consolas sz=9.0 b=None} "data": {
+[pNormal] {font=Consolas sz=9.0 b=None} "conversation_id": "会话ID",
+[pNormal] {font=Consolas sz=9.0 b=None} "avatar": "视频号头像",
+[pNormal] {font=Consolas sz=9.0 b=None} "cover_url": "封面URL",
+[pNormal] {font=Consolas sz=9.0 b=None} "desc": "视频描述",
+[pNormal] {font=Consolas sz=9.0 b=None} "feed_type": 4,
+[pNormal] {font=Consolas sz=9.0 b=None} "nickname": "视频号昵称",
+[pNormal] {font=Consolas sz=9.0 b=None} "thumb_url": "缩略图URL",
+[pNormal] {font=Consolas sz=9.0 b=None} "url": "视频号链接",
+[pNormal] {font=Consolas sz=9.0 b=None} "extras": "扩展数据"
+[pNormal] {font=Consolas sz=9.0 b=None} },
+[pNormal] {font=Consolas sz=9.0 b=None} "client": 1
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 发送卡片消息 type: 11159
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "type": 11159,
+[pNormal] {font=Consolas sz=9.0 b=None} "data": {
+[pNormal] {font=Consolas sz=9.0 b=None} "conversation_id": "会话ID",
+[pNormal] {font=Consolas sz=9.0 b=None} "url": "链接地址",
+[pNormal] {font=Consolas sz=9.0 b=None} "image_url": "图标地址",
+[pNormal] {font=Consolas sz=9.0 b=None} "title": "标题",
+[pNormal] {font=Consolas sz=9.0 b=None} "desc": "描述"
+[pNormal] {font=Consolas sz=9.0 b=None} },
+[pNormal] {font=Consolas sz=9.0 b=None} "client": 1
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 发送名片 type: 11161
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "type": 11161,
+[pNormal] {font=Consolas sz=9.0 b=None} "data": {
+[pNormal] {font=Consolas sz=9.0 b=None} "conversation_id": "会话ID",
+[pNormal] {font=Consolas sz=9.0 b=None} "share_user_id": "要分享的好友ID"
+[pNormal] {font=Consolas sz=9.0 b=None} },
+[pNormal] {font=Consolas sz=9.0 b=None} "client": 1
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 发送视频号直播消息 type: 11196
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "type": 11196,
+[pNormal] {font=Consolas sz=9.0 b=None} "data": {
+[pNormal] {font=Consolas sz=9.0 b=None} "conversation_id": "会话ID",
+[pNormal] {font=Consolas sz=9.0 b=None} "avatar": "主播头像",
+[pNormal] {font=Consolas sz=9.0 b=None} "cover_url": "封面URL",
+[pNormal] {font=Consolas sz=9.0 b=None} "desc": "直播描述",
+[pNormal] {font=Consolas sz=9.0 b=None} "extras": "",
+[pNormal] {font=Consolas sz=9.0 b=None} "feed_type": 9,
+[pNormal] {font=Consolas sz=9.0 b=None} "nickname": "主播昵称",
+[pNormal] {font=Consolas sz=9.0 b=None} "object_id": "直播ID",
+[pNormal] {font=Consolas sz=9.0 b=None} "object_nonce_id": "nonce_id",
+[pNormal] {font=Consolas sz=9.0 b=None} "thumb_url": "缩略图URL",
+[pNormal] {font=Consolas sz=9.0 b=None} "url": "直播链接"
+[pNormal] {font=Consolas sz=9.0 b=None} },
+[pNormal] {font=Consolas sz=9.0 b=None} "client": 1
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=10.5 b=None} ──────────────────────────────────────────────────
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 2.5 CDN 资源
+[pNormal] {font=微软雅黑 sz=11.0 b=True} C2cCDN 上传资源 type: 11115
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "type": 11115,
+[pNormal] {font=Consolas sz=9.0 b=None} "data": { "file_path": "C:\\path\\image.jpg", "file_type": 1 },
+[pNormal] {font=Consolas sz=9.0 b=None} "client": 1,
+[pNormal] {font=Consolas sz=9.0 b=None} "getData": true
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=10.5 b=None} file_type = 1 可上传图片（含 GIF）。返回：file_id, file_aes_key, file_key, file_md5, file_size, image_height, image_width
+[pNormal] {font=微软雅黑 sz=11.0 b=True} C2cCDN 下载媒体文件 type: 11170
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 用于下载企微用户发送的媒体文件（消息中 cdn_type = 2）
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "type": 11170,
+[pNormal] {font=Consolas sz=9.0 b=None} "data": {
+[pNormal] {font=Consolas sz=9.0 b=None} "aes_key": "61316639333163346262363730326261",
+[pNormal] {font=Consolas sz=9.0 b=None} "file_id": "文件ID",
+[pNormal] {font=Consolas sz=9.0 b=None} "file_size": 968802,
+[pNormal] {font=Consolas sz=9.0 b=None} "file_type": 1
+[pNormal] {font=Consolas sz=9.0 b=None} },
+[pNormal] {font=Consolas sz=9.0 b=None} "client": 1
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=10.5 b=None} ⚠️ 成功时直接返回二进制文件流，不是 JSON。
+[pNormal] {font=微软雅黑 sz=11.0 b=True} WxCDN 下载文件 type: 11171
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 用于下载个微用户发送的媒体文件（消息中 cdn_type = 1）
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "type": 11171,
+[pNormal] {font=Consolas sz=9.0 b=None} "data": {
+[pNormal] {font=Consolas sz=9.0 b=None} "download_type": 1,
+[pNormal] {font=Consolas sz=9.0 b=None} "url": "下载URL",
+[pNormal] {font=Consolas sz=9.0 b=None} "auth_key": "认证密钥",
+[pNormal] {font=Consolas sz=9.0 b=None} "aes_key": "AES密钥",
+[pNormal] {font=Consolas sz=9.0 b=None} "size": 851646
+[pNormal] {font=Consolas sz=9.0 b=None} },
+[pNormal] {font=Consolas sz=9.0 b=None} "client": 1
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=10.5 b=None} ⚠️ 成功时直接返回二进制文件流，不是 JSON。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} ──────────────────────────────────────────────────
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 三、通知事件
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 3.1 登录事件
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 接口就绪通知 type: 11024
+[pNormal] {font=Consolas sz=9.0 b=None} { "type": 11024, "data": { "pid": 27620 } }
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 登录二维码通知 type: 11028
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "type": 11028,
+[pNormal] {font=Consolas sz=9.0 b=None} "data": {
+[pNormal] {font=Consolas sz=9.0 b=None} "code": "二维码内容URL（可自行生成二维码图片）",
+[pNormal] {font=Consolas sz=9.0 b=None} "file": "二维码图片本地路径",
+[pNormal] {font=Consolas sz=9.0 b=None} "key": "二维码key"
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 登录二维码状态通知 type: 11174
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 扫码后推送，关键字段：status, nick_name, icon_url, vid（用户 ID）, corpid（公司 ID）
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 用户登录成功通知 type: 11026
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "type": 11026,
+[pNormal] {font=Consolas sz=9.0 b=None} "data": {
+[pNormal] {font=Consolas sz=9.0 b=None} "account": "帐号",
+[pNormal] {font=Consolas sz=9.0 b=None} "acctid": "acctid",
+[pNormal] {font=Consolas sz=9.0 b=None} "avatar": "头像URL",
+[pNormal] {font=Consolas sz=9.0 b=None} "corp_id": "公司ID",
+[pNormal] {font=Consolas sz=9.0 b=None} "document_root": "数据目录",
+[pNormal] {font=Consolas sz=9.0 b=None} "email": "邮箱",
+[pNormal] {font=Consolas sz=9.0 b=None} "mobile": "手机号",
+[pNormal] {font=Consolas sz=9.0 b=None} "pid": 27536,
+[pNormal] {font=Consolas sz=9.0 b=None} "sex": 1,
+[pNormal] {font=Consolas sz=9.0 b=None} "user_id": "用户ID",
+[pNormal] {font=Consolas sz=9.0 b=None} "username": "姓名"
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 用户登录成功通知（含公司名称） type: 11179
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 与 11026 相同，额外包含 corp_name（公司全称）、corp_short_name（公司简称）
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 用户退出通知 type: 11027
+[pNormal] {font=Consolas sz=9.0 b=None} { "type": 11027, "data": { "user_id": "用户ID" } }
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 用户在手机端退出或切换企业时触发。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} ──────────────────────────────────────────────────
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 3.2 消息通知
+[pNormal] {font=None sz=None b=None} 所有消息通知包含公共字段：conversation_id, sender, sender_name, receiver, send_time, server_id, local_id, is_pc。从 5.0.13.6005 起，同一条消息还会多返回 sequence、message_type、quote、payload_fields 等字段，完整名单见「五、仅企业微信 5.0.13.6005」。更早版本不返回这些字段。
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 撤回消息通知 type: 11123
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "type": 11123,
+[pNormal] {font=Consolas sz=9.0 b=None} "data": {
+[pNormal] {font=Consolas sz=9.0 b=None} "message_server_id": "被撤回消息ID",
+[pNormal] {font=Consolas sz=9.0 b=None} "op_user_id": "撤回操作人ID",
+[pNormal] {font=Consolas sz=9.0 b=None} "room_id": "群ID（0为私聊）"
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=10.5 b=None} ──────────────────────────────────────────────────
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 3.3 好友事件
+[pNormal] {font=微软雅黑 sz=10.5 b=None} ──────────────────────────────────────────────────
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 3.4 群聊事件
+[pNormal] {font=微软雅黑 sz=10.5 b=None} ──────────────────────────────────────────────────
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 四、指令类型速查表
+[pNormal] {font=None sz=None b=None} 五、仅企业微信 5.0.13.6005
+[pNormal] {font=None sz=None b=None} 下面这些只在微灵选中的企业微信版本是 5.0.13.6005 时才会出现。5.0.0.6008 和 5.0.3.6005 不推这些新事件，同一条旧接口也不会多出这些字段。对接时看字段在不在，不要假设旧版本也有。
+[pNormal] {font=None sz=None b=None} 5.1 新通知事件（仅 5.0.13.6005 支持）
+[pNormal] {font=None sz=None b=None} 11201 连接断开。账号还在，只是观察到连接中断。这是实验通知。connection_state 为 unknown 时不能当成离线，也不要据此把账号标成退出。data 字段：event（固定 disconnected）、event_id、account_id、user_id、observed_at_ms（观察到变化的 Unix 毫秒）、source、connection_state、pid。source 可能是 client_context、client_connection_callback、process_replacement。
+[pNormal] {font=None sz=None b=None} 11202 连接恢复。event 固定 reconnected，其余字段与 11201 相同。
+[pNormal] {font=None sz=None b=None} 11200 旧类型表里没有的消息。新接口给出的消息类型对不上 11041 到 11195 时，仍然原样推送，type 固定 11200，不要当成 11041 文本。data.bridge_unmapped 为 true。用 message_type、message_type_name 区分具体种类。红包、图文、视频号、视频号直播、好友申请如果能识别，仍走原来的 11049、11068、11124、11195、11063，不走 11200。
+[pNormal] {font=None sz=None b=None} 5.2 同一条旧接口多出来的字段（从 5.0.13.6005 开始才返回）
+[pNormal] {font=None sz=None b=None} 旧字段名和含义不变。下面这些字段只在 5.0.13.6005 的回调或查询结果里出现，更早版本没有这些键。有值才带上。
+[pNormal] {font=None sz=None b=None} 消息通知（11041、11042、11043、11044、11045、11046、11047、11048、11049、11050、11063、11066、11068、11123、11124、11195，以及 11200）在原有公共字段之外，还可能带：sequence 消息序号；raw_type 客户端原始类型；raw_flag 原始标记；message_type 新接口类型名，例如 text、image；message_type_name 类型名称；summary 摘要；content_status 正文解析状态，可能是 decoded、partial、malformed、empty；extra_content_status 附加内容解析状态；payload_base64 完整正文载荷的 Base64，最大约 1MiB；extra_payload_base64 附加载荷的 Base64；payload_size、extra_payload_size 解码后的字节数；payload_fields、extra_payload_fields 按类型解析出的字段；segments 分段内容；quote 引用，回复文字在 quote.display_text；is_revoked 本地记录是否已撤回；payload_truncated、extra_payload_truncated 是否截断；conversation_type 会话种类，private、group、customer_service 或 unknown；reply_conversation_id 可以用来回复的完整会话 ID。
+[pNormal] {font=None sz=None b=None} 登录成功 11026，以及查询当前账号 11035，从 5.0.13.6005 起在原字段外还返回：name、avatar_url、english_name、email、position、external_corp_name、external_job、category、remark、wechat_id、conversation_status、categories、profile_cached、conversation_id、alias。alias 同时写入原来的 acctid。mobile 没有缓存时为空字符串。category 可能是 self、external、colleague、wechat、cached_profile。cached_profile 只表示有资料缓存，不表示已经是好友。
+[pNormal] {font=None sz=None b=None} 退出 11027 从 5.0.13.6005 起还带：account_id、event_id、observed_at_ms、source、connection_state。user_id 仍然有。
+[pNormal] {font=None sz=None b=None} 获取自己的二维码 11122、刷新登录二维码 11153：原来的 ctcode 仍在。从 5.0.13.6005 起多返回 qr_content，内容与 ctcode 相同，是二维码完整链接。
+[pNormal] {font=None sz=None b=None} 外部联系人 11037 的 user_list、联系人详情 11039：原有 user_id、username、avatar、remark、corp_id、conversation_id 保留。从 5.0.13.6005 起把该联系人对象上的其余字段一并带回，包括 name、avatar_url、english_name、email、mobile、position、external_corp_name、external_job、category、wechat_id、conversation_status、categories、profile_cached、alias。11039 返回整份资料，不再删字段。
+[pNormal] {font=None sz=None b=None} 群列表 11038 的 room_list：原有 conversation_id、name 保留，并补 room_name、group_name、nickname。从 5.0.13.6005 起还返回 creator_id、cached_member_count、avatar_url。cached_member_count 同时写入 member_count，avatar_url 同时写入 avatar。这是本地缓存人数，不是云端精确人数。
+[pNormal] {font=None sz=None b=None} 群成员 11040 的 member_list：原有 user_id、username、avatar、remark、room_nickname、is_admin、invite_user_id、join_time 保留。从 5.0.13.6005 起还带回成员对象上的其余字段，包括 name、avatar_url、group_nickname、inviter_id。group_nickname 已写入 room_nickname，inviter_id 已写入 invite_user_id。
+[pNormal] {font=None sz=None b=None} 搜索用户 11052 的返回从 5.0.13.6005 起使用新接口的搜索结果。每条可能含 user_id、contact_user_id、search_result_id、name、avatar_url、corp_id、profile_source、profile_cached、profile_complete。search_result_id 只在当前账号、本次运行的 10 分钟内有效，用来申请添加。user_id 为空时不能拿去删除或同意好友。
+[pNormal] {font=微软雅黑 sz=16.0 b=True} 个人微信
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 从这里开始只写个人微信。不要使用上面的企业微信 type 码和 /api/Client 路径。
+[pNormal] {font=微软雅黑 sz=14.0 b=True} 个人微信怎么对接
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 个微不要使用企业微信的 type 码，也不要调用 /api/Client/ExecCommand。指令名和参数见本文「个人微信指令」「个人微信事件」。微灵只负责转发。
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 5.1 微灵这边怎么准备
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 1. 打开「个人微信」页，填好本机 Weixin.exe 的完整路径。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 2. 通信方式选 HTTP 或 WebSocket，只选一种。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 3. 点「启动个人微信」，等窗口起来后再登录。不要自己先打开已经在运行的微信再指望注入。个微只能在微灵拉起进程时注入，已经开着的微信注入不进去。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 4. 账号面板里出现该微信，状态在线。指令里的 client 填这个账号的编号。这个编号就是该实例的本地端口，也可以改填这个号的 wxid。
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 5.2 个人微信：HTTP
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 微灵这边：
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 1. 通信方式选 HTTP。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 2. 填写个微自己的「事件通知 URL」并保存。这是个微专用地址，不要填成企微那个。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 3. 「本机配置」里 HTTP 服务必须是「运行中」，默认端口仍是 8060。企微和个微共用这一个 HTTP 端口，靠路径区分。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 下指令：
+[pNormal] {font=Consolas sz=9.0 b=None} POST http://微灵IP:8060/api/PersonalWeChat/ExecCommand
+[pNormal] {font=微软雅黑 sz=10.5 b=None} Content-Type: application/json
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "client": "19088",
+[pNormal] {font=Consolas sz=9.0 b=None} "action": "send_text_msg",
+[pNormal] {font=Consolas sz=9.0 b=None} "data": {}
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=11.0 b=True} client：账号面板上的编号，或该微信的 wxid。必填。
+[pNormal] {font=微软雅黑 sz=10.5 b=True} action：个微指令名，例如 send_text_msg。具体名字和 data 字段看上面的 Apifox 文档。必填。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} data：这条指令的参数。没有参数时传 {}。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 查当前有哪些个微在线：
+[pNormal] {font=Consolas sz=9.0 b=None} GET http://微灵IP:8060/api/PersonalWeChat/Clients
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 返回每条里的 clientId、wxId、nickname、isOnline。clientId 就是下指令时的 client。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 由微灵拉起一个新的个人微信：
+[pNormal] {font=Consolas sz=9.0 b=None} GET http://微灵IP:8060/api/PersonalWeChat/OpenWeixin
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 不传 path 时使用微灵里已保存的 Weixin.exe 路径。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 成功时 HTTP 正文同样是 code、msg、data、time。code 为 200 表示微灵这一层成功。data 里是个微自己的返回，常见成功码是 0、1、200。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 下载语音、图片、视频、文件时，action 使用 download_voice、download_img、download_video、download_file。HTTP 成功时直接返回文件二进制，不是 JSON。语音可以在 data 里带 format 为 mp3 或 wav，微灵会转码后再返回；不带 format 则返回原始文件。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 发图片、文件、语音时，data 里可以给微灵所在电脑上的本地路径，也可以给 url 或 base64。微灵会先落成临时文件再转发给个微。对应 action：send_image_msg、send_file_msg、send_voice、send_mp3_voice。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 事件推送：个人微信里发生的事件，微灵 POST 到个微的事件通知 URL。正文是个微原始事件，并额外加上：
+[pNormal] {font=微软雅黑 sz=10.5 b=None} client：该实例编号
+[pNormal] {font=微软雅黑 sz=10.5 b=None} robot_id：当前登录 wxid
+[pNormal] {font=微软雅黑 sz=10.5 b=None} client_name：微灵里填的个微客户端名称，没填就没有
+[pNormal] {font=微软雅黑 sz=10.5 b=None} client_url：客户端地址，没填就没有
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 原始事件里用 event_type 区分类型（有的包写作 even_type），文字说明在 event_desc。各类型的字段见本文「个人微信事件」。你的接口尽快返回 HTTP 2xx 即可。回调最多等 5 秒，超时不会重推。不要在这个请求里做耗时处理。
+[pNormal] {font=微软雅黑 sz=11.0 b=True} Java 示例（个微 HTTP）
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 和企微 HTTP 一样，差别是回调地址、指令路径和请求体。不要调用 /api/Client/ExecCommand，也不要传企微的 type。client 是字符串，填账号面板编号或 wxid。发文本时 data 里用 wxid 和 msg。
+[pNormal] {font=Consolas sz=9.0 b=None} @RestController
+[pNormal] {font=Consolas sz=9.0 b=None} public class PersonalHttpDemo {
+[pNormal] {font=Consolas sz=9.0 b=None} private final ObjectMapper json = new ObjectMapper();
+[pNormal] {font=Consolas sz=9.0 b=None} private final RestTemplate http = new RestTemplate();
+[pNormal] {font=Consolas sz=9.0 b=None} // 个微「事件通知 URL」填：http://你的主机:端口/personal-wx/callback
+[pNormal] {font=Consolas sz=9.0 b=None} // 不要填成企微的 /wx/callback
+[pNormal] {font=Consolas sz=9.0 b=None} @PostMapping("/personal-wx/callback")
+[pNormal] {font=Consolas sz=9.0 b=None} public ResponseEntity<String> onEvent(@RequestBody String body) throws Exception {
+[pNormal] {font=Consolas sz=9.0 b=None} JsonNode event = json.readTree(body);
+[pNormal] {font=Consolas sz=9.0 b=None} String client = event.path("client").asText();
+[pNormal] {font=Consolas sz=9.0 b=None} String robotId = event.path("robot_id").asText();
+[pNormal] {font=Consolas sz=9.0 b=None} String eventType = event.path("event_type").asText(event.path("even_type").asText(""));
+[pNormal] {font=Consolas sz=9.0 b=None} return ResponseEntity.ok("success");
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=Consolas sz=9.0 b=None} // client 填账号面板编号或 wxid。发文本的 data 用 wxid、msg。
+[pNormal] {font=Consolas sz=9.0 b=None} public String sendText(String client, String wxid, String text) {
+[pNormal] {font=Consolas sz=9.0 b=None} Map<String, Object> data = new LinkedHashMap<String, Object>();
+[pNormal] {font=Consolas sz=9.0 b=None} data.put("wxid", wxid);
+[pNormal] {font=Consolas sz=9.0 b=None} data.put("msg", text);
+[pNormal] {font=Consolas sz=9.0 b=None} Map<String, Object> body = new LinkedHashMap<String, Object>();
+[pNormal] {font=Consolas sz=9.0 b=None} body.put("client", client);
+[pNormal] {font=Consolas sz=9.0 b=None} body.put("action", "send_text_msg");
+[pNormal] {font=Consolas sz=9.0 b=None} body.put("data", data);
+[pNormal] {font=Consolas sz=9.0 b=None} return http.postForObject(
+[pNormal] {font=Consolas sz=9.0 b=None} "http://微灵IP:8060/api/PersonalWeChat/ExecCommand", body, String.class);
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 5.3 个人微信：WebSocket
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 帧格式、文件分片和企业微信那一节相同。心跳也相同：微灵每 20 秒发 ping，后端必须用同一个 id 回 pong；大约 40 秒没有 pong 就断开。重连从 1 秒翻倍，最长 30 秒。只有下面这些不同。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 微灵这边：
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 1. 「个人微信」页通信方式选 WebSocket。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 2. 连接地址填你的服务端。只填主机时，微灵自动补路径 /personal-wx/ws。建议写完整地址，例如 ws://192.168.1.100:8080/personal-wx/ws
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 3. Token 填你约定的口令。微灵会追加为 ?token=你的Token。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 4. 点「连接」，状态必须是「已连接」。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 连上后微灵发 hello，channel 是 personal，不是 wecom：
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "id": "uuid",
+[pNormal] {font=Consolas sz=9.0 b=None} "action": "hello",
+[pNormal] {font=Consolas sz=9.0 b=None} "payload": {
+[pNormal] {font=Consolas sz=9.0 b=None} "clientName": "微灵里填的个微客户端名称",
+[pNormal] {font=Consolas sz=9.0 b=None} "channel": "personal"
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 收到 channel 为 personal 才按个微处理。企微那条连接的 channel 是 wecom，两条连接不要接到同一个业务处理里。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 事件仍然是 action=event。payload 就是 5.2 里那份 POST 正文（原始事件加上 client、robot_id 等）。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 下指令仍然是 action=command，但 payload 用个微的请求体，不是企微的 type：
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "id": "指令uuid",
+[pNormal] {font=Consolas sz=9.0 b=None} "action": "command",
+[pNormal] {font=Consolas sz=9.0 b=None} "payload": {
+[pNormal] {font=Consolas sz=9.0 b=None} "client": "19088",
+[pNormal] {font=Consolas sz=9.0 b=None} "action": "send_text_msg",
+[pNormal] {font=Consolas sz=9.0 b=None} "data": {}
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 注意：外层 action 固定写 command，里层 payload.action 才是个微指令名。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 回包仍是同一个 id 的 command_result，payload.code 为 200 表示成功。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} download_voice、download_img、download_video、download_file 的文件内容不在 JSON 里，走企业微信 WebSocket 里写过的 file_start、WXFL 二进制分片、file_end，最后再来一条 command_result。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} WebSocket 没连上时，个微事件会被丢掉，不会改走 HTTP。
+[pNormal] {font=微软雅黑 sz=11.0 b=True} Java 示例（个微 WebSocket）
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 路径是 /personal-wx/ws，和企微的 /wx/ws 各一条连接，心跳各自回。hello 里 channel 必须是 personal。外层 action 固定写 command，里层 payload.action 才是个微指令名，例如 send_text_msg。
+[pNormal] {font=Consolas sz=9.0 b=None} @Component
+[pNormal] {font=Consolas sz=9.0 b=None} public class PersonalWsDemo extends TextWebSocketHandler {
+[pNormal] {font=Consolas sz=9.0 b=None} private final ObjectMapper json = new ObjectMapper();
+[pNormal] {font=Consolas sz=9.0 b=None} @Override
+[pNormal] {font=Consolas sz=9.0 b=None} protected void handleTextMessage(WebSocketSession session, TextMessage message) throws Exception {
+[pNormal] {font=Consolas sz=9.0 b=None} JsonNode frame = json.readTree(message.getPayload());
+[pNormal] {font=Consolas sz=9.0 b=None} String action = frame.path("action").asText();
+[pNormal] {font=Consolas sz=9.0 b=None} String id = frame.path("id").asText();
+[pNormal] {font=Consolas sz=9.0 b=None} if ("ping".equals(action)) {
+[pNormal] {font=Consolas sz=9.0 b=None} reply(session, id, "pong", json.createObjectNode());
+[pNormal] {font=Consolas sz=9.0 b=None} return;
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=Consolas sz=9.0 b=None} if ("hello".equals(action)) {
+[pNormal] {font=Consolas sz=9.0 b=None} // payload.channel 必须是 personal，不要和 wecom 那条连接混在一个业务里。
+[pNormal] {font=Consolas sz=9.0 b=None} return;
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=Consolas sz=9.0 b=None} if ("event".equals(action)) {
+[pNormal] {font=Consolas sz=9.0 b=None} JsonNode payload = frame.path("payload");
+[pNormal] {font=Consolas sz=9.0 b=None} String eventType = payload.path("event_type").asText(payload.path("even_type").asText(""));
+[pNormal] {font=Consolas sz=9.0 b=None} return;
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=Consolas sz=9.0 b=None} if ("command_result".equals(action)) {
+[pNormal] {font=Consolas sz=9.0 b=None} int code = frame.path("payload").path("code").asInt();
+[pNormal] {font=Consolas sz=9.0 b=None} return;
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=Consolas sz=9.0 b=None} public void sendText(WebSocketSession session, String client, String wxid, String text) throws Exception {
+[pNormal] {font=Consolas sz=9.0 b=None} ObjectNode data = json.createObjectNode();
+[pNormal] {font=Consolas sz=9.0 b=None} data.put("wxid", wxid);
+[pNormal] {font=Consolas sz=9.0 b=None} data.put("msg", text);
+[pNormal] {font=Consolas sz=9.0 b=None} ObjectNode payload = json.createObjectNode();
+[pNormal] {font=Consolas sz=9.0 b=None} payload.put("client", client);
+[pNormal] {font=Consolas sz=9.0 b=None} payload.put("action", "send_text_msg");
+[pNormal] {font=Consolas sz=9.0 b=None} payload.set("data", data);
+[pNormal] {font=Consolas sz=9.0 b=None} // 外层 action 固定是 command，里层 payload.action 才是个微指令名。
+[pNormal] {font=Consolas sz=9.0 b=None} reply(session, UUID.randomUUID().toString(), "command", payload);
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=Consolas sz=9.0 b=None} private void reply(WebSocketSession session, String id, String action, JsonNode payload) throws Exception {
+[pNormal] {font=Consolas sz=9.0 b=None} ObjectNode frame = json.createObjectNode();
+[pNormal] {font=Consolas sz=9.0 b=None} frame.put("id", id);
+[pNormal] {font=Consolas sz=9.0 b=None} frame.put("action", action);
+[pNormal] {font=Consolas sz=9.0 b=None} frame.set("payload", payload);
+[pNormal] {font=Consolas sz=9.0 b=None} synchronized (session) {
+[pNormal] {font=Consolas sz=9.0 b=None} session.sendMessage(new TextMessage(json.writeValueAsString(frame)));
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=Consolas sz=9.0 b=None} @Configuration
+[pNormal] {font=Consolas sz=9.0 b=None} @EnableWebSocket
+[pNormal] {font=Consolas sz=9.0 b=None} class PersonalWsConfig implements WebSocketConfigurer {
+[pNormal] {font=Consolas sz=9.0 b=None} private final PersonalWsDemo handler;
+[pNormal] {font=Consolas sz=9.0 b=None} PersonalWsConfig(PersonalWsDemo handler) { this.handler = handler; }
+[pNormal] {font=Consolas sz=9.0 b=None} @Override
+[pNormal] {font=Consolas sz=9.0 b=None} public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
+[pNormal] {font=Consolas sz=9.0 b=None} registry.addHandler(handler, "/personal-wx/ws").setAllowedOrigins("*");
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 5.4 个微没反应时查什么
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 账号是不是从微灵「启动个人微信」拉起来的、面板里是否在线、client 是不是该实例编号或 wxid、HTTP 是否打到 /api/PersonalWeChat/ExecCommand、WebSocket 的 hello 里 channel 是不是 personal。不要把企微的 type、/wx/ws、/api/Client/ExecCommand 用到个微上。
+[pNormal] {font=微软雅黑 sz=14.0 b=True} 个人微信指令
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 下面每条都是一次调用。HTTP 和 WebSocket 的 payload 相同：
+[pNormal] {font=Consolas sz=9.0 b=None} {
+[pNormal] {font=Consolas sz=9.0 b=None} "client": "账号面板上的编号或wxid",
+[pNormal] {font=Consolas sz=9.0 b=None} "action": "下面的 action",
+[pNormal] {font=Consolas sz=9.0 b=None} "data": { }
+[pNormal] {font=Consolas sz=9.0 b=None} }
+[pNormal] {font=微软雅黑 sz=10.5 b=None} action 不要带 /api/。data 没有参数时传 {}。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 下载类 action（download_img、download_file、download_video、download_voice）成功时，HTTP 直接返回文件；WebSocket 走 file_start 和 WXFL 分片。语音可在 data 里加 format 为 mp3 或 wav。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 发图片、文件、语音时，data 里可以写本机路径，也可以写 url 或 base64，微灵会先落成临时文件。对应 action：send_image_msg、send_file_msg、send_voice、send_mp3_voice。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 返回里 code 为 1 且 msg 为 success 是个微自己的成功，微灵外面还会再包一层 code 200。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 下载图片
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 下载文件
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 下载视频
+[pNormal] {font=微软雅黑 sz=11.0 b=True} 下载语音
+[pNormal] {font=微软雅黑 sz=10.5 b=True} action：download_voice
+[pNormal] {font=微软雅黑 sz=10.5 b=True} data 字段：newMsgId：必填；length：必填；MsgId：必填
+[pNormal] {font=微软雅黑 sz=14.0 b=True} 个人微信事件
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 这些不是指令，不要拿去当 action 调用。个人微信发生这些事时，微灵会把原始内容推给你，并额外加上 client（实例编号）、robot_id（当前 wxid）。HTTP 是 POST 到个微事件通知 URL；WebSocket 是 action=event 的 payload。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 事件类型看 event_type，有的包写作 even_type。说明文字在 event_desc 或 even_desc。
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 个人发送文本消息回调
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 个人发送图片消息回调
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 个人发送文件/卡片/小程序/等等xml回调
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 群聊消息回调
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 私聊消息回调
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 公众号文章,服务号通知都在这个回调里   可以用server酱来测试
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 朋友圈消息回调
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 聊天对象切换回调
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 群成员修改昵称回调
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 群成员进群回调
+[pNormal] {font=微软雅黑 sz=10.5 b=None} 群成员退群回调
+
+===== TABLE 0 rows=5 cols=4 =====
+  r0: 参数 | 类型 | 必填 | 说明
+  r1: type | integer | ✅ | 指令类型码，见下方指令列表
+  r2: data | object | ✅ | 指令参数，不同 type 对应不同结构
+  r3: client | integer | ✅ | 企微实例客户端 ID，在微灵控制台可以看到每个企微实例对应的 ClientId
+  r4: getData | boolean | ❌ | 需要获取返回数据的指令传 true，下方有返回值的指令示例中已标注，没有返回值的不要传值，会超时！！
+
+===== TABLE 1 rows=6 cols=2 =====
+  r0: 用途 | JSON 路径
+  r1: 微信用户 user_id | data.datalist[0].contact_info_wx.uin
+  r2: 微信用户 openid | data.datalist[0].openid
+  r3: 微信用户 wx_ticket | data.datalist[0].wx_ticket
+  r4: 企微用户 user_id | data.datalist[0].contact_info.uin
+  r5: 企微用户 corp_id | data.datalist[0].contact_info.corpid
+
+===== TABLE 2 rows=6 cols=2 =====
+  r0: file_type | 说明
+  r1: 1 | 原图
+  r2: 2 | 中图
+  r3: 3 | 缩略图
+  r4: 4 | 视频
+  r5: 5 | 文件
+
+===== TABLE 3 rows=5 cols=2 =====
+  r0: download_type | 说明
+  r1: 1 | 图片
+  r2: 2 | 视频
+  r3: 3 | 录音
+  r4: 4 | 文件（.dat 格式）
+
+===== TABLE 4 rows=15 cols=4 =====
+  r0: type | 消息类型 | content_type | 特有字段
+  r1: 11041 | 文本消息 | 2 | content
+  r2: 11042 | 图片消息 | 101 | cdn_type, cdn{aes_key, auth_key, url, md5, size, md_url, ld_url}
+  r3: 11043 | 视频消息 | 103 | duration, file_size, cdn_type, cdn{url, preview_img_url}
+  r4: 11044 | 语音消息 | 16 | duration, c2c_cdn{aes_key, file_id, size, voice_time}
+  r5: 11045 | 文件消息 | 102 | cdn_type, cdn{aes_key, auth_key, file_name, md5, size, url}
+  r6: 11046 | 位置消息 | 6 | title, address, latitude, longitude, zoom
+  r7: 11047 | 链接消息 | 13 | title, desc, url, image_url
+  r8: 11048 | GIF消息 | 29 | url, width, height, name
+  r9: 11049 | 红包消息 | 26 | desc, money, packet_id, remark
+  r10: 11050 | 名片消息 | 41 | avatar, nickname, user_id, source
+  r11: 11066 | 小程序消息 | 78 | appid, appname, title, page_path, username, cdn_type, cdn{}
+  r12: 11068 | 图文消息 | 123 | text_content, image_list[]{cdn_type, cdn{}}
+  r13: 11124 | 视频号消息 | 141 | avatar, cover_url, desc, feed_type, nickname, thumb_url, url, extras
+  r14: 11195 | 视频号直播 | 146 | avatar, cover_url, desc, feed_type, nickname, object_id, thumb_url, url
+
+===== TABLE 5 rows=4 cols=3 =====
+  r0: type | 事件 | 关键字段
+  r1: 11063 | 好友申请通知 | avatar, corp_id, nickname, sex, user_id, verify
+  r2: 11076 | 好友新增通知 | acctid, avatar, conversation_id, corp_id, user_id, username
+  r3: 11077 | 好友删除通知 | avatar, corp_id, nickname, sex, user_id
+
+===== TABLE 6 rows=6 cols=3 =====
+  r0: type | 事件 | 关键字段
+  r1: 11074 / 11173 | 新增群通知 | room_conversation_id, room_name, member_list[], op_user_id
+  r2: 11072 | 群成员增加 | member_list[]{name, user_id}, op_user_id, op_user_name, room_conversation_id, room_name
+  r3: 11073 | 群成员减少 | 同群成员增加
+  r4: 11075 | 主动退群 | op_user_id, op_user_name, room_conversation_id, room_name
+  r5: 11078 | 群名称变化 | op_user_id, room_conversation_id, room_name（新群名）
+
+===== TABLE 7 rows=77 cols=3 =====
+  r0: type | 功能 | 分类
+  r1: 11024 | 接口就绪通知 | 通知
+  r2: 11026 | 用户登录成功通知 | 通知
+  r3: 11027 | 用户退出通知 | 通知
+  r4: 11028 | 登录二维码通知 | 通知
+  r5: 11029 | 发送文本消息 | 消息
+  r6: 11030 | 发送图片消息 | 消息
+  r7: 11031 | 发送文件消息 | 消息
+  r8: 11035 | 获取当前登录帐号信息 | 登录
+  r9: 11036 | 获取内部联系人列表 | 联系人
+  r10: 11037 | 获取外部联系人列表 | 联系人
+  r11: 11038 | 获取群聊列表 | 群组
+  r12: 11039 | 获取联系人信息 | 联系人
+  r13: 11040 | 获取群成员列表 | 群组
+  r14: 11041 | 文本消息通知 | 通知
+  r15: 11042 | 图片消息通知 | 通知
+  r16: 11043 | 视频消息通知 | 通知
+  r17: 11044 | 语音消息通知 | 通知
+  r18: 11045 | 文件消息通知 | 通知
+  r19: 11046 | 位置消息通知 | 通知
+  r20: 11047 | 链接消息通知 | 通知
+  r21: 11048 | GIF 消息通知 | 通知
+  r22: 11049 | 红包消息通知 | 通知
+  r23: 11050 | 名片消息通知 | 通知
+  r24: 11052 | 搜索微信/企微用户 | 联系人
+  r25: 11053 | 添加搜索的微信用户 | 联系人
+  r26: 11054 | 修改好友备注 | 联系人
+  r27: 11055 | 修改好友描述 | 联系人
+  r28: 11056 | 修改外部联系人手机号 | 联系人
+  r29: 11057 | 修改外部联系人公司名称 | 联系人
+  r30: 11058 | 创建内/外部群 | 群组
+  r31: 11059 | 修改群名 | 群组
+  r32: 11060 | 批量邀请好友入群 | 群组
+  r33: 11061 | 批量踢群成员 | 群组
+  r34: 11063 | 好友申请通知 | 通知
+  r35: 11064 | 接受好友申请 | 联系人
+  r36: 11066 | 小程序消息通知 | 通知
+  r37: 11067 | 发送视频消息 | 消息
+  r38: 11068 | 图文消息通知 | 通知
+  r39: 11069 | 发送群 @ 消息 | 消息
+  r40: 11070 | 发送动图消息 | 消息
+  r41: 11071 | 添加群成员为联系人 | 群组
+  r42: 11072 | 群成员增加通知 | 通知
+  r43: 11073 | 群成员减少通知 | 通知
+  r44: 11074 | 新增群通知 | 通知
+  r45: 11075 | 主动退群通知 | 通知
+  r46: 11076 | 好友新增通知 | 通知
+  r47: 11077 | 好友删除通知 | 通知
+  r48: 11078 | 群名称变化通知 | 通知
+  r49: 11082 | 发布群公告 | 群组
+  r50: 11088 | 添加搜索的企微用户 | 联系人
+  r51: 11089 | 开启/关闭群邀请确认 | 群组
+  r52: 11090 | 转让群主 | 群组
+  r53: 11105 | 退出群聊 | 群组
+  r54: 11108 | 开启/关闭禁止修改群名 | 群组
+  r55: 11111 | 删除联系人 | 联系人
+  r56: 11112 | 退出登录 | 登录
+  r57: 11115 | C2cCDN 上传资源 | CDN
+  r58: 11121 | 添加名片为联系人 | 联系人
+  r59: 11122 | 获取自己的二维码 | 登录
+  r60: 11123 | 撤回消息通知 | 通知
+  r61: 11124 | 视频号消息通知 | 通知
+  r62: 11125 | 创建空外部群 | 群组
+  r63: 11130 | 解散群 | 群组
+  r64: 11152 | 添加删除的联系人 | 联系人
+  r65: 11153 | 刷新登录二维码 | 登录
+  r66: 11159 | 发送卡片消息 | 消息
+  r67: 11161 | 发送名片 | 消息
+  r68: 11162 | 发送小程序 | 消息
+  r69: 11170 | C2cCDN 下载媒体文件 | CDN
+  r70: 11171 | WxCDN 下载文件 | CDN
+  r71: 11172 | 发送视频号 | 消息
+  r72: 11173 | 新增群通知 | 通知
+  r73: 11174 | 登录二维码状态通知 | 通知
+  r74: 11179 | 登录成功通知（含公司名称） | 通知
+  r75: 11195 | 视频号直播消息通知 | 通知
+  r76: 11196 | 发送视频号直播消息 | 消息
+
+===== TABLE 8 rows=54 cols=3 =====
+  r0: 功能 | action | 参数
+  r1: 修改我所在群的群昵称 | mod_chat_room_self_nick_name | roomId：48520920817@chatroom
+  r2: 发送卡片/XML消息。该接口所有的卡片信息都可以发 包括但不限于 小程序 位置 音乐卡片等等 | send_app_msg | content：见消息或文件内容；type：19
+  r3: 发送本地GIF信息 | send_emotion_msg | wxid：75
+  r4: 发送链接信息_不走UI | send_xml | wxid：63；title：由于向下更加全啊；description：再业最到。难族开常因团象后也。可命保口。行几布族道市打传段程。实看属处总义合色强明。们第运一型加始。周学金会劳。；thumbUrl：https://gleaming-nougat.org/
+  r5: 发送文本消息 | send_text_msg | wxid：45220347292@chatroom
+  r6: 发送AT消息 | send_at_text | wxids：notify@all；msg：@爱吃香菜 123123
+  r7: 发送名片消息 | send_card_msg | towxid：filehelper
+  r8: 发送图片消息 | send_image_msg | wxid：50210378945@chatroom；filepath：见消息或文件内容
+  r9: cdn发送图片(无源可用做转发消息) | send_cdn_img_msg | toWxid：filehelper；totalLen：84942；fileId：见消息或文件内容；aesky：1b48433cbab0884878b14f030c324b05；cdnmidImgSize：558950；cdnthumbImgSize：6591
+  r10: 发送文件消息 | send_file_msg | wxid：48520920817@chatroom
+  r11: 发送语音消息 | send_voice | toWxid：wxid_n629zjvs2ath29；silkPath：见消息或文件内容
+  r12: 发送MP3语音 | send_mp3_voice | wxid：wxid_n629zjvs2ath29
+  r13: 发送拍一拍 | send_pat | roomId：群聊的话填写群聊个人的话 填写个人
+  r14: 发送引用消息 | send_quote | reply：1；referContent：1；fromUsr：wxid_n629zjvs2ath29；newmsgid：3931166677406054178；createTime：0；sendto：wxid_bdk9jdwumfgj22
+  r15: 发送小程序 | send_applet_msg | content：见消息或文件内容；type：33
+  r16: 发送位置消息 | send_location_msg | 无参数，data 传 {}
+  r17: 发送朋友圈。这个发朋友圈 容易掉线 说实话不太建议用 | sns_post | content：6666666666666666666666；blackList：必填
+  r18: 发送图片朋友圈 | sns_send_img | filelist：D:\7777777.jpg
+  r19: 获取群成员列表。如果消息里面没有群成员资料的话 可以调用该接口进行缓存 | get_room_members | 无参数，data 传 {}
+  r20: 获取群详情缓存。该接口适用于 需要频繁获取群资料 | get_chatroom_detail_cache | 无参数，data 传 {}
+  r21: 获取好友二维码 | get_my_qrocde | wxid：45220347292@chatroom；opcode：0；style：7
+  r22: 搜索微信号/手机号 | net_scene_search_contact | 无参数，data 传 {}
+  r23: 获取个人资料缓存 | get_profile_cache | 无参数，data 传 {}
+  r24: 获取登录二维码 | reflash_qrcode | 无参数，data 传 {}
+  r25: 网络查询好友资料 | get_contact | 无参数，data 传 {}
+  r26: 查询群成员信息 | get_group_member_contact | wxid：wxid_3e9mll0g0fad21
+  r27: 获取A8key。a8key有很多场景 展示的是群聊邀请a8key 其他请自行获取 | get_a8key | url：见消息或文件内容；urlType：0
+  r28: 获取小程序code | js_login | 无参数，data 传 {}
+  r29: 修改自己昵称 | mod_self_nick_name | 无参数，data 传 {}
+  r30: 验证好友请求 | verify_friend | v3：见消息或文件内容；v4：见消息或文件内容
+  r31: 创建群聊 | creat_chat_room | 无参数，data 传 {}
+  r32: 获取数据库句柄 | get_db_handle | 无参数，data 传 {}
+  r33: 执行数据库查询。查询前 先查询一下表结构 {"db_name":"contact.db","sql_fmt":"select * from sqlite_master"} | sqlite3_exec | db_name：contact.db
+  r34: 获取好友列表。该接口第一次获取要从网络拿到一次好友列表 之后会以kv存到本地 速度非常的快 | get_frien_lists | 无参数，data 传 {}
+  r35: 获取个人最新网络 | get_profile_new | 无参数，data 传 {}
+  r36: 快速查找好友资料(非常快)。建议使用fast接口 最好去更新一下好友资料 之后需要频繁查询速度就会变得非常快 | get_contact_fast | 无参数，data 传 {}
+  r37: 更新好友列表。该接口会向微信服务器获取一次完整的好友列表 该接口跟 快速查找好友资料联动 | update_all_friend | 无参数，data 传 {}
+  r38: 邀请进入群聊 | invite_member_to_chat_room | wxid_list：wxid1,wxid2,wxid3
+  r39: 添加群成员40人以内 | add_member_to_chat_room | wxid_list：wxid_3e9mll0g0fad21
+  r40: 添加群管理 | api/set_room_admin | roomId：49767299448@chatroom
+  r41: 删除群管理 | api/del_room_admin | roomId：49767299448@chatroom
+  r42: 设置群公告 | set_room_announcement_pb | roomId：51687237616@chatroom
+  r43: 踢出群成员 | del_member_from_chat_room | wxid_list：wxid_8543785438012
+  r44: 修改好友备注 | remark_contact | wxid：wxid_ozyqateb85un22
+  r45: 删除好友 | del_contact | 无参数，data 传 {}
+  r46: 确认收款 | ten_pay_trans_fer_confirm | 无参数，data 传 {}
+  r47: 拒绝收款 | un_ten_pay_trans_fer_confirm | 无参数，data 传 {}
+  r48: 删除朋友圈评论 | sns_del_comment | sns_id：14661929784229180031
+  r49: 朋友圈回复 | sns_comment_reply | content：66666666666；sns_id：14667428703163265648
+  r50: 删除朋友圈 | sns_del | 无参数，data 传 {}
+  r51: 获取朋友圈详情 | sns_get_detail | 无参数，data 传 {}
+  r52: 获取朋友圈首页 | sns_get_first_page | 无参数，data 传 {}
+  r53: 退出群聊 | quit_and_del_chat_room | 无参数，data 传 {}
+
+===== TABLE 9 rows=2 cols=3 =====
+  r0: 功能 | action | 参数
+  r1: 这些参数都来自于消息里 | download_img | to_user：wxid_bdk9jdwumfgj22；from_user：wxid_n629zjvs2ath29；start_pos：0；total_len：559726；data_len：559726；compress_type：0；MsgId：1469066920
+
+===== TABLE 10 rows=16 cols=3 =====
+  r0: 功能 | action | 参数
+  r1: 这些参数都来自于消息里 | download_file | from_user：必填；total_len：31538；MsgId：2754393265637994500；path：d:\罗泽南8月考勤表.xlsx；attachid：见消息或文件内容
+  r2: 同意群聊邀请。运行该接口的时候 需要将url 用a8key转一下 | enter_room | url：见消息或文件内容
+  r3: 朋友圈图片上传。该接口取的url其实可以当做图库 | sns_upload | 无参数，data 传 {}
+  r4: 修改头像 | upload_head_img | 无参数，data 传 {}
+  r5: 修改个人签名 | mod_self_nick_signature | 无参数，data 传 {}
+  r6: 获取标签列表 | get_label_lists | 无参数，data 传 {}
+  r7: 增加标签 | add_label | 无参数，data 传 {}
+  r8: 删除标签 | del_label | 无参数，data 传 {}
+  r9: 修改好友标签 | modify_contact_label | wxids：wxid_8543785438012
+  r10: 更新标签名字 | update_label_name | labelId：1
+  r11: 获取群详情 | get_chatroom_info | 无参数，data 传 {}
+  r12: 保存群聊到通讯录 | save_chatroom_to_contact | 无参数，data 传 {}
+  r13: 移除群聊通讯录 | remov_chatroom_to_contact | 无参数，data 传 {}
+  r14: 获取配置文件保存目录 | get_config_path | 无参数，data 传 {}
+  r15: 获取附近人 | get_lbs_friend | longitude：120.24646699999994
+
+===== TABLE 11 rows=6 cols=3 =====
+  r0: 功能 | action | 参数
+  r1: 该接口里的所有数据均来自消息回调 | download_video | total_len：68264760；NewMsgId：150973212120165920；path：d:\121.mp4
+  r2: 防撤回 | anti_revoke | 无参数，data 传 {}
+  r3: 获取群员昵称 | get_group_memeber_info | roomId：49767299448@chatroom
+  r4: 获取朋友圈下一页 | sns_get_next_page | 无参数，data 传 {}
+  r5: 微信初始化_删除当前设备_慎用 | wechat_init | 无参数，data 传 {}
+
+===== TABLE 12 rows=23 cols=3 =====
+  r0: 功能 | action | 参数
+  r1: cdn下载。文件类型 | cdn_download | fileid：见消息或文件内容；asekey：ae38eb5aee69ba62e6b3a94ecfc76c5f；imgType：2
+  r2: 更新单个用户资料 | update_single_profile | 无参数，data 传 {}
+  r3: 获取登陆状态 | check_login | 无参数，data 传 {}
+  r4: 二维码识别 | qrscan | 无参数，data 传 {}
+  r5: 退出登陆 | logout | 无参数，data 传 {}
+  r6: 获取群聊列表 | get_chatroom_list | 无参数，data 传 {}
+  r7: 撤回任何消息 | revoke_any | newMsgId：2050044161371926300；createTime：1761391928
+  r8: 修改群名称 | mod_chatroom_topic | wxid：49767299448@chatroom
+  r9: 置顶好友 | set_top | 无参数，data 传 {}
+  r10: 取消置顶 | cancel_top | 无参数，data 传 {}
+  r11: 星标好友 | set_start | 无参数，data 传 {}
+  r12: 取消星标 | del_start | 无参数，data 传 {}
+  r13: 关闭消息免打扰 | del_mute_user | 无参数，data 传 {}
+  r14: 拉黑好友 | black_user | 无参数，data 传 {}
+  r15: 移出黑名单 | del_black_user | 无参数，data 传 {}
+  r16: 获取收藏列表 | get_favs | 无参数，data 传 {}
+  r17: 获取所有群的资料(网络获取长耗时接口)。该接口会把你的所有群资料全部保存一遍 | batch_getroom_contact | 无参数，data 传 {}
+  r18: 获取所有的群资料(缓存速度极快) | batch_getroom_cache | 无参数，data 传 {}
+  r19: 初始化群聊。如果遇到群里成员发送消息 无成员资料 可以调用此接口 缓存 | init_rooms | 无参数，data 传 {}
+  r20: 获取群成员简要信息(获取群成员昵称接口) | get_member_nick | wxid：wxid_3e9mll0g0fad21
+  r21: 转让群主 | transferchatroomowner | 无参数，data 传 {}
+  r22: 获取cdn信息 | get_cdn_info | 无参数，data 传 {}

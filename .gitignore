@@ -1,4 +1,6 @@
-# 构建产物（native/bin 里的原始 DLL 要提交，显式排除）
+# ============================================================
+# 构建产物 / 二进制
+# ============================================================
 bin/
 !native/bin/
 obj/
@@ -6,17 +8,94 @@ obj/
 *.suo
 .vs/
 
+# 可执行文件与 DLL（一律不入库，体积大且可从源码重建）
+*.exe
+*.dll
+
+# ============================================================
 # Python
+# ============================================================
 __pycache__/
 *.pyc
 .venv/
 venv/
 
+# ============================================================
 # 运行时产物
+# ============================================================
 logs/
 *.log
+*.jsonl
 temp_cdn/
 bridge/config.json
 config.ini
+config.ini.bak
 qr.png
 *.tmp
+
+# ============================================================
+# onebot/ 专项排除
+# ============================================================
+
+# 补丁输出 / 编译产物（可从源码重建）
+onebot/output/
+onebot/tests/bin/
+onebot/tests/lib/
+onebot/tests/logs/
+
+# 第三方库（dnlib / Newtonsoft / Cecil —— 用户自行下载）
+onebot/lib/
+onebot/tools/Mono.Cecil.dll
+onebot/tools/dnlib.dll
+onebot/tools/_probe/
+onebot/analysis/*.dll
+
+# 逆向分析过程中的临时探测工具（.exe/.bin/.err 等）
+onebot/analysis/*.exe
+onebot/analysis/*.bin
+onebot/analysis/*.err
+onebot/analysis/rt.exe
+onebot/analysis/rt-dn.exe
+onebot/analysis/unlocked.exe
+onebot/analysis/unlocked-dn.exe
+onebot/analysis/res/
+onebot/analysis/WeComSever.exe
+onebot/analysis/OneBotShim.dll
+onebot/analysis/stub.*.log
+onebot/analysis/onebot_v11.log
+onebot/analysis/probe.out.log
+onebot/tools/*.exe
+onebot/tools/dump*.txt
+onebot/tools/*.log
+onebot/tools/probe_raw_stdout.txt
+
+# 冒烟测试 / GUI 取证（体积巨大，不入库）
+onebot/smoke/
+
+# 媒体临时文件
+onebot_media_tmp/
+onebot/tests/bin/onebot_media_tmp/
+
+# 截图 / 图片
+*.png
+
+# ============================================================
+# 根目录二进制与安装包（不入库）
+# ============================================================
+PersonalTcpBridge.exe
+微灵*.exe
+个微安装*.exe
+企微安装*.exe
+*.docx
+微灵OneBotV11-启动.cmd
+
+# 备份目录
+backup/
+data/
+dll/
+wt2/
+
+# 临时日志
+onebot_v11.log
+probe_raw.log
+patched_*.png
