@@ -138,11 +138,8 @@ POST /api/Client/ExecCommand
 ### 快速构建
 
 ```powershell
-# 1. 编译 shim（需要 .NET Framework 4.x csc + Newtonsoft.Json 13.0.0）
-cd onebot\tools
-.\build.ps1
-
-# 2. 输出：onebot\output\微灵-OneBotV11-1.11.0.exe
+cd onebot\tools && .\build.ps1
+# 输出：onebot\output\微灵-OneBotV11-1.11.0.exe
 ```
 
 ### 验证
@@ -159,7 +156,21 @@ cd onebot\tools
 
 ## 构建
 
-当前 `src/WeComSever/` 是**反编译产物**：`.cs` 完整可读，但 WPF 的 XAML 已被编译成 BAML，反编译工具无法直接还原，因此不能开箱即编译（浏览器构建见 [`docs/BUILD.md`](docs/BUILD.md)）。
+### 微灵 1.11.0 OneBot v11 改造版（可构建）
+
+`onebot/` 工程完全可构建：shim（`onebot/src/WxSocketClient.cs`）是标准 C# 5 代码，用 dnlib IL 补丁工具移植进原 exe，一条命令完成编译 + 重打补丁：
+
+```powershell
+cd onebot\tools
+.\build.ps1
+# 输出：onebot\output\微灵-OneBotV11-1.11.0.exe
+```
+
+依赖：.NET Framework 4.x csc、Newtonsoft.Json 13.0.0（编译参考）、dnlib 4.5.0（打包用，工具自动下载）。
+
+### 微灵 v1.0.1.0 原始源码（仅可读）
+
+`src/WeComSever/` 是**反编译产物**：`.cs` 完整可读，但 WPF 的 XAML 已被编译成 BAML，反编译工具无法直接还原，因此不能开箱即编译（详见 [`docs/BUILD.md`](docs/BUILD.md)）。
 替代方案：直接使用 `dist/微灵.exe`（原始二进制）配合 `bridge/`。
 
 ## 授权与致谢
