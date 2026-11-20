@@ -2,7 +2,14 @@
 
 本仓库是闭源工具「微灵」（内部程序集名 `WeComSever`）的**反向工程整理版**：反编译源码、协议文档、原生注入组件与 OneBot v11 适配层。
 
-原工具通过注入企业微信 PC 客户端（**仅适配企业微信 5.0.0.6008 x86**），实现以**本人账号身份**收发消息，并对外提供 HTTP / WebSocket / TCP 三套指令与事件通道。原作者已停止维护；本仓库用于技术研究与学习。
+原工具通过注入企业微信 PC 客户端，实现以**本人账号身份**收发消息，并对外提供指令与事件通道。原作者已停止维护；本仓库用于技术研究与学习。
+
+**支持的微灵 / 企业微信版本：**
+
+| 微灵版本 | 企业微信版本 | 说明 |
+| --- | --- | --- |
+| v1.0.1.0（旧版） | 5.0.0.6008 x86 | 原始版本，反编译源码 + HTTP 桥接层（`bridge/`） |
+| v1.11.0（改造版） | **5.0.13.6005 x86** | OneBot v11 改造工程（`onebot/`），内置反向 WS 客户端，无需外挂桥接 |
 
 > ⚠️ **风险提示（务必阅读）**
 >
@@ -39,6 +46,26 @@ wecom-ling/
 
 ## 快速体验
 
+### 方式一：微灵 1.11.0 + OneBot v11（推荐）
+
+1. 安装企业微信 **5.0.13.6005 x86**。
+2. 构建（或下载）改造版 `微灵-OneBotV11-1.11.0.exe`，放到**不受安全软件限制的目录**。
+3. 同目录建 `config.ini`：
+
+   ```ini
+   Port=8060
+   WeComVersion=5.0.13.6005
+   WeComUseWebSocket=true
+   WxWsAutoConnect=true
+   WxWsUrl=ws://127.0.0.1:6200
+   WxWsToken=your-token
+   ```
+
+4. 以管理员身份运行，登录企业微信，OneBot 实现端（AstrBot 等）显示「适配器已连接」即成功。
+5. 详细部署见 [`onebot/REPORT.md`](onebot/REPORT.md) 与对接文档。
+
+### 方式二：微灵 v1.0.1.0 + HTTP 桥接（旧版）
+
 1. 安装企业微信 **5.0.0.6008 x86**（官方历史版本包，见 `docs/BUILD.md`）。
 2. 把 `native/bin/Loader.dll`、`native/bin/Helper_5.0.0.6008.dll`、`dist/微灵.exe` 放到**同一个目录**。
 3. 在该目录建 `config.ini`（参考 `examples/config.ini`）：
@@ -59,7 +86,7 @@ wecom-ling/
 
    OneBot 服务端（如 AstrBot 的 aiocqhttp 反向 WS）监听 `127.0.0.1:6200`。
 
-## 协议速查
+## 协议速查（微灵 v1.0.1.0 原生协议）
 
 | 通道 | 地址 | 用途 |
 | --- | --- | --- |
@@ -95,6 +122,7 @@ POST /api/Client/ExecCommand
 
 将微灵 1.11.0 自研 WebSocket 协议（`{id,action,payload}` + hello/ping/pong + WXFL 二进制分片）**替换为标准 OneBot v11 反向 WebSocket**，使微灵可以直接对接 AstrBot / NapCat / LLOneBot 等 OneBot v11 实现，**无需外挂桥接层**。
 
+- 适配企业微信 **5.0.13.6005 x86**（1.11.0 版本绑定的客户端版本）。
 - 原程序 exe 不修改（SHA256 前后一致），改造产物为独立 exe。
 - 使用 dnlib IL 补丁（加法式策略 + `MetadataFlags.PreserveAll`），只替换 `WxWebSocketClient` 类的 10 个公开方法体，其余全部保留。
 - 微灵其余功能（企微注入、HTTP 8060 API、事件回调、UI、个微 TCP 桥等）原样保留。
